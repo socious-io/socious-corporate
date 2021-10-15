@@ -1,17 +1,7 @@
-const website = require('./config/website')
-
 module.exports = {
   siteMetadata: {
-    siteUrl: website.url + pathPrefix, // For gatsby-plugin-sitemap
-    pathPrefix,
-    title: website.title,
-    titleAlt: website.titleAlt,
-    description: website.description,
-    headline: website.headline,
-    siteLanguage: website.siteLanguage,
-    logo: website.logo,
-    ogLanguage: website.ogLanguage,
-    author: website.author
+    siteUrl: "https://www.socious.io",
+    title: "Socious",
   },
   plugins: [
     "gatsby-plugin-sass",
