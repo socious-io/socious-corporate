@@ -3,5 +3,9 @@ module.exports = {
     siteUrl: "https://www.yourdomain.tld",
     title: "Socious",
   },
-  plugins: ["gatsby-plugin-sass"],
+  plugins: [
+    "gatsby-plugin-sass",
+    "gatsby-plugin-image",
+    "gatsby-plugin-sharp",
+  ],
 };
