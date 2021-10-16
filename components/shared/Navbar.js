@@ -1,14 +1,14 @@
 import * as React from 'react'
 import { Link } from 'gatsby'
-import '../../src/styles/index.scss'
+import { StaticImage } from 'gatsby-plugin-image'
 
 const Navbar = () => {
   return (
-    <nav class="header">
-      <div class="header__logo-container">
-        <img class="header__logo-image" src="./images/socious-logo.png" />
+    <nav className="header">
+      <div className="header__logo-container">
+        <img className="header__logo-image" src="images/socious-logo.png" />
       </div>
-      <a class="header__language-switcher" href="./ja">日本語</a>
+      <a className="header__language-switcher" href="./ja">日本語</a>
     </nav>
   )
 }
