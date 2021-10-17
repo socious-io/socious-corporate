@@ -1,24 +1,27 @@
 import React from 'react'
 
+import AppleIcon from '@mui/icons-material/Apple';
+import AndroidIcon from '@mui/icons-material/Android';
+
 const AppLinks = () => {
   return (
-    <div class="section-app-links">
-      <div class="section-app-links__wrapper">
-        <div class="section-app-links__header">
+    <div className="section-app-links">
+      <div className="section-app-links__wrapper">
+        <div className="section-app-links__header">
           Experience the social impact ecosystem
         </div>
-        <div class="section-app-links__subheader">
+        <div className="section-app-links__subheader">
           Connect with like-minded people, find the right social enterprise, and contribute to solving social issues
         </div>
-        <div class="section-app-links__app-links-block">
-          <div class="section-app-links__app-links">
-            <button class="section-app-links__app-links-button">
-              <span class="material-icons md-36">apple</span>
+        <div className="section-app-links__app-links-block">
+          <div className="section-app-links__app-links">
+            <button className="section-app-links__app-links-button">
+              <AppleIcon />
             </button>
           </div>
-          <div class="section-app-links__app-links">
-            <button class="section-app-links__app-links-button">
-              <span class="material-icons md-36">android</span>
+          <div className="section-app-links__app-links">
+            <button className="section-app-links__app-links-button">
+              <AndroidIcon />
             </button>
           </div>
         </div>
