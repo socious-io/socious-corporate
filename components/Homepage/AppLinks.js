@@ -16,12 +16,12 @@ const AppLinks = () => {
         <div className="section-app-links__app-links-block">
           <div className="section-app-links__app-links">
             <button className="section-app-links__app-links-button">
-              <AppleIcon />
+              <AppleIcon sx={{ fontSize: 48 }} />
             </button>
           </div>
           <div className="section-app-links__app-links">
             <button className="section-app-links__app-links-button">
-              <AndroidIcon />
+              <AndroidIcon sx={{ fontSize: 48 }} />
             </button>
           </div>
         </div>
