@@ -11,6 +11,7 @@
 .header__language-switcher {
   display: flex;
   align-items: center;
+  height: 100%;
 
   &:link,
   &:visited {
@@ -28,6 +29,7 @@
 .header__logo-container {
   display: flex;
   align-items: center;
+  height: 100%;
 }
 
 /* For use on pages with transparent nav */
