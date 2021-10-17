@@ -1,0 +1,35 @@
+#mc_embed_signup {
+  background: #fff;
+  clear: left;
+  font: 14px 'Helvetica', 'Arial', sans-serif;
+}
+
+#mc_embed_signup .button {
+  padding: 0px;
+  margin-top: 20px;
+  cursor: pointer;
+  background: rgb(38, 105, 160);
+  border: none;
+  text-align: center;
+  font-family: Barlow;
+  font-size: 14px;
+  font-weight: 700;
+  font-family: 'Inter';
+  color: rgb(255, 255, 255);
+  letter-spacing: 2px;
+  line-height: 1;
+  border-radius: 5px;
+  transition: background 200ms ease 0s;
+  box-shadow: none;
+  width: 200px;
+  height: 50px;
+}
+
+#mc_embed_signup .button:hover {
+  background: none rgb(38, 105, 160);
+}
+
+.clear {
+  display: flex;
+  justify-content: center;
+}
