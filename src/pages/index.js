@@ -1,8 +1,9 @@
 import * as React from "react"
 import "../styles/main.scss"
 
-import Intro from "../../components/shared/Homepage/Intro/Intro"
+import Intro from "../../components/Homepage/Intro/Intro"
 import Navbar from "../../components/shared/Navbar"
+import AppLinks from "../../components/Homepage/AppLinks"
 
 
 const IndexPage = () => {
@@ -10,6 +11,7 @@ const IndexPage = () => {
     <main>
       <Navbar />
       <Intro />
+      <AppLinks />
     </main>
   )
 }
