@@ -5,6 +5,7 @@ import Intro from "../../components/Homepage/Intro/Intro"
 import Navbar from "../../components/shared/Navbar"
 import AppLinks from "../../components/Homepage/AppLinks"
 import JobsSection from "../../components/Homepage/JobsSection/JobsSection"
+import Footer from "../../components/shared/Footer"
 
 
 const IndexPage = () => {
@@ -14,6 +15,7 @@ const IndexPage = () => {
       <Intro />
       <AppLinks />
       <JobsSection />
+      <Footer />
     </main>
   )
 }

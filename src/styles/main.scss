@@ -1,9 +1,10 @@
-// Default page styles
+// Graphical variables
 
+// Default page styles
 @import "normalize";
 @import "verified";
 
-// Component index stylesheets
-
-// Homepage
+// Your CSS partials
+@import "./shared/navbar";
+@import "./shared/footer";
 @import "./homepage/index.scss"

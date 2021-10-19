@@ -1,0 +1,36 @@
+footer {
+  display: flex;
+  justify-content: space-evenly;
+  padding-top: 3rem;
+}
+
+.footer-list {
+  line-height: 2rem;
+}
+
+.footer-item ul {
+
+  text-decoration: none;
+  list-style: none;
+  padding: 0;
+
+  font-weight: 400;
+}
+
+.footer-item ul > li > a {
+  text-decoration: none;
+}
+
+.footer-item ul > li > a:link,
+.footer-item ul > li > a:visited {
+  color: rgba(10,10,10,0.8);
+}
+
+/* SECTION_FOOTER_MOBILE */
+
+@media screen and (max-width: 600px) {
+  footer {
+    flex-direction: column;
+    margin-left: 4rem;
+  }
+}
