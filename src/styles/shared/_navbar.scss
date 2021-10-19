@@ -1,0 +1,61 @@
+.header {
+  height: 70px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 15px;
+  position: relative;
+  z-index: 1;
+}
+
+.header__language-switcher {
+  display: flex;
+  align-items: center;
+  height: 100%;
+
+  &:link,
+  &:visited {
+    text-decoration: inherit;
+    color: rgb(38, 105, 160);
+    cursor: pointer;
+  }
+}
+
+.header__logo-image {
+  height: 52px;
+  width: 39px;
+}
+
+.header__logo-container {
+  display: flex;
+  align-items: center;
+  height: 100%;
+}
+
+/* For use on pages with transparent nav */
+
+.header-fixed {
+  width: 100vw;
+  position: absolute;
+  margin-top: 1rem;
+  padding: 0;
+}
+
+.header__language-switcher-transparent {
+  display: flex;
+  align-items: center;
+  margin-right: 2rem;
+
+  &:link,
+  &:visited {
+    text-decoration: inherit;
+    color: #FFF;
+    cursor: pointer;
+  }
+}
+
+.header__logo-image-transparent {
+  margin-left: 2rem;
+  height: 52px;
+  width: 39px;
+}
