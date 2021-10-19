@@ -26,6 +26,8 @@
 }
 
 .section-jobs__block {
+  max-width: 90rem;
+  margin: 48px auto;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
