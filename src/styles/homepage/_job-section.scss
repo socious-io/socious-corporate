@@ -6,7 +6,7 @@
 }
 
 .section-jobs__sup-header {
-  color: rgb(38, 105, 160);
+  color: $primary;
   font-size: 16px;
 }
 
@@ -92,7 +92,7 @@
   width: 151.708px;
   left: -37px;
   top: 400px;
-  background-color: rgb(38, 105, 160);
+  background-color: $primary;
   border-radius: 5px;
   transform: rotate(30deg);
 }
@@ -121,7 +121,7 @@
 }
 
 .section-jobs__list-icon {
-  background-color: rgb(38, 105, 160);
+  background-color: $primary;
   color: white;
   border-radius: 5px;
   font-size: 24px;

@@ -23,7 +23,7 @@
 
 /* squares behind images */
 .section-intro__app-image-blue-square {
-  background-color: rgb(38, 105, 160);
+  background-color: $primary;
   border-radius: 5px;
   height: 132px;
   width: 145px;
@@ -61,7 +61,7 @@
 }
 
 .section-intro__mailchimp--blue {
-  color: rgb(38, 105, 160);
+  color: $primary;
 }
 
 .section-intro__mailchimp__form-container {
