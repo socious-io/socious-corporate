@@ -13,12 +13,14 @@
 .section-jobs__header {
   font-weight: 800;
   margin-top: 20px;
+  margin-bottom: 2rem;
   font-size: 36px;
 }
 
 .section-jobs__img-container,
 .section-jobs__img-entrepreneurs-container {
-  width: 30%;
+  width: max-content;
+  margin: 0 auto;
   /* for square paleblue */
   position: relative;
 }
@@ -49,7 +51,7 @@
   height: 226px;
   width: 321px;
   position: absolute;
-  z-index: 1;
+  z-index: -1;
   left: -16px;
   top: 140px;
   transform: rotate(15deg);
@@ -62,6 +64,7 @@
   background-repeat: no-repeat;
   background-size: cover;
   margin-top: 30px;
+  margin-right: 1rem;
   z-index: 4;
   /* for z-index to work */
   position: relative;
@@ -70,10 +73,10 @@
 .section-jobs__img-entrepreneurs-paleblue-square {
   position: absolute;
   box-sizing: border-box;
-  z-index: 2;
+  z-index: -1;
   height: 102px;
   width: 234.458px;
-  left: 96.5417px;
+  left: 32px;
   top: 0px;
   background-color: rgb(229, 237, 255);
   border-radius: 5px;
@@ -129,9 +132,19 @@
 
 /* MOBILE JOBS SECTION */
 
+@media only screen and (max-width: 1230px) {
+  .section-jobs__header {
+    max-width: 40rem;
+  }
+}
+
 @media only screen and (max-width: 1015px) {
   .section-jobs__block {
     flex-direction: column;
+  }
+
+  .section-jobs__list {
+    width: 100%;
   }
 
   .section-jobs__img-entrepreneurs-container {
@@ -156,7 +169,8 @@
 
   .section-jobs__img-container,
   .section-jobs__img-entrepreneurs-container {
-    width: 100%;
+    width: max-content;
+    margin: 0 auto;
   }
 
   .section-jobs__img {
