@@ -10,14 +10,22 @@
   margin: auto;
 }
 
+.section-app-links__container {
+  width: max-content;
+  margin: 0 auto;
+}
+
 .section-app-links__header {
   font-size: 48px;
-  margin-bottom: 2rem;
+  width: max-content;
+  margin: 2rem auto;
 }
 
 .section-app-links__subheader {
   font-weight: 400;
-  margin-bottom: 40px;
+  width: 100%;
+  margin: 0 auto;
+  margin-bottom: 2.5rem;
 }
 
 .section-app-links__app-links-button {

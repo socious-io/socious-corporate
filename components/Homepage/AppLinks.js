@@ -7,11 +7,13 @@ const AppLinks = () => {
   return (
     <div className="section-app-links">
       <div className="section-app-links__wrapper">
-        <div className="section-app-links__header">
-          Experience the social impact ecosystem
-        </div>
-        <div className="section-app-links__subheader">
-          Connect with like-minded people, find the right social enterprise, and contribute to solving social issues
+        <div className="section-app-links__container">
+          <div className="section-app-links__header">
+            Experience the social impact ecosystem
+          </div>
+          <div className="section-app-links__subheader">
+            Connect with like-minded people, find the right social enterprise, and contribute to solving social issues
+          </div>
         </div>
         <div className="section-app-links__app-links-block">
           <div className="section-app-links__app-links">
