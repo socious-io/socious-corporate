@@ -1,8 +1,8 @@
 /* INTRO_SECTION */
 
 .section-intro {
-  margin-top: 61px;
-  width: 100%;
+  margin: 61px auto;
+  max-width: 90rem;
   display: flex;
   flex-direction: row;
   flex-wrap: wrap-reverse;
@@ -85,7 +85,7 @@
 
 @media only screen and (max-width: 1015px) {
   .section-intro {
-    width: 100%;
+    width: 95%;
     justify-content: center;
   }
 
