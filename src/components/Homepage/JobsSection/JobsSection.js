@@ -24,37 +24,37 @@ const JobsSection = () => {
   )
   
   return (
-    <div class="section-jobs">
-      <div class="section-jobs__block">
-        <div class="section-jobs__list">
-          <div class="section-jobs__sup-header">BENEFITS</div>
-          <div class="section-jobs__header">
+    <div className="section-jobs">
+      <div className="section-jobs__block">
+        <div className="section-jobs__list">
+          <div className="section-jobs__sup-header">BENEFITS</div>
+          <div className="section-jobs__header">
             People passionate about social change can:
             {jobItemsLeft}
           </div>
         </div>
-        <div class="section-jobs__img-container">
-          <div class="section-jobs__img"></div>
-          <div class="section-jobs__img-paleblue-square"></div>
+        <div className="section-jobs__img-container">
+          <div className="section-jobs__img"></div>
+          <div className="section-jobs__img-paleblue-square"></div>
         </div>
       </div>
-      <div class="section-jobs__block">
-        <div class="section-jobs__img-entrepreneurs-container">
-          <div class="section-jobs__img-entrepreneurs"></div>
-          <div class="section-jobs__img-entrepreneurs-paleblue-square"></div>
-          <div class="section-jobs__img-entrepreneurs-purple-square"></div>
+      <div className="section-jobs__block">
+        <div className="section-jobs__img-entrepreneurs-container">
+          <div className="section-jobs__img-entrepreneurs"></div>
+          <div className="section-jobs__img-entrepreneurs-paleblue-square"></div>
+          <div className="section-jobs__img-entrepreneurs-purple-square"></div>
         </div>
-        <div class="section-jobs__list">
-          <div class="section-jobs__sup-header">BENEFITS</div>
-          <div class="section-jobs__header">
+        <div className="section-jobs__list">
+          <div className="section-jobs__sup-header">BENEFITS</div>
+          <div className="section-jobs__header">
             Social entrepreneurs can:
             {jobItemsRight}
           </div>
         </div>
-        <div class="section-jobs__img-entrepreneurs-container--mobile">
-          <div class="section-jobs__img-entrepreneurs--mobile"></div>
-          <div class="section-jobs__img-entrepreneurs-paleblue-square"></div>
-          <div class="section-jobs__img-entrepreneurs-purple-square"></div>
+        <div className="section-jobs__img-entrepreneurs-container--mobile">
+          <div className="section-jobs__img-entrepreneurs--mobile"></div>
+          <div className="section-jobs__img-entrepreneurs-paleblue-square"></div>
+          <div className="section-jobs__img-entrepreneurs-purple-square"></div>
         </div>
       </div>
     </div>

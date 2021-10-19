@@ -1,8 +1,6 @@
 import React from "react";
 
 const Job = (props) => {
-  console.log(props)
-
   return (
     <div className="section-jobs__list-item">
       <div className="section-jobs__list-icon">
