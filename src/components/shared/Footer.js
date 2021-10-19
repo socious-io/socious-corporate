@@ -4,11 +4,11 @@ import { Link } from 'gatsby'
 const Footer = () => {
   return (
     <footer>
-      <div class="footer-item">
-        <div class="footer-title">
+      <div className="footer-item">
+        <div className="footer-title">
           <h4>About</h4>
         </div>
-        <div class="footer-list">
+        <div className="footer-list">
           <ul>
             <li><Link to="/">Socious App</Link></li>
             <li><a href="https://socious.io/about#our-mission">Our Mission</a></li>
@@ -20,21 +20,21 @@ const Footer = () => {
           </ul>
         </div>
       </div>
-      <div class="footer-item">
-        <div class="footer-title">
+      <div className="footer-item">
+        <div className="footer-title">
           <h4>Latest News</h4>
         </div>
-        <div class="footer-list">
+        <div className="footer-list">
           <ul>
             <li><a href="#">Newsroom</a></li>
           </ul>
         </div>
       </div>
-      <div class="footer-item">
-        <div class="footer-title">
+      <div className="footer-item">
+        <div className="footer-title">
           <h4>Corporate</h4>
         </div>
-        <div class="footer-list">
+        <div className="footer-list">
           <ul>
             <li><a href="https://socious.io/careers">Join Us</a></li>
             <li><a href="https://socious.io/about#contact-us">Contact Us</a></li>

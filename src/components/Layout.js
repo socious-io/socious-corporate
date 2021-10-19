@@ -1,4 +1,4 @@
-import React from 'react'
+import * as React from 'react'
 import { Link, useStaticQuery, graphql } from 'gatsby'
 
 import Navbar from './shared/Navbar'
@@ -6,7 +6,7 @@ import Footer from './shared/Footer'
 
 const Layout = ({ pageTitle, children }) => {
   const data = useStaticQuery(graphql`
-    query {
+    query SiteInfo {
       site {
         siteMetadata {
           title
@@ -19,7 +19,9 @@ const Layout = ({ pageTitle, children }) => {
     <div>
       <title>{pageTitle} | { data.site.siteMetadata.title }</title>
       <Navbar />
-        { children }
+      <main>
+        {children}
+      </main>
       <Footer />
     </div>
   )
