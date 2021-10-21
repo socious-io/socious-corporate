@@ -20,7 +20,7 @@ const ScrollArrow = () => {
   return (
     <div>
       <a href="#scroll-top">
-        <i id="scroll-arrow" class="scroll-arrow up hide"></i>
+        <i id="scroll-arrow" className="scroll-arrow up hide"></i>
       </a>
     </div>
   )

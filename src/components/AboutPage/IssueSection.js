@@ -13,10 +13,10 @@ const IssueSection = () => {
   )
 
   return (
-    <div class="issue-section" id="social-issues">
-      <div class="issue-banner">
-        <div class="issue-banner__image"></div>
-        <div class="issue-banner__content">
+    <div className="issue-section" id="social-issues">
+      <div className="issue-banner">
+        <div className="issue-banner__image"></div>
+        <div className="issue-banner__content">
           <h2>Social Issues We Are Solving</h2>
           <p>The resources needed to solve social issues are scattered, unmatched and limited</p>
         </div>

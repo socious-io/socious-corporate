@@ -6,17 +6,17 @@ const AboutItem = (props) => {
   }
 
   return (
-    <div class="about-item" style={aboutItemBorder}>
-      <div class="about-image">
+    <div className="about-item" style={aboutItemBorder}>
+      <div className="about-image">
         <img src={props.imageUrl} alt={props.imageAlt} />
       </div>
-      <div class="about-info">
-        <div class="about-header">
+      <div className="about-info">
+        <div className="about-header">
           <h3>
             {props.header}
           </h3>
         </div>
-        <div class="about-content">
+        <div className="about-content">
           <p>
             {props.content}
           </p>

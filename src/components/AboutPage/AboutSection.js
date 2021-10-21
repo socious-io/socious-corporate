@@ -16,7 +16,7 @@ const AboutSection = () => {
   
   return (
     <section>
-      <div class="about-title" id="what-we-do">
+      <div className="about-title" id="what-we-do">
         <h2>What we do</h2>
         <p>
           We leverage the untapped potential of passive social change makers by helping them contribute to society in an easy, fun way through a purpose-driven
@@ -24,7 +24,7 @@ const AboutSection = () => {
         </p>
       </div>
 
-      <div class="about-section">
+      <div className="about-section">
         {aboutComponents}
       </div>
     </section>
