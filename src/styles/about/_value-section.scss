@@ -1,0 +1,96 @@
+/* SECTION_VALUES */
+
+.values-banner {
+  height: 70vh;
+  width: 100%;
+  margin-top: 2rem;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  color: #FFF;
+  text-shadow: 0 0.2rem 0.5rem $light-grey;
+
+  background-image: linear-gradient($dark-grey 0%, $light-grey 100%), url("/images/values-banner.png");
+  background-size: cover;
+  background-position: 50% 20%;
+}
+
+.values-banner h2 {
+  font-size: 3rem;
+}
+
+.values-banner p {
+  width: 35%;
+  font-size: 1.5rem;
+  text-align: center;
+  line-height: 2rem;
+}
+
+.values-section {
+  min-height: 50vh;
+  padding: 3rem 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  max-width: 40%;
+  margin: 0 auto;
+}
+
+.values-item {
+  width: 100%;
+}
+
+.values-item p {
+  font-weight: 400;
+  line-height: 2rem;
+}
+/* SECTION_VALUES_END */
+
+/* SECTION_VALUES_MOBILE */
+
+@media only screen and (max-width: 1015px) {
+  .values-item {
+    width: 125%;
+  }
+
+  .values-banner {
+    margin-top: 0;
+  }
+
+  .values-banner h2 {
+    font-size: 3rem;
+  }
+  
+  .values-banner p {
+    width: 50%;
+    font-size: 1.4rem;
+    line-height: 2rem;
+  }
+}
+
+@media only screen and (max-width: 500px) {
+  .values-banner h2 {
+    font-size: 2rem;
+  }
+  
+  .values-banner p {
+    width: 60%;
+    font-size: 1.3rem;
+  }
+}
+
+@media only screen and (max-width: 360px) {
+  .values-item h3 {
+    font-size: 1.1rem;
+  }
+
+  .values-item p {
+    font-size: 1rem;
+  }
+}
+
+/* SECTION_VALUES_MOBILE_END */
