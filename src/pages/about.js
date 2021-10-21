@@ -6,6 +6,7 @@ import Layout from "../components/Layout";
 import ScrollArrow from "../components/shared/ScrollArrow";
 import IssueSection from "../components/AboutPage/IssueSection";
 import AboutSection from "../components/AboutPage/AboutSection";
+import VisionSection from "../components/AboutPage/VisionSection";
 
 const AboutPage = () => {
   return (
@@ -14,6 +15,7 @@ const AboutPage = () => {
       <ScrollArrow />
       <IssueSection />
       <AboutSection />
+      <VisionSection />
     </Layout>
   )
 }
