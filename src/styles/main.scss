@@ -6,9 +6,11 @@
 @import "normalize";
 @import "verified";
 
-// Your CSS partials
+// Shared partials
 @import "./shared/navbar";
 @import "./shared/footer";
 @import "./shared/scroll-arrow";
+
+// Your CSS partials
 @import "./homepage/index.scss";
 @import "./about/index.scss"
