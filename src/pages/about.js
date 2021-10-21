@@ -8,6 +8,7 @@ import IssueSection from "../components/AboutPage/IssueSection";
 import AboutSection from "../components/AboutPage/AboutSection";
 import VisionSection from "../components/AboutPage/VisionSection";
 import ValuesSection from "../components/AboutPage/ValuesSection";
+import TeamSection from "../components/AboutPage/TeamSection";
 
 const AboutPage = () => {
   return (
@@ -18,6 +19,7 @@ const AboutPage = () => {
       <AboutSection />
       <VisionSection />
       <ValuesSection />
+      <TeamSection />
     </Layout>
   )
 }
