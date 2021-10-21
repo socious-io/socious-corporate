@@ -5,6 +5,7 @@ import Hero from "../components/AboutPage/Hero";
 import Layout from "../components/Layout";
 import ScrollArrow from "../components/shared/ScrollArrow";
 import IssueSection from "../components/AboutPage/IssueSection";
+import AboutSection from "../components/AboutPage/AboutSection";
 
 const AboutPage = () => {
   return (
@@ -12,6 +13,7 @@ const AboutPage = () => {
       <Hero />
       <ScrollArrow />
       <IssueSection />
+      <AboutSection />
     </Layout>
   )
 }
