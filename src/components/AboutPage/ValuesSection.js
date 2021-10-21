@@ -1,7 +1,7 @@
 import React from "react";
 
 import ValueItem from "./components/ValueItem";
-import valueItems from "../../../data/valuesSectionData";
+import valueItems from "../../../data/AboutPage/valuesSectionData";
 
 const ValuesSection = () => {
   const values = valueItems.map(value => 

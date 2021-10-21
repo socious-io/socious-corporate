@@ -1,8 +1,8 @@
 import React from "react";
 
 import Job from "./Job";
-import jobsSectionLeft from "../../../../data/jobSectionLeft"
-import jobsSectionRight from "../../../../data/jobSectionRight"
+import jobsSectionLeft from "../../../../data/Homepage/jobSectionLeft"
+import jobsSectionRight from "../../../../data/Homepage/jobSectionRight"
 
 const JobsSection = () => {
   const jobItemsLeft = jobsSectionLeft.map(job => 

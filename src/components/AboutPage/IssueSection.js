@@ -1,6 +1,6 @@
 import React from 'react'
 
-import issueItems from '../../../data/issueSectionData'
+import issueItems from '../../../data/AboutPage/issueSectionData'
 import IssueItem from './components/IssueItem'
 
 const IssueSection = () => {

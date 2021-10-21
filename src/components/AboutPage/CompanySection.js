@@ -1,7 +1,7 @@
 import React from "react";
 
 import CompanyItem from "./components/CompanyItem";
-import companyInfo from "../../../data/companySectionData";
+import companyInfo from "../../../data/AboutPage/companySectionData";
 
 const CompanySection = () => {
   const companyRow = companyInfo.map(data => 

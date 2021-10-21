@@ -1,7 +1,7 @@
 import React from "react";
 
 import AboutItem from "./components/AboutItem";
-import aboutItems from "../../../data/aboutSectionData";
+import aboutItems from "../../../data/AboutPage/aboutSectionData";
 
 const AboutSection = () => {
   const aboutComponents = aboutItems.map(item => 

@@ -1,7 +1,7 @@
 import React from "react";
 
 import TeamMember from "./components/TeamMember";
-import teamMembers from "../../../data/teamSectionData";
+import teamMembers from "../../../data/AboutPage/teamSectionData";
 
 const TeamSection = () => {
   const team = teamMembers.map(member =>
