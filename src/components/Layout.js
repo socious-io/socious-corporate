@@ -18,6 +18,7 @@ const Layout = ({ pageTitle, children }) => {
   return (
     <div>
       <title>{pageTitle} | { data.site.siteMetadata.title }</title>
+      <div id="scroll-top"></div>
       <Navbar />
       <main>
         {children}
