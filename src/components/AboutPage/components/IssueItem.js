@@ -1,6 +1,6 @@
 import React from "react";
 
-const Issue = (props) => {
+const IssueItem = (props) => {
   return (
     <div className="issue-item">
       <div className="issue-item__header">
@@ -15,4 +15,4 @@ const Issue = (props) => {
   )
 }
 
-export default Issue
+export default IssueItem

@@ -1,11 +1,11 @@
 import React from 'react'
 
 import issueItems from '../../../data/issueSectionData'
-import Issue from './components/Issue'
+import IssueItem from './components/IssueItem'
 
 const IssueSection = () => {
   const issues = issueItems.map(issue => 
-    <Issue
+    <IssueItem
       key={issue.id}
       header={issue.header}
       content={issue.content}
