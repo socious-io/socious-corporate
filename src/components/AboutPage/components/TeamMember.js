@@ -67,7 +67,7 @@ const TeamMember = (props) => {
                   <br />
                   {props.bio3}
                 </div> 
-                : ""
+                : null
               }
             </p>
           </div>
