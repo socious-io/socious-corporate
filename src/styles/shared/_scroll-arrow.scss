@@ -1,0 +1,24 @@
+.scroll-arrow {
+  position: fixed;
+  bottom: 5rem;
+  right: 6rem;
+  border: solid black;
+  border-width: 0 6px 6px 0;
+  display: inline-block;
+  padding: 8px;
+  z-index: 1;
+  transition: all 1s;
+}
+
+.up {
+  transform: rotate(-135deg);
+  -webkit-transform: rotate(-135deg);
+}
+
+.hide {
+  opacity:0;
+}
+
+.show {
+  opacity:1;
+}
