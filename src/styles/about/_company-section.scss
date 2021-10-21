@@ -1,0 +1,54 @@
+/* SECTION_COMPANY */
+
+.company-title {
+  text-align: center;
+  margin: 3rem 1rem 0 1rem;
+  font-size: clamp(1.5rem, 5vw, 2rem);
+}
+
+.company-content {
+  width: 60%;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.content-row {
+  display: flex;
+  justify-content: center;
+}
+
+.content-title {
+  width: 25%;
+  color: #2669A0;
+  text-align: right;
+  margin-right: 2rem;
+}
+
+.content-info {
+  width: 25%;
+  font-weight: 400;
+}
+
+/* SECTION_COMPANY_END */
+
+/* SECTION_COMPANY_MOBILE */
+
+@media only screen and (max-width: 750px) {
+  .content-row {
+    flex-direction: column;
+  }
+
+  .content-title {
+    width: 100%;
+    text-align: left;
+  }
+  
+  .content-info {
+    width: 100%;
+    font-weight: 400;
+  }
+}
+
+/* SECTION_COMPANY_MOBILE_END */

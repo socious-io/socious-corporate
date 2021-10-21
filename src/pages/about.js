@@ -9,6 +9,7 @@ import AboutSection from "../components/AboutPage/AboutSection";
 import VisionSection from "../components/AboutPage/VisionSection";
 import ValuesSection from "../components/AboutPage/ValuesSection";
 import TeamSection from "../components/AboutPage/TeamSection";
+import CompanySection from "../components/AboutPage/CompanySection";
 
 const AboutPage = () => {
   return (
@@ -20,6 +21,7 @@ const AboutPage = () => {
       <VisionSection />
       <ValuesSection />
       <TeamSection />
+      <CompanySection />
     </Layout>
   )
 }
