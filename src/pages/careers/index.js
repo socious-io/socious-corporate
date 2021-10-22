@@ -1,13 +1,15 @@
 import React from "react";
 
-import Layout from "../components/Layout";
+import Layout from "../../components/Layout";
 
-const CareerPage = () => {
+import Banner from "../../components/CareersPage/Banner";
+
+const CareersPage = () => {
   return (
     <Layout pageTitle="Careers">
-
+      <Banner />
     </Layout>
   )
 }
 
-export default CareerPage
+export default CareersPage
