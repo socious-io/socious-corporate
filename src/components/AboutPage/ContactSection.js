@@ -13,11 +13,11 @@ const ContactSection = () => {
     )
 
   return (
-    <div class="contact-section" id="contact-us">
-      <div class="contact-title">
+    <div className="contact-section" id="contact-us">
+      <div className="contact-title">
         <h2>Get In Touch</h2>
       </div>
-      <div class="contact-container">
+      <div className="contact-container">
         {contactInfo}
       </div>
     </div>

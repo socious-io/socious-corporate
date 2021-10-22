@@ -6,7 +6,7 @@ import valueItems from "../../../data/AboutPage/valuesSectionData";
 const ValuesSection = () => {
   const values = valueItems.map(value => 
     <ValueItem 
-      id={value.id}
+      key={value.id}
       header={value.header}
       content={value.content}
     />
@@ -14,11 +14,11 @@ const ValuesSection = () => {
 
   return (
     <section>
-      <div class="values-banner" id="our-values">
+      <div className="values-banner" id="our-values">
         <h2>Our values</h2>
         <p>At Socious we want to make a difference in the world but we believe that do so needs to start from within</p>
       </div>
-      <div class="values-section">
+      <div className="values-section">
         {values}
       </div>
     </section>
