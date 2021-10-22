@@ -1,6 +1,7 @@
 import React from 'react'
 
 import { LinkSimple } from 'phosphor-react'
+import { Link } from 'gatsby'
 
 const JobsSection = () => {
   return (
@@ -29,7 +30,7 @@ const JobsSection = () => {
         </div>
         <div className="jobs-list__item">
           <div className="job-title">
-            <p><a href="https://socious.io/careers/senior_data_scientist"><LinkSimple size={18} /> Senior Data Scientist</a></p>
+            <p><Link to="/careers/senior-data-scientist"><LinkSimple size={18} /> Senior Data Scientist</Link></p>
           </div>
           <div className="job-department">
             <p>Data Science / Machine Learning</p>

@@ -1,14 +1,15 @@
 import * as React from 'react'
 import { Link } from 'gatsby'
 import { useLocation } from '@reach/router';
+import { StaticImage } from 'gatsby-plugin-image';
 
 const Navbar = () => {
   const location = useLocation();
 
-  const headerStyle = location.pathname === '/' ? 'header' : 'header header-fixed'
-  const logoImageStyle = location.pathname === '/' ? 'header__logo-image' : 'header__logo-image-transparent'
-  const navLinkStyle = location.pathname === '/' ? 'nav-item' : 'nav-item-transparent'
-  const languageSwitcherStyle = location.pathname === '/' ? 'header__language-switcher' : 'header__language-switcher-transparent'
+  const headerStyle = location.pathname === '/about' || location.pathname === '/careers' ? 'header header-fixed' : 'header'
+  const logoImageStyle = location.pathname === '/about' || location.pathname === '/careers' ? 'header__logo-image-transparent' : 'header__logo-image'
+  const navLinkStyle = location.pathname === '/about' || location.pathname === '/careers' ? 'nav-item-transparent' : 'nav-item'
+  const languageSwitcherStyle = location.pathname === '/about' || location.pathname === '/careers' ? 'header__language-switcher-transparent' : 'header__language-switcher'
 
   const activeLinkStyle = {
     paddingBottom: "0.5rem",
@@ -19,7 +20,8 @@ const Navbar = () => {
     <nav className={headerStyle}>
       <div className="header__logo-container">
         <Link to="/">
-          <img className={logoImageStyle} src="images/socious-logo.png" />
+          <StaticImage src="../../images/socious-logo.png" className={logoImageStyle} />
+          {/* <img className={logoImageStyle} src="images/socious-logo.png" /> */}
         </Link>
       </div>
       <div className="nav-links">
