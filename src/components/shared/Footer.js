@@ -1,5 +1,6 @@
 import * as React from 'react'
 import { Link } from 'gatsby'
+import { AnchorLink } from "gatsby-plugin-anchor-links";
 
 const Footer = () => {
   return (
@@ -11,12 +12,12 @@ const Footer = () => {
         <div className="footer-list">
           <ul>
             <li><Link to="/">Socious App</Link></li>
-            <li><a href="https://socious.io/about#our-mission">Our Mission</a></li>
-            <li><a href="https://socious.io/about#social-issues">Social Issues</a></li>
-            <li><a href="https://socious.io/about#what-we-do">What We Do</a></li>
-            <li><a href="https://socious.io/about#our-vision">Our Vision</a></li>
-            <li><a href="https://socious.io/about#our-values">Culture & Values</a></li>
-            <li><a href="https://socious.io/about#our-team">Our Team</a></li>
+            <li><AnchorLink to="/about#our-mission" title="Our Mission" /></li>
+            <li><AnchorLink to="/about#social-issues" title="Social Issues" /></li>
+            <li><AnchorLink to="/about#what-we-do" title="What We Do" /></li>
+            <li><AnchorLink to="/about#our-vision" title="Our Vision" /></li>
+            <li><AnchorLink to="/about#our-values" title="Culture & Values" /></li>
+            <li><AnchorLink to="/about#our-team" title="Our Team" /></li>
           </ul>
         </div>
       </div>
@@ -36,9 +37,8 @@ const Footer = () => {
         </div>
         <div className="footer-list">
           <ul>
-            <li><a href="https://socious.io/careers">Join Us</a></li>
-            <li><a href="https://socious.io/about#contact-us">Contact Us</a></li>
-            <li><a href="https://socious.io/about#company-profile">Company Profile</a></li>
+            <li><Link to="/careers">Join Us</Link></li>
+            <li><AnchorLink to="/about#contact-us" title="Contact Us" /></li>
           </ul>
         </div>
       </div>
