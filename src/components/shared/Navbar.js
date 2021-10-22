@@ -4,7 +4,6 @@ import { useLocation } from '@reach/router';
 
 const Navbar = () => {
   const location = useLocation();
-  console.log(location)
 
   const headerStyle = location.pathname === '/' ? 'header' : 'header header-fixed'
   const logoImageStyle = location.pathname === '/' ? 'header__logo-image' : 'header__logo-image-transparent'

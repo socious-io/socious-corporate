@@ -6,7 +6,7 @@ import teamMembers from "../../../data/AboutPage/teamSectionData";
 const TeamSection = () => {
   const team = teamMembers.map(member =>
       <TeamMember
-        id={member.id}
+        key={member.id}
         imageUrl={member.imageUrl}
         imageAlt={member.imageAlt}
         name={member.name}

@@ -63,10 +63,10 @@ const TeamMember = (props) => {
               <br /><br />
               {props.bio2}
               {props.bio3 ? 
-                <div>
-                  <br />
+                <span>
+                  <br /><br />
                   {props.bio3}
-                </div> 
+                </span> 
                 : null
               }
             </p>

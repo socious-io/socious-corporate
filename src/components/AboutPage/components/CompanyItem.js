@@ -2,11 +2,11 @@ import React from 'react'
 
 const CompanyItem = (props) => {
   return (
-    <div class="content-row">
-      <div class="content-title">
+    <div className="content-row">
+      <div className="content-title">
         <p>{props.title}</p>
       </div>
-      <div class="content-info">
+      <div className="content-info">
         <p>{props.info}</p>
       </div>
     </div>
