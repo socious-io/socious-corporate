@@ -37,6 +37,10 @@ I considered a number of different data types to house job listing data but deci
 
 When using a CMS or data types other than JSON (e.g. MDX) it's much easier to dynamically generate pages. Although I considered this as an option, I felt that the small number of concurrent job listings at any given time isn't likely to grow to the point where this is necessary. I instead focused on creating components that are easily reusable and can generate individual pages quickly based on a template. Should the number of listings grow to the point where individually posting them becomings extremely time-consuming then I'll likely migrate data to a more convenient format and render accordingly.
 
+### Drawbacks
+
+The main downside to this approach is that each time we want to create a new job listing page we have to go follow a process of creating the data then using that data to render components inside a new page component. This makes the barrier for entry regarding posting new jobs slightly higher as it requires at least a basic knowledge of React and Gatsby link components.
+
 ## Job Posting Data Template
 
 Any job listing data should be created in a new file inside the following folder:
