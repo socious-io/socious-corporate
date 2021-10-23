@@ -77,6 +77,13 @@ Replace jobTitleHere in declaration name with relevant job title.
 
     export default jobTitleHere
     
+In each rendered DescriptionRow component within the overall job component the header will be displayed on the left and the content on the right, for example:
+
+              Header                                      Content
+
+![image](https://user-images.githubusercontent.com/32938384/138551176-d3f9cd06-0577-42b0-b628-5b44dbd1a1ef.png)
+
+    
 ## Job Posting Component
 
 Replace the following:
