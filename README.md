@@ -1,54 +1,127 @@
 <p align="center">
-  <a href="https://www.gatsbyjs.com/?utm_source=starter&utm_medium=readme&utm_campaign=minimal-starter">
-    <img alt="Gatsby" src="https://www.gatsbyjs.com/Gatsby-Monogram.svg" width="60" />
+  <a href="https://socious.io/">
+    <img alt="Gatsby" src="https://media-exp1.licdn.com/dms/image/C560BAQH4gHoQxIBVvA/company-logo_200_200/0/1630919891632?e=1643241600&v=beta&t=dagbkNMv02QTDeVuvmRyjsDSsOvkqrdnoJyiSIaMWoU" />
   </a>
 </p>
 <h1 align="center">
-  Gatsby minimal starter
+  Socious
 </h1>
 
-## 🚀 Quick start
+> Socious.io is a social networking app for social change. Socious.io helps social entrepreneurs hire talented people who are passionate about their companies’ missions through its social passion search function and data-driven mechanism for mutually relevant connections. Unlike its competitors, Socious.io allows mission-fit and culture-fit analyses and its AI will recommend suitable candidates for their social startups.
 
-1.  **Create a Gatsby site.**
+### Site and download links
 
-    Use the Gatsby CLI to create a new site, specifying the minimal starter.
+Live website: https://socious.io/
 
-    ```shell
-    # create a new Gatsby site using the minimal starter
-    npm init gatsby
-    ```
+Gatsby build (in progress): https://sociousgatsbymaster.gatsbyjs.io/
 
-2.  **Start developing.**
+App Store: https://apps.apple.com/jp/app/socious/id1581904474
 
-    Navigate into your new site’s directory and start it up.
+Play Store: https://play.google.com/store/apps/details?id=com.dissocialnetwork
 
-    ```shell
-    cd my-gatsby-site/
-    npm run develop
-    ```
+## Getting started
 
-3.  **Open the code and start customizing!**
+After cloning the repository in your selected folder:
 
-    Your site is now running at http://localhost:8000!
+1.  cd socious-gatsby
+2.  npm install
+3.  gatsby develop
 
-    Edit `src/pages/index.js` to see your site update in real-time!
+The site will now be running at http://localhost:8000
 
-4.  **Learn more**
+## Considerations
 
-    - [Documentation](https://www.gatsbyjs.com/docs/?utm_source=starter&utm_medium=readme&utm_campaign=minimal-starter)
+I considered a number of different data types to house job listing data but decided to stick with standard JavaScript objects in order to inject the data into React components. I considered using markdown but each job page follows the same structure and has repeated content in the body section. This means that by defining one component (DescriptionRow) you're able to map over the body object nested within the parent and create individual components.
 
-    - [Tutorials](https://www.gatsbyjs.com/tutorial/?utm_source=starter&utm_medium=readme&utm_campaign=minimal-starter)
+### Data type
 
-    - [Guides](https://www.gatsbyjs.com/tutorial/?utm_source=starter&utm_medium=readme&utm_campaign=minimal-starter)
+When using a CMS or data types other than JSON (e.g. MDX) it's much easier to dynamically generate pages. Although I considered this as an option, I felt that the small number of concurrent job listings at any given time isn't likely to grow to the point where this is necessary. I instead focused on creating components that are easily reusable and can generate individual pages quickly based on a template. Should the number of listings grow to the point where individually posting them becomings extremely time-consuming then I'll likely migrate data to a more convenient format and render accordingly.
 
-    - [API Reference](https://www.gatsbyjs.com/docs/api-reference/?utm_source=starter&utm_medium=readme&utm_campaign=minimal-starter)
+## Job Posting Data Template
 
-    - [Plugin Library](https://www.gatsbyjs.com/plugins?utm_source=starter&utm_medium=readme&utm_campaign=minimal-starter)
+Replace jobTitleHere in declaration name with relevant job title.
 
-    - [Cheat Sheet](https://www.gatsbyjs.com/docs/cheat-sheet/?utm_source=starter&utm_medium=readme&utm_campaign=minimal-starter)
+    import React from "react";
 
-## 🚀 Quick start (Gatsby Cloud)
+    const jobTitleHere = {
+      title: '',
+      location: '',
+      department: '',
+      body: [
+        {
+          header: '',
+          content: ,
+        },
+        {
+          header: '',
+          content: ,
+        },
+        {
+          header: '',
+          content: ,
+        },
+        {
+          header: '',
+          content: ,
+        },
+        {
+          header: '',
+          content: ,
+        },
+        {
+          header: '',
+          content: ,
+        },
+      ]
+    }
 
-Deploy this starter with one click on [Gatsby Cloud](https://www.gatsbyjs.com/cloud/):
+    export default jobTitleHere
+    
+## Job Posting Component
 
-[<img src="https://www.gatsbyjs.com/deploynow.svg" alt="Deploy to Gatsby Cloud">](https://www.gatsbyjs.com/dashboard/deploynow?url=https://github.com/gatsbyjs/gatsby-starter-minimal)
+Replace the following:
+
+- jobTitleData
+Replace with the name of the data file you create using the above template. Replace both in the import and in the jobInformation function.
+
+- JobTitleComponent
+Replace with the name of the job listing you're creating (same as the file name). If the job title is Senior Data Scientist, the name should be SeniorDataScientist. Replace in both the function declaration as well as the export or combine using ``export default function JobTitleComponent() {body}``
+
+```
+import React from "react";
+
+import Layout from '../../components/Layout'
+import jobTitleData from "../../../data/CareersPage/jobTitleHere";
+
+import PositionHeader from "../../components/JobPage/PositionHeader";
+import DescriptionRow from "../../components/JobPage/DescriptionRow";
+
+const JobTitleComponent = () => {
+  const { title, location, department } = JobTitleHere
+
+  const jobInformation = jobTitleData.body.map(data =>
+      <DescriptionRow
+        key={data.id}
+        header={data.header}
+        content={data.content}
+      />
+    )
+
+  return (
+    <Layout pageTitle={title}>
+      <div className="job-container">
+        <PositionHeader
+          title={title}
+          location={location}
+          department={department}
+        />
+        <div className="position-description">
+          {jobInformation}
+        </div>
+      </div>
+    </Layout>
+  )
+}
+
+export default JobTitleComponent
+```
