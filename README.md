@@ -39,6 +39,12 @@ When using a CMS or data types other than JSON (e.g. MDX) it's much easier to dy
 
 ## Job Posting Data Template
 
+Any job listing data should be created in a new file inside the following folder:
+
+``/data/CareersPage``
+
+The name of the file should be the name of the job listing in lowerCamelCase (e.g. seniorDataScientist.js)
+
 Replace jobTitleHere in declaration name with relevant job title.
 
     import React from "react";
@@ -85,6 +91,12 @@ In each rendered DescriptionRow component within the overall job component the h
 
     
 ## Job Posting Component
+
+Once the data for the job listing has been set up create a new page component in the following folder:
+
+``/src/pages/careers``
+
+The name of the file should be the layout you want the link to be displayed in the url. For consistency this should be kebab-case (e.g. senior-data-scientist.js)
 
 Replace the following:
 
