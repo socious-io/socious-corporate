@@ -19,7 +19,7 @@ const JobsSection = () => {
         </div>
         <div className="jobs-list__item">
           <div className="job-title">
-            <p><a href="https://socious.io/careers/senior_developer"><LinkSimple size={18} /> Senior Developer</a></p>
+            <p><Link to="/careers/senior-developer"><LinkSimple size={18} /> Senior Developer</Link></p>
           </div>
           <div className="job-department">  
             <p>Engineering</p>
