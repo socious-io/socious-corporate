@@ -23,9 +23,9 @@ Play Store: https://play.google.com/store/apps/details?id=com.dissocialnetwork
 
 After cloning the repository in your selected folder:
 
-1.  cd socious-gatsby
-2.  npm install
-3.  gatsby develop
+    cd socious-gatsby
+    npm install
+    gatsby develop
 
 The site will now be running at http://localhost:8000
 
