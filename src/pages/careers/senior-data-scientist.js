@@ -6,7 +6,7 @@ import seniorDataScientist from "../../../data/CareersPage/seniorDataScientist";
 import PositionHeader from "../../components/JobPage/PositionHeader";
 import DescriptionRow from "../../components/JobPage/DescriptionRow";
 
-const SeniorDataSceintist = () => {
+const SeniorDataScientist = () => {
   const { title, location, department } = seniorDataScientist
 
   const jobInformation = seniorDataScientist.body.map(data =>
@@ -33,4 +33,4 @@ const SeniorDataSceintist = () => {
   )
 }
 
-export default SeniorDataSceintist
+export default SeniorDataScientist
