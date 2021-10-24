@@ -20,7 +20,7 @@ const Navbar = () => {
     <nav className={headerStyle}>
       <div className="header__logo-container">
         <Link to="/">
-          <StaticImage src="../../images/socious-logo.png" className={logoImageStyle} />
+          <StaticImage src="../../images/socious-logo.png" className={logoImageStyle} alt="Socious brand logo" />
           {/* <img className={logoImageStyle} src="images/socious-logo.png" /> */}
         </Link>
       </div>
