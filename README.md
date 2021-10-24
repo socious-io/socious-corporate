@@ -87,6 +87,8 @@ Replace jobTitleHere in declaration name with relevant job title.
 
     export default jobTitleHere
     
+Header content will always be rendered as an h3 element in the final component so a string value is recommended. The content property can be given HTML as a value. To avoid any errors it's best to place the content in a div.
+
 In each rendered DescriptionRow component within the overall job component the header will be displayed on the left and the content on the right, for example:
 
               Header                                      Content
@@ -105,9 +107,11 @@ The name of the file should be the layout you want the link to be displayed in t
 Replace the following:
 
 - jobTitleData
+
 Replace with the name of the data file you create using the above template. Replace both in the import and in the jobInformation function.
 
 - JobTitleComponent
+
 Replace with the name of the job listing you're creating (same as the file name). If the job title is Senior Data Scientist, the name should be SeniorDataScientist. Replace in both the function declaration as well as the export or combine using ``export default function JobTitleComponent() {body}``
 
 ```
