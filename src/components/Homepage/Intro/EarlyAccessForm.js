@@ -57,7 +57,7 @@ export default class EarlyAccessForm extends React.Component {
                   noValidate
                 >
                   <div id="mc_embed_signup_scroll">
-                    <h2>Get Early Access</h2>
+                    <h2>Subscribe to our newsletter</h2>
                     <div className="indicates-required">
                       <span className="asterisk">*</span> indicates required
                     </div>
@@ -111,7 +111,7 @@ export default class EarlyAccessForm extends React.Component {
                         id="mc-embedded-subscribe"
                         className="button"
                       >
-                        Get Early Access
+                        Subscribe
                       </button>
                     </div>
                   </div>
