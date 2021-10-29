@@ -1,9 +1,9 @@
 module.exports = {
   siteMetadata: {
     url: "https://socious.io",
-    title: "Socious",
+    title: "Socious | Community App for Social Change",
     titleTemplate: "%s · Socious",
-    description: "Socious is a Social Networking App for Social Changemakers: connecting social entrepreneurs with social impact talent.",
+    description: "Socious is a community app for social change with a mission to accelerate social change by bringing people together. Many people are interested in contributing to social impact projects, but few of them can do so. We leverage this untapped potential by helping them contribute to society in an easy, fun way through a purpose-driven community app, AI recommendations, and community currency.",
     image: "/socious-og.png",
     twitterImage: "/socious-og-twitter.png",
     favicon: {
