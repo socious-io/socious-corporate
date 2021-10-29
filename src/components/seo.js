@@ -88,6 +88,7 @@ const query = graphql`
           sm
           lg
           appleTouchIcon
+          safariPinnedTab
           manifest
         }
       }
