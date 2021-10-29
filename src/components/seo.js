@@ -30,7 +30,8 @@ const Seo = ({ title, description, image, article }) => {
     <Helmet title={seo.title} titleTemplate={titleTemplate}>
       <meta name="description" content={seo.description} />
       <meta name="image" content={seo.image} />
-      <meta name='og:type' content='website' />
+
+      <meta property='og:type' content='website' />
       {seo.url && <meta property="og:url" content={seo.url} />}
       {(article ? true : null) && <meta property="og:type" content="article" />}
       {seo.title && <meta property="og:title" content={seo.title} />}
@@ -38,6 +39,9 @@ const Seo = ({ title, description, image, article }) => {
         <meta property="og:description" content={seo.description} />
       )}
       {seo.image && <meta property="og:image" content={seo.image} />}
+      <meta property="og:image:width" content="1200" />
+      <meta property="og:image:height" content="630" />
+      
       <meta name="twitter:card" content="summary_large_image" />
       {seo.title && <meta name="twitter:title" content={seo.title} />}
       {seo.description && (
