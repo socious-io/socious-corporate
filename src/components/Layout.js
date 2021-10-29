@@ -1,5 +1,5 @@
 import * as React from 'react'
-import { Link, useStaticQuery, graphql } from 'gatsby'
+import { useStaticQuery, graphql } from 'gatsby'
 
 import Navbar from './shared/Navbar'
 import Footer from './shared/Footer'
@@ -17,6 +17,7 @@ const Layout = ({ pageTitle, children }) => {
 
   return (
     <div>
+
       <title>{pageTitle} | { data.site.siteMetadata.title }</title>
       <div id="scroll-top"></div>
       <Navbar />

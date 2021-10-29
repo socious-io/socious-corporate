@@ -1,6 +1,7 @@
 import React from "react";
 
 import Layout from '../../components/Layout'
+import Seo from "../../components/seo"
 import seniorDeveloper from "../../../data/CareersPage/seniorDeveloper";
 
 import PositionHeader from "../../components/JobPage/PositionHeader";
@@ -18,7 +19,11 @@ const SeniorDeveloper = () => {
     )
   
   return (
-    <Layout pageTitle={title}>
+    <Layout>
+      <Seo
+        title={title}
+        description='Join the Socious team and make a difference in the world'
+      />
       <div className="job-container">
         <PositionHeader
           title={title}
