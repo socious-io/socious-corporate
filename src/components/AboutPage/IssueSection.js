@@ -18,10 +18,14 @@ const IssueSection = () => {
         <div className="issue-banner__image"></div>
         <div className="issue-banner__content">
           <h2>Social Issues We Are Solving</h2>
-          <p>The resources needed to solve social issues are scattered, unmatched and limited</p>
+          <p>
+            The resources needed to solve social issues are scattered, unmatched and limited
+            <br/><br/>
+            While many are interested in contributing to social change, only few are able to do so
+          </p>
         </div>
       </div>
-      {issues}
+      {/* {issues} */}
     </div>
   )
 }
