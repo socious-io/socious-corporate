@@ -47,6 +47,15 @@ const Navbar = () => {
             Careers
           </Link>
         </div>
+        <div className={navLinkStyle}>
+          <Link 
+          to="/newsroom"
+          activeStyle={activeLinkStyle}
+          partiallyActive={true}
+          >
+            Newsroom
+          </Link>
+        </div>
         <a className={languageSwitcherStyle} href="./about-ja">日本語</a>
       </div>
     </nav>

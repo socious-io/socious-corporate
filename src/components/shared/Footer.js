@@ -27,7 +27,7 @@ const Footer = () => {
         </div>
         <div className="footer-list">
           <ul>
-            <li><a href="#">Newsroom</a></li>
+            <li><Link to="/newsroom">Newsroom</Link></li>
           </ul>
         </div>
       </div>
