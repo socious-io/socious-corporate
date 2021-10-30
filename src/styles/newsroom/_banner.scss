@@ -1,0 +1,26 @@
+.newsroom-banner {
+  height: 50vh;
+  background-image: linear-gradient(rgba(10,10,10,0.8) 0%, rgba(10,10,10,0.2) 100%), url("/images/newsroom-banner.png");
+  background-size: cover;
+  background-position: 50% 50%;
+  width: 100%;
+}
+
+.newsroom-banner__text {
+  height: 100%;
+  width: 100%;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  color: #FFF;
+}
+
+.newsroom-banner__text h1 {
+  font-family: 'Inter', sans-serif;
+  font-weight: 800;
+  font-size: clamp(2rem, 8vw, 6rem);
+  letter-spacing: 1.5px;
+  text-align: center;
+}
