@@ -6,10 +6,14 @@ import { StaticImage } from 'gatsby-plugin-image';
 const Navbar = () => {
   const location = useLocation();
 
-  const headerStyle = location.pathname === '/about' || location.pathname === '/careers' ? 'header header-fixed' : 'header'
-  const logoImageStyle = location.pathname === '/about' || location.pathname === '/careers' ? 'header__logo-image-transparent' : 'header__logo-image'
-  const navLinkStyle = location.pathname === '/about' || location.pathname === '/careers' ? 'nav-item-transparent' : 'nav-item'
-  const languageSwitcherStyle = location.pathname === '/about' || location.pathname === '/careers' ? 'header__language-switcher-transparent' : 'header__language-switcher'
+  const transparentNavPaths = location.pathname === '/about' || 
+                              location.pathname === '/careers' || 
+                              location.pathname === '/newsroom'
+
+  const headerStyle = transparentNavPaths ? 'header header-fixed' : 'header'
+  const logoImageStyle = transparentNavPaths ? 'header__logo-image-transparent' : 'header__logo-image'
+  const navLinkStyle = transparentNavPaths ? 'nav-item-transparent' : 'nav-item'
+  const languageSwitcherStyle = transparentNavPaths ? 'header__language-switcher-transparent' : 'header__language-switcher'
 
   const activeLinkStyle = {
     paddingBottom: "0.5rem",
