@@ -39,5 +39,11 @@ module.exports = {
        // url: "${process.env.WORDPRESS_URL}/graphql",
       },
     },
+    {
+      resolve: `gatsby-source-wordpress`,
+      options: {
+        url: `http://localhost/graphql`,
+      },
+    },
   ],
 };
