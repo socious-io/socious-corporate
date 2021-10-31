@@ -1,10 +1,10 @@
 import React from "react"
 import { graphql } from "gatsby"
 
-import Layout from "../components/Layout"
+import Layout from "../../components/Layout"
 
 export default function BlogPost({ data }) {
-  const post = data.wpcontent.posts.nodes[0]
+  const post = data.allWpPost.nodes[0]
   console.log(post)
   return (
     <Layout>
@@ -15,17 +15,13 @@ export default function BlogPost({ data }) {
     </Layout>
   )
 }
+
 export const query = graphql`
-  query ($id: Int) {
-    wpcontent {
-      posts(where: {id: $id}) {
-        nodes {
-          title(format: RENDERED)
-          excerpt
-          content
-          slug
-          id
-        }
+  query($slug: String!) {
+    allWpPost(filter: { slug: { eq: $slug } }) {
+      nodes {
+        title
+        content
       }
     }
   }

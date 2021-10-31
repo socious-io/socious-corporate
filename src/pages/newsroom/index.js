@@ -1,5 +1,5 @@
 import React from "react"
-import { graphql } from "gatsby"
+import { Link, graphql } from "gatsby"
 
 import Layout from "../../components/Layout"
 import Seo from "../../components/seo"
@@ -7,13 +7,13 @@ import Seo from "../../components/seo"
 import Banner from "../../components/NewsroomPage/Banner";
 
 const NewsroomPage = ({ data }) => {
-  console.log(data.wpcontent.posts.nodes)
-  const newsPosts = data.wpcontent.posts.nodes.map(node => {
+  const newsPosts = data.allWpPost.nodes.map(node => {
     return (
-      <div>
-        <p>{node.title}</p>
-        <small>{node.author.node.name}</small>
-        <div dangerouslySetInnerHTML={{ __html: node.excerpt }}/>
+      <div key={node.slug}>
+        <Link to={node.slug}>
+          <p>{node.title}</p>
+        </Link>
+        <div dangerouslySetInnerHTML={{ __html: node.excerpt }} />
       </div>
     )
   })
@@ -34,19 +34,11 @@ export default NewsroomPage
 
 export const pageQuery = graphql`
   query {
-    wpcontent {
-      posts(where: {orderby: {field: DATE, order: DESC}}) {
-        nodes {
-          id
-          uri
-          title
-          author {
-            node {
-              name
-            }
-          }
-          excerpt
-        }
+    allWpPost(sort: { fields: [date] }) {
+      nodes {
+        title
+        excerpt
+        slug
       }
     }
   }

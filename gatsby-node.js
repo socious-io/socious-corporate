@@ -4,30 +4,28 @@ exports.createPages = ({ graphql, actions }) => {
   const { createPage } = actions
   return graphql(`
     {
-      wpcontent {
-        posts(where: {orderby: {field: DATE, order: DESC}}) {
-          nodes {
-            title
-            excerpt
-            content
-            slug
-          }
+      allWpPost(sort: { fields: [date] }) {
+        nodes {
+          title
+          excerpt
+          content
+          slug
         }
       }
     }
-    `).then(result => {
-      //highlight-start
-      result.data.wpcontent.posts.nodes.forEach(node => {
-        createPage({
-          path: node.slug,
-          component: path.resolve(`./src/templates/blog-post.js`),
-          context: {
-            // This is the $slug variable
-            // passed to blog-post.js
-            slug: node.slug,
-          },
-        })
+  `).then(result => {
+    //highlight-start
+    result.data.allWpPost.nodes.forEach(node => {
+      createPage({
+        path: `newsroom/${node.slug}`,
+        component: path.resolve(`./src/pages/newsroom/blog-post.js`),
+        context: {
+          // This is the $slug variable
+          // passed to blog-post.js
+          slug: node.slug,
+        },
       })
-      //highlight-end
     })
-  }
+    //highlight-end
+  })
+}
