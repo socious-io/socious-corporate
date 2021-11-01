@@ -28,5 +28,22 @@ module.exports = {
           timeout: 3500,
       },
     },
+    {
+      resolve: "gatsby-source-graphql",
+      options: {
+        typeName: "WPGraphQL",
+        fieldName: "wpcontent",
+        // GraphQL endpoint, relative to your WordPress home URL.
+        url: "http://localhost/graphql",
+        // GraphQL endpoint using env variable
+       // url: "${process.env.WORDPRESS_URL}/graphql",
+      },
+    },
+    {
+      resolve: `gatsby-source-wordpress`,
+      options: {
+        url: `http://localhost/graphql`,
+      },
+    },
   ],
 };
