@@ -3,7 +3,7 @@ const path = require(`path`)
 exports.createPages = ({ graphql, actions }) => {
   const { createPage } = actions
   return graphql(`
-    {
+    query {
       allWpPost(sort: { fields: [date] }) {
         nodes {
           title
