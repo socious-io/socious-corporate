@@ -25,7 +25,7 @@ const NewsroomPage = ({ data }) => {
       />
     )
   });
-  
+
   return (
     <Layout>
       <Seo
