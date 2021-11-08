@@ -19,6 +19,7 @@
     "@emotion/styled": "^11.3.0",
     "@mui/icons-material": "^5.0.4",
     "@mui/material": "^5.0.6",
+    "dotenv": "^10.0.0",
     "gatsby": "^4.0.2",
     "gatsby-plugin-anchor-links": "^1.2.1",
     "gatsby-plugin-image": "^2.0.0",

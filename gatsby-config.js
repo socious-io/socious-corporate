@@ -1,3 +1,7 @@
+require("dotenv").config({
+  path: `.env.${process.env.NODE_ENV}`,
+})
+
 module.exports = {
   siteMetadata: {
     url: "https://socious.io",
@@ -31,8 +35,8 @@ module.exports = {
     {
       resolve: `gatsby-source-notion-api`,
       options: {
-        token: `secret_pCsJM86Sj3EnwVFz6q6bDmaetnVQOUyi8GkD1O21gQn`,
-        databaseId: `2a01b847fb664e9588ec9d569b66b49e`,
+        token: process.env.NOTION_SECRET_TOKEN,
+        databaseId: process.env.NOTION_DATABASE_ID,
         propsToFrontmatter: true,
         lowerTitleLevel: true,
       },
