@@ -6,9 +6,9 @@ import { StaticImage } from 'gatsby-plugin-image';
 const Navbar = () => {
   const location = useLocation();
 
-  const transparentNavPaths = location.pathname === '/about' || 
-                              location.pathname === '/careers' || 
-                              location.pathname === '/newsroom'
+  const transparentNavPaths = location.pathname === '/about/' || 
+                              location.pathname === '/careers/' || 
+                              location.pathname === '/newsroom/'
 
   const headerStyle = transparentNavPaths ? 'header header-fixed' : 'header'
   const logoImageStyle = transparentNavPaths ? 'header__logo-image-transparent' : 'header__logo-image'
@@ -31,7 +31,7 @@ const Navbar = () => {
       <div className="nav-links">
         <div className={navLinkStyle}>
           <Link 
-          to="/about"
+          to="/about/"
           activeStyle={activeLinkStyle}
           partiallyActive={true}
           >
@@ -40,7 +40,7 @@ const Navbar = () => {
         </div>
         <div className={navLinkStyle}>
           <Link 
-          to="/careers"
+          to="/careers/"
           activeStyle={activeLinkStyle}
           partiallyActive={true}
           >
@@ -49,7 +49,7 @@ const Navbar = () => {
         </div>
         <div className={navLinkStyle}>
           <Link 
-          to="/newsroom"
+          to="/newsroom/"
           activeStyle={activeLinkStyle}
           partiallyActive={true}
           >
