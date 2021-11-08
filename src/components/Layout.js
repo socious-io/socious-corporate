@@ -1,5 +1,6 @@
 import * as React from 'react'
 import { useStaticQuery, graphql } from 'gatsby'
+import "../styles/main.scss"
 
 import Navbar from './shared/Navbar'
 import Footer from './shared/Footer'
