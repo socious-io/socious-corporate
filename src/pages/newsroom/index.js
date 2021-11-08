@@ -7,18 +7,21 @@ import Banner from "../../components/NewsroomPage/Banner"
 import PostItem from "./PostItem"
 
 const NewsroomPage = ({ data }) => {
-  const posts = data.allNotion.edges.map(post => {
+  const posts = data.allMarkdownRemark.edges.map(post => {
     const { id,
-            title,
-            createdAt,
-            properties: { Author, Date }
+            frontmatter: { title, slug, Author, Date, Hero_Image }
     } = post.node
+
+    console.log(typeof(Hero_Image[0].file.url))
 
     return (
       <PostItem
+        key={id}
+        slug={slug}
         title={title}
-        date={Date.value.start}
-        author={Author.value[0].name}
+        date={Date.start}
+        author={Author[0].name}
+        imageSrc={Hero_Image[0].file.url}
       />
     )
   });
@@ -38,31 +41,26 @@ const NewsroomPage = ({ data }) => {
 export default NewsroomPage
 
 export const query = graphql`
-  query {
-    allNotion(sort: {fields: createdAt, order: DESC}) {
+  query IndexPage {
+    allMarkdownRemark {
       edges {
         node {
-          id
-          internal {
-            content
-            mediaType
-          }
-          title
-          archived
-          updatedAt(formatString: "YYYY-MM-DD")
-          properties {
+          frontmatter {
+            title
+            slug
             Author {
-              value {
-                name
-                avatar_url
-              }
+              name
             }
             Date {
-              value {
-                start(formatString: "YYYY-MM-DD")
+              start
+            }
+            Hero_Image {
+              file {
+                url
               }
             }
           }
+          id
         }
       }
     }
