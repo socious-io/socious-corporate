@@ -9,10 +9,6 @@
 
 > Socious.io is a social networking app for social change. Socious.io helps social entrepreneurs hire talented people who are passionate about their companies’ missions through its social passion search function and data-driven mechanism for mutually relevant connections. Unlike its competitors, Socious.io allows mission-fit and culture-fit analyses and its AI will recommend suitable candidates for their social startups.
 
-### Important
-
-As of the current build (01/11/2021) the site will only run in a development environment when connected to a locally hosted Wordpress site. This will be addressed once the localhost website has been migrated to an online host.
-
 ### Site and download links
 
 Live website: https://socious.io/
@@ -32,6 +28,10 @@ After cloning the repository in your selected folder:
     gatsby develop
 
 The site will now be running at http://localhost:8000
+
+## Notion Integration
+
+Using the [gatsby-source-notion-api](https://www.gatsbyjs.com/plugins/gatsby-source-notion-api/) plugin, you can connect to a Notion database and dynamically create pages based on GraphQL queries. For more information check out the documentation including how to query information and what environment variables you need.
 
 ## Considerations
 
