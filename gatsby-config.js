@@ -29,17 +29,6 @@ module.exports = {
       },
     },
     {
-      resolve: "gatsby-source-graphql",
-      options: {
-        typeName: "WPGraphQL",
-        fieldName: "wpcontent",
-        // GraphQL endpoint, relative to your WordPress home URL.
-        url: "http://localhost/graphql",
-        // GraphQL endpoint using env variable
-       // url: "${process.env.WORDPRESS_URL}/graphql",
-      },
-    },
-    {
       resolve: `gatsby-source-notion-api`,
       options: {
         token: `secret_pCsJM86Sj3EnwVFz6q6bDmaetnVQOUyi8GkD1O21gQn`,
