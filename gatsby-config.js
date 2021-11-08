@@ -39,5 +39,14 @@ module.exports = {
        // url: "${process.env.WORDPRESS_URL}/graphql",
       },
     },
+    {
+      resolve: `gatsby-source-notion-api`,
+      options: {
+        token: `secret_pCsJM86Sj3EnwVFz6q6bDmaetnVQOUyi8GkD1O21gQn`,
+        databaseId: `2a01b847fb664e9588ec9d569b66b49e`,
+        propsToFrontmatter: true,
+        lowerTitleLevel: true,
+      },
+    },
   ],
 };
