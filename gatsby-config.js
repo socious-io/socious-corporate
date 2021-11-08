@@ -1,3 +1,7 @@
+require("dotenv").config({
+  path: `.env.${process.env.NODE_ENV}`,
+})
+
 module.exports = {
   siteMetadata: {
     url: "https://socious.io",
@@ -29,21 +33,26 @@ module.exports = {
       },
     },
     {
-      resolve: "gatsby-source-graphql",
+      resolve: `gatsby-source-notion-api`,
       options: {
-        typeName: "WPGraphQL",
-        fieldName: "wpcontent",
-        // GraphQL endpoint, relative to your WordPress home URL.
-        url: "http://localhost/graphql",
-        // GraphQL endpoint using env variable
-       // url: "${process.env.WORDPRESS_URL}/graphql",
+        token: process.env.NOTION_SECRET_TOKEN,
+        databaseId: process.env.NOTION_DATABASE_ID,
+        propsToFrontmatter: true,
+        lowerTitleLevel: true,
       },
     },
     {
-      resolve: `gatsby-source-wordpress`,
-      options: {
-        url: `http://localhost/graphql`,
-      },
-    },
+			resolve: "gatsby-transformer-remark",
+			options: {
+				plugins: [
+					{
+						resolve: `gatsby-remark-katex`,
+						options: {
+							strict: false,
+						},
+					},
+				],
+			},
+		},
   ],
 };

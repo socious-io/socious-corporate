@@ -1,31 +1,37 @@
-const path = require(`path`)
+const path = require("path");
 
-exports.createPages = ({ graphql, actions }) => {
-  const { createPage } = actions
-  return graphql(`
-    query {
-      allWpPost(sort: { fields: [date] }) {
-        nodes {
-          title
-          excerpt
-          content
-          slug
+exports.createPages = async ({ graphql, actions, reporter }) => {
+  const { createPage } = actions;
+  const blogPostTemplate = path.resolve("src/templates/BlogPost.js");
+
+  const result = await graphql(`
+    {
+      postsRemark: allMarkdownRemark(sort: {order: DESC, fields: frontmatter___Date___start}) {
+        edges {
+          node {
+            frontmatter {
+              slug
+            }
+          }
         }
       }
     }
-  `).then(result => {
-    //highlight-start
-    result.data.allWpPost.nodes.forEach(node => {
-      createPage({
-        path: `newsroom/${node.slug}`,
-        component: path.resolve(`./src/pages/newsroom/blog-post.js`),
-        context: {
-          // This is the $slug variable
-          // passed to blog-post.js
-          slug: node.slug,
-        },
-      })
-    })
-    //highlight-end
-  })
-}
+  `);
+
+  if (result.errors) {
+    reporter.panicOnBuild("Error while running GraphQL query.");
+    return;
+  }
+
+  const posts = result.data.postsRemark.edges;
+
+  posts.forEach(({ node }) => {
+    createPage({
+      path: node.frontmatter.slug,
+      component: blogPostTemplate,
+      context: {
+        slug: node.frontmatter.slug,
+      },
+    });
+  });
+};

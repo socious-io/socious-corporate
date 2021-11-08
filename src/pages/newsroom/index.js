@@ -1,22 +1,30 @@
 import React from "react"
-import { Link, graphql } from "gatsby"
+import { graphql } from "gatsby"
 
 import Layout from "../../components/Layout"
 import Seo from "../../components/seo"
-
-import Banner from "../../components/NewsroomPage/Banner";
+import Banner from "../../components/NewsroomPage/Banner"
+import PostItem from "./PostItem"
 
 const NewsroomPage = ({ data }) => {
-  const newsPosts = data.allWpPost.nodes.map(node => {
+  const posts = data.allMarkdownRemark.edges.map(post => {
+    const { id,
+            frontmatter: { title, slug, Author, Date, Hero_Image }
+    } = post.node
+
+    console.log(typeof(Hero_Image[0].file.url))
+
     return (
-      <div key={node.slug}>
-        <Link to={node.slug}>
-          <p>{node.title}</p>
-        </Link>
-        <div dangerouslySetInnerHTML={{ __html: node.excerpt }} />
-      </div>
+      <PostItem
+        key={id}
+        slug={slug}
+        title={title}
+        date={Date.start}
+        author={Author[0].name}
+        imageSrc={Hero_Image[0].file.url}
+      />
     )
-  })
+  });
 
   return (
     <Layout>
@@ -25,20 +33,35 @@ const NewsroomPage = ({ data }) => {
         description='Keep up to date with the latest news at Socious'
       />
       <Banner />
-      {newsPosts}
+      {posts}
     </Layout>
   )
 }
 
 export default NewsroomPage
 
-export const pageQuery = graphql`
-  query {
-    allWpPost(sort: { fields: date, order: DESC }) {
-      nodes {
-        title
-        excerpt
-        slug
+export const query = graphql`
+  query IndexPage {
+    allMarkdownRemark {
+      edges {
+        node {
+          frontmatter {
+            title
+            slug
+            Author {
+              name
+            }
+            Date {
+              start
+            }
+            Hero_Image {
+              file {
+                url
+              }
+            }
+          }
+          id
+        }
       }
     }
   }
