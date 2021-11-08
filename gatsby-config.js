@@ -37,5 +37,18 @@ module.exports = {
         lowerTitleLevel: true,
       },
     },
+    {
+			resolve: "gatsby-transformer-remark",
+			options: {
+				plugins: [
+					{
+						resolve: `gatsby-remark-katex`,
+						options: {
+							strict: false,
+						},
+					},
+				],
+			},
+		},
   ],
 };
