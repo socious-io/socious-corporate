@@ -12,8 +12,6 @@ const NewsroomPage = ({ data }) => {
             frontmatter: { title, slug, Author, Date, Hero_Image }
     } = post.node
 
-    console.log(typeof(Hero_Image[0].file.url))
-
     return (
       <PostItem
         key={id}
@@ -33,7 +31,9 @@ const NewsroomPage = ({ data }) => {
         description='Keep up to date with the latest news at Socious'
       />
       <Banner />
-      {posts}
+      <div className="container__articles">
+        {posts}
+      </div>
     </Layout>
   )
 }
