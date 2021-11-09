@@ -8,12 +8,12 @@ const PostItem = (props) => {
   console.log(imageSrc)
 
   return (
-    <div style={{ margin: 10 }}>        
+    <div className="article-item">        
         <Link to={url}>
-          <img src={imageSrc} style = {{ maxWidth: "50rem" }} alt="article hero banner" />
+          <img src={imageSrc} style = {{ maxWidth: "100%" }} alt="article hero banner" />
           <h1 style={{ color: "black" }}>{title}</h1>
-          <div style={{color: "grey", margin: '-30px 0px 0px 0px'}}>{date}</div>
-          <p style={{ color: "black", margin: '15px 0px 30px 0px' }}>{author}</p>
+          <small style={{color: "grey"}}>{date}</small>
+          <p style={{ color: "black"}}>{author}</p>
         </Link>
     </div>
   )

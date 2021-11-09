@@ -32,6 +32,7 @@ const NewsroomPage = ({ data }) => {
       />
       <Banner />
       <div className="container__articles">
+        <h2>Latest News</h2>
         {posts}
       </div>
     </Layout>
@@ -52,7 +53,7 @@ export const query = graphql`
               name
             }
             Date {
-              start
+              start(formatString: "YYYY-MM-DD")
             }
             Hero_Image {
               file {
