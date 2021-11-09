@@ -4,12 +4,14 @@ import { graphql } from "gatsby"
 import Layout from "../../components/Layout"
 import Seo from "../../components/seo"
 import Banner from "../../components/NewsroomPage/Banner"
+
+import NewsHeadline from "./NewsHeadline"
 import PostItem from "./PostItem"
 
 const NewsroomPage = ({ data }) => {
   const posts = data.allMarkdownRemark.edges.map(post => {
     const { id,
-            frontmatter: { title, slug, Author, Date, Hero_Image }
+            frontmatter: { title, slug, Date, Hero_Image }
     } = post.node
 
     return (
@@ -18,7 +20,6 @@ const NewsroomPage = ({ data }) => {
         slug={slug}
         title={title}
         date={Date.start}
-        author={Author[0].name}
         imageSrc={Hero_Image[0].file.url}
       />
     )
@@ -33,6 +34,7 @@ const NewsroomPage = ({ data }) => {
       <Banner />
       <div className="container__articles">
         <h2>Latest News</h2>
+        <NewsHeadline />
         {posts}
       </div>
     </Layout>
@@ -43,15 +45,12 @@ export default NewsroomPage
 
 export const query = graphql`
   query IndexPage {
-    allMarkdownRemark {
+    allMarkdownRemark(sort: {fields: frontmatter___Date___start, order: DESC}) {
       edges {
         node {
           frontmatter {
             title
             slug
-            Author {
-              name
-            }
             Date {
               start(formatString: "YYYY-MM-DD")
             }
