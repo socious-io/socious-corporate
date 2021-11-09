@@ -4,15 +4,15 @@ import { graphql } from "gatsby"
 import Layout from "../../components/Layout"
 import Seo from "../../components/seo"
 import Banner from "../../components/NewsroomPage/Banner"
+
+import NewsHeadline from "./NewsHeadline"
 import PostItem from "./PostItem"
 
 const NewsroomPage = ({ data }) => {
   const posts = data.allMarkdownRemark.edges.map(post => {
     const { id,
-            frontmatter: { title, slug, Author, Date, Hero_Image }
+            frontmatter: { title, slug, Date, Hero_Image }
     } = post.node
-
-    console.log(typeof(Hero_Image[0].file.url))
 
     return (
       <PostItem
@@ -20,7 +20,6 @@ const NewsroomPage = ({ data }) => {
         slug={slug}
         title={title}
         date={Date.start}
-        author={Author[0].name}
         imageSrc={Hero_Image[0].file.url}
       />
     )
@@ -33,7 +32,11 @@ const NewsroomPage = ({ data }) => {
         description='Keep up to date with the latest news at Socious'
       />
       <Banner />
-      {posts}
+      <div className="container__articles">
+        <h2>Latest News</h2>
+        <NewsHeadline />
+        {posts}
+      </div>
     </Layout>
   )
 }
@@ -42,7 +45,10 @@ export default NewsroomPage
 
 export const query = graphql`
   query IndexPage {
-    allMarkdownRemark {
+    allMarkdownRemark(
+      sort: {fields: frontmatter___Date___start, order: DESC}
+      skip: 1
+    ) {
       edges {
         node {
           frontmatter {
@@ -52,7 +58,7 @@ export const query = graphql`
               name
             }
             Date {
-              start
+              start(formatString: "YYYY-MM-DD")
             }
             Hero_Image {
               file {
@@ -60,7 +66,6 @@ export const query = graphql`
               }
             }
           }
-          id
         }
       }
     }
