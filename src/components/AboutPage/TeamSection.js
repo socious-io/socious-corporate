@@ -7,6 +7,7 @@ const TeamSection = () => {
   const team = teamMembers.map(member =>
       <TeamMember
         key={member.id}
+        id={member.id}
         imageUrl={member.imageUrl}
         imageAlt={member.imageAlt}
         name={member.name}
