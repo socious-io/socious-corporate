@@ -45,12 +45,18 @@ export default NewsroomPage
 
 export const query = graphql`
   query IndexPage {
-    allMarkdownRemark(sort: {fields: frontmatter___Date___start, order: DESC}) {
+    allMarkdownRemark(
+      sort: {fields: frontmatter___Date___start, order: DESC}
+      skip: 1
+    ) {
       edges {
         node {
           frontmatter {
             title
             slug
+            Author {
+              name
+            }
             Date {
               start(formatString: "YYYY-MM-DD")
             }
@@ -60,7 +66,6 @@ export const query = graphql`
               }
             }
           }
-          id
         }
       }
     }
