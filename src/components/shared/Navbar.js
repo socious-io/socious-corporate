@@ -6,7 +6,7 @@ import { StaticImage } from 'gatsby-plugin-image';
 const Navbar = () => {
   const location = useLocation();
 
-  const transparentNavPaths = location.pathname === '/about/' || 
+  const transparentNavPaths = location.pathname.includes('/about') || 
                               location.pathname === '/careers/' || 
                               location.pathname === '/newsroom/'
 
@@ -31,7 +31,7 @@ const Navbar = () => {
       <div className="nav-links">
         <div className={navLinkStyle}>
           <Link 
-          to="/about/"
+          to="/about"
           activeStyle={activeLinkStyle}
           partiallyActive={true}
           >
