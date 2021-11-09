@@ -32,8 +32,7 @@ const NewsHeadline = () => {
       }
     `
   )
-
-  console.log(data)
+  
   const {frontmatter: { title,
                         slug,
                         Date,
