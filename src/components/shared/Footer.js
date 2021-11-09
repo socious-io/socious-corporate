@@ -27,7 +27,7 @@ const Footer = () => {
         </div>
         <div className="footer-list">
           <ul>
-            <li><Link to="/newsroom">Newsroom</Link></li>
+            <li><Link to="/newsroom/">Newsroom</Link></li>
           </ul>
         </div>
       </div>
@@ -37,7 +37,7 @@ const Footer = () => {
         </div>
         <div className="footer-list">
           <ul>
-            <li><Link to="/careers">Join Us</Link></li>
+            <li><Link to="/careers/">Join Us</Link></li>
             <li><AnchorLink to="/about#contact-us" title="Contact Us" /></li>
           </ul>
         </div>
