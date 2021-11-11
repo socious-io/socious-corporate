@@ -7,11 +7,17 @@ const PostItem = (props) => {
 
   return (
     <Link to={url}>
-      <div className="news-headline">        
-        <img src={imageSrc} style = {{ maxWidth: "100%" }} alt="article hero banner" />
-        <div className="headline-content">
-          <h3>{title}</h3>
-          <small>{date}</small>
+      <div className="news-item">
+        <div class="news-item__image">
+          <img src={imageSrc} style = {{ maxWidth: "100%" }} alt="article hero banner" />
+        </div>
+        <div className="news-item__content">
+          <div class="news-content-title">
+            <h3>{title}</h3>
+          </div>
+          <div class="news-content-date">
+            <small>{date}</small>
+          </div>
         </div>
       </div>
     </Link>

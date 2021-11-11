@@ -35,7 +35,9 @@ const NewsroomPage = ({ data }) => {
       <div className="container__articles">
         <h2>Latest News</h2>
         <NewsHeadline />
-        {posts}
+        <div class="news-container">
+          {posts}
+        </div>
       </div>
     </Layout>
   )
