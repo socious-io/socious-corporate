@@ -6,11 +6,9 @@ const PostItem = (props) => {
   const url = "/" + slug
 
   return (
-    <Link to={url}>
-      <div className="news-item">
-        <div class="news-item__image">
-          <img src={imageSrc} style = {{ maxWidth: "100%" }} alt="article hero banner" />
-        </div>
+    <div className="news-item">
+      <Link to={url} style={{ width: "max-content" }}>
+        <img src={imageSrc} style = {{ maxWidth: "100%" }} alt="article hero banner" />
         <div className="news-item__content">
           <div class="news-content-title">
             <h3>{title}</h3>
@@ -19,8 +17,8 @@ const PostItem = (props) => {
             <small>{date}</small>
           </div>
         </div>
-      </div>
-    </Link>
+      </Link>
+    </div>
   )
 }
 
