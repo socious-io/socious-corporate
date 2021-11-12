@@ -6,15 +6,19 @@ const PostItem = (props) => {
   const url = "/" + slug
 
   return (
-    <Link to={url}>
-      <div className="news-headline">        
+    <div className="news-item">
+      <Link to={url} style={{ width: "max-content" }}>
         <img src={imageSrc} style = {{ maxWidth: "100%" }} alt="article hero banner" />
-        <div className="headline-content">
-          <h3>{title}</h3>
-          <small>{date}</small>
+        <div className="news-item__content">
+          <div class="news-content-title">
+            <h3>{title}</h3>
+          </div>
+          <div class="news-content-date">
+            <small>{date}</small>
+          </div>
         </div>
-      </div>
-    </Link>
+      </Link>
+    </div>
   )
 }
 
