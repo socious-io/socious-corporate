@@ -22,7 +22,9 @@ const BlogPost = ({ data }) => {
             <p>{frontmatter.Author[0].name}</p>
           </div>
           <img src={frontmatter.Hero_Image[0].external.url} className="image__article" alt="article hero banner" />
-          <div dangerouslySetInnerHTML={{ __html: html }} />
+          <div className="article__body">
+            <div dangerouslySetInnerHTML={{ __html: html }} />
+          </div>
         </div>
       </div>
     </Layout>
