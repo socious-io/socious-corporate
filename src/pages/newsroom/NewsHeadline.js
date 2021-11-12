@@ -21,7 +21,7 @@ const NewsHeadline = () => {
                   start(formatString: "YYYY-MM-DD")
                 }
                 Hero_Image {
-                  file {
+                  external {
                     url
                   }
                 }
@@ -43,7 +43,7 @@ const NewsHeadline = () => {
   return (
     <Link to={url}>
       <div className="news-headline">        
-        <img src={Hero_Image[0].file.url} style = {{ maxWidth: "100%" }} alt="article hero banner" />
+        <img src={Hero_Image[0].external.url} style = {{ maxWidth: "100%" }} alt="article hero banner" />
         <div className="headline-content">
           <h3>{title}</h3>
           <small>{Date.start}</small>
