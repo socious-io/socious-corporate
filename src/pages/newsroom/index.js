@@ -20,7 +20,7 @@ const NewsroomPage = ({ data }) => {
         slug={slug}
         title={title}
         date={Date.start}
-        imageSrc={Hero_Image[0].file.url}
+        imageSrc={Hero_Image[0].external.url}
       />
     )
   });
@@ -32,11 +32,13 @@ const NewsroomPage = ({ data }) => {
         description='Keep up to date with the latest news at Socious'
       />
       <Banner />
-      <div className="container__articles">
-        <h2>Latest News</h2>
-        <NewsHeadline />
-        <div class="news-container">
-          {posts}
+      <div className="main">
+        <div className="container__articles">
+          <h2>Latest News</h2>
+          <NewsHeadline />
+          <div class="news-container">
+            {posts}
+          </div>
         </div>
       </div>
     </Layout>
@@ -63,7 +65,7 @@ export const query = graphql`
               start(formatString: "YYYY-MM-DD")
             }
             Hero_Image {
-              file {
+              external {
                 url
               }
             }
