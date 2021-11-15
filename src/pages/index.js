@@ -8,13 +8,14 @@ import Intro from "../components/Homepage/Intro/Intro"
 import AppLinks from "../components/Homepage/AppLinks"
 import JobsSection from "../components/Homepage/JobsSection/JobsSection"
 
-const IndexPage = () => {
+const IndexPage = (props) => {
+  console.log(props.pageContext)
   return (
     <Layout>
-      <Seo />
-      <Intro />
-      <AppLinks />
-      <JobsSection />
+      <Seo {...props} />
+      <Intro {...props} />
+      <AppLinks {...props} />
+      <JobsSection {...props} />
     </Layout>
   )
 }
