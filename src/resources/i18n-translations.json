@@ -1,0 +1,12 @@
+{
+  "en" : {
+    "home-header" : "Join the world’s largest social impact community",
+    "app-links-header": "Experience the social impact ecosystem",
+    "app-links-subheader": "Connect with like-minded people, find the right social enterprise, and contribute to solving social issues"
+  },
+  "ja" : {
+    "home-header" : "世界最大のソーシャル・インパクト・コミュニティに参加する",
+    "app-links-header": "ソーシャル・インパクト・エコシステムを体験する",
+    "app-links-subheader": "同じ志を持つ仲間と繋がり、自分にぴったりの社会的企業に出会い、気軽に社会課題解決に貢献する "
+  }
+}
