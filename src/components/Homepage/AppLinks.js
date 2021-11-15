@@ -1,34 +1,44 @@
 import React from 'react'
 
+import { FormattedMessage } from "react-intl";
+import LinkTranslated from "../shared/LinkTranslated";
+import SimpleLocalize from "../shared/SimpleLocalize";
+
 import AppleIcon from '@mui/icons-material/Apple';
 import AndroidIcon from '@mui/icons-material/Android';
 
-const AppLinks = () => {
+const AppLinks = (props) => {
   return (
-    <div className="section-app-links">
-      <div className="section-app-links__wrapper">
-        <div className="section-app-links__container">
-          <div className="section-app-links__header">
-            Experience the social impact ecosystem
+    <SimpleLocalize {...props}>
+      <div className="section-app-links">
+        <div className="section-app-links__wrapper">
+          <div className="section-app-links__container">
+            <div className="section-app-links__header">
+              <FormattedMessage
+                id="app-links-header"
+              />
+            </div>
+            <div className="section-app-links__subheader">
+              <FormattedMessage
+                id="app-links-subheader"
+              />
+            </div>
           </div>
-          <div className="section-app-links__subheader">
-            Connect with like-minded people, find the right social enterprise, and contribute to solving social issues
-          </div>
-        </div>
-        <div className="section-app-links__app-links-block">
-          <div className="section-app-links__app-links">
-            <button className="section-app-links__app-links-button">
-              <AppleIcon sx={{ fontSize: 48 }} />
-            </button>
-          </div>
-          <div className="section-app-links__app-links">
-            <button className="section-app-links__app-links-button">
-              <AndroidIcon sx={{ fontSize: 48 }} />
-            </button>
+          <div className="section-app-links__app-links-block">
+            <div className="section-app-links__app-links">
+              <button className="section-app-links__app-links-button">
+                <AppleIcon sx={{ fontSize: 48 }} />
+              </button>
+            </div>
+            <div className="section-app-links__app-links">
+              <button className="section-app-links__app-links-button">
+                <AndroidIcon sx={{ fontSize: 48 }} />
+              </button>
+            </div>
           </div>
         </div>
       </div>
-    </div>
+    </SimpleLocalize>
   )
 }
 
