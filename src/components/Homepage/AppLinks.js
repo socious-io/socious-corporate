@@ -1,8 +1,7 @@
 import React from 'react'
 
-import { FormattedMessage } from "react-intl";
-import LinkTranslated from "../shared/LinkTranslated";
 import SimpleLocalize from "../shared/SimpleLocalize";
+import { FormattedMessage } from "react-intl";
 
 import AppleIcon from '@mui/icons-material/Apple';
 import AndroidIcon from '@mui/icons-material/Android';
