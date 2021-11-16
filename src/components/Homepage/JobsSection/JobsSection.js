@@ -5,10 +5,17 @@ import { FormattedMessage } from "react-intl";
 
 import Job from "./Job";
 import jobsSectionLeft from "../../../../data/Homepage/jobSectionLeft"
+import jobsSectionLeftJa from "../../../../data/Homepage/jobSectionLeftJa"
 import jobsSectionRight from "../../../../data/Homepage/jobSectionRight"
+import jobsSectionRightJa from "../../../../data/Homepage/jobSectionRightJa"
 
 const JobsSection = (props) => {
-  const jobItemsLeft = jobsSectionLeft.map(job => 
+  const { language } = props.pageContext
+
+  const leftLanguageSelector = language === 'ja' ? jobsSectionLeftJa : jobsSectionLeft
+  const rightLanguageSelector = language === 'ja' ? jobsSectionRightJa : jobsSectionRight
+
+  const jobItemsLeft = leftLanguageSelector.map(job => 
       <Job
         icon={job.icon}
         key={job.id}
@@ -17,7 +24,7 @@ const JobsSection = (props) => {
       />
   )
 
-  const jobItemsRight = jobsSectionRight.map(job => 
+  const jobItemsRight = rightLanguageSelector.map(job => 
       <Job
         icon={job.icon}
         key={job.id}
