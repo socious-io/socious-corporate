@@ -9,24 +9,26 @@ const jobItem = [
     id: 1,
     icon: <WhatshotIcon />,
     title: "Meet like-minded people",
-    subtitle: `
-      Socious AI will match you with the people you want to meet and offer community support and meaningful connections that accelerate social change
+    subtitle: `Socious AI will match you with the people you want to meet and offer 
+    community support and meaningful connections that accelerate social change
     `
   },
   {
     id: 2,
     icon: <DeveloperModeIcon />,
     title: "Easily find the most suited social impact projects",
-    subtitle: `
-      From fast-growing social startups to international organizations, Socious AI will connect you with the right organization. You can contribute to the achievement of the SDGs in a variety of ways, including freelance, part-time, and advisory.
+    subtitle: `From fast-growing social startups to international organizations,
+    Socious AI will connect you with the right organization.
+    You can contribute to the achievement of the SDGs in a variety of ways,
+    including freelance, part-time, and advisory.
     `
   },
   {
     id: 3,
     icon: <FilterTiltShiftIcon />,
     title: "Visualizes your social impact",
-    subtitle: `
-      Socious' unique algorithm quantifies and visualizes your contribution to solving social issues
+    subtitle: `Socious' unique algorithm quantifies and visualizes
+    your contribution to solving social issues
     `
   }
 ]
