@@ -9,7 +9,10 @@
     "form-email" : "Email Address",
     "form-button" : "Subscribe",
     "app-links-header": "Experience the social impact ecosystem",
-    "app-links-subheader": "Connect with like-minded people, find the right social enterprise, and contribute to solving social issues"
+    "app-links-subheader": "Connect with like-minded people, find the right social enterprise, and contribute to solving social issues",
+    "benifits-caption" : "BENEFITS",
+    "benefits-header-left" : "People passionate about social change can:",
+    "benefits-header-right" : "Social entrepreneurs can:"
   },
   "ja" : {
     "form-header-black" : "世界最大のソーシャル・",
@@ -21,6 +24,9 @@
     "form-email" : "Eメール",
     "form-button" : "購読する",
     "app-links-header": "ソーシャル・インパクト・エコシステムを体験する",
-    "app-links-subheader": "同じ志を持つ仲間と繋がり、自分にぴったりの社会的企業に出会い、気軽に社会課題解決に貢献する "
+    "app-links-subheader": "同じ志を持つ仲間と繋がり、自分にぴったりの社会的企業に出会い、気軽に社会課題解決に貢献する ",
+    "benifits-caption" : "メリット",
+    "benefits-header-left" : "ソーシャルセクター人材は：",
+    "benefits-header-right" : "社会起業家は:"
   }
 }
