@@ -3,11 +3,11 @@ import * as React from 'react'
 import MobileImageBlock from './MobileImageBlock'
 import EarlyAccessForm from './EarlyAccessForm'
 
-const Intro = () => {
+const Intro = (props) => {
   return (
     <div className="section-intro">
       <MobileImageBlock />
-      <EarlyAccessForm />
+      <EarlyAccessForm {...props} />
     </div>
   )
 }

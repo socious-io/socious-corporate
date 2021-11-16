@@ -1,11 +1,25 @@
 {
   "en" : {
-    "home-header" : "Join the world’s largest social impact community",
+    "form-header-black" : "Join the world’s largest",
+    "form-header-blue-one" : "social impact",
+    "form-header-blue-two" : "community ",
+    "form-title" : "Subscribe to our newsletter",
+    "form-required" : " indicates required ",
+    "form-full-name" : "Full Name",
+    "form-email" : "Email Address",
+    "form-button" : "Subscribe",
     "app-links-header": "Experience the social impact ecosystem",
     "app-links-subheader": "Connect with like-minded people, find the right social enterprise, and contribute to solving social issues"
   },
   "ja" : {
-    "home-header" : "世界最大のソーシャル・インパクト・コミュニティに参加する",
+    "form-header-black" : "世界最大のソーシャル・",
+    "form-header-blue-one" : "インパクト・",
+    "form-header-blue-two" : "コミュニティに参加する",
+    "form-title" : "ニュースレターを購読する",
+    "form-required" : " が必要です。",
+    "form-full-name" : "名前",
+    "form-email" : "Eメール",
+    "form-button" : "購読する",
     "app-links-header": "ソーシャル・インパクト・エコシステムを体験する",
     "app-links-subheader": "同じ志を持つ仲間と繋がり、自分にぴったりの社会的企業に出会い、気軽に社会課題解決に貢献する "
   }
