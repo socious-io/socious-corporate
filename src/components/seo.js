@@ -25,6 +25,10 @@ const Seo = ({ title, description, image, article }) => {
     url: `${siteUrl}${pathname}`,
     twitterImage: `${siteUrl}${twitterImage || defaultImage}`,
   }
+  
+  const fixedFaviconLink = (icon) => {
+    return `${siteUrl}/${icon}`
+  }
 
   return (
     <Helmet title={seo.title} titleTemplate={titleTemplate}>
@@ -48,12 +52,12 @@ const Seo = ({ title, description, image, article }) => {
       )}
       {seo.image && <meta name="twitter:image" content={seo.twitterImage} />}
 
-      <link rel="apple-touch-icon" sizes="180x180" href={favicon.appleTouchIcon} />
-      <link rel="icon" type="image/png" sizes="16x16" href={favicon.ico} />
-      <link rel="icon" type="image/png" sizes="16x16" href={favicon.sm} />
-      <link rel="icon" type="image/png" sizes="32x32" href={favicon.lg} />
-      <link rel="mask-icon" href={favicon.safariPinnedTab} color="#5bbad5" />
-      <link rel="manifest" href={favicon.manifest} />
+      <link rel="apple-touch-icon" sizes="180x180" href={fixedFaviconLink(favicon.appleTouchIcon)} />
+      <link rel="icon" type="image/png" sizes="16x16" href={fixedFaviconLink(favicon.ico)} />
+      <link rel="icon" type="image/png" sizes="16x16" href={fixedFaviconLink(favicon.sm)} />
+      <link rel="icon" type="image/png" sizes="32x32" href={fixedFaviconLink(favicon.lg)} />
+      <link rel="mask-icon" href={fixedFaviconLink(favicon.safariPinnedTab)} color="#5bbad5" />
+      <link rel="manifest" href={fixedFaviconLink(favicon.manifest)} />
       <meta name="msapplication-TileColor" content="#2b5797" />
       <meta name="theme-color" content="#ffffff" />
     </Helmet>
