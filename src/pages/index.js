@@ -9,7 +9,6 @@ import AppLinks from "../components/Homepage/AppLinks"
 import JobsSection from "../components/Homepage/JobsSection/JobsSection"
 
 const IndexPage = (props) => {
-  console.log(props.pageContext)
   return (
     <Layout>
       <Seo {...props} />
