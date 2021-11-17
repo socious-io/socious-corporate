@@ -15,48 +15,59 @@ const Navbar = () => {
   const navLinkStyle = transparentNavPaths ? 'nav-item-transparent' : 'nav-item'
   const languageSwitcherStyle = transparentNavPaths ? 'header__language-switcher-transparent' : 'header__language-switcher'
 
+  const jaPage = location.pathname.includes('/ja')
+  const altPage = jaPage ? location.pathname.slice(3) : `/ja${location.pathname}`
+  const languageSwitcher = jaPage ?
+                           <a className={languageSwitcherStyle} href={altPage}>English</a> :
+                           <a className={languageSwitcherStyle} href={altPage}>日本語</a>
+
+  const aboutLink = jaPage ? "/ja/about" : "/about"
+  const careersLink = jaPage ? "/ja/careers" : "/careers"
+  const newsroomLink = jaPage ? "/ja/newsroom" : "/newsroom"
+  
   const activeLinkStyle = {
     paddingBottom: "0.5rem",
     borderBottom: "2px solid white"
   }
   
+  console.log(location)
+
   return (
     <nav className={headerStyle}>
       <div className="header__logo-container">
         <Link to="/">
           <StaticImage src="../../images/socious-logo.png" className={logoImageStyle} alt="Socious brand logo" />
-          {/* <img className={logoImageStyle} src="images/socious-logo.png" /> */}
         </Link>
       </div>
       <div className="nav-links">
         <div className={navLinkStyle}>
           <Link 
-          to="/about"
+          to={aboutLink}
           activeStyle={activeLinkStyle}
           partiallyActive={true}
           >
-            About
+            {jaPage ? 'ソーシャスについて' : 'About'}
           </Link>
         </div>
         <div className={navLinkStyle}>
           <Link 
-          to="/careers/"
+          to={careersLink}
           activeStyle={activeLinkStyle}
           partiallyActive={true}
           >
-            Careers
+            {jaPage ? '採用情報' : 'Careers'}
           </Link>
         </div>
         <div className={navLinkStyle}>
           <Link 
-          to="/newsroom/"
+          to={newsroomLink}
           activeStyle={activeLinkStyle}
           partiallyActive={true}
           >
-            Newsroom
+            {jaPage ? 'ニュース' : 'Newsroom'}
           </Link>
         </div>
-        <a className={languageSwitcherStyle} href="./about-ja">日本語</a>
+        {languageSwitcher}
       </div>
     </nav>
   )
