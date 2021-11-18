@@ -6,9 +6,11 @@ import { StaticImage } from 'gatsby-plugin-image';
 const Navbar = () => {
   const location = useLocation();
 
-  const transparentNavPaths = location.pathname.includes('/about') || 
-                              location.pathname === '/careers/' || 
-                              location.pathname === '/newsroom/'
+   const transparentNavPaths = location.pathname.includes('/about') || 
+                               location.pathname === '/careers' || 
+                               location.pathname === '/ja/careers' || 
+                               location.pathname === '/newsroom' ||
+                               location.pathname === '/ja/newsroom'
 
   const headerStyle = transparentNavPaths ? 'header header-fixed' : 'header'
   const logoImageStyle = transparentNavPaths ? 'header__logo-image-transparent' : 'header__logo-image'
@@ -16,7 +18,7 @@ const Navbar = () => {
   const languageSwitcherStyle = transparentNavPaths ? 'header__language-switcher-transparent' : 'header__language-switcher'
 
   const jaPage = location.pathname.includes('/ja')
-  const homePage = jaPage ? "/ja/" : "/"
+  const homePage = jaPage ? "/ja" : "/"
   const altPage = jaPage ? location.pathname.slice(3) : `/ja${location.pathname}`
   const languageSwitcher = jaPage ?
                            <a className={languageSwitcherStyle} href={altPage}>English</a> :
