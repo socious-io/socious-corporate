@@ -1,8 +1,13 @@
 import * as React from 'react'
+import { useLocation } from '@reach/router';
 import { Link } from 'gatsby'
 import { AnchorLink } from "gatsby-plugin-anchor-links";
 
 const Footer = () => {
+  const location = useLocation();
+
+  const jaPage = location.pathname.includes('/ja')
+  
   return (
     <footer>
       <div className="footer-item">
