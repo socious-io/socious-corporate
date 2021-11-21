@@ -18,7 +18,7 @@ const Navbar = () => {
   const languageSwitcherStyle = transparentNavPaths ? 'header__language-switcher-transparent' : 'header__language-switcher'
 
   const jaPage = location.pathname.includes('/ja')
-  const homePage = jaPage ? "/ja" : "/"
+  const homePage = jaPage ? "/ja/" : "/"
   const altPage = jaPage ? location.pathname.slice(3) : `/ja${location.pathname}`
   const languageSwitcher = jaPage ?
                            <a className={languageSwitcherStyle} href={altPage}>English</a> :
