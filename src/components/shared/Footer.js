@@ -41,7 +41,7 @@ const Footer = () => {
         </div>
         <div className="footer-list">
           <ul>
-            <li><Link to="/newsroom/">{jaPage ? 'ニュースルーム' : 'Newsroom'}</Link></li>
+            <li><Link to="/newsroom">{jaPage ? 'ニュースルーム' : 'Newsroom'}</Link></li>
           </ul>
         </div>
       </div>
@@ -51,7 +51,7 @@ const Footer = () => {
         </div>
         <div className="footer-list">
           <ul>
-            <li><Link to="/careers/">{jaPage ? '採用情報' : 'Join Us'}</Link></li>
+            <li><Link to="/careers">{jaPage ? '採用情報' : 'Join Us'}</Link></li>
             <li><AnchorLink to="/about#contact-us" title={contactUs} /></li>
             <li><AnchorLink to="/about#company-profile" title={companyProfile} /></li>
           </ul>
