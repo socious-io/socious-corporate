@@ -14,6 +14,8 @@ const Footer = () => {
   const ourVision = jaPage ? 'ビジョン' : 'Our Vision'
   const cultureAndValues = jaPage ? 'ソーシャスの文化' : 'Culture & Values'
   const ourTeam = jaPage ? 'チーム' : 'Our Team'
+  const contactUs = jaPage ? 'お問い合わせ' : 'Contact Us'
+  const companyProfile = jaPage ? '会社情報' : 'Company Profile'
 
   return (
     <footer>
@@ -35,22 +37,23 @@ const Footer = () => {
       </div>
       <div className="footer-item">
         <div className="footer-title">
-          <h4>Latest News</h4>
+          <h4>{jaPage ? '最新情報' : 'Latest News'}</h4>
         </div>
         <div className="footer-list">
           <ul>
-            <li><Link to="/newsroom/">Newsroom</Link></li>
+            <li><Link to="/newsroom/">{jaPage ? 'ニュースルーム' : 'Newsroom'}</Link></li>
           </ul>
         </div>
       </div>
       <div className="footer-item">
         <div className="footer-title">
-          <h4>Corporate</h4>
+          <h4>{jaPage ? 'コーポレート' : 'Corporate'}</h4>
         </div>
         <div className="footer-list">
           <ul>
-            <li><Link to="/careers/">Join Us</Link></li>
-            <li><AnchorLink to="/about#contact-us" title="Contact Us" /></li>
+            <li><Link to="/careers/">{jaPage ? '採用情報' : 'Join Us'}</Link></li>
+            <li><AnchorLink to="/about#contact-us" title={contactUs} /></li>
+            <li><AnchorLink to="/about#company-profile" title={companyProfile} /></li>
           </ul>
         </div>
       </div>
