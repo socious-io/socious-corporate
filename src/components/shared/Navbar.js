@@ -6,11 +6,11 @@ import { StaticImage } from 'gatsby-plugin-image';
 const Navbar = () => {
   const location = useLocation();
 
-   const transparentNavPaths = location.pathname.includes('/about') || 
-                               location.pathname === '/careers' || 
-                               location.pathname === '/ja/careers' || 
-                               location.pathname === '/newsroom' ||
-                               location.pathname === '/ja/newsroom'
+  const transparentNavPaths = location.pathname.includes('/about') || 
+                              location.pathname === '/careers' || 
+                              location.pathname === '/ja/careers' || 
+                              location.pathname === '/newsroom' ||
+                              location.pathname === '/ja/newsroom'
 
   const headerStyle = transparentNavPaths ? 'header header-fixed' : 'header'
   const logoImageStyle = transparentNavPaths ? 'header__logo-image-transparent' : 'header__logo-image'
@@ -32,8 +32,6 @@ const Navbar = () => {
     paddingBottom: "0.5rem",
     borderBottom: "2px solid white"
   }
-  
-  console.log(location)
 
   return (
     <nav className={headerStyle}>
