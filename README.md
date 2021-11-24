@@ -33,6 +33,10 @@ The site will now be running at http://localhost:8000
 
 Using the [gatsby-source-notion-api](https://www.gatsbyjs.com/plugins/gatsby-source-notion-api/) plugin, you can connect to a Notion database and dynamically create pages based on GraphQL queries. For more information check out the documentation including how to query information and what environment variables you need.
 
+From my integration, add a new integration (Socious Newsroom) and copy the secret code and put it in env. file. 
+
+Invite the integraiton
+
 ## Considerations
 
 I considered a number of different data types to house job listing data but decided to stick with standard JavaScript objects in order to inject the data into React components. I considered using markdown but each job page follows the same structure and has repeated content in the body section. This means that by defining one component (DescriptionRow) you're able to map over the body object nested within the parent and create individual components.
