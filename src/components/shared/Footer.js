@@ -17,6 +17,10 @@ const Footer = () => {
   const contactUs = jaPage ? 'お問い合わせ' : 'Contact Us'
   const companyProfile = jaPage ? '会社情報' : 'Company Profile'
 
+  const linkLanguageSelector = (pageUrl) => {
+    return jaPage ? `/ja${pageUrl}` : pageUrl
+  }
+
   return (
     <footer>
       <div className="footer-item">
@@ -26,12 +30,12 @@ const Footer = () => {
         <div className="footer-list">
           <ul>
             <li><Link to="/">{jaPage ? 'ソーシャスアプリ' : 'Socious App'}</Link></li>
-            <li><AnchorLink to="/about#our-mission" title={ourMission} /></li>
-            <li><AnchorLink to="/about#social-issues" title={socialIssues} /></li>
-            <li><AnchorLink to="/about#what-we-do" title={whatWeDo} /></li>
-            <li><AnchorLink to="/about#our-vision" title={ourVision} /></li>
-            <li><AnchorLink to="/about#our-values" title={cultureAndValues} /></li>
-            <li><AnchorLink to="/about#our-team" title={ourTeam} /></li>
+            <li><AnchorLink to={linkLanguageSelector("/about#our-mission")} title={ourMission} /></li>
+            <li><AnchorLink to={linkLanguageSelector("/about#social-issues")} title={socialIssues} /></li>
+            <li><AnchorLink to={linkLanguageSelector("/about#what-we-do")} title={whatWeDo} /></li>
+            <li><AnchorLink to={linkLanguageSelector("/about#our-vision")} title={ourVision} /></li>
+            <li><AnchorLink to={linkLanguageSelector("/about#our-values")} title={cultureAndValues} /></li>
+            <li><AnchorLink to={linkLanguageSelector("/about#our-team")} title={ourTeam} /></li>
           </ul>
         </div>
       </div>
@@ -41,7 +45,7 @@ const Footer = () => {
         </div>
         <div className="footer-list">
           <ul>
-            <li><Link to="/newsroom">{jaPage ? 'ニュースルーム' : 'Newsroom'}</Link></li>
+            <li><Link to={linkLanguageSelector("/newsroom")}>{jaPage ? 'ニュースルーム' : 'Newsroom'}</Link></li>
           </ul>
         </div>
       </div>
@@ -51,9 +55,9 @@ const Footer = () => {
         </div>
         <div className="footer-list">
           <ul>
-            <li><Link to="/careers">{jaPage ? '採用情報' : 'Join Us'}</Link></li>
-            <li><AnchorLink to="/about#contact-us" title={contactUs} /></li>
-            <li><AnchorLink to="/about#company-profile" title={companyProfile} /></li>
+            <li><Link to={linkLanguageSelector("/careers")}>{jaPage ? '採用情報' : 'Join Us'}</Link></li>
+            <li><AnchorLink to={linkLanguageSelector("/about#contact-us")} title={contactUs} /></li>
+            <li><AnchorLink to={linkLanguageSelector("/about#company-profile")} title={companyProfile} /></li>
           </ul>
         </div>
       </div>
