@@ -35,7 +35,16 @@ const teamMembers = [
     title: 'Web Developer',
     bio1: `A full-stack web developer with a history in digital marketing and public relations, Rhys has experience building web applications using a variety of front and back end tools and frameworks. A Le Wagon web development bootcamp graduate, he's dedicated many hours to learning the tools of the trade and pushing himself to develop new skills that help bring Socious' vision of a connected and impactful world to life online.`,
     bio2: 'With a history in copywriting and account management, Rhys brings to the table a fine balance between technical and social skills that help him build strong relationships built on solid communication. He holds a Bachelor of Arts Honours degree in Media & Cultural Studies from the University of KwaZulu-Natal in Durban, South Africa.',
-  }
+  },
+  {
+    id: 5,
+    imageUrl: 'images/team/Lawrence Cate.jpeg',
+    imageAlt: 'Lawrence Cate',
+    name: 'Lawrence Cate',
+    title: 'Technical Advisor',
+    bio1: 'Lawrie is a computer scientist passionate about tackling social and environmental issues by using technology and community. A graduate of the University of Nottingham in the UK, Lawrie has experience working in Japan on the international expansion of the Mercari marketplace service.',
+    bio2: `Lawrie is now working on the development of the Home away from Home travel service and is also a founding member of mymizu, one of Japan's leading non-profit organisations tackling the plastic pollution crisis.`,
+  },
 ]
 
 export default teamMembers

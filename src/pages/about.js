@@ -14,7 +14,7 @@ import TeamSection from "../components/AboutPage/TeamSection";
 import CompanySection from "../components/AboutPage/CompanySection";
 import ContactSection from "../components/AboutPage/ContactSection";
 
-const AboutPage = () => {
+const AboutPage = (props) => {
   const location = useLocation();
   const jaPage = location.pathname.includes('/ja')
 
@@ -31,15 +31,15 @@ const AboutPage = () => {
         title={seoTitle}
         description={seoDescription}
       />
-      <HeroSection />
-      <ScrollArrow />
-      <IssueSection />
-      <AboutSection />
-      <VisionSection />
-      <ValuesSection />
-      <TeamSection />
-      <CompanySection />
-      <ContactSection />
+      <HeroSection {...props} />
+      <ScrollArrow {...props} />
+      <IssueSection {...props} />
+      <AboutSection {...props} />
+      <VisionSection {...props} />
+      <ValuesSection {...props} />
+      <TeamSection {...props} />
+      <CompanySection {...props} />
+      <ContactSection {...props} />
     </Layout>
   )
 }
