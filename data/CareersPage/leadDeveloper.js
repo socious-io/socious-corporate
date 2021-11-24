@@ -32,7 +32,7 @@ const leadDeveloper = {
           developers. As we secure funding, we’re now looking to bring on our first full time hire to oversee future development.
           <br /><br />
           In this role, you’ll work closely with senior stakeholders to understand business goals and ensure that the development
-          team & technologies used are aligned with these. As we grow, you’ll have the opportuntity to move into a CTO role in the
+          team & technologies used are aligned with these. As we grow, you’ll have the opportunity to move into a CTO role in the
           future.
         </p>
       ,
