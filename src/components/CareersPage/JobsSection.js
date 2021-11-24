@@ -44,7 +44,7 @@ const JobsSection = (props) => {
           </div>
           <div className="jobs-list__item">
             <div className="job-title">
-              <p><Link to={linkLanguageSelector("/careers/senior-developer")}><LinkSimple size={18} /> Senior Developer</Link></p>
+              <p><Link to={linkLanguageSelector("/careers/lead-developer")}><LinkSimple size={18} /> Lead Developer</Link></p>
             </div>
             <div className="job-department">  
               <p>Engineering</p>

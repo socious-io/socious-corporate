@@ -1,8 +1,7 @@
 {
   "en" : {
-    "form-header-black" : "Join the world’s largest",
-    "form-header-blue-one" : "social impact",
-    "form-header-blue-two" : "community ",
+    "form-header-black" : "Community app for",
+    "form-header-blue-one" : "social change",
     "form-title" : "Subscribe to our newsletter",
     "form-required" : " indicates required ",
     "form-full-name" : "Full Name",
@@ -33,9 +32,8 @@
     "careers-page-description" : "At Socious we're committed to bringing together change-makers and encouraging people to make a difference in the world. We're always on the lookout for exciting and ambitious talent to join our team and help us make the world a better place one act at a time."
   },
   "ja" : {
-    "form-header-black" : "世界最大のソーシャル・",
-    "form-header-blue-one" : "インパクト・",
-    "form-header-blue-two" : "コミュニティに参加する",
+    "form-header-black" : "社会変革のための",
+    "form-header-blue-one" : "コミュニティアプリ",
     "form-title" : "ニュースレターを購読する",
     "form-required" : " が必要です。",
     "form-full-name" : "名前",
