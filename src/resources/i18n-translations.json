@@ -24,7 +24,12 @@
     "values-title" : "Our values",
     "values-description" : "At Socious we want to make a difference in the world but we believe that do so needs to start from within",
     "company-profile-header" : "Socious Company Profile",
-    "contact-section-header" : "Get In Touch"
+    "contact-section-header" : "Get In Touch",
+    "careers-banner" : "Careers at Socious",
+    "careers-header-black-one" : "Join the Socious team and ",
+    "careers-header-blue" : "make a difference ",
+    "careers-header-black-two" : "in the world",
+    "careers-page-description" : "At Socious we're committed to bringing together change-makers and encouraging people to make a difference in the world. We're always on the lookout for exciting and ambitious talent to join our team and help us make the world a better place one act at a time."
   },
   "ja" : {
     "form-header-black" : "社会変革のための",
@@ -51,6 +56,11 @@
     "values-title" : "ソーシャスの文化",
     "values-description" : "ソーシャスは社会変革を目指していますが、そのためにはまず社内から始める必要があると考えています。",
     "company-profile-header" : "会社情報",
-    "contact-section-header" : "お問い合わせ"
+    "contact-section-header" : "お問い合わせ",
+    "careers-banner" : "ソーシャスでのキャリア",
+    "careers-header-black-one" : "ソーシャスで",
+    "careers-header-blue" : "社会変革",
+    "careers-header-black-two" : "を目指す",
+    "careers-page-description" : "ソーシャスは、チェンジメーカーが集まることにより社会変革を加速させることができると信じています。私たちは世界をより良い場所にするために一歩ずつ行動してくれるメンバーを探しています。"
   }
 }
