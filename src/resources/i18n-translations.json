@@ -17,7 +17,9 @@
     "about-hero-subtitle" : "Accelerate social change by bringing people together",
     "issue-section-title" : "Social Issues We Are Solving",
     "issue-section-body-one" : "The resources needed to solve social issues are limited",
-    "issue-section-body-two" : "While many are interested in contributing to social change, only few are able to do so"
+    "issue-section-body-two" : "While many are interested in contributing to social change, only few are able to do so",
+    "about-section-title" : "What we do",
+    "about-section-description" : "We leverage the untapped potential of passive social change makers by helping them contribute to society in an easy, fun way through a purpose-driven community app, AI recommendations, and community currency."
   },
   "ja" : {
     "form-header-black" : "世界最大のソーシャル・",
@@ -37,6 +39,8 @@
     "about-hero-subtitle" : "出会いの化学反応で社会変革を加速させる",
     "issue-section-title" : "解決しようとする社会課題",
     "issue-section-body-one" : "社会課題解決のために必要なリソースの不足",
-    "issue-section-body-two" : "多くの人が社会貢献に興味があるにも関わらず行動に移せていない"
+    "issue-section-body-two" : "多くの人が社会貢献に興味があるにも関わらず行動に移せていない",
+    "about-section-title" : "ソーシャスの活動",
+    "about-section-description" : "ソーシャスは潜在的なソーシャルチェンジメーカーが気軽に楽しく社会貢献できるように、社会課題に関する興味でつながるSNS、AIマッチング、コミュニティ通貨を提供します。"
   }
 }

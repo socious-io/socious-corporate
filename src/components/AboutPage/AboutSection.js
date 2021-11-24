@@ -1,9 +1,12 @@
 import React from "react";
 
+import SimpleLocalize from "../shared/SimpleLocalize";
+import { FormattedMessage } from "react-intl";
+
 import AboutItem from "./components/AboutItem";
 import aboutItems from "../../../data/AboutPage/aboutSectionData";
 
-const AboutSection = () => {
+const AboutSection = (props) => {
   const aboutComponents = aboutItems.map(item => 
     <AboutItem
       key={item.id}
@@ -15,19 +18,26 @@ const AboutSection = () => {
   )
   
   return (
-    <section>
-      <div className="about-title" id="what-we-do">
-        <h2>What we do</h2>
-        <p>
-          We leverage the untapped potential of passive social change makers by helping them contribute to society in an easy, fun way through a purpose-driven
-          community app, AI recommendations, and community currency.
-        </p>
-      </div>
+    <SimpleLocalize {...props}>
+      <section>
+        <div className="about-title" id="what-we-do">
+          <h2>
+            <FormattedMessage
+              id="about-section-title"
+            />
+          </h2>
+          <p>
+            <FormattedMessage
+              id="about-section-description"
+            />
+          </p>
+        </div>
 
-      <div className="about-section">
-        {aboutComponents}
-      </div>
-    </section>
+        <div className="about-section">
+          {aboutComponents}
+        </div>
+      </section>
+    </SimpleLocalize>
   )
 }
 
