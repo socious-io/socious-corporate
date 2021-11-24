@@ -19,9 +19,9 @@ const JobsSection = () => {
         </div>
         <div className="jobs-list__item">
           <div className="job-title">
-            <p><Link to="/careers/senior-developer"><LinkSimple size={18} /> Senior Developer</Link></p>
+            <p><Link to="/careers/lead-developer"><LinkSimple size={18} /> Lead Developer</Link></p>
           </div>
-          <div className="job-department">  
+          <div className="job-department">
             <p>Engineering</p>
           </div>
           <div className="job-date">
