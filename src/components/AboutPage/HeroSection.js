@@ -1,13 +1,26 @@
 import React from 'react'
 
-const Hero = () => {
+import SimpleLocalize from "../shared/SimpleLocalize";
+import { FormattedMessage } from "react-intl";
+
+const Hero = (props) => {
   return (
-    <div className="hero-section" id="our-mission">
-      <div className="hero-text">
-        <h5>OUR MISSION</h5>
-        <h1>Accelerate social change by bringing people together</h1>
+    <SimpleLocalize {...props}>
+      <div className="hero-section" id="our-mission">
+        <div className="hero-text">
+          <h5>
+            <FormattedMessage
+              id="about-hero-title"
+            />
+          </h5>
+          <h1>
+            <FormattedMessage
+              id="about-hero-subtitle"
+            />
+          </h1>
+        </div>
       </div>
-    </div>
+    </SimpleLocalize>
   )
 }
 

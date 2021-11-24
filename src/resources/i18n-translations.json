@@ -12,7 +12,9 @@
     "app-links-subheader": "Connect with like-minded people, find the right social enterprise, and contribute to solving social issues",
     "benefits-caption" : "BENEFITS",
     "benefits-header-left" : "People passionate about social change can:",
-    "benefits-header-right" : "Social entrepreneurs can:"
+    "benefits-header-right" : "Social entrepreneurs can:",
+    "about-hero-title" : "OUR MISSION",
+    "about-hero-subtitle" : "Accelerate social change by bringing people together"
   },
   "ja" : {
     "form-header-black" : "世界最大のソーシャル・",
@@ -27,6 +29,8 @@
     "app-links-subheader": "同じ志を持つ仲間と繋がり、自分にぴったりの社会的企業に出会い、気軽に社会課題解決に貢献する ",
     "benefits-caption" : "メリット",
     "benefits-header-left" : "ソーシャルセクター人材は：",
-    "benefits-header-right" : "社会起業家は:"
+    "benefits-header-right" : "社会起業家は:",
+    "about-hero-title" : "ソーシャスのミッション",
+    "about-hero-subtitle" : "出会いの化学反応で社会変革を加速させる"
   }
 }
