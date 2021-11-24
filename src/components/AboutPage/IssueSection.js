@@ -6,7 +6,7 @@ import { FormattedMessage } from "react-intl";
 // import issueItems from '../../../data/AboutPage/issueSectionData'
 // import IssueItem from './components/IssueItem'
 
-const IssueSection = () => {
+const IssueSection = (props) => {
   // const issues = issueItems.map(issue => 
   //   <IssueItem
   //     key={issue.id}
@@ -16,20 +16,30 @@ const IssueSection = () => {
   // )
 
   return (
-    <div className="issue-section" id="social-issues">
-      <div className="issue-banner">
-        <div className="issue-banner__image"></div>
-        <div className="issue-banner__content">
-          <h2>Social Issues We Are Solving</h2>
-          <p>
-            The resources needed to solve social issues are scattered, unmatched and limited
-            <br/><br/>
-            While many are interested in contributing to social change, only few are able to do so
-          </p>
+    <SimpleLocalize {...props}>
+      <div className="issue-section" id="social-issues">
+        <div className="issue-banner">
+          <div className="issue-banner__image"></div>
+          <div className="issue-banner__content">
+            <h2>
+              <FormattedMessage
+                id="issue-section-title"
+              />
+            </h2>
+            <p>
+              <FormattedMessage
+                id="issue-section-body-one"
+              />
+              <br/><br/>
+              <FormattedMessage
+                id="issue-section-body-two"
+              />
+            </p>
+          </div>
         </div>
+        {/* {issues} */}
       </div>
-      {/* {issues} */}
-    </div>
+    </SimpleLocalize>
   )
 }
 
