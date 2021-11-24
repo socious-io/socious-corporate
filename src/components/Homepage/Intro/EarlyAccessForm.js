@@ -50,9 +50,6 @@ export default class EarlyAccessForm extends React.Component {
             <div className="section-intro__mailchimp--blue">
               <FormattedMessage
                 id="form-header-blue-one"
-              /><br />
-              <FormattedMessage
-                id="form-header-blue-two"
               />
             </div>
           </div>
@@ -149,5 +146,3 @@ export default class EarlyAccessForm extends React.Component {
     )
   }
 }
-
-
