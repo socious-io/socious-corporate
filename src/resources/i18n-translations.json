@@ -21,7 +21,9 @@
     "about-section-title" : "What we do",
     "about-section-description" : "We leverage the untapped potential of passive social change makers by helping them contribute to society in an easy, fun way through a purpose-driven community app, AI recommendations, and community currency.",
     "vision-title" : "OUR VISION",
-    "vision-description" : "Become the world's largest social impact ecosystem"
+    "vision-description" : "Become the world's largest social impact ecosystem",
+    "values-title" : "Our values",
+    "values-description" : "At Socious we want to make a difference in the world but we believe that do so needs to start from within"
   },
   "ja" : {
     "form-header-black" : "世界最大のソーシャル・",
@@ -45,6 +47,8 @@
     "about-section-title" : "ソーシャスの活動",
     "about-section-description" : "ソーシャスは潜在的なソーシャルチェンジメーカーが気軽に楽しく社会貢献できるように、社会課題に関する興味でつながるSNS、AIマッチング、コミュニティ通貨を提供します。",
     "vision-title" : "ソーシャスのビジョン",
-    "vision-description" : "世界最大のソーシャルインパクトエコシステム"
+    "vision-description" : "世界最大のソーシャルインパクトエコシステム",
+    "values-title" : "ソーシャスの文化",
+    "values-description" : "ソーシャスは社会変革を目指していますが、そのためにはまず社内から始める必要があると考えています。"
   }
 }
