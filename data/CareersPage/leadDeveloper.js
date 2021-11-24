@@ -12,9 +12,28 @@ const leadDeveloper = {
         <p>
           Do you have a passion for social impact? If yes, Socious Inc. is looking for somebody with your enthusiasm and skills to work as part of the team. We are looking for an experienced developer who is curious, driven, and passionate about social impact. If you are looking for a role where you can make a major impact in the world, we want to meet you.
           <br/><br/>
-          As a founding member of Socious Inc., you will be at the forefront of this transformational technology assisting social change makers and in growing the company with the CEO.
+          Socious is a community app for social change makers with a mission to accelerate social change by bringing people
+          together. Many people are interested in contributing to social impact projects, but few of them can do so. We leverage
+          this untapped potential by helping them contribute to society in an easy, fun way through a purpose-driven community
+          app, AI recommendations, and community currency.
           <br/><br/>
-          We are currently hiring a Lead Developer to work closely with senior stakeholders to understand business goals and ensure that the development team & technologies used are aligned with these. We are seeking someone with the potential to move into a CTO role in the future.
+          We started Socious in July 2021, so as an early employee you’ll be pivotal in shaping the direction of the company. We
+          have enough runway to last us through the end of 2022, and are about to close a seed round to allow us to accelerate
+          even faster.
+          <br /><br />
+          You’ll be able to work fully remotely, though we'll meet up in person several times per year, so we're looking for
+          someone living in Japan. If you aren't here yet, that's fine: you’ll be able to work remotely until we help you secure a
+          working visa.
+          <br /><br />
+          We communicate in English, and so no Japanese ability is required, though there will be opportunities to use Japanese if
+          you’d like to.
+          <br /><br />
+          We’ve built a prototype version of our app using a combination of part-time freelance developers and offshore
+          developers. As we secure funding, we’re now looking to bring on our first full time hire to oversee future development.
+          <br /><br />
+          In this role, you’ll work closely with senior stakeholders to understand business goals and ensure that the development
+          team & technologies used are aligned with these. As we grow, you’ll have the opportuntity to move into a CTO role in the
+          future.
         </p>
       ,
     },
