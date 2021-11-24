@@ -25,7 +25,8 @@
     "values-title" : "Our values",
     "values-description" : "At Socious we want to make a difference in the world but we believe that do so needs to start from within",
     "company-profile-header" : "Socious Company Profile",
-    "contact-section-header" : "Get In Touch"
+    "contact-section-header" : "Get In Touch",
+    "careers-banner" : "Careers at Socious"
   },
   "ja" : {
     "form-header-black" : "世界最大のソーシャル・",
@@ -53,6 +54,7 @@
     "values-title" : "ソーシャスの文化",
     "values-description" : "ソーシャスは社会変革を目指していますが、そのためにはまず社内から始める必要があると考えています。",
     "company-profile-header" : "会社情報",
-    "contact-section-header" : "お問い合わせ"
+    "contact-section-header" : "お問い合わせ",
+    "careers-banner" : "ソーシャスでのキャリア"
   }
 }
