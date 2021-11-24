@@ -7,7 +7,7 @@ import Seo from "../../components/seo"
 import Banner from "../../components/CareersPage/Banner";
 import JobsSection from "../../components/CareersPage/JobsSection";
 
-const CareersPage = () => {
+const CareersPage = (props) => {
   const location = useLocation();
   const jaPage = location.pathname.includes('/ja')
 
@@ -25,8 +25,8 @@ const CareersPage = () => {
         title={seoTitle}
         description={seoDescription}
       />
-      <Banner />
-      <JobsSection />
+      <Banner {...props} />
+      <JobsSection {...props} />
     </Layout>
   )
 }
