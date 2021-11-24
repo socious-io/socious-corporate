@@ -1,16 +1,19 @@
 import React from 'react'
 
-import issueItems from '../../../data/AboutPage/issueSectionData'
-import IssueItem from './components/IssueItem'
+import SimpleLocalize from "../shared/SimpleLocalize";
+import { FormattedMessage } from "react-intl";
+
+// import issueItems from '../../../data/AboutPage/issueSectionData'
+// import IssueItem from './components/IssueItem'
 
 const IssueSection = () => {
-  const issues = issueItems.map(issue => 
-    <IssueItem
-      key={issue.id}
-      header={issue.header}
-      content={issue.content}
-    />
-  )
+  // const issues = issueItems.map(issue => 
+  //   <IssueItem
+  //     key={issue.id}
+  //     header={issue.header}
+  //     content={issue.content}
+  //   />
+  // )
 
   return (
     <div className="issue-section" id="social-issues">
