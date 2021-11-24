@@ -5,9 +5,13 @@ import { FormattedMessage } from "react-intl";
 
 import AboutItem from "./components/AboutItem";
 import aboutItems from "../../../data/AboutPage/aboutSectionData";
+import aboutItemsJa from "../../../data/AboutPage/aboutSectionDataJa";
 
 const AboutSection = (props) => {
-  const aboutComponents = aboutItems.map(item => 
+  const { language } = props.pageContext
+  const aboutComponentLanguageSelector = language === 'ja' ? aboutItemsJa : aboutItems
+
+  const aboutComponents = aboutComponentLanguageSelector.map(item => 
     <AboutItem
       key={item.id}
       imageUrl={item.imageUrl}
