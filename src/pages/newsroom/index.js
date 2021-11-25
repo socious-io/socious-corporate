@@ -1,44 +1,43 @@
 import React from "react"
 import { graphql } from "gatsby"
+import { useLocation } from '@reach/router';
 
 import Layout from "../../components/Layout"
 import Seo from "../../components/seo"
 import Banner from "../../components/NewsroomPage/Banner"
 
-import NewsHeadline from "./NewsHeadline"
-import PostItem from "./PostItem"
+import EnglishNewsHeadline from "../../components/NewsroomPage/EnglishNewsHeadline";
+import JapaneseNewsHeadline from "../../components/NewsroomPage/JapaneseNewsHeadline";
+import JapaneseNews from "../../components/NewsroomPage/JapaneseNews";
+import EnglishNews from "../../components/NewsroomPage/EnglishNews";
 
-const NewsroomPage = ({ data }) => {
-  const posts = data.allMarkdownRemark.edges.map(post => {
-    const { id,
-            frontmatter: { title, slug, Date, Hero_Image }
-    } = post.node
 
-    return (
-      <PostItem
-        key={id}
-        slug={slug}
-        title={title}
-        date={Date.start}
-        imageSrc={Hero_Image[0].external.url}
-      />
-    )
-  });
+const NewsroomPage = (props) => {
+  const location = useLocation();
+  const jaPage = location.pathname.includes('/ja')
+
+  const { pageContext } = props
+
+  const seoDescription = jaPage ?
+                         'ソーシャスは社会変革のためのコミュニティアプリです。' :
+                         'Learn more about Socious and what we do, who we are, and what we stand for'
+
+  const seoTitle = jaPage ?
+                   'ニュースルーム' :
+                   'Newsroom'
 
   return (
     <Layout>
       <Seo
-        title='Newsroom'
-        description='Keep up to date with the latest news at Socious'
+        title={seoTitle}
+        description={seoDescription}
       />
       <Banner />
       <div className="main">
         <div className="container__articles">
           <h2>Latest News</h2>
-          <NewsHeadline />
-          <div class="news-container">
-            {posts}
-          </div>
+          {pageContext.language === 'ja' ? <JapaneseNewsHeadline /> : <EnglishNewsHeadline />}
+          {pageContext.language === 'ja' ? <JapaneseNews /> : <EnglishNews />}
         </div>
       </div>
     </Layout>
@@ -69,6 +68,8 @@ export const query = graphql`
                 url
               }
             }
+            Publish
+            Language
           }
         }
       }
