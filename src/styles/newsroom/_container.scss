@@ -26,5 +26,11 @@
 
   display: flex;
   flex-wrap: wrap;
-  justify-content: center;
+  justify-content: space-between;
+}
+
+@media screen and (max-width: 750px) {
+  .container__articles {
+    max-width: 680px;
+  }
 }
