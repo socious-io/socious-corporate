@@ -9,18 +9,22 @@
   margin-left: 1rem;
   margin-right: 1rem;
 
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
   p {
     font-weight: 400;
   }
 }
 
 .image__article {
-  width: 100%;
+  width: 95%;
 }
 
 .article__info {
   margin-bottom: 2rem;
-  padding-left: 2rem;
+  width: 95%;
 
   h1 {
     margin-bottom: 0;
@@ -30,5 +34,12 @@
 
 .article__body {
   line-height: 2rem;
-  padding: 1rem;
+  width: 95%;
+  padding: 1rem 0;
+}
+
+@media screen and (max-width: 450px) {
+  .image__article {
+    width: 100%;
+  }
 }
