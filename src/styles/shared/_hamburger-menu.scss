@@ -9,12 +9,12 @@
 
 /* Color/shape of burger icon bars */
 .bm-burger-bars {
-  background: #373a47;
+  background: $primary;
 }
 
 /* Color/shape of burger icon bars on hover*/
 .bm-burger-bars-hover {
-  background: #a90000;
+  background: $primary-light;
 }
 
 /* Position and sizing of clickable cross button */
@@ -35,6 +35,7 @@ Note: Beware of modifying this element as it can break the animations - you shou
 .bm-menu-wrap {
   position: fixed;
   height: 100%;
+  top: 0;
 }
 
 /* General sidebar styles */
@@ -42,6 +43,7 @@ Note: Beware of modifying this element as it can break the animations - you shou
   background: #373a47;
   padding: 2.5em 1.5em 0;
   font-size: 1.15em;
+  overflow: hidden !important;
 }
 
 /* Morph shape necessary with bubble or elastic */
@@ -53,6 +55,12 @@ Note: Beware of modifying this element as it can break the animations - you shou
 .bm-item-list {
   color: #b8b7ad;
   padding: 0.8em;
+
+  a {
+    text-decoration: none;
+    color: #FFF;
+    margin-bottom: 1rem;
+  }
 }
 
 /* Individual item */
