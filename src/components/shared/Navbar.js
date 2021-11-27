@@ -1,9 +1,23 @@
-import * as React from 'react'
+import React, { useState, useEffect } from 'react'
 import { Link } from 'gatsby'
 import { useLocation } from '@reach/router';
 import { StaticImage } from 'gatsby-plugin-image';
+import { slide as Menu } from 'react-burger-menu'
 
 const Navbar = () => {
+  const [windowWidth, setWindowWidth] = useState(window.innerWidth)
+  
+  useEffect(() => {
+    function currentWidth() {
+      setWindowWidth(window.innerWidth)
+    }
+    window.addEventListener("resize", currentWidth)
+    return () => {
+      window.removeEventListener("resize", currentWidth)
+      console.log("Unmount")
+    }
+  }, [])
+
   const location = useLocation();
 
   const transparentNavPaths = location.pathname.includes('/about') || 
@@ -33,44 +47,89 @@ const Navbar = () => {
     borderBottom: "2px solid white"
   }
 
+  const activeLinkStyleMobile = {
+    paddingLeft: "0.5rem",
+    borderLeft: "2px solid white"
+  }
+
   return (
-    <nav className={headerStyle}>
-      <div className="header__logo-container">
-        <Link to={homePage}>
-          <StaticImage src="../../images/socious-logo.png" className={logoImageStyle} alt="Socious brand logo" />
-        </Link>
-      </div>
-      <div className="nav-links">
-        <div className={navLinkStyle}>
+    <div>
+      { windowWidth > 600
+      ? 
+      <nav className={headerStyle}>
+        <div className="header__logo-container">
+          <Link to={homePage}>
+            <StaticImage src="../../images/socious-logo.png" className={logoImageStyle} alt="Socious brand logo" />
+          </Link>
+        </div>
+        <div className="nav-links">
+          <div className={navLinkStyle}>
+            <Link 
+            to={aboutLink}
+            activeStyle={activeLinkStyle}
+            partiallyActive={true}
+            >
+              {jaPage ? 'ソーシャスについて' : 'About'}
+            </Link>
+          </div>
+          <div className={navLinkStyle}>
+            <Link 
+            to={careersLink}
+            activeStyle={activeLinkStyle}
+            partiallyActive={true}
+            >
+              {jaPage ? '採用情報' : 'Careers'}
+            </Link>
+          </div>
+          <div className={navLinkStyle}>
+            <Link 
+            to={newsroomLink}
+            activeStyle={activeLinkStyle}
+            partiallyActive={true}
+            >
+              {jaPage ? 'ニュース' : 'Newsroom'}
+            </Link>
+          </div>
+          {languageSwitcher}
+        </div>
+      </nav>
+      :
+      <div className={headerStyle} style={{ zIndex: "100" }}>
+        <div className="header__logo-container">
+          <Link to={homePage}>
+            <StaticImage src="../../images/socious-logo.png" className={logoImageStyle} alt="Socious brand logo" />
+          </Link>
+        </div>
+        <Menu right >
           <Link 
           to={aboutLink}
-          activeStyle={activeLinkStyle}
+          activeStyle={activeLinkStyleMobile}
           partiallyActive={true}
+          className="menu-item"
           >
             {jaPage ? 'ソーシャスについて' : 'About'}
           </Link>
-        </div>
-        <div className={navLinkStyle}>
           <Link 
-          to={careersLink}
-          activeStyle={activeLinkStyle}
-          partiallyActive={true}
-          >
-            {jaPage ? '採用情報' : 'Careers'}
+            to={careersLink}
+            activeStyle={activeLinkStyleMobile}
+            partiallyActive={true}
+            className="menu-item"
+            >
+              {jaPage ? '採用情報' : 'Careers'}
           </Link>
-        </div>
-        <div className={navLinkStyle}>
           <Link 
-          to={newsroomLink}
-          activeStyle={activeLinkStyle}
-          partiallyActive={true}
-          >
-            {jaPage ? 'ニュース' : 'Newsroom'}
+            to={newsroomLink}
+            activeStyle={activeLinkStyleMobile}
+            partiallyActive={true}
+            className="menu-item"
+            >
+              {jaPage ? 'ニュース' : 'Newsroom'}
           </Link>
-        </div>
-        {languageSwitcher}
+          {languageSwitcher}
+        </Menu>
       </div>
-    </nav>
+    }
+  </div>
   )
 }
 
