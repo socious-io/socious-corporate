@@ -5,9 +5,10 @@ import { StaticImage } from 'gatsby-plugin-image';
 import { slide as Menu } from 'react-burger-menu'
 
 const Navbar = () => {
-  const [windowWidth, setWindowWidth] = useState(window.innerWidth)
+  const [windowWidth, setWindowWidth] = useState(null)
   
   useEffect(() => {
+    setWindowWidth(window.innerWidth)
     function currentWidth() {
       setWindowWidth(window.innerWidth)
     }
