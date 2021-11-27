@@ -1,8 +1,11 @@
 import React, { useState, useEffect } from 'react'
-import { Link } from 'gatsby'
 import { useLocation } from '@reach/router';
+import { Link } from 'gatsby'
 import { StaticImage } from 'gatsby-plugin-image';
 import { slide as Menu } from 'react-burger-menu'
+
+import NavbarLarge from './NavbarLarge';
+import NavbarMobile from './NavbarMobile';
 
 const Navbar = () => {
   const [windowWidth, setWindowWidth] = useState(null)
@@ -15,7 +18,6 @@ const Navbar = () => {
     window.addEventListener("resize", currentWidth)
     return () => {
       window.removeEventListener("resize", currentWidth)
-      console.log("Unmount")
     }
   }, [])
 
@@ -43,94 +45,39 @@ const Navbar = () => {
   const careersLink = jaPage ? "/ja/careers" : "/careers"
   const newsroomLink = jaPage ? "/ja/newsroom" : "/newsroom"
   
-  const activeLinkStyle = {
-    paddingBottom: "0.5rem",
-    borderBottom: "2px solid white"
-  }
-
-  const activeLinkStyleMobile = {
-    paddingLeft: "0.5rem",
-    borderLeft: "2px solid white"
+  let navSelector = ""
+  
+  if (windowWidth === null) {
+    return navSelector
+  } else if (windowWidth <= 600) {
+    navSelector = <NavbarMobile
+                    headerStyle={headerStyle}
+                    homePage={homePage}
+                    logoImageStyle={logoImageStyle}
+                    aboutLink={aboutLink}
+                    careersLink={careersLink}
+                    newsroomLink={newsroomLink}
+                    languageSwitcher={languageSwitcher}
+                    jaPage={jaPage}
+                  />
+  } else {
+    navSelector = <NavbarLarge
+                    headerStyle={headerStyle}
+                    navLinkStyle={navLinkStyle}
+                    homePage={homePage}
+                    logoImageStyle={logoImageStyle}
+                    aboutLink={aboutLink}
+                    careersLink={careersLink}
+                    newsroomLink={newsroomLink}
+                    languageSwitcher={languageSwitcher}
+                    jaPage={jaPage}
+                  />
   }
 
   return (
     <div>
-      { windowWidth < 600 && windowWidth !== null
-      ?
-      <div className={headerStyle} style={{ zIndex: "100" }}>
-        <div className="header__logo-container">
-          <Link to={homePage}>
-            <StaticImage src="../../images/socious-logo.png" className={logoImageStyle} alt="Socious brand logo" />
-          </Link>
-        </div>
-        <Menu right >
-          <Link 
-          to={aboutLink}
-          activeStyle={activeLinkStyleMobile}
-          partiallyActive={true}
-          className="menu-item"
-          >
-            {jaPage ? 'ソーシャスについて' : 'About'}
-          </Link>
-          <Link 
-            to={careersLink}
-            activeStyle={activeLinkStyleMobile}
-            partiallyActive={true}
-            className="menu-item"
-            >
-              {jaPage ? '採用情報' : 'Careers'}
-          </Link>
-          <Link 
-            to={newsroomLink}
-            activeStyle={activeLinkStyleMobile}
-            partiallyActive={true}
-            className="menu-item"
-            >
-              {jaPage ? 'ニュース' : 'Newsroom'}
-          </Link>
-          {languageSwitcher}
-        </Menu>
-      </div>
-      :
-      <nav className={headerStyle}>
-        <div className="header__logo-container">
-          <Link to={homePage}>
-            <StaticImage src="../../images/socious-logo.png" className={logoImageStyle} alt="Socious brand logo" />
-          </Link>
-        </div>
-        <div className="nav-links">
-          <div className={navLinkStyle}>
-            <Link 
-            to={aboutLink}
-            activeStyle={activeLinkStyle}
-            partiallyActive={true}
-            >
-              {jaPage ? 'ソーシャスについて' : 'About'}
-            </Link>
-          </div>
-          <div className={navLinkStyle}>
-            <Link 
-            to={careersLink}
-            activeStyle={activeLinkStyle}
-            partiallyActive={true}
-            >
-              {jaPage ? '採用情報' : 'Careers'}
-            </Link>
-          </div>
-          <div className={navLinkStyle}>
-            <Link 
-            to={newsroomLink}
-            activeStyle={activeLinkStyle}
-            partiallyActive={true}
-            >
-              {jaPage ? 'ニュース' : 'Newsroom'}
-            </Link>
-          </div>
-          {languageSwitcher}
-        </div>
-      </nav>
-    }
-  </div>
+      { navSelector }
+    </div>
   )
 }
 
