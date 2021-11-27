@@ -55,8 +55,43 @@ const Navbar = () => {
 
   return (
     <div>
-      { windowWidth > 600
-      ? 
+      { windowWidth < 600 && windowWidth !== null
+      ?
+      <div className={headerStyle} style={{ zIndex: "100" }}>
+        <div className="header__logo-container">
+          <Link to={homePage}>
+            <StaticImage src="../../images/socious-logo.png" className={logoImageStyle} alt="Socious brand logo" />
+          </Link>
+        </div>
+        <Menu right >
+          <Link 
+          to={aboutLink}
+          activeStyle={activeLinkStyleMobile}
+          partiallyActive={true}
+          className="menu-item"
+          >
+            {jaPage ? 'ソーシャスについて' : 'About'}
+          </Link>
+          <Link 
+            to={careersLink}
+            activeStyle={activeLinkStyleMobile}
+            partiallyActive={true}
+            className="menu-item"
+            >
+              {jaPage ? '採用情報' : 'Careers'}
+          </Link>
+          <Link 
+            to={newsroomLink}
+            activeStyle={activeLinkStyleMobile}
+            partiallyActive={true}
+            className="menu-item"
+            >
+              {jaPage ? 'ニュース' : 'Newsroom'}
+          </Link>
+          {languageSwitcher}
+        </Menu>
+      </div>
+      :
       <nav className={headerStyle}>
         <div className="header__logo-container">
           <Link to={homePage}>
@@ -94,41 +129,6 @@ const Navbar = () => {
           {languageSwitcher}
         </div>
       </nav>
-      :
-      <div className={headerStyle} style={{ zIndex: "100" }}>
-        <div className="header__logo-container">
-          <Link to={homePage}>
-            <StaticImage src="../../images/socious-logo.png" className={logoImageStyle} alt="Socious brand logo" />
-          </Link>
-        </div>
-        <Menu right >
-          <Link 
-          to={aboutLink}
-          activeStyle={activeLinkStyleMobile}
-          partiallyActive={true}
-          className="menu-item"
-          >
-            {jaPage ? 'ソーシャスについて' : 'About'}
-          </Link>
-          <Link 
-            to={careersLink}
-            activeStyle={activeLinkStyleMobile}
-            partiallyActive={true}
-            className="menu-item"
-            >
-              {jaPage ? '採用情報' : 'Careers'}
-          </Link>
-          <Link 
-            to={newsroomLink}
-            activeStyle={activeLinkStyleMobile}
-            partiallyActive={true}
-            className="menu-item"
-            >
-              {jaPage ? 'ニュース' : 'Newsroom'}
-          </Link>
-          {languageSwitcher}
-        </Menu>
-      </div>
     }
   </div>
   )
