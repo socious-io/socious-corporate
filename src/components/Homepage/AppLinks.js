@@ -25,14 +25,14 @@ const AppLinks = (props) => {
           </div>
           <div className="section-app-links__app-links-block">
             <div className="section-app-links__app-links">
-              <a href="https://apps.apple.com/jp/app/socious/id1581904474" target="_blank">
+              <a href="https://apps.apple.com/jp/app/socious/id1581904474" target="_blank" rel="noreferrer">
                 <button className="section-app-links__app-links-button">
                   <AppleIcon sx={{ fontSize: 48 }} />
                 </button>
               </a>
             </div>
             <div className="section-app-links__app-links">
-              <a href="https://play.google.com/store/apps/details?id=com.dissocialnetwork" target="_blank">
+              <a href="https://play.google.com/store/apps/details?id=com.dissocialnetwork" target="_blank" rel="noreferrer">
                 <button className="section-app-links__app-links-button">
                   <AndroidIcon sx={{ fontSize: 48 }} />
                 </button>
