@@ -4,23 +4,31 @@ import { Helmet } from "react-helmet"
 import { useLocation } from "@reach/router"
 import { useStaticQuery, graphql } from "gatsby"
 
-const Seo = ({ title, description, image, article }) => {
+const Seo = ({ title, description, image }) => {
   const { pathname } = useLocation()
   const { site } = useStaticQuery(query)
 
   const {
     defaultTitle,
+    titleJapanese,
     titleTemplate,
+    titleTemplateJapanese,
     defaultDescription,
+    descriptionJapanese,
     siteUrl,
     defaultImage,
     twitterImage,
     favicon,
   } = site.siteMetadata
 
+  const jaPage = pathname.includes('/ja')
+  const titleSelector = jaPage ? titleJapanese : defaultTitle
+  const descriptionSelector = jaPage ? descriptionJapanese : defaultDescription
+  const titleTemplateSelector = jaPage ? titleTemplateJapanese : titleTemplate
+
   const seo = {
-    title: title || defaultTitle,
-    description: description || defaultDescription,
+    title: title || titleSelector,
+    description: description || descriptionSelector,
     image: `${siteUrl}${image || defaultImage}`,
     url: `${siteUrl}${pathname}`,
     twitterImage: `${siteUrl}${twitterImage || defaultImage}`,
@@ -31,7 +39,7 @@ const Seo = ({ title, description, image, article }) => {
   }
 
   return (
-    <Helmet title={seo.title} titleTemplate={titleTemplate}>
+    <Helmet title={seo.title} titleTemplate={titleTemplateSelector}>
       <meta name="description" content={seo.description} />
       <meta name="image" content={seo.image} />
 
@@ -85,8 +93,11 @@ const query = graphql`
     site {
       siteMetadata {
         defaultTitle: title
+        titleJapanese
         titleTemplate
+        titleTemplateJapanese
         defaultDescription: description
+        descriptionJapanese
         siteUrl: url
         defaultImage: image
         twitterImage
