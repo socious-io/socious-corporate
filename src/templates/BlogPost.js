@@ -19,7 +19,6 @@ const BlogPost = ({ data }) => {
           <div className="article__info">
             <h1>{frontmatter.title}</h1>
             <p>{frontmatter.Date.start}</p>
-            <p>{frontmatter.Author[0].name}</p>
           </div>
           <img src={frontmatter.Hero_Image[0].external.url} className="image__article" alt="article hero banner" />
           <div className="article__body">
