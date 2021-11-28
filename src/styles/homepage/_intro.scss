@@ -1,3 +1,5 @@
+// @import url('https://cdn-images.mailchimp.com/embedcode/classic-10_7.css');
+
 /* INTRO_SECTION */
 
 .section-intro {
@@ -110,6 +112,23 @@
 
   .square-2 {
     left: 141px;
+  }
+}
+
+@media only screen and (max-width: 450px) {
+  .section-intro__app-image {
+    width: 100vw;
+    height: 40rem;
+    background-size: contain;
+    background-position: 50% 50%;
+  }
+
+  .section-intro__app-image-blue-square {
+    display: none;
+  }
+  
+  .section-intro__app-image-paleblue-square {
+    display: none;
   }
 }
 
