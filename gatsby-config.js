@@ -6,8 +6,11 @@ module.exports = {
   siteMetadata: {
     url: "https://sociousgatsbymaster.gatsbyjs.io",
     title: "Socious | Community App for Social Change",
+    titleJapanese: "ソーシャス | 社会変革のためのコミュニティアプリ",
     titleTemplate: "%s · Socious",
-    description: "Socious is a community app for social change with a mission to accelerate social change by bringing people together. Many people are interested in contributing to social impact projects, but few of them can do so. We leverage this untapped potential by helping them contribute to society in an easy, fun way through a purpose-driven community app, AI recommendations, and community currency.",
+    titleTemplateJapanese: "%s · ソーシャス",
+    description: "Socious is a community app to accelerate social change by bringing people together. We use AI and blockchain-based tokens to help people join social impact projects in an easy, fun and fulfilling way.",
+    descriptionJapanese: "ソーシャスは、「出会いの化学反応で社会変革を加速させる」というミッションのもと、誰でも気軽に楽しく社会貢献できるように、SNSアプリ、AIマッチング、ブロックチェーンに基づくコミュニティ通貨を開発しています。",
     image: "/socious-og.png",
     twitterImage: "/socious-og-twitter.png",
     favicon: {
