@@ -1,8 +1,5 @@
 import React, { useState, useEffect } from 'react'
 import { useLocation } from '@reach/router';
-import { Link } from 'gatsby'
-import { StaticImage } from 'gatsby-plugin-image';
-import { slide as Menu } from 'react-burger-menu'
 
 import NavbarLarge from './NavbarLarge';
 import NavbarMobile from './NavbarMobile';
