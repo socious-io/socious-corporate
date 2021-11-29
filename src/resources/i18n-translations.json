@@ -29,7 +29,14 @@
     "careers-header-black-one" : "Join the Socious team and ",
     "careers-header-blue" : "make a difference ",
     "careers-header-black-two" : "in the world",
-    "careers-page-description" : "At Socious we're committed to bringing together change-makers and encouraging people to make a difference in the world. We're always on the lookout for exciting and ambitious talent to join our team and help us make the world a better place one act at a time."
+    "careers-page-description" : "At Socious we're committed to bringing together change-makers and encouraging people to make a difference in the world. We're always on the lookout for exciting and ambitious talent to join our team and help us make the world a better place one act at a time.",
+    "support-title" : "Socious User Guide",
+    "support-content-one" : "Everthing you need to know about ",
+    "support-content-two" : "Socious",
+    "support-mail-description" : "If you have any questions or bug reports, please contact us at the email address below.",
+    "support-email-title" : "Email: ",
+    "socious-email" : "support@socious.io",
+    "support-team" : "The Socious Support Team"
   },
   "ja" : {
     "form-header-black" : "社会変革のための",
@@ -61,6 +68,13 @@
     "careers-header-black-one" : "ソーシャスで",
     "careers-header-blue" : "社会変革",
     "careers-header-black-two" : "を目指す",
-    "careers-page-description" : "ソーシャスは、チェンジメーカーが集まることにより社会変革を加速させることができると信じています。私たちは世界をより良い場所にするために一歩ずつ行動してくれるメンバーを探しています。"
+    "careers-page-description" : "ソーシャスは、チェンジメーカーが集まることにより社会変革を加速させることができると信じています。私たちは世界をより良い場所にするために一歩ずつ行動してくれるメンバーを探しています。",
+    "support-title" : "ユーザーガイド",
+    "support-content-one" : "ソーシャスのユーザーガイドは",
+    "support-content-two" : "こちら",
+    "support-mail-description" : "ご質問等ございましたら下記のEメールアドレスよりご連絡いただけると幸いです。",
+    "support-email-title" : "Email: ",
+    "socious-email" : "support@socious.io",
+    "support-team" : "ソーシャス サポートチーム"
   }
 }
