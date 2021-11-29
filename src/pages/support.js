@@ -35,7 +35,7 @@ const SupportPage = (props) => {
             />
           </div>
           <div class="content">
-            <span><FormattedMessage id="support-email-title"/><a href="mailto:support@socious.io" aria-label="support@socious.io"><FormattedMessage id="support-email"/></a></span>
+            <span><FormattedMessage id="support-email-title"/><a href="mailto:support@socious.io">support@socious.io</a></span>
             <br/>
             <strong>
               <FormattedMessage
