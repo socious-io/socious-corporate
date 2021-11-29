@@ -20,27 +20,29 @@ const SupportPage = (props) => {
         title={seoTitle}
       />
       <SimpleLocalize {...props}>
-        <div class="title">
-          <FormattedMessage
-            id="support-title"
-          />
-        </div>
-        <div class="content">
-          <FormattedMessage id="support-content-one"/><a href="https://drive.google.com/file/d/1UL8sGX63H4MXmypAv9RYRbDmkg5zL5jl/view?usp=sharing" aria-label="Socious"><FormattedMessage id="support-content-two"/></a>
-        </div>
-        <div class="content">
-          <FormattedMessage
-            id="support-mail-description"
-          />
-        </div>
-        <div class="content">
-          <span><FormattedMessage id="support-email-title"/><a href="mailto:support@socious.io" aria-label="support@socious.io"><FormattedMessage id="support-email"/></a></span>
-          <br/>
-          <strong>
+        <div style={{ maxWidth: "max-content", margin: "0 auto", padding: "0 2rem" }}>
+          <div class="title">
             <FormattedMessage
-              id="support-team"
+              id="support-title"
             />
-          </strong>
+          </div>
+          <div class="content">
+            <FormattedMessage id="support-content-one"/><a href="https://drive.google.com/file/d/1UL8sGX63H4MXmypAv9RYRbDmkg5zL5jl/view?usp=sharing" aria-label="Socious"><FormattedMessage id="support-content-two"/></a>
+          </div>
+          <div class="content">
+            <FormattedMessage
+              id="support-mail-description"
+            />
+          </div>
+          <div class="content">
+            <span><FormattedMessage id="support-email-title"/><a href="mailto:support@socious.io" aria-label="support@socious.io"><FormattedMessage id="support-email"/></a></span>
+            <br/>
+            <strong>
+              <FormattedMessage
+                id="support-team"
+              />
+            </strong>
+          </div>
         </div>
       </SimpleLocalize>
     </Layout>
