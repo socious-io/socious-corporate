@@ -58,6 +58,7 @@ const Footer = () => {
             <li><Link to={linkLanguageSelector("/careers")}>{jaPage ? '採用情報' : 'Join Us'}</Link></li>
             <li><AnchorLink to={linkLanguageSelector("/about#contact-us")} title={contactUs} /></li>
             <li><AnchorLink to={linkLanguageSelector("/about#company-profile")} title={companyProfile} /></li>
+            <li><Link to={linkLanguageSelector("/support")}>{jaPage ? 'サポート' : 'Support'}</Link></li>
           </ul>
         </div>
       </div>
