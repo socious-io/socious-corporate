@@ -10,7 +10,7 @@ const VerifiedPage = () => {
     />
       <div className="body">
         <div className="header">
-          <img className ="icon" src="images/socious-logo.png" alt="Socious brand logo" />
+          <img className ="icon" src="../images/socious-logo.png" alt="Socious brand logo" />
           <div className="textHeader">
             Socious
           </div>
