@@ -8,11 +8,11 @@ const UserAgreementPageJa = () => {
         title="ソーシャス利用規約"
       />
       <div id="content">
-          <div class="section">
+          <div className="section">
               <span>ソーシャス株式会社（以下、「当社」といいます）は、より良い世界を共創することをミッションとし、ソーシャルチェンジメーカーのためのソーシャルネットワーキングサービスを本ウェブサイト及び本アプリで提供するサービス（以下、「本サービス」といいます）において提供しています。本利用規約（以下「本規約」といいます）では、本サービスの提供条件及び当社と登録ユーザーの皆様との間の権利義務関係が定められています。本サービスの利用に際しては、本規約の全文をお読みいただいたうえで、本規約に同意いただく必要があります。</span>
           </div>
-          <div class="section">
-              <span class="section-title">第１条 適用</span>
+          <div className="section">
+              <span className="section-title">第１条 適用</span>
               <ol>
                   <li>
                       <span>本規約は、本サービスの提供条件及び本サービスの利用に関する当社と登録ユーザーとの間の権利義務関係を定め、登録ユーザーと当社との間の本サービスの利用に関わる一切の関係に適用されます。</span>
@@ -28,8 +28,8 @@ const UserAgreementPageJa = () => {
                   </li>
               </ol>
           </div>
-          <div class="section">
-              <span class="section-title">第２条 定義</span><br/>
+          <div className="section">
+              <span className="section-title">第２条 定義</span><br/>
               <span>本規約において使用する以下の用語は、以下に定める意味を有するものとします。</span><br/>
               <span>（１）本サイト：そのドメインが「socious.io/」であり、「ソーシャス」という名称の当社が運営するウェブサイト（当社のウェブサイトのドメインまたは名称が変更された場合は、当該変更後のウェブサイトを含みます。）</span><br/>
               <span>（２）本アプリ：当社が提供するソーシャスという名称のアプリケーション</span><br/>
@@ -39,8 +39,8 @@ const UserAgreementPageJa = () => {
               <span>（６）投稿データ：登録ユーザーが本サービスを利用して文章、画像、動画その他のデータを送信して他者の閲覧に提供するコンテンツ</span><br/>
               <span>（７）ソーシャルアクション：登録ユーザーが投稿データに対するフォロー、いいね、閲覧、コメント等をする行為</span>
           </div>
-          <div class="section">
-              <span class="section-title">第３条 登録手続き</span>
+          <div className="section">
+              <span className="section-title">第３条 登録手続き</span>
               <ol>
                   <li>
                       <span>本サービスの利用を希望する者（以下「登録希望者」といいます。）は、本規約を遵守することに同意し、かつ当社の定める一定の情報（以下「登録事項」といいます。）を当社の定める方法で当社に提供することにより、当社に対し、本サービスの利用の登録を申請することができます。</span>
@@ -62,16 +62,16 @@ const UserAgreementPageJa = () => {
                   </li>
               </ol>
           </div>
-          <div class="section">
-              <span class="section-title">第４条 本サービスの提供</span><br/>
+          <div className="section">
+              <span className="section-title">第４条 本サービスの提供</span><br/>
               <span>当社は、時間帯にかかわらず本サイトを登録ユーザーの利用に供し、本サービスを提供します。ただし、事前通知による本サービスの全部または一部の提供を停止または中断する場合のほか、以下のいずれかに該当する場合には、登録 ユーザーに事前に通知することなく、本サービスの全部または一部の提供を停止または中断することができる権利を留保します。</span><br/>
               <span>（１）本サービスに係るコンピューター・システムの点検または保守作業を緊急に行う場合</span><br/>
               <span>（２）コンピューター、通信回線等の障害、誤操作、過度なアクセスの集中、不正アクセス、ハッキング等により本サービスの運営ができなくなった場合</span><br/>
               <span>（３）地震、落雷、火災、風水害、停電、天災地変などの不可抗力により本サービスの運営ができなくなった場合</span><br/>
               <span>（４）その他、当社が停止または中断を必要と判断した場合</span>
           </div>
-          <div class="section">
-              <span class="section-title">第５条 登録ユーザーの義務</span>
+          <div className="section">
+              <span className="section-title">第５条 登録ユーザーの義務</span>
               <ol>
                   <li>
                       <span>１．登録ユーザーは以下の事項を表明保証します。</span><br/>
@@ -87,8 +87,8 @@ const UserAgreementPageJa = () => {
                   </li>
               </ol>
           </div>
-          <div class="section">
-              <span class="section-title">第６条 権利帰属</span>
+          <div className="section">
+              <span className="section-title">第６条 権利帰属</span>
               <ol>
                   <li>
                       <span>当社ウェブサイト及び本サービスに関する知的財産権は全て当社または当社にライセンスを許諾している者に帰属しており、本規約に基づく本サービスの利用許諾は、当社ウェブサイトまたは本サービスに関する当社または当社にライセンスを許諾している者の知的財産権の使用許諾を意味するものではあり ません。</span>
@@ -104,8 +104,8 @@ const UserAgreementPageJa = () => {
                   </li>
               </ol>
           </div>
-          <div class="section">
-              <span class="section-title">第７条 有償サービス</span>
+          <div className="section">
+              <span className="section-title">第７条 有償サービス</span>
               <ol>
                   <li>
                       <span>登録ユーザーは、本サービスのうち、有償サービスについては、利用の対価として、別途当社が定め、当社ウェブサイトに表示する利用料金を、当社が指定する支払方法により当社に支払うものとします。</span>
@@ -121,8 +121,8 @@ const UserAgreementPageJa = () => {
                   </li>
               </ol>
           </div>
-          <div class="section">
-              <span class="section-title">第８条 禁止事項</span><br/>
+          <div className="section">
+              <span className="section-title">第８条 禁止事項</span><br/>
               <span>登録ユーザーは、本サービスの利用にあたり、以下の各号のいずれかに該当する行為または該当すると当社が判断する行為をしてはいけません。</span><br/>
               <span>（１）法令に違反する行為または犯罪行為に関連する行為</span><br/>
               <span>（２）当社、本サービスの他の利用者またはその他の第三者に対する詐欺または脅迫行為</span><br/>
@@ -143,8 +143,8 @@ const UserAgreementPageJa = () => {
               <span>（１７）前各号の行為を試みること</span><br/>
               <span>（１８）その他、当社が不適切と判断する行為</span>
           </div>
-          <div class="section">
-              <span class="section-title">第９条 登録抹消等</span><br/>
+          <div className="section">
+              <span className="section-title">第９条 登録抹消等</span><br/>
               <span>当社は、登録ユーザーが、以下の各号のいずれかの事由に該当する場合は、事前に通知または催告することなく、投稿データを削除もしくは非表示にし、当該登録ユーザーについて本サービスの全部または一部の利用を一時的に停止し、当社のサービスを使って登録ユーザーがつながりを構築する方法やコミュニケーションを図る方法を制限し、または登録ユーザーとしての登録を抹消することができます。</span><br/>
               <span>（１）本規約のいずれかの条項に違反した場合</span><br/>
               <span>（２）登録事項に虚偽の事実があることが判明した場合</span><br/>
@@ -154,12 +154,12 @@ const UserAgreementPageJa = () => {
               <span>（６）第3条第4項各号に該当する場合</span><br/>
               <span>（７）その他、当社が本サービスの利用または登録ユーザーとしての登録の継続を適当でないと判断した場合</span>
           </div>
-          <div class="section">
-              <span class="section-title">第１０条 退会</span><br/>
+          <div className="section">
+              <span className="section-title">第１０条 退会</span><br/>
               <span>登録ユーザーは、当社所定の手続の完了により、本サービスから退会し、自己の登録ユーザーとしての登録を抹消することができます。</span>
           </div>
-          <div class="section">
-              <span class="section-title">第１１条 本サービスの内容の変更、終了</span>
+          <div className="section">
+              <span className="section-title">第１１条 本サービスの内容の変更、終了</span>
               <ol>
                   <li>
                       <span>当社は、当社の都合により、本サービスの内容を変更し、または提供を終了することができます。</span>
@@ -169,8 +169,8 @@ const UserAgreementPageJa = () => {
                   </li>
               </ol>
           </div>
-          <div class="section">
-              <span class="section-title">第１２条 保証の否認及び免責</span>
+          <div className="section">
+              <span className="section-title">第１２条 保証の否認及び免責</span>
               <ol>
                   <li>
                       <span>当社は、本サービスが登録ユーザーの特定の目的に適合すること、期待する機能・商品的価値・正確性・有用性を有すること、登録ユーザーによる本サービスの利用が登録ユーザーに適用のある法令または業界団体の内部規則等に 適合すること、継続的に利用できること、及び不具合が生じないことについて、明示又は黙示を問わず何ら保証するものではありません。</span>
@@ -183,16 +183,16 @@ const UserAgreementPageJa = () => {
                   </li>
               </ol>
           </div>
-          <div class="section">
-              <span class="section-title">第１３条 秘密保持</span><br/>
+          <div className="section">
+              <span className="section-title">第１３条 秘密保持</span><br/>
               <span>登録ユーザーは、本サービスに関連して当社が登録ユーザーに対して秘密に取扱うことを求めて開示した非公知の情報について、当社の事前の書面による承諾がある場合を除き、秘密に取扱うものとします。</span>
           </div>
-          <div class="section">
-              <span class="section-title">第１４条 本規約等の変更</span><br/>
+          <div className="section">
+              <span className="section-title">第１４条 本規約等の変更</span><br/>
               <span>当社は、当社が必要と認めた場合は、本規約を変更することがあります。本契約を変更する場合、変更後の本規約の施行時期及び内容を当社ウェブサイト上での掲示その他の適切な方法により周知し、または登録ユーザーに通知します。但し、法令上登録ユーザーの同意が必要となるような内容の変更の場合は、登録ユーザーの同意を得るものとします。</span>
           </div>
-          <div class="section">
-              <span class="section-title">第１５条 通知等</span>
+          <div className="section">
+              <span className="section-title">第１５条 通知等</span>
               <ol>
                   <li>
                       <span>登録ユーザーは当社が次の方法で通知やメッセージを提供することに同意するものとします。</span><br/>
@@ -204,8 +204,8 @@ const UserAgreementPageJa = () => {
                   </li>
               </ol>
           </div>
-          <div class="section">
-              <span class="section-title">第１６条 サービス利用契約上の地位の譲渡等</span>
+          <div className="section">
+              <span className="section-title">第１６条 サービス利用契約上の地位の譲渡等</span>
               <ol>
                   <li>
                       <span>登録ユーザーは、当社の書面による事前の承諾なく、利用契約上の地位または本規約に基づく権利もしくは義務につき、第三者に対し、譲渡、移転、担保設定、その他の処分をすることはできません。</span>
@@ -215,15 +215,15 @@ const UserAgreementPageJa = () => {
                   </li>
               </ol>
           </div>
-          <div class="section">
-              <span class="section-title">第１７条 準拠法、管轄</span><br/>
+          <div className="section">
+              <span className="section-title">第１７条 準拠法、管轄</span><br/>
               <span>当社および登録ユーザーは、両者が万が一法的紛争に至った場合、その紛争の準拠法は日本法とし、東京地方裁判所を第一審の専属的合意管轄裁判所とすることに同意します。</span>
           </div>
-          <div class="section">
-              <span class="section-title">第１８条 言語</span><br/>
+          <div className="section">
+              <span className="section-title">第１８条 言語</span><br/>
               <span>本規約は、日本語で記載されているものがオリジナルです。</span>
           </div>
-          <div class="section">
+          <div className="section">
               <span>２０２1年8月19日制定</span>
           </div>
       </div>
