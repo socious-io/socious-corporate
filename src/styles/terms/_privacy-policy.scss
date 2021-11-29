@@ -1,5 +1,11 @@
 #content {
   margin: 50px;
+  font-weight: 400;
+
+  span, ol, li {
+    font-family: sans-serif;
+    font-size: 16px;
+  }
 }
 
 .section {
