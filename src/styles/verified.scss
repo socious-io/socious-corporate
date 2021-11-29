@@ -12,12 +12,14 @@ body {
 .body{
   padding: 7% 10% 7% 10%;
 }
+
 .header{
   display: flex;
   flex-direction: row;
   color: red;
   align-items: flex-end;
 }
+
 .textHeader{
   margin-left: 20px;
   font-family: 'Inter', sans-serif;
@@ -27,10 +29,11 @@ body {
   text-align: center;
   color: #2768A0;
 }
+
 .icon {
   object-fit: contain;
-  width: 94px;
 }
+
 .title{
   margin-top: 8%;
   margin-left: 8%;
@@ -41,6 +44,7 @@ body {
   text-align: left;
   color: #1F2128;
 }
+
 .content{
   font-family: 'Inter', sans-serif;
   font-weight: normal;
@@ -63,6 +67,7 @@ body {
     text-align: left;
     color: #1F2128;
   }
+
   .content{
     font-family: 'Inter', sans-serif;
     font-weight: normal;
@@ -74,20 +79,19 @@ body {
     text-align: left;
   }
 }
+
 @media only screen and (max-width: 768px) {
   /* For mobile phones: */
   .body{
     padding: 20px;
   }
+
   .header{
     display: flex;
     flex-direction: row;
     align-items: center;
   }
-  .icon {
-    object-fit: contain;
-    width: 24px;
-  }
+
   .textHeader{
     margin-left: 10px;
     font-family: 'Inter', sans-serif;
@@ -97,6 +101,7 @@ body {
     text-align: center;
     color: #2768A0;
   }
+
   .title{
     margin-top: 113px;
     margin-left: 8%;
@@ -107,6 +112,7 @@ body {
     text-align: left;
     color: #1F2128;
   }
+
   .content{
     font-family: 'Inter', sans-serif;
     font-weight: normal;
