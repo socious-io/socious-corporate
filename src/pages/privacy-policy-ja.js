@@ -1,5 +1,6 @@
 import React from 'react'
 import Seo from '../components/seo'
+import '../styles/terms/index.scss'
 
 const PrivacyPolicyPageJa = () => {
   return (
