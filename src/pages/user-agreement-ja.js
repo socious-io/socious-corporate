@@ -1,12 +1,8 @@
 import React from 'react'
-import Seo from '../components/seo'
 
 const UserAgreementPageJa = () => {
   return (
-    <>
-      <Seo
-        title="ソーシャス利用規約"
-      />
+    <div>
       <div id="content">
           <div className="section">
               <span>ソーシャス株式会社（以下、「当社」といいます）は、より良い世界を共創することをミッションとし、ソーシャルチェンジメーカーのためのソーシャルネットワーキングサービスを本ウェブサイト及び本アプリで提供するサービス（以下、「本サービス」といいます）において提供しています。本利用規約（以下「本規約」といいます）では、本サービスの提供条件及び当社と登録ユーザーの皆様との間の権利義務関係が定められています。本サービスの利用に際しては、本規約の全文をお読みいただいたうえで、本規約に同意いただく必要があります。</span>
@@ -227,7 +223,7 @@ const UserAgreementPageJa = () => {
               <span>２０２1年8月19日制定</span>
           </div>
       </div>
-    </>
+    </div>
   )
 }
 
