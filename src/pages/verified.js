@@ -1,5 +1,6 @@
 import React from "react";
 import Seo from "../components/seo";
+import "../styles/verified.scss"
 
 const VerifiedPage = () => {
   return (
