@@ -1,8 +1,12 @@
 import React from 'react'
+import Seo from '../components/seo'
 
 const UserAgreementPage = () => {
   return (
-    <div>
+    <>
+      <Seo
+      title="Terms of Use"
+      />
       <div id="content">
         <div className="section">
             <span>With the mission to accelerate social change by bringing people together, Socious Inc. (hereinafter referred to as 'the Company') provides social networking services for social changemakers through this website and the services provided in this application (hereinafter referred to as 'the Services'). (1) Terms of Use This Terms of Service (hereinafter referred to as the 'Terms') sets forth the terms and conditions of the Service and the relationship of rights and obligations between the Company and registered users. In order to use the Service, you must read and agree to these Terms of Use in their entirety.</span>
@@ -221,7 +225,7 @@ const UserAgreementPage = () => {
             <span>Enacted on August 19, 2021</span>
         </div>
       </div>
-    </div>
+    </>
   )
 }
 
