@@ -1,7 +1,9 @@
 footer {
+  max-width: 50rem;
+  margin: 0 auto;
   display: flex;
-  justify-content: space-evenly;
-  padding-top: 3rem;
+  justify-content: space-between;
+  padding: 3rem;
 }
 
 .footer-list {
