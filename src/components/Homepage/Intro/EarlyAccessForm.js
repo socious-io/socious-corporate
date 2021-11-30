@@ -5,15 +5,17 @@ import SimpleLocalize from '../../shared/SimpleLocalize'
 import { FormattedMessage } from 'react-intl'
 
 export default class EarlyAccessForm extends React.Component {
-  state = {
-    fullName: "",
-    email: "",
+  constructor() {
+    super()
+    this.state = {
+      fullName: "",
+      email: "",
+    }
+    this._handleChange = this._handleChange.bind(this)
+    this._handleSubmit = this._handleSubmit.bind(this)
   }
 
   _handleChange = e => {
-    console.log({
-      [`${e.target.name}`]: e.target.value,
-    })
     this.setState({
       [`${e.target.name}`]: e.target.value,
     })
@@ -84,7 +86,7 @@ export default class EarlyAccessForm extends React.Component {
                     <input
                       type="text"
                       value={this.state.fullName}
-                      name="name"
+                      name="fullName"
                       onChange={this._handleChange}
                       id="mce-name"
                     />
