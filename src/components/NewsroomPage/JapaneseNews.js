@@ -10,7 +10,7 @@ const JapaneseNews = () => {
         allMarkdownRemark(
           sort: {fields: frontmatter___Date___start, order: DESC}
           skip: 1
-          filter: {frontmatter: {Language: {eq: "ja"}}}
+          filter: {frontmatter: {Language: {eq: "ja"}, Publish: {eq: true}}}
         ) {
           edges {
             node {
