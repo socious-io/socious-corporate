@@ -22,9 +22,13 @@ const Navbar = () => {
 
   const transparentNavPaths = location.pathname.includes('/about') || 
                               location.pathname === '/careers' || 
+                              location.pathname === '/careers/' || 
                               location.pathname === '/ja/careers' || 
+                              location.pathname === '/ja/careers/' || 
                               location.pathname === '/newsroom' ||
-                              location.pathname === '/ja/newsroom'
+                              location.pathname === '/newsroom/' ||
+                              location.pathname === '/ja/newsroom' ||
+                              location.pathname === '/ja/newsroom/'
 
   const headerStyle = transparentNavPaths ? 'header header-fixed' : 'header'
   const logoImageStyle = transparentNavPaths ? 'header__logo-image-transparent' : 'header__logo-image'
