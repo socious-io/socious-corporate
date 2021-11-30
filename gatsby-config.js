@@ -4,7 +4,7 @@ require("dotenv").config({
 
 module.exports = {
   siteMetadata: {
-    url: "https://sociousgatsbymaster.gatsbyjs.io",
+    url: "https://socious.io",
     title: "Socious | Community App for Social Change",
     titleJapanese: "ソーシャス | 社会変革のためのコミュニティアプリ",
     titleTemplate: "%s · Socious",
