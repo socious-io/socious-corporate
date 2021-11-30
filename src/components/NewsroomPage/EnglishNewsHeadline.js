@@ -9,7 +9,7 @@ const EnglishNewsHeadline = () => {
         allMarkdownRemark(
           sort: {fields: frontmatter___Date___start, order: DESC}
           limit: 1
-          filter: {frontmatter: {Language: {eq: "en"}}}
+          filter: {frontmatter: {Language: {eq: "en"}, Publish: {eq: true}}}
         ) {
           edges {
             node {

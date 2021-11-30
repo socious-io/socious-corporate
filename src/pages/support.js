@@ -20,21 +20,21 @@ const SupportPage = (props) => {
         title={seoTitle}
       />
       <SimpleLocalize {...props}>
-        <div style={{ maxWidth: "max-content", margin: "0 auto", padding: "0 2rem" }}>
-          <div class="title">
+        <div style={{ maxWidth: "50rem", margin: "0 auto", padding: "3rem" }}>
+          <div class="title" style={{ marginLeft: "0", marginTop: "0" }}>
             <FormattedMessage
               id="support-title"
             />
           </div>
-          <div class="content">
+          <div class="content" style={{ marginLeft: "0" }}>
             <FormattedMessage id="support-content-one"/><a href="https://drive.google.com/file/d/1UL8sGX63H4MXmypAv9RYRbDmkg5zL5jl/view?usp=sharing" aria-label="Socious"><FormattedMessage id="support-content-two"/></a>
           </div>
-          <div class="content">
+          <div class="content" style={{ marginLeft: "0" }}>
             <FormattedMessage
               id="support-mail-description"
             />
           </div>
-          <div class="content">
+          <div class="content" style={{ marginLeft: "0" }}>
             <span><FormattedMessage id="support-email-title"/><a href="mailto:support@socious.io">support@socious.io</a></span>
             <br/>
             <strong>
