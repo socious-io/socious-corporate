@@ -8,7 +8,7 @@ const seniorDataScientist = {
     {
       id: 1,
       header: 'The Role',
-      content: 
+      content:
         <p>
           Do you have a passion for social impact? If yes, Socious Inc. is looking for somebody with your enthusiasm and skills to work as part of the team. We are looking for an experienced data scientist who is curious, driven, and passionate about social impact and data analytics. If you are looking for a role where you can make a major impact in the world, we want to meet you.
           <br/><br/>
@@ -22,7 +22,7 @@ const seniorDataScientist = {
     {
       id: 2,
       header: 'Responsibilities',
-      content: 
+      content:
         <div>
           <p>
             As a member of Socious Inc. you will be at the forefront of this transformational technology assisting social change makers. You will be building a recommender engine for the Socious app. Resposibilities include:
@@ -53,7 +53,7 @@ const seniorDataScientist = {
     {
       id: 3,
       header: 'Skills & Experience',
-      content: 
+      content:
         <ul>
           <li>Bachelor's Degree</li>
           <li>3+ years of experience with data scripting languages (e.g SQL, Python, R etc.), statistical/mathematical software (e.g. R, SAS, or Matlab), or AWS products</li>
@@ -64,7 +64,7 @@ const seniorDataScientist = {
     {
       id: 4,
       header: 'Language Skills',
-      content: 
+      content:
         <ul>
           <li>Business-level English skills are required. Japanese skills are desirable.</li>
         </ul>
@@ -73,13 +73,13 @@ const seniorDataScientist = {
     {
       id: 5,
       header: 'What’s on offer',
-      content: 
+      content:
         <ul>
           <li>A supportive, trusting and transparent working environment</li>
           <li>Work-life balance with flexible hours and leave (unlimited paid leave)</li>
           <li>A place to look at things differently and challenge and offer solutions</li>
           <li>Flexible work arrangements (full-time, part-time freelance, side-job, onsite, remote, etc.)</li>
-          <li>A competitive salary package</li>
+          <li>A competitive salary package (10-20 million yen per year + stock options)</li>
           <li>Japan work visa sponsorship</li>
         </ul>
       ,
@@ -87,9 +87,9 @@ const seniorDataScientist = {
     {
       id: 6,
       header: 'How to apply',
-      content: 
+      content:
         <div>
-          <p>To apply, please send your resume to <a href="mailto:jobs@socious.io">jobs@socious.io</a></p>
+          <p>To apply, please send your letter of motivation (cover letter) and CV to <a href="mailto:jobs@socious.io">jobs@socious.io</a></p>
           <br/>
           <p><strong>Please Note:</strong> This role is open to remote work outside Japan and also to remote work initially, with the aim of relocating to Japan post-Covid.</p>
         </div>
