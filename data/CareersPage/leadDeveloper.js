@@ -57,7 +57,7 @@ const leadDeveloper = {
       content:
         <ul>
           <li>Degree in Computer Science, Engineering or a related field</li>
-          <li>You have solid experience in software development, especially with React Native, React, PHP, NodeJS, MySQL, JavaScript, AWS</li>
+          <li>Minimum 10 years of experience (or equivalent skills) in software development, especially with React Native, React, PHP, NodeJS, MySQL, GraphQL, Go, JavaScript, AWS</li>
           <li>Proven success as a technical team leader</li>
           <li>You are a good mentor & coach</li>
           <li>You possess good communication skills</li>
@@ -82,7 +82,7 @@ const leadDeveloper = {
           <li>Work-life balance with flexible hours and leave (unlimited paid leave)</li>
           <li>A place to look at things differently and challenge and offer solutions</li>
           <li>Flexible work arrangements (full-time, part-time freelance, side-job, onsite, remote, etc.)</li>
-          <li>A competitive salary package</li>
+          <li>A competitive salary package (10-20 million yen per year + stock options)</li>
           <li>Japan work visa sponsorship</li>
         </ul>
       ,
@@ -92,7 +92,7 @@ const leadDeveloper = {
       header: 'How to apply',
       content:
         <div>
-          <p>To apply, please send your resume to <a href="mailto:jobs@socious.io">jobs@socious.io</a></p>
+          <p>To apply, please send your letter of motivation (cover letter) and CV to <a href="mailto:jobs@socious.io">jobs@socious.io</a></p>
           <br/>
           <p><strong>Please Note:</strong> This role is open to remote work outside Japan and also to remote work initially, with the aim of relocating to Japan post-Covid.</p>
         </div>
