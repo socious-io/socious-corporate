@@ -89,7 +89,7 @@ const seniorDataScientist = {
       header: 'How to apply',
       content:
         <div>
-          <p>To apply, please send your resume to <a href="mailto:jobs@socious.io">jobs@socious.io</a></p>
+          <p>To apply, please send your letter of motivation (cover letter) and CV to <a href="mailto:jobs@socious.io">jobs@socious.io</a></p>
           <br/>
           <p><strong>Please Note:</strong> This role is open to remote work outside Japan and also to remote work initially, with the aim of relocating to Japan post-Covid.</p>
         </div>
