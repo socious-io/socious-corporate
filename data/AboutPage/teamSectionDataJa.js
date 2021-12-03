@@ -1,7 +1,13 @@
+import SeiraImg from '../../src/images/team/Seira Yun.jpeg'
+import AtsushiImg from '../../src/images/team/Atsushi Inoue.jpeg'
+import GalinaImg from '../../src/images/team/Galina Neydenova.jpeg'
+import RhysImg from '../../src/images/team/Rhys Malyon.jpeg'
+import LawrenceImg from '../../src/images/team/Lawrence Cate.jpeg'
+
 const teamMembersJa = [
   {
     id: 1,
-    imageUrl: '../images/team/Seira Yun.jpeg',
+    imageUrl: SeiraImg,
     imageAlt: '尹 世羅',
     name: '尹 世羅',
     title: '創業者CEO',
@@ -10,7 +16,7 @@ const teamMembersJa = [
   },
   {
     id: 2,
-    imageUrl: '../images/team/Atsushi Unoue.jpeg',
+    imageUrl: AtsushiImg,
     imageAlt: '井上 敦司 (博士)',
     name: '井上 敦司 (博士)',
     title: '顧問',
@@ -19,7 +25,7 @@ const teamMembersJa = [
   },
   {
     id: 3,
-    imageUrl: '../images/team/Galina Neydenova.jpeg',
+    imageUrl: GalinaImg,
     imageAlt: 'ガリナ ナイデノバ',
     name: 'ガリナ ナイデノバ (MSc, FHEA)',
     title: 'データサイエンティスト',
@@ -29,7 +35,7 @@ const teamMembersJa = [
   },
   {
     id: 4,
-    imageUrl: '../images/team/Rhys Malyon.jpeg',
+    imageUrl: RhysImg,
     imageAlt: 'リース マルヨン',
     name: 'リース マルヨン',
     title: 'ウェブ開発者',
@@ -38,7 +44,7 @@ const teamMembersJa = [
   },
   {
     id: 5,
-    imageUrl: '../images/team/Lawrence Cate.jpeg',
+    imageUrl: LawrenceImg,
     imageAlt: 'ローレンス ケイト',
     name: 'ローレンス ケイト',
     title: '技術顧問',

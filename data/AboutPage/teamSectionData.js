@@ -1,7 +1,13 @@
+import SeiraImg from '../../src/images/team/Seira Yun.jpeg'
+import AtsushiImg from '../../src/images/team/Atsushi Inoue.jpeg'
+import GalinaImg from '../../src/images/team/Galina Neydenova.jpeg'
+import RhysImg from '../../src/images/team/Rhys Malyon.jpeg'
+import LawrenceImg from '../../src/images/team/Lawrence Cate.jpeg'
+
 const teamMembers = [
   {
     id: 1,
-    imageUrl: '../images/team/Seira Yun.jpeg',
+    imageUrl: SeiraImg,
     imageAlt: 'Seira Yun',
     name: 'Seira Yun',
     title: 'Founder & CEO',
@@ -10,7 +16,7 @@ const teamMembers = [
   },
   {
     id: 2,
-    imageUrl: '../images/team/Atsushi Unoue.jpeg',
+    imageUrl: AtsushiImg,
     imageAlt: 'Atsushi Inoue',
     name: 'Atsushi Inoue, Ph.D.',
     title: 'AI Advisor',
@@ -19,7 +25,7 @@ const teamMembers = [
   },
   {
     id: 3,
-    imageUrl: '../images/team/Galina Neydenova.jpeg',
+    imageUrl: GalinaImg,
     imageAlt: 'Galina Neydenova',
     name: 'Galina Naydenova (MSc, FHEA)',
     title: 'Data Scientist',
@@ -29,7 +35,7 @@ const teamMembers = [
   },
   {
     id: 4,
-    imageUrl: '../images/team/Rhys Malyon.jpeg',
+    imageUrl: RhysImg,
     imageAlt: 'Rhys Malyon',
     name: 'Rhys Malyon',
     title: 'Web Developer',
@@ -38,7 +44,7 @@ const teamMembers = [
   },
   {
     id: 5,
-    imageUrl: '../images/team/Lawrence Cate.jpeg',
+    imageUrl: LawrenceImg,
     imageAlt: 'Lawrence Cate',
     name: 'Lawrence Cate',
     title: 'Technical Advisor',
