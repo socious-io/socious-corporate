@@ -1,12 +1,39 @@
 import React from 'react'
 
+import { graphql, useStaticQuery } from 'gatsby'
+import { getImage } from 'gatsby-plugin-image'
+import { BgImage } from 'gbimage-bridge'
+
 import SimpleLocalize from "../shared/SimpleLocalize";
 import { FormattedMessage } from "react-intl";
 
 const Hero = (props) => {
+  const { heroBackgroundImage } = useStaticQuery(
+    graphql`
+      query {
+        heroBackgroundImage: file(relativePath: {eq: "hero-banner.png"}) {
+          childImageSharp {
+            gatsbyImageData(
+              width: 2000,
+              quality: 50,
+              webpOptions: {quality: 70}
+              placeholder: BLURRED
+            )
+          }
+        }
+      }
+    `
+  )
+
+  const pluginImage = getImage(heroBackgroundImage)
+  const backgroundFluidImageStack = [
+    pluginImage,
+    `linear-gradient(rgba(10, 10, 10, 0.8), rgba(10, 10, 10, 0.2))`,
+  ].reverse();
+
   return (
     <SimpleLocalize {...props}>
-      <div className="hero-section" id="our-mission">
+      <BgImage image={backgroundFluidImageStack} className="hero-section" id="our-mission">
         <div className="hero-text">
           <h5>
             <FormattedMessage
@@ -19,7 +46,7 @@ const Hero = (props) => {
             />
           </h1>
         </div>
-      </div>
+      </BgImage>
     </SimpleLocalize>
   )
 }

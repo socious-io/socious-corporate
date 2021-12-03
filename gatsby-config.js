@@ -2,6 +2,8 @@ require("dotenv").config({
   path: `.env.${process.env.NODE_ENV}`,
 })
 
+const path = require(`path`)
+
 module.exports = {
   siteMetadata: {
     url: "https://socious.io",
@@ -43,7 +45,15 @@ module.exports = {
     },
     "gatsby-plugin-sass",
     "gatsby-plugin-image",
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `images`,
+        path: path.join(__dirname, `src`, `images`),
+      },
+    },
     "gatsby-plugin-sharp",
+    "gatsby-transformer-sharp",
     "gatsby-plugin-anchor-links",
     "gatsby-plugin-react-helmet",
     {

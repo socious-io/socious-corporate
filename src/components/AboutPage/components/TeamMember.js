@@ -1,14 +1,6 @@
 import React, { useEffect } from "react";
-import { useLocation } from '@reach/router';
 
 const TeamMember = (props) => {
-  const location = useLocation()
-  const jaPage = location.pathname.includes('/ja')
-  
-  const fixedImageLink = (url) => {
-    return `${location.pathname.slice(10)}/${url}`
-  }
-
   const modalId = `myModal${props.id}`
   const modalRef = `#myModal${props.id}`
   
@@ -46,7 +38,7 @@ const TeamMember = (props) => {
   return (
     <div>
       <div className="team-member">
-        <img src={jaPage ? fixedImageLink(props.imageUrl) : props.imageUrl} alt={props.imageAlt} />
+        <img src={props.imageUrl} alt={props.imageAlt} />
         <div className="member-content">
           <div className="member-title">
             <p>{props.title}</p>
