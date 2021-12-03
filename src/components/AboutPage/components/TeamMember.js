@@ -6,7 +6,7 @@ const TeamMember = (props) => {
   const jaPage = location.pathname.includes('/ja')
   
   const fixedImageLink = (url) => {
-    return `${location.pathname.slice(9)}/${url}`
+    return `${location.pathname.slice(10)}/${url}`
   }
 
   const modalId = `myModal${props.id}`
