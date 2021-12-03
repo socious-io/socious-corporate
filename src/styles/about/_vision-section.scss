@@ -15,7 +15,6 @@
 
 .vision-image {
   min-width: 60%;
-  background-image: linear-gradient(to right, $light-grey 0%, $primary 100%), url("/images/vision-banner.png");
   background-size: cover;
   background-position: 50% 50%;
 }
@@ -57,7 +56,6 @@
 
   .vision-image {
     height: 100%;
-    background-image: linear-gradient(to bottom, $light-grey 0%, $primary 100%), url("/images/vision-banner.png");
 }
   
   .vision-content {
