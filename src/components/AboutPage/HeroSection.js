@@ -15,8 +15,8 @@ const Hero = (props) => {
           childImageSharp {
             gatsbyImageData(
               width: 2000,
-              quality: 50,
-              webpOptions: {quality: 70}
+              quality: 70,
+              webpOptions: {quality: 80}
               placeholder: BLURRED
             )
           }
