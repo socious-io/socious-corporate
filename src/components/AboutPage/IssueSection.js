@@ -1,25 +1,42 @@
 import React from 'react'
 
+import { graphql, useStaticQuery } from 'gatsby'
+import { getImage } from 'gatsby-plugin-image'
+import { BgImage } from 'gbimage-bridge'
+
 import SimpleLocalize from "../shared/SimpleLocalize";
 import { FormattedMessage } from "react-intl";
 
-// import issueItems from '../../../data/AboutPage/issueSectionData'
-// import IssueItem from './components/IssueItem'
-
 const IssueSection = (props) => {
-  // const issues = issueItems.map(issue => 
-  //   <IssueItem
-  //     key={issue.id}
-  //     header={issue.header}
-  //     content={issue.content}
-  //   />
-  // )
+  const { issuesBackgroundImage } = useStaticQuery(
+    graphql`
+      query {
+        issuesBackgroundImage: file(relativePath: {eq: "issues-banner.jpg"}) {
+          childImageSharp {
+            gatsbyImageData(
+              width: 2000,
+              quality: 60,
+              webpOptions: {quality: 80}
+              placeholder: BLURRED
+            )
+          }
+        }
+      }
+    `
+  )
+
+  const pluginImage = getImage(issuesBackgroundImage)
+  const backgroundFluidImageStack = [
+    pluginImage,
+    `linear-gradient(to right, rgba(10,10,10,0.2), rgba(255, 255, 255, 1))`,
+  ].reverse();
 
   return (
     <SimpleLocalize {...props}>
       <div className="issue-section" id="social-issues">
         <div className="issue-banner">
-          <div className="issue-banner__image"></div>
+          <BgImage image={backgroundFluidImageStack} className="issue-banner__image" />
+          {/* <div className="issue-banner__image"></div> */}
           <div className="issue-banner__content">
             <h2>
               <FormattedMessage
