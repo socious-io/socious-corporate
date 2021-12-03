@@ -34,7 +34,6 @@ const Hero = (props) => {
   return (
     <SimpleLocalize {...props}>
       <BgImage image={backgroundFluidImageStack} className="hero-section" id="our-mission">
-      {/* <div className="hero-section" id="our-mission"> */}
         <div className="hero-text">
           <h5>
             <FormattedMessage
@@ -47,7 +46,6 @@ const Hero = (props) => {
             />
           </h1>
         </div>
-      {/* </div> */}
       </BgImage>
     </SimpleLocalize>
   )
