@@ -46,11 +46,11 @@ const JobsSection = (props) => {
             <div className="job-title">
               <p><Link to={linkLanguageSelector("/careers/lead-developer")}><LinkSimple size={18} /> Lead Developer</Link></p>
             </div>
-            <div className="job-department">  
+            <div className="job-department">
               <p>Engineering</p>
             </div>
             <div className="job-date">
-              <p>10/06/2021</p>
+              <p>06/10/2021</p>
             </div>
           </div>
           <div className="jobs-list__item">
@@ -61,7 +61,18 @@ const JobsSection = (props) => {
               <p>Data Science / Machine Learning</p>
             </div>
             <div className="job-date">
-              <p>10/15/2021</p>
+              <p>15/10/2021</p>
+            </div>
+          </div>
+          <div className="jobs-list__item">
+            <div className="job-title">
+              <p><Link to={linkLanguageSelector("/careers/lead-designer")}><LinkSimple size={18} /> Lead UI/UX Designer</Link></p>
+            </div>
+            <div className="job-department">
+              <p>Design</p>
+            </div>
+            <div className="job-date">
+              <p>05/12/2021</p>
             </div>
           </div>
         </div>
