@@ -1,4 +1,5 @@
 import React from "react";
+import { StaticImage } from "gatsby-plugin-image";
 
 import SimpleLocalize from "../../shared/SimpleLocalize";
 import { FormattedMessage } from "react-intl";
@@ -51,13 +52,29 @@ const JobsSection = (props) => {
             </div>
           </div>
           <div className="section-jobs__img-container">
-            <div className="section-jobs__img"></div>
+            {/* <div className="section-jobs__img"></div> */}
+            <StaticImage
+              src="../../../images/socious-job-seeker.png"
+              alt="socious app illustration"
+              className="section-jobs__img"
+              placeholder="blurred"
+              loading="lazy"
+              objectFit="contain"
+            />
             <div className="section-jobs__img-paleblue-square"></div>
           </div>
         </div>
         <div className="section-jobs__block">
           <div className="section-jobs__img-entrepreneurs-container">
-            <div className="section-jobs__img-entrepreneurs"></div>
+            {/* <div className="section-jobs__img-entrepreneurs"></div> */}
+            <StaticImage
+              src="../../../images/socious-entrepreneurs.png"
+              alt="socious app illustration"
+              className="section-jobs__img-entrepreneurs"
+              placeholder="blurred"
+              loading="lazy"
+              objectFit="contain"
+            />
             <div className="section-jobs__img-entrepreneurs-paleblue-square"></div>
             <div className="section-jobs__img-entrepreneurs-purple-square"></div>
           </div>
@@ -75,7 +92,14 @@ const JobsSection = (props) => {
             </div>
           </div>
           <div className="section-jobs__img-entrepreneurs-container--mobile">
-            <div className="section-jobs__img-entrepreneurs--mobile"></div>
+            <StaticImage
+                src="../../../images/socious-entrepreneurs.png"
+                alt="socious app illustration"
+                className="section-jobs__img-entrepreneurs--mobile"
+                placeholder="blurred"
+                loading="lazy"
+                objectFit="contain"
+            />
             <div className="section-jobs__img-entrepreneurs-paleblue-square"></div>
             <div className="section-jobs__img-entrepreneurs-purple-square"></div>
           </div>
