@@ -8,27 +8,25 @@ const jobItem = [
   {
     id: 1,
     icon: <WhatshotIcon />,
-    title: "Meet like-minded people",
-    subtitle: `Socious AI will match you with the people you want to meet and offer 
-    community support and meaningful connections that accelerate social change
+    title: "Contribute to a social cause you care about",
+    subtitle: `You can meet like-minded people and be part of the social impact community.
+    Our 1-Click Application feature and AI recommendations will save you time and hassle.
     `
   },
   {
     id: 2,
     icon: <DeveloperModeIcon />,
-    title: "Easily find the most suited social impact projects",
-    subtitle: `From fast-growing social startups to international organizations,
-    Socious AI will connect you with the right organization.
-    You can contribute to the achievement of the SDGs in a variety of ways,
-    including freelance, part-time, and advisory.
+    title: "Find paid opportunities where you can learn new skills and achieve your goals",
+    subtitle: `Our proprietary algorithms ensure quality connections and reduce the risk of mismatches.
+    You can find one-off, part-time, and full-time opportunities at social impact organizations tackling various social issues.
     `
   },
   {
     id: 3,
     icon: <FilterTiltShiftIcon />,
-    title: "Visualizes your social impact",
-    subtitle: `Socious' unique algorithm quantifies and visualizes
-    your contribution to solving social issues
+    title: "Take full control of and monetize your data",
+    subtitle: `You are the owner of your data and you can sell it to whomever you please through our blockchain-based platform.
+    You can join social impact projects, buy & sell socially conscious products, and monetize your data. All in one platform.
     `
   }
 ]
