@@ -1,10 +1,85 @@
 import React from "react";
+import { graphql, useStaticQuery } from "gatsby";
 
 import TeamMember from "./components/TeamMember";
 import teamMembers from "../../../data/AboutPage/teamSectionData";
 import teamMembersJa from "../../../data/AboutPage/teamSectionDataJa";
 
 const TeamSection = (props) => {
+  const data = useStaticQuery(graphql`
+    query TeamImages {
+      SeiraYun: file(
+        relativePath: {eq: "team/Seira Yun.jpeg"}
+      ) {
+        childImageSharp {
+          gatsbyImageData(
+            width: 197,
+            height: 224,
+            quality: 70,
+            placeholder: BLURRED,
+            blurredOptions: {width: 100}
+          )
+        }
+      }
+      RhysMalyon: file(
+        relativePath: {eq: "team/Rhys Malyon.jpeg"}
+      ) {
+        childImageSharp {
+          gatsbyImageData(
+            width: 197,
+            height: 224,
+            quality: 70,
+            placeholder: BLURRED,
+            blurredOptions: {width: 100}
+          )
+        }
+      }
+      GalinaNeydenova: file(
+        relativePath: {eq: "team/Galina Neydenova.jpeg"}
+      ) {
+        childImageSharp {
+          gatsbyImageData(
+            width: 197,
+            height: 224,
+            quality: 70,
+            placeholder: BLURRED,
+            blurredOptions: {width: 100}
+          )
+        }
+      }
+      AtsushiInoue: file(
+        relativePath: {eq: "team/Atsushi Inoue.jpeg"}
+      ) {
+        childImageSharp {
+          gatsbyImageData(
+            width: 197,
+            height: 224,
+            quality: 70,
+            placeholder: BLURRED, 
+            blurredOptions: {width: 100}
+          )
+        }
+      }
+      LawrenceCate: file(
+        relativePath: {eq: "team/Lawrence Cate.jpeg"}
+      ) {
+        childImageSharp {
+          gatsbyImageData(
+            width: 197,
+            height: 224,
+            quality: 70,
+            placeholder: BLURRED,
+            blurredOptions: {width: 100}
+          )
+        }
+      }
+    }
+  `)
+
+  const { SeiraYun, AtsushiInoue, GalinaNeydenova, RhysMalyon, LawrenceCate } = data
+
+  const teamImages = [SeiraYun, AtsushiInoue, GalinaNeydenova, RhysMalyon, LawrenceCate]
+
   const { language } = props.pageContext
 
   const meetTheTeamLanguage = language === 'ja' ? 'チーム' : 'Meet The Team'
@@ -14,6 +89,7 @@ const TeamSection = (props) => {
     <TeamMember
       key={member.id}
       id={member.id}
+      imageOpt={teamImages[member.id - 1]}
       imageUrl={member.imageUrl}
       imageAlt={member.imageAlt}
       name={member.name}

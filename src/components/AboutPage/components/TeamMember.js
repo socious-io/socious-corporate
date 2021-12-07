@@ -1,4 +1,5 @@
 import React, { useEffect } from "react";
+import { GatsbyImage, getImage } from "gatsby-plugin-image";
 
 const TeamMember = (props) => {
   const modalId = `myModal${props.id}`
@@ -35,10 +36,12 @@ const TeamMember = (props) => {
     }
   })
 
+  const image = getImage(props.imageOpt.childImageSharp.gatsbyImageData)
+
   return (
     <div>
       <div className="team-member">
-        <img src={props.imageUrl} alt={props.imageAlt} />
+        <GatsbyImage image={image} alt={props.imageAlt} />
         <div className="member-content">
           <div className="member-title">
             <p>{props.title}</p>
