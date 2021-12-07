@@ -8,7 +8,7 @@ const jobItem = [
   {
     id: 1,
     icon: <WhatshotIcon />,
-    title: "Contribute to a social cause you care about",
+    title: "Discover and contribute to social impact projects you care about effortlessly",
     subtitle: `You can meet like-minded people and be part of the social impact community.
     Our 1-Click Application feature and AI recommendations will save you time and hassle.
     `
@@ -17,8 +17,8 @@ const jobItem = [
     id: 2,
     icon: <DeveloperModeIcon />,
     title: "Find paid opportunities where you can learn new skills and achieve your goals",
-    subtitle: `Our proprietary algorithms ensure quality connections and reduce the risk of mismatches.
-    You can find one-off, part-time, and full-time opportunities at social impact organizations tackling various social issues.
+    subtitle: `You can find one-off, part-time, and full-time opportunities at social impact organizations tackling various social issues and Sustainable Development Goals (SDGs).
+    Our proprietary algorithms ensure meaningful connections with people you want to meet and reduce the risk of mismatches.
     `
   },
   {
