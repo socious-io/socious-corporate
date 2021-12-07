@@ -9,8 +9,7 @@ const TeamSection = (props) => {
   const data = useStaticQuery(graphql`
     query TeamImages {
       SeiraYun: file(
-        sourceInstanceName: {eq: "images"}
-        childImageSharp: {id: {eq: "5f51ced9-7c02-5857-a990-a4f5142c9ca3"}}
+        relativePath: {eq: "team/Seira Yun.jpeg"}
       ) {
         childImageSharp {
           gatsbyImageData(
@@ -23,8 +22,7 @@ const TeamSection = (props) => {
         }
       }
       RhysMalyon: file(
-        sourceInstanceName: {eq: "images"}
-        childImageSharp: {id: {eq: "cdf8d6c3-8676-5500-b44f-393e7ccbf39c"}}
+        relativePath: {eq: "team/Rhys Malyon.jpeg"}
       ) {
         childImageSharp {
           gatsbyImageData(
@@ -37,8 +35,7 @@ const TeamSection = (props) => {
         }
       }
       GalinaNeydenova: file(
-        sourceInstanceName: {eq: "images"}
-        childImageSharp: {id: {eq: "693cada6-2e44-5766-8fd0-f054d66a05e7"}}
+        relativePath: {eq: "team/Galina Neydenova.jpeg"}
       ) {
         childImageSharp {
           gatsbyImageData(
@@ -51,8 +48,7 @@ const TeamSection = (props) => {
         }
       }
       AtsushiInoue: file(
-        sourceInstanceName: {eq: "images"}
-        childImageSharp: {id: {eq: "b099071c-2a60-534f-8b30-3bc5163c236f"}}
+        relativePath: {eq: "team/Atsushi Inoue.jpeg"}
       ) {
         childImageSharp {
           gatsbyImageData(
@@ -65,8 +61,7 @@ const TeamSection = (props) => {
         }
       }
       LawrenceCate: file(
-        sourceInstanceName: {eq: "images"},
-        childImageSharp: {id: {eq: "5e27a7b7-0f4e-51b8-b204-2656aa4251f5"}}
+        relativePath: {eq: "team/Lawrence Cate.jpeg"}
       ) {
         childImageSharp {
           gatsbyImageData(
