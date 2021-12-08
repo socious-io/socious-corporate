@@ -26,8 +26,9 @@ const jobItem = [
   {
     id: 6,
     icon: <FaceIcon />,
-    title: "Find impact investors, cities, schools, and impact-driven organizations to collaborate with",
-    subtitle: `Find people with a variety of skills - from software development to UX design - and sell a variety of products - from sustainable products to cruelty-free products.
+    title: "Find impact investors, cities, and impact-driven organizations to collaborate with",
+    subtitle: `Meet impact investors who share your passion and raise the capital necessary for social impact.
+    Collaborate with cities, schools, and impact-driven organizations.
     Hire talents, sell socially conscious products, fundraise, find partners, and advertise to socially conscious consumers on one platform.
     `
   }
