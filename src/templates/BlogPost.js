@@ -6,13 +6,14 @@ import Seo from '../components/seo'
 
 const BlogPost = ({ data }) => {
   const { frontmatter, html } = data.markdownRemark
-  console.log(frontmatter)
 
   return (
     <Layout>
       <Seo
         title={frontmatter.title}
-        description='Keep up to date with the latest news at Socious'
+        description={frontmatter.Meta_Description}
+        image={frontmatter.Hero_Image[0].external.url}
+        twitterImage={frontmatter.Hero_Image[0].external.url}
       />
       <div className="main">
         <div className="container__article">
@@ -49,6 +50,7 @@ export const query = graphql`
             url
           }
         }
+        Meta_Description
       }
       html
     }
