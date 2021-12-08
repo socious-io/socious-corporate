@@ -9,26 +9,26 @@ const jobItem = [
     id: 4,
     icon: <PersonAddIcon />,
     title: "Hire the right talent for your company",
-    subtitle: `Socious AI recommends the perfect candidate for your company
-    based on mission-fit, culture-fit, and skill-fit. It helps prevent 
-    mismatches and improve retention rate, employee happiness, and performance.
-    Social ventures come here first to build their team.
+    subtitle: `Meet like-minded people (one-off, part-time, full-time) to work with and solve social problems faster together.
+    Our proprietary algorithms recommend the most suitable candidates who share your mission, reduce the risk of mismatches, and improve retention rate, employee happiness, and performance.
+    Automate the hiring process using AI screening and chatbots to significantly reduce the cost and time spent on recruitment.
     `
   },
   {
     id: 5,
     icon: <StarIcon />,
-    title: "Significantly reduce the cost and time spent on recruitment",
-    subtitle: `Automate the hiring process using AI screening and chatbots
-    to significantly reduce the cost and time spent on recruitment.
+    title: "Sell your socially conscious products on Socious Market",
+    subtitle: `Reach and sell your products to socially conscious consumers through our marketplace for socially conscious products.
+    Directly target socially conscious customers who have explicitly consented to monetize their data and receive your ads on our socially conscious ad platform.
+    Get certified as a Socious organization and access talents and customers who are otherwise inaccessible.
     `
   },
   {
     id: 6,
     icon: <FaceIcon />,
-    title: "Connect with impact investors",
-    subtitle: `Socious will match you with impact investors who share your passion.
-      Collaborate with cities, schools, and impact-driven corporates.
+    title: "Find impact investors, cities, schools, and impact-driven organizations to collaborate with",
+    subtitle: `Find people with a variety of skills - from software development to UX design - and sell a variety of products - from sustainable products to cruelty-free products.
+    Hire talents, sell socially conscious products, fundraise, find partners, and advertise to socially conscious consumers on one platform.
     `
   }
 ]
