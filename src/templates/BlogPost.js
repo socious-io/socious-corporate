@@ -21,7 +21,7 @@ const BlogPost = ({ data }) => {
             <h1>{frontmatter.title}</h1>
             <p>{frontmatter.Date.start}</p>
           </div>
-          <img src={frontmatter.Hero_Image[0].external.url} className="image__article" alt="article hero banner" />
+          <img src={frontmatter.Hero_Image[0].external.url} className="image__article" alt={frontmatter.Hero_Image_Alt} />
           <div className="article__body">
             <div dangerouslySetInnerHTML={{ __html: html }} />
           </div>
@@ -50,6 +50,7 @@ export const query = graphql`
             url
           }
         }
+        Hero_Image_Alt
         Meta_Description
       }
       html
