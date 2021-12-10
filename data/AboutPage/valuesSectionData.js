@@ -2,27 +2,27 @@ const valueItems = [
   {
     id: 1,
     header: 'Diversity, Inclusion and Belonging',
-    content: 'We want build a more inclusive world and it starts from building an inclusive company.'
+    content: 'Inclusion is part of our DNA. People have unconscious biases, and building an inclusive company means we have to think critically about our hiring and workplace practices. We are fully committed to Diversity, Inclusion, and Belonging, and we strive to follow industry best practices and take feedback from our employees about how we can do better.'
   },
   {
     id: 2,
     header: 'Life First, Work Second',
-    content: 'We believe that family and friends are more important than work. If there is a conflict between life and work, we should always prioritize life.'
+    content: 'We believe that employees can achieve work-life balance by prioritizing their wellbeing and relationships before work. If there is ever a conflict between commitments with your life’s priorities and work, life should come first. In this spirit, we offer an unlimited vacation policy and the autonomy for employees to take leave whenever necessary. Employees know themselves best; hence they are well-equipped to decide how they want to work and deliver excellent results.'
   },
   {
     id: 3,
     header: 'High Performance for High Social Impact',
-    content: 'Our goal is to maximize social impact, not shareholder value or profit. Our social and financial returns are generally aligned, but if there is a conflict, we prioritize social returns.'
+    content: 'Our goal is to maximize social impact, not shareholder value or profit. Our social and financial returns are generally aligned, but if there is a conflict, we prioritize social returns. We are a highly motivated group of people. As a result, we want high performance from our employees and collaborators. We hire only the best-fit candidates so that we can maximize social impact. Being thoughtful about what kind of people we hire and the flexibility to adjust if employee or company performance is mismatched helps us build an effective company culture that can accelerate social change.'
   },
   {
     id: 4,
     header: 'Autonomy and Accountability',
-    content: 'Each Socious member enjoys a high level of autonomy is trusted to do the right thing. They are also accountable for the decisions they make.'
+    content: 'With great power comes great responsibility, and so it is for employees at Socious. We want employees to decide what they will take on and the level of resources they need. There are no budget or scope limits, but all employees are accountable to good performance that maximizes social impact returns.'
   },
   {
     id: 5,
     header: 'Candor and Collaboration',
-    content: 'Being honest is better than being nice.'
+    content: 'We want to foster an environment where employees can speak to one another honestly and with respect. We believe that being honest is better than being nice. Everyone makes mistakes; the key is in our ability to learn from them and it’s in the company’s long-term interest for employees to speak up. Open communication will ensure positive relationships and efficient problem-solving at Socious.'
   },
 ]
 
