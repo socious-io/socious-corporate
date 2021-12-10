@@ -11,7 +11,7 @@ const aboutItems = [
     imageUrl: '/images/environment.png',
     imageAlt: 'illustration of environmental considerations',
     header: 'Blockchain-based community currency and marketplace for socially conscious products',
-    content: 'By offering Socious Coins, our blockchain-based community currency, Socious incentivizes people to contribute to a social cause. You can earn Socious Coins by contributing their time to social impact projects. Your Socious Coins can be exchanged for socially conscious products sold by Socious organizations (NPOs, social businesses, etc.) at Socious Market - you can solve social issues not only by contributing your time but also by buying and selling products.'
+    content: 'By offering Socious Coins, our blockchain-based community currency, Socious incentivizes people to contribute to a social cause. You can earn Socious Coins by contributing their time to social impact projects. Your Socious Coins can be exchanged for socially conscious products sold by Socious organizations (NPOs, social businesses, etc.) at Socious Market - you can solve social issues not only by contributing your time but also by buying and selling products. Socious organizations can hire people who can contribute their time and skills to their projects using the Socious Coins they obtain by selling socially conscious products. In this way, the circulation of Socious Coins creates a social impact ecosystem.'
   },
   {
     id: 3,
