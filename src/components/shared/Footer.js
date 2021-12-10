@@ -46,6 +46,8 @@ const Footer = () => {
         <div className="footer-list">
           <ul>
             <li><Link to={linkLanguageSelector("/newsroom")}>{jaPage ? 'ニュースルーム' : 'Newsroom'}</Link></li>
+            <li><a href="https://www.linkedin.com/company/socious-io/" target="_blank" rel="noreferrer">LinkedIn</a></li>
+            <li><a href="https://www.instagram.com/socious.io/" target="_blank" rel="noreferrer">Instagram</a></li>
           </ul>
         </div>
       </div>
