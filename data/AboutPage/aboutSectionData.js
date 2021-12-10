@@ -10,14 +10,14 @@ const aboutItems = [
     id: 2,
     imageUrl: '/images/environment.png',
     imageAlt: 'illustration of environmental considerations',
-    header: 'Blockchain-based community currency and marketplace for socially conscious products',
+    header: 'Blockchain-based community currency and marketplace for socially conscious products *in development',
     content: 'By offering Socious Coins, our blockchain-based community currency, Socious incentivizes people to contribute to a social cause. You can earn Socious Coins by contributing their time to social impact projects. Your Socious Coins can be exchanged for socially conscious products sold by Socious organizations (NPOs, social businesses, etc.) at Socious Market - you can solve social issues not only by contributing your time but also by buying and selling products. Socious organizations can hire people who can contribute their time and skills to their projects using the Socious Coins they obtain by selling socially conscious products. In this way, the circulation of Socious Coins creates a social impact ecosystem.'
   },
   {
     id: 3,
     imageUrl: '/images/development.png',
     imageAlt: 'illustration of teamwork and development',
-    header: 'Blockchain-based platform where you can take full control of and monetize your data',
+    header: 'Blockchain-based platform where you can take full control of and monetize your data *in development',
     content: `On Socious, you are the owner of your data and you can sell it to whomever you please through our blockchain-based platform in a secure manner. Your data is securely stored on a blockchain and, if you wish, you can choose to sell it to advertisers/researchers via smart contracts. You don’t need to directly hand over your data to companies because you can send your data to a trusted execution environment (TEE) where companies can run their algorithms to achieve their goals.`
   },
 ]
