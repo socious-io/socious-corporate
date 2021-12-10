@@ -17,19 +17,21 @@ const Seo = ({ title, description, image, twitterImage }) => {
     descriptionJapanese,
     siteUrl,
     defaultImage,
+    imageJapanese,
     defaultTwitterImage,
     favicon,
   } = site.siteMetadata
 
   const jaPage = pathname.includes('/ja')
   const titleSelector = jaPage ? titleJapanese : defaultTitle
+  const imageSelector = jaPage ? imageJapanese : defaultImage
   const descriptionSelector = jaPage ? descriptionJapanese : defaultDescription
   const titleTemplateSelector = jaPage ? titleTemplateJapanese : titleTemplate
 
   const seo = {
     title: title || titleSelector,
     description: description || descriptionSelector,
-    image: image || defaultImage,
+    image: image || imageSelector,
     url: `${siteUrl}${pathname}`,
     twitterImage: twitterImage || defaultTwitterImage,
   }
@@ -100,6 +102,7 @@ const query = graphql`
         descriptionJapanese
         siteUrl: url
         defaultImage: image
+        imageJapanese
         defaultTwitterImage: twitterImage
         favicon {
           ico
