@@ -12,7 +12,7 @@ const valueItems = [
   {
     id: 3,
     header: 'High Performance for High Social Impact',
-    content: 'Our goal is to maximize social impact, not shareholder value or profit. Our social and financial returns are generally aligned, but if there is a conflict, we prioritize social returns. We are a highly motivated group of people. As a result, we want high performance from our employees and collaborators. We hire only the best-fit candidates so that we can maximize social impact. Being thoughtful about what kind of people we hire and the flexibility to adjust if employee or company performance is mismatched helps us build an effective company culture that can accelerate social change.'
+    content: 'Our goal is to maximize social impact, not shareholder value or profit. Our social and financial returns are generally aligned, but if there is a conflict, we prioritize social returns. We are a highly motivated group of people. As a result, we want high performance from our employees and collaborators. We hire only the best-fit candidates so that we can maximize social impact. Being thoughtful about people we work with helps us build an effective company culture that can accelerate social change.'
   },
   {
     id: 4,
