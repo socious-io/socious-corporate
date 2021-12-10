@@ -18,7 +18,7 @@ const aboutItems = [
     imageUrl: '/images/development.png',
     imageAlt: 'illustration of teamwork and development',
     header: 'Blockchain-based platform where you can take full control of and monetize your data',
-    content: `On Socious, you are the owner of your data and you can sell it to whomever you please through our blockchain-based platform in a secure manner. Your data is securely stored on a blockchain and, if you wish, you can choose to sell it to advertisers/researchers via smart contracts. You don’t need to directly hand over your data to companies because you can send your data to a trusted execution environment where companies can run their algorithms to achieve their goals.`
+    content: `On Socious, you are the owner of your data and you can sell it to whomever you please through our blockchain-based platform in a secure manner. Your data is securely stored on a blockchain and, if you wish, you can choose to sell it to advertisers/researchers via smart contracts. You don’t need to directly hand over your data to companies because you can send your data to a trusted execution environment (TEE) where companies can run their algorithms to achieve their goals.`
   },
 ]
 
