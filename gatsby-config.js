@@ -11,7 +11,7 @@ module.exports = {
     titleJapanese: "ソーシャス | 社会変革のためのコミュニティアプリ",
     titleTemplate: "%s · Socious",
     titleTemplateJapanese: "%s · ソーシャス",
-    description: "Socious is a community app to accelerate social change by bringing people together. We use AI and blockchain-based tokens to help people join social impact projects in an easy, fun and fulfilling way.",
+    description: "Socious is a community app with a mission to connect people to accelerate social change. We use AI and blockchain-based tokens to help people join social impact projects in an easy, fun and fulfilling way.",
     descriptionJapanese: "ソーシャスは、「出会いの化学反応で社会変革を加速させる」というミッションのもと、誰でも気軽に楽しく社会貢献できるように、SNSアプリ、AIマッチング、ブロックチェーンに基づくコミュニティ通貨を開発しています。",
     image: "https://socious.io/socious-og.png",
     imageJapanese: "https://socious.io/socious-og-ja.png",

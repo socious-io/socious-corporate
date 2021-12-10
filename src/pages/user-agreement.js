@@ -10,7 +10,7 @@ const UserAgreementPage = () => {
       />
       <div id="content">
         <div className="section">
-            <span>With the mission to accelerate social change by bringing people together, Socious Inc. (hereinafter referred to as 'the Company') provides social networking services for social changemakers through this website and the services provided in this application (hereinafter referred to as 'the Services'). (1) Terms of Use This Terms of Service (hereinafter referred to as the 'Terms') sets forth the terms and conditions of the Service and the relationship of rights and obligations between the Company and registered users. In order to use the Service, you must read and agree to these Terms of Use in their entirety.</span>
+          <span>With a mission to connect people to accelerate social change, Socious Inc. (hereinafter referred to as 'the Company') provides social networking services for social changemakers through this website and the services provided in this application (hereinafter referred to as 'the Services'). (1) Terms of Use This Terms of Service (hereinafter referred to as the 'Terms') sets forth the terms and conditions of the Service and the relationship of rights and obligations between the Company and registered users. In order to use the Service, you must read and agree to these Terms of Use in their entirety.</span>
         </div>
         <div className="section">
             <p className="section-title">Article 1. Application</p>
