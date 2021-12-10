@@ -14,6 +14,7 @@ module.exports = {
     description: "Socious is a community app to accelerate social change by bringing people together. We use AI and blockchain-based tokens to help people join social impact projects in an easy, fun and fulfilling way.",
     descriptionJapanese: "ソーシャスは、「出会いの化学反応で社会変革を加速させる」というミッションのもと、誰でも気軽に楽しく社会貢献できるように、SNSアプリ、AIマッチング、ブロックチェーンに基づくコミュニティ通貨を開発しています。",
     image: "https://socious.io/socious-og.png",
+    imageJapanese: "https://socious.io/socious-og-ja.png",
     twitterImage: "https://socious.io/socious-og-twitter.png",
     favicon: {
       ico: 'favicons/favicon.ico',
