@@ -37,13 +37,36 @@
   width: 95%;
   padding: 1rem 0;
 
+  h3 {
+    margin: 2.5rem 0;
+    padding-bottom: 1rem;
+    border-bottom: 4px solid $primary;
+  }
+
   img {
     width: 100%;
+    margin: 2rem 0;
+  }
+
+  a {
+    overflow-wrap: anywhere;
   }
 }
 
-@media screen and (max-width: 450px) {
+@media screen and (max-width: 600px) {
+  .container__article {
+    width: 100%;
+  }
+  
   .image__article {
     width: 100%;
+  }
+
+  .article__info {
+    width: 80%;
+  }
+
+  .article__body {
+    width: 80%;
   }
 }
