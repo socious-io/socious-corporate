@@ -1,4 +1,5 @@
 import React, { useEffect } from 'react'
+import ArrowCircleUpTwoToneIcon from '@mui/icons-material/ArrowCircleUpTwoTone';
 
 const ScrollArrow = () => {
   useEffect(() => {
@@ -19,8 +20,8 @@ const ScrollArrow = () => {
 
   return (
     <div>
-      <a href="#scroll-top">
-        <i id="scroll-arrow" className="scroll-arrow up hide"></i>
+      <a href="#scroll-top" id="scroll-arrow" className="scroll-arrow hide">
+        <ArrowCircleUpTwoToneIcon />
       </a>
     </div>
   )
