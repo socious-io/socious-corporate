@@ -7,7 +7,7 @@ const valueItems = [
   {
     id: 2,
     header: 'Life First, Work Second',
-    content: 'We believe that employees can achieve work-life balance by prioritizing their wellbeing and relationships before work. If there is ever a conflict between commitments with your life’s priorities and work, life should come first. In this spirit, we offer an unlimited vacation policy and the autonomy for employees to take leave whenever necessary. Employees know themselves best; hence they are well-equipped to decide how they want to work and deliver excellent results.'
+    content: 'We believe that employees can achieve work-life balance by prioritizing their wellbeing and relationships before work. If there is ever a conflict between commitments with your life’s priorities and work, life should come first. No job is more important than family, friends, and health. In this spirit, we offer an unlimited vacation policy and the autonomy for employees to take leave whenever necessary. Employees know themselves best; hence they are well-equipped to decide how they want to work and deliver excellent results.'
   },
   {
     id: 3,
