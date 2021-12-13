@@ -55,6 +55,7 @@ const seniorDataScientist = {
       header: 'Skills & Experience',
       content:
         <ul>
+          <li>A strong passion for social impact (previous experience with social impact organizations is an asset).</li>
           <li>Bachelor's Degree</li>
           <li>3+ years of experience with data scripting languages (e.g SQL, Python, R etc.), statistical/mathematical software (e.g. R, SAS, or Matlab), or AWS products</li>
           <li>2 years working as a Data Scientist</li>
