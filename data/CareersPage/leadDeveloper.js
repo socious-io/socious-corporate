@@ -55,6 +55,7 @@ const leadDeveloper = {
       header: 'Skills & Experience',
       content:
         <ul>
+          <li>A strong passion for social impact (previous experience with social impact organizations is an asset).</li>
           <li>Degree in Computer Science, Engineering or a related field</li>
           <li>Minimum 10 years of experience (or equivalent skills) in software development, especially with React Native, React, PHP, NodeJS, MySQL, GraphQL, Go, JavaScript, AWS</li>
           <li>Proven success as a technical team leader</li>

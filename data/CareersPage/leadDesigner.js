@@ -54,6 +54,7 @@ const leadDesigner = {
       header: 'Skills & Experience',
       content:
         <ul>
+          <li>A strong passion for social impact (previous experience with social impact organizations is an asset).</li>
           <li>10+ years of industry experience (or equivalent skills) as a UI/UX designer and/or manager in a cross-functional UI/UX team.</li>
           <li>Experience in architecting system wide design solutions that satisfy both product and engineering requirements.</li>
           <li>Experience in full product life cycle from design through deployment.</li>
