@@ -12,8 +12,9 @@ const seniorDataScientist = {
         <p>
           Do you have a passion for social impact? If yes, Socious Inc. is looking for somebody with your enthusiasm and skills to work as part of the team. We are looking for an experienced data scientist who is curious, driven, and passionate about social impact and data analytics. If you are looking for a role where you can make a major impact in the world, we want to meet you.
           <br/><br/>
-          Socious is a community app for social impact with a mission to connect people to accelerate social change. Socious helps anyone who has a passion for social change contribute their time to social impact projects in an easy, fun and fulfilling way. Socious helps them connect with like-minded people and effortlessly join social impact projects. You can learn new skills and build your portfolio while contributing to a social cause. In the future, we offer
-          blockchain-based tokens when you contribute your time to social impact projects. These tokens can be exchanged for socially conscious products and experiences within the community.
+          Socious is a community app for social change, powered by AI and blockchain. Many people are interested in contributing to social impact projects, but few of them can do so. We leverage
+          this untapped potential by helping them contribute to society in an easy, fun way through a purpose-driven community
+          app, AI recommendations, and blockchain-based community currency. We are developing a decentralized application (Dapp) where users can take control of and monetize their content and data.
           <br/><br/>
           Socious Inc. was founded in July 2021 and is looking to grow it's team. As a founding member of Socious Inc., you will be at the forefront of this transformational technology assisting social change makers and in growing the company with the CEO.
         </p>

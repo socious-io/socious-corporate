@@ -12,9 +12,9 @@ const leadDeveloper = {
         <p>
           Do you have a passion for social impact? If yes, Socious Inc. is looking for somebody with your enthusiasm and skills to work as part of the team. We are looking for an experienced developer who is curious, driven, and passionate about social impact. If you are looking for a role where you can make a major impact in the world, we want to meet you.
           <br/><br/>
-          Socious is a community app for social change makers with a mission to connect people to accelerate social change. Many people are interested in contributing to social impact projects, but few of them can do so. We leverage
+          Socious is a community app for social change, powered by AI and blockchain. Many people are interested in contributing to social impact projects, but few of them can do so. We leverage
           this untapped potential by helping them contribute to society in an easy, fun way through a purpose-driven community
-          app, AI recommendations, and community currency.
+          app, AI recommendations, and blockchain-based community currency. We are developing a decentralized application (Dapp) where users can take control of and monetize their content and data.
           <br/><br/>
           We started Socious in July 2021, so as an early employee you’ll be pivotal in shaping the direction of the company. We
           have enough runway to last us through the end of 2022, and are about to close a seed round to allow us to accelerate
