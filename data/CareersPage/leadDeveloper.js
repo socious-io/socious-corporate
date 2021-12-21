@@ -44,6 +44,8 @@ const leadDeveloper = {
           <li>Working closely with senior stakeholders to understand business requirements and help translate these into technical requirements for the development team</li>
           <li>Planning and documenting technical specifications for features or system design</li>
           <li>Designing, building and configuring applications to meet business process and application requirements</li>
+          <li>Research, design, develop, and test blockchain technologies</li>
+          <li>Be involved in the global blockchain community—work on implementing and integrating the latest improvement proposals</li>
           <li>Directing the development team in the design, development, coding, testing and debugging of applications</li>
           <li>Writing testable, scalable and efficient code and leading code reviews</li>
           <li>Mentoring junior team members and ensuring they adhere to determined software quality standards</li>
@@ -57,7 +59,12 @@ const leadDeveloper = {
         <ul>
           <li>A strong passion for social impact (previous experience with social impact organizations is an asset).</li>
           <li>Degree in Computer Science, Engineering or a related field</li>
-          <li>Minimum 10 years of experience (or equivalent skills) in software/Dapp development, especially with Solidity, React Native, React, PHP, NodeJS, MySQL, GraphQL, Go, JavaScript, AWS</li>
+          <li>Minimum 10 years of experience (or equivalent skills) in software/Dapp development, especially with Solidity, C++, Java, JavaScript, Typescript, React Native, React, PHP, NodeJS, MySQL, GraphQL, Go, AWS</li>
+          <li>Strong knowledge of common algorithms and data structures</li>
+          <li>Familiarity with basic cryptography</li>
+          <li>Familiarity with P2P networks</li>
+          <li>Strong knowledge of blockchains</li>
+          <li>Strong knowledge of concurrency and writing efficient and safe multithreaded code</li>
           <li>Proven success as a technical team leader</li>
           <li>You are a good mentor & coach</li>
           <li>You possess good communication skills</li>
