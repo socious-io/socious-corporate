@@ -2,7 +2,7 @@ const valueItems = [
   {
     id: 1,
     header: 'Diversity, Inclusion and Belonging',
-    content: 'Inclusion is part of our DNA. People have unconscious biases, and building an inclusive company means we have to think critically about our hiring and workplace practices. We are fully committed to Diversity, Inclusion, and Belonging, and we strive to follow industry best practices and take feedback from our employees about how we can do better.'
+    content: 'Inclusion is part of our DNA. People have unconscious biases, and building an inclusive company means we have to think critically about our hiring and workplace practices. We are fully committed to Diversity, Inclusion, and Belonging, and we strive to follow industry best practices and take feedback from our employees about how we can do better. Thanks to our culture, we attract talented people from diverse backgrounds.'
   },
   {
     id: 2,
@@ -12,12 +12,12 @@ const valueItems = [
   {
     id: 3,
     header: 'High Performance for High Social Impact',
-    content: 'Our goal is to maximize social impact, not shareholder value or profit. Our social and financial returns are generally aligned, but if there is a conflict, we prioritize social returns. We are a highly motivated group of people. As a result, we want high performance from our employees and collaborators. We hire only the best-fit candidates so that we can maximize social impact. Being thoughtful about people we work with helps us build an effective company culture that can accelerate social change.'
+    content: 'Our goal is to maximize social impact, not shareholder value or profit. Our social and financial returns are generally aligned, but if there is a conflict, we prioritize social returns. We are a highly motivated group of people. As a result, we want high performance from our employees and collaborators. We hire only the best-fit candidates so that we can maximize social impact. We pay above market rate salaries to have only incredible colleagues in each role. Being thoughtful about the people we work with helps us build an effective company culture that can accelerate social change.'
   },
   {
     id: 4,
     header: 'Autonomy and Accountability',
-    content: 'With great power comes great responsibility, and so it is for employees at Socious. We want employees to decide what they will take on and the level of resources they need. There are no budget or scope limits, but all employees are accountable to good performance that maximizes social impact returns.'
+    content: 'With great power comes great responsibility, and so it is for employees at Socious. We want employees to decide what they will take on and the level of resources they need. There are no budget or scope limits, but all employees are accountable for a great performance that maximizes social impact returns.'
   },
   {
     id: 5,
