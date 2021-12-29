@@ -31,8 +31,7 @@ const leadDeveloper = {
           developers. As we secure funding, we’re now looking to bring on our first full time hire to oversee future development.
           <br /><br />
           In this role, you’ll work closely with senior stakeholders to understand business goals and ensure that the development
-          team & technologies used are aligned with these. As we grow, you’ll have the opportunity to move into a CTO role in the
-          future.
+          team & technologies used are aligned with these.
         </p>
       ,
     },
@@ -85,9 +84,9 @@ const leadDeveloper = {
       header: 'What’s on offer',
       content:
         <ul>
+          <li>Diverse, driven, and high-performing colleagues</li>
           <li>A supportive, trusting and transparent working environment</li>
           <li>Work-life balance with flexible hours and leave (unlimited paid leave)</li>
-          <li>A place to look at things differently and challenge and offer solutions</li>
           <li>Flexible work arrangements (full-time, part-time freelance, side-job, onsite, remote, etc.)</li>
           <li>A competitive salary package (10-20 million yen per year + stock options)</li>
           <li>Japan work visa sponsorship</li>
