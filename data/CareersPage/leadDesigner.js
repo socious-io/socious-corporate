@@ -75,9 +75,9 @@ const leadDesigner = {
       header: 'What’s on offer',
       content:
         <ul>
+          <li>Diverse, driven, and high-performing colleagues</li>
           <li>A supportive, trusting and transparent working environment</li>
           <li>Work-life balance with flexible hours and leave (unlimited paid leave)</li>
-          <li>A place to look at things differently and challenge and offer solutions</li>
           <li>Flexible work arrangements (full-time, part-time freelance, side-job, onsite, remote, etc.)</li>
           <li>A competitive salary package (10-20 million yen per year + stock options)</li>
           <li>Japan work visa sponsorship</li>

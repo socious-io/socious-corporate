@@ -86,6 +86,17 @@ const JobsSection = (props) => {
               <p>17/12/2021</p>
             </div>
           </div>
+          <div className="jobs-list__item">
+            <div className="job-title">
+              <p><Link to={linkLanguageSelector("/careers/cto")}><LinkSimple size={18} /> Chief Technology Officer (CTO)</Link></p>
+            </div>
+            <div className="job-department">
+              <p>Engineering</p>
+            </div>
+            <div className="job-date">
+              <p>30/12/2021</p>
+            </div>
+          </div>
         </div>
       </div>
     </SimpleLocalize>
