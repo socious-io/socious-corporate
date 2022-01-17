@@ -88,7 +88,7 @@ const leadDeveloper = {
           <li>A supportive, trusting and transparent working environment</li>
           <li>Work-life balance with flexible hours and leave (unlimited paid leave)</li>
           <li>Flexible work arrangements (full-time, part-time freelance, side-job, onsite, remote, etc.)</li>
-          <li>A competitive salary package (10-20 million yen per year + stock options)</li>
+          <li>A competitive salary package: 10-20 million yen (USD 87k - 175k) per year + stock options</li>
           <li>Japan work visa sponsorship</li>
         </ul>
       ,
