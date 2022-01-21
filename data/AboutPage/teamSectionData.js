@@ -19,7 +19,7 @@ const teamMembers = [
     imageUrl: AtsushiImg,
     imageAlt: 'Atsushi Inoue',
     name: 'Atsushi Inoue, Ph.D.',
-    title: 'AI Advisor',
+    title: 'Advisor',
     bio1: 'A seasoned specialist in Artificial Intelligence & Blockchain based in the United States and Japan.  He had led a number of cutting-edge projects in diversified application domains across the globe as the Director of Intelligent Informatics Initiative (I3).',
     bio2: 'Currently, he is a Startup Solutions Architect at AWS and a Visiting Professor of the Graduate School of Regional Innovation Studies at Mie University in Japan. He is focusing on the digital entrepreneurship in order to lower the hurdles of its PoC and MVP by taking integrative approaches, i.e. as a result of utilizing SBC, e.g. Raspberry Pi, and Cloud Computing, e.g. Azure, GCP and AWS.',
   },
