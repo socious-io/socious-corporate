@@ -3,6 +3,7 @@ import AtsushiImg from '../../src/images/team/Atsushi Inoue.jpeg'
 import GalinaImg from '../../src/images/team/Galina Neydenova.jpeg'
 import RhysImg from '../../src/images/team/Rhys Malyon.jpeg'
 import LawrenceImg from '../../src/images/team/Lawrence Cate.jpeg'
+import JaysonImg from '../../src/images/team/Jayson Ilagan.jpeg'
 
 const teamMembersJa = [
   {
@@ -50,6 +51,15 @@ const teamMembersJa = [
     title: '技術顧問',
     bio1: 'テクノロジーとコミュニティを活用して社会問題や環境問題に取り組むことに情熱を注ぐコンピュータサイエンティストです。 イギリスのノッティンガム大学を卒業後、日本でマーケットプレイスサービス「メルカリ」の海外展開に携わった経験を持つ。',
     bio2: `現在は、旅行サービス「Home away from Home」の開発に携わっているほか、プラスチック汚染問題に取り組む日本有数の非営利団体「mymizu」の創設メンバーでもある。`,
+  },
+  {
+    id: 6,
+    imageUrl: JaysonImg,
+    imageAlt: 'イラガン ジェイソン',
+    name: 'イラガン ジェイソン',
+    title: 'シニアエンジニア',
+    bio1: 'ジェイソンは、12年以上の経験をウェブ・モバイルアプリの開発者です。Lyceum of the Philippines-Lagunaでコンピュータサイエンスの学位を取得しました。卒業後、学校の誘いに応じてシステム構築に携わり、教員の業績評価システムの開発に取り組みました。',
+    bio2: `Ivoclar Vivadent Inc.でITグローバルソフトウェアデベロッパーとして6年間勤務し、主にプロジェクト作成に携わった後、シンガポールに2年間移住し、Direct Asia Management Services Pte. Ltd.に転職。ウェブ開発者として、バイクや旅行保険を扱う会社のポータルサイトのプロジェクトに携わりました。今後は、薬代を払えない難病の子供たちが適切な医療を受けられるようなアプリケーションを構築したいと考えています。`,
   },
 ]
 
