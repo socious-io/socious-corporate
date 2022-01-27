@@ -55,7 +55,7 @@ const TeamSection = (props) => {
             width: 197,
             height: 224,
             quality: 70,
-            placeholder: BLURRED, 
+            placeholder: BLURRED,
             blurredOptions: {width: 100}
           )
         }
@@ -73,12 +73,25 @@ const TeamSection = (props) => {
           )
         }
       }
+      JaysonIlagan: file(
+        relativePath: {eq: "team/Jayson Ilagan.jpeg"}
+      ) {
+        childImageSharp {
+          gatsbyImageData(
+            width: 197,
+            height: 224,
+            quality: 70,
+            placeholder: BLURRED,
+            blurredOptions: {width: 100}
+          )
+        }
+      }
     }
   `)
 
-  const { SeiraYun, AtsushiInoue, GalinaNeydenova, RhysMalyon, LawrenceCate } = data
+  const { SeiraYun, AtsushiInoue, GalinaNeydenova, RhysMalyon, LawrenceCate, JaysonIlagan } = data
 
-  const teamImages = [SeiraYun, AtsushiInoue, GalinaNeydenova, RhysMalyon, LawrenceCate]
+  const teamImages = [SeiraYun, AtsushiInoue, GalinaNeydenova, RhysMalyon, LawrenceCate, JaysonIlagan]
 
   const { language } = props.pageContext
 
