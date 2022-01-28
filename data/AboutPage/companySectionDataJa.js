@@ -7,7 +7,7 @@ const companyInfoJa = [
   {
     id: 2,
     title: '設立',
-    info: '2021年'
+    info: '2021年7月'
   },
   {
     id: 3,
@@ -23,6 +23,11 @@ const companyInfoJa = [
     id: 5,
     title: '資本金（2021年9月末時点）',
     info: '3,000,000円'
+  },
+  {
+    id: 6,
+    title: '法律顧問',
+    info: 'アンダーソン・毛利・友常法律事務所 外国法共同事業'
   },
 ]
 
