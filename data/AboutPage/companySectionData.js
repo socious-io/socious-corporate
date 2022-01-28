@@ -7,7 +7,7 @@ const companyInfo = [
   {
     id: 2,
     title: 'Established',
-    info: '2021'
+    info: 'July 2021'
   },
   {
     id: 3,
@@ -23,6 +23,11 @@ const companyInfo = [
     id: 5,
     title: 'Capital (As of 30 September 2021)',
     info: '3,000,000 yen'
+  },
+  {
+    id: 6,
+    title: 'Legal Advisor',
+    info: 'Anderson Mori & Tomotsune'
   },
 ]
 
