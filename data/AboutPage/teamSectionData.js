@@ -4,6 +4,7 @@ import GalinaImg from '../../src/images/team/Galina Neydenova.jpeg'
 import RhysImg from '../../src/images/team/Rhys Malyon.jpeg'
 import LawrenceImg from '../../src/images/team/Lawrence Cate.jpeg'
 import JaysonImg from '../../src/images/team/Jayson Ilagan.jpeg'
+import RiteshImg from '../../src/images/team/Ritesh Giri.jpeg'
 
 const teamMembers = [
   {
@@ -61,6 +62,17 @@ const teamMembers = [
     bio1: 'Jayson is a web and mobile app developer with over 12 years of experience. He earned his degree in Computer Science from the Lyceum of the Philippines-Laguna. He accepted his school invitation to work for them after graduation to build systems and worked on developing a faculty performance evaluation system.',
     bio2: `After spending six years working at Ivoclar Vivadent Inc. as an IT Global Software Developer, where his primary focus was project creation, he decided to move to Singapore for two years to join Direct Asia Management Services Pte. Ltd. As a web developer, he enhanced the Quote and Buy journey of the company portal that caters to motorcycles and travel insurance. He hopes to build an application for kids with curable diseases who don't have the means to pay for medications to help them access proper medical treatment.`,
   },
+  {
+    id: 7,
+    imageUrl: RiteshImg,
+    imageAlt: 'Ritesh Giri',
+    name: 'Ritesh Giri',
+    title: 'Product Manager',
+    bio1: `Ritesh Giri holds a Bachelor in Computer Engineering from the University of Mumbai and a Master's degree from the Georgia Institute of Technology. His internship in UBTECH Robotics has contributed to developing and integrating text to speech and audio recognition functionalities using iFLYTEK for Yanshee, a first-of-its-kind programmable robot.`,
+    bio2: `He started working in 2019 at PwC as a Software Developer. He was given the "Aplomb award" for helping increase client confidence and renew service contracts despite high-pressure client situations.`,
+    bio3: 'While he acts as a Product Manager in Socious, he is also the Senior Product Manager at Quinstreet, where he builds software products and solutions for performance-based and search engine marketing.',
+    bio4: `His belief that 'being involved in social change is a moral responsibility' motivated him to join the team. He wants to be a part of the solution and not just benefit from the action of others. He hopes his tech skills will impact Socious design and growth as he shares the same passion with the company's mission.`
+  }
 ]
 
 export default teamMembers

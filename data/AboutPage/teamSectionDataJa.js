@@ -4,6 +4,7 @@ import GalinaImg from '../../src/images/team/Galina Neydenova.jpeg'
 import RhysImg from '../../src/images/team/Rhys Malyon.jpeg'
 import LawrenceImg from '../../src/images/team/Lawrence Cate.jpeg'
 import JaysonImg from '../../src/images/team/Jayson Ilagan.jpeg'
+import RiteshImg from '../../src/images/team/Ritesh Giri.jpeg'
 
 const teamMembersJa = [
   {
@@ -61,6 +62,17 @@ const teamMembersJa = [
     bio1: 'ジェイソンは、12年以上の経験をウェブ・モバイルアプリの開発者です。Lyceum of the Philippines-Lagunaでコンピュータサイエンスの学位を取得しました。卒業後、学校の誘いに応じてシステム構築に携わり、教員の業績評価システムの開発に取り組みました。',
     bio2: `Ivoclar Vivadent Inc.でITグローバルソフトウェアデベロッパーとして6年間勤務し、主にプロジェクト作成に携わった後、シンガポールに2年間移住し、Direct Asia Management Services Pte. Ltd.に転職。ウェブ開発者として、バイクや旅行保険を扱う会社のポータルサイトのプロジェクトに携わりました。今後は、薬代を払えない難病の子供たちが適切な医療を受けられるようなアプリケーションを構築したいと考えています。`,
   },
+  {
+    id: 7,
+    imageUrl: RiteshImg,
+    imageAlt: 'リテッシュ ギリ',
+    name: 'リテッシュ ギリ',
+    title: 'プロダクトマネージャー',
+    bio1: 'ムンバイ大学で学士号(計算機工学)、ジョージア工科大学で修士号を取得。UBTECH Robotics社でのインターンシップでは、iFLYTEKを使用して、世界初のプログラマブルロボットYansheeのテキスト読み上げ機能と音声認識機能の開発、および統合に貢献しました。',
+    bio2: '2019年、ソフトウェア・ディベロッパー（開発者）としてPwCに入社。クライアントとの信頼を高め、サービス契約の更新に貢献したとして「アプロム賞」を受賞。',
+    bio3: 'ソーシャスのプロダクトマネージャーである一方、Quinstreetのシニアプロダクトマネージャーとして、パフォーマンスベースや検索エンジンマーケティングのためのソフトウェア製品、およびソリューションの構築に携わっています。',
+    bio4: 'ソーシャスに参画した理由は「社会変革に携わることは道徳的責任である」という彼の信念。他人に頼らず、自分自身が解決策の一部となりたいと考えています。会社のミッションに共感し、自分のIT分野のスキルを活かし、ソーシャスのデザインと成長に貢献できることを期待しています。'
+  }
 ]
 
 export default teamMembersJa
