@@ -68,10 +68,9 @@ const teamMembers = [
     imageAlt: 'Ritesh Giri',
     name: 'Ritesh Giri',
     title: 'Product Manager',
-    bio1: `Ritesh Giri holds a Bachelor in Computer Engineering from the University of Mumbai and a Master's degree from the Georgia Institute of Technology. His internship in UBTECH Robotics has contributed to developing and integrating text to speech and audio recognition functionalities using iFLYTEK for Yanshee, a first-of-its-kind programmable robot.`,
-    bio2: `He started working in 2019 at PwC as a Software Developer. He was given the "Aplomb award" for helping increase client confidence and renew service contracts despite high-pressure client situations.`,
-    bio3: 'While he acts as a Product Manager in Socious, he is also the Senior Product Manager at Quinstreet, where he builds software products and solutions for performance-based and search engine marketing.',
-    bio4: `His belief that 'being involved in social change is a moral responsibility' motivated him to join the team. He wants to be a part of the solution and not just benefit from the action of others. He hopes his tech skills will impact Socious design and growth as he shares the same passion with the company's mission.`
+    bio1: `Ritesh Giri holds a Bachelor in Computer Engineering from the University of Mumbai and a Master's degree from the Georgia Institute of Technology. His internship in UBTECH Robotics has contributed to developing and integrating text to speech and audio recognition functionalities using iFLYTEK for Yanshee, a first-of-its-kind programmable robot. He started working in 2019 at PwC as a Software Developer. He was given the "Aplomb award" for helping increase client confidence and renew service contracts despite high-pressure client situations.`,
+    bio2: 'While he acts as a Product Manager in Socious, he is also the Senior Product Manager at Quinstreet, where he builds software products and solutions for performance-based and search engine marketing.',
+    bio3: `His belief that 'being involved in social change is a moral responsibility' motivated him to join the team. He wants to be a part of the solution and not just benefit from the action of others. He hopes his tech skills will impact Socious design and growth as he shares the same passion with the company's mission.`
   }
 ]
 
