@@ -4,7 +4,6 @@ import GalinaImg from '../../src/images/team/Galina Neydenova.jpeg'
 import RhysImg from '../../src/images/team/Rhys Malyon.jpeg'
 import LawrenceImg from '../../src/images/team/Lawrence Cate.jpeg'
 import JaysonImg from '../../src/images/team/Jayson Ilagan.jpeg'
-import RiteshImg from '../../src/images/team/Ritesh Giri.jpeg'
 
 const teamMembersJa = [
   {
