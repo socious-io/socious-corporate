@@ -86,12 +86,25 @@ const TeamSection = (props) => {
           )
         }
       }
+      RiteshGiri: file(
+        relativePath: {eq: "team/Ritesh Giri.jpeg"}
+      ) {
+        childImageSharp {
+          gatsbyImageData(
+            width: 197,
+            height: 224,
+            quality: 70,
+            placeholder: BLURRED,
+            blurredOptions: {width: 100}
+          )
+        }
+      }
     }
   `)
 
-  const { SeiraYun, AtsushiInoue, GalinaNeydenova, RhysMalyon, LawrenceCate, JaysonIlagan } = data
+  const { SeiraYun, AtsushiInoue, GalinaNeydenova, RhysMalyon, LawrenceCate, JaysonIlagan, RiteshGiri } = data
 
-  const teamImages = [SeiraYun, AtsushiInoue, GalinaNeydenova, RhysMalyon, LawrenceCate, JaysonIlagan]
+  const teamImages = [SeiraYun, AtsushiInoue, GalinaNeydenova, RhysMalyon, LawrenceCate, JaysonIlagan, RiteshGiri]
 
   const { language } = props.pageContext
 
