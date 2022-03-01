@@ -5,6 +5,7 @@ import RhysImg from '../../src/images/team/Rhys Malyon.jpeg'
 import LawrenceImg from '../../src/images/team/Lawrence Cate.jpeg'
 import JaysonImg from '../../src/images/team/Jayson Ilagan.jpeg'
 import RiteshImg from '../../src/images/team/Ritesh Giri.jpeg'
+import XanImg from '../../src/images/team/Xan Varcoe.jpeg'
 
 const teamMembersJa = [
   {
@@ -72,6 +73,15 @@ const teamMembersJa = [
     2019年、ソフトウェア・ディベロッパー(開発者)としてPwCに入社。クライアントとの信頼を高め、サービス契約の更新に貢献したとして「アプロム賞」を受賞。`,
     bio2: `ソーシャスのプロダクトマネージャーである一方、Quinstreetのシニアプロダクトマネージャーとして、パフォーマンスベースや検索エンジンマーケティングのためのソフトウェア製品、およびソリューションの構築に携わっています。
     ソーシャスに参画した理由は「社会変革に携わることは道徳的責任である」という彼の信念。他人に頼らず、自分自身が解決策の一部となりたいと考えています。会社のミッションに共感し、自分のIT分野のスキルを活かし、ソーシャスのデザインと成長に貢献できることを期待しています。`,
+  },
+  {
+    id: 8,
+    imageUrl: XanImg,
+    imageAlt: 'バーコ ザン',
+    name: 'バーコ ザン',
+    title: 'シニアデータサイエンティスト',
+    bio1: '書籍を出版しているデータサイエンティスト、そしてテクノロジー・エバンジェリスト。多彩なバックグランドを持ち、コンピューターサイエンスと人類学の両方の学位を取得。機械学習から経営、マーケティング、ブロックチェーンソリューション、教育、そしてイベントなど、多様なプロフェッショナルな経験を持っています。',
+    bio2: 'データとデザインに動かされ、自分の仕事ではポジティブで持続的なインパクトを与えることを目指している。古くからある問題に最先端のソリューションを提供し、人々がポジティブに現状を打破可能にしたいと考えています。',
   },
 ]
 
