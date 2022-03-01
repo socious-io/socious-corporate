@@ -112,12 +112,25 @@ const TeamSection = (props) => {
           )
         }
       }
+      TinCabrera: file(
+        relativePath: {eq: "team/Tin Cabrera.jpeg"}
+      ) {
+        childImageSharp {
+          gatsbyImageData(
+            width: 197,
+            height: 224,
+            quality: 70,
+            placeholder: BLURRED,
+            blurredOptions: {width: 100}
+          )
+        }
+      }
     }
   `)
 
-  const { SeiraYun, AtsushiInoue, GalinaNeydenova, RhysMalyon, LawrenceCate, JaysonIlagan, RiteshGiri, XanVarcoe } = data
+  const { SeiraYun, AtsushiInoue, GalinaNeydenova, RhysMalyon, LawrenceCate, JaysonIlagan, RiteshGiri, XanVarcoe, TinCabrera } = data
 
-  const teamImages = [SeiraYun, AtsushiInoue, GalinaNeydenova, RhysMalyon, LawrenceCate, JaysonIlagan, RiteshGiri, XanVarcoe]
+  const teamImages = [SeiraYun, AtsushiInoue, GalinaNeydenova, RhysMalyon, LawrenceCate, JaysonIlagan, RiteshGiri, XanVarcoe, TinCabrera]
 
   const { language } = props.pageContext
 

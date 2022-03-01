@@ -6,6 +6,7 @@ import LawrenceImg from '../../src/images/team/Lawrence Cate.jpeg'
 import JaysonImg from '../../src/images/team/Jayson Ilagan.jpeg'
 import RiteshImg from '../../src/images/team/Ritesh Giri.jpeg'
 import XanImg from '../../src/images/team/Xan Varcoe.jpeg'
+import TinImg from '../../src/images/team/Tin Cabrera.jpeg'
 
 const teamMembersJa = [
   {
@@ -82,6 +83,15 @@ const teamMembersJa = [
     title: 'シニアデータサイエンティスト',
     bio1: '書籍を出版しているデータサイエンティスト、そしてテクノロジー・エバンジェリスト。多彩なバックグランドを持ち、コンピューターサイエンスと人類学の両方の学位を取得。機械学習から経営、マーケティング、ブロックチェーンソリューション、教育、そしてイベントなど、多様なプロフェッショナルな経験を持っています。',
     bio2: 'データとデザインに動かされ、自分の仕事ではポジティブで持続的なインパクトを与えることを目指している。古くからある問題に最先端のソリューションを提供し、人々がポジティブに現状を打破可能にしたいと考えています。',
+  },
+  {
+    id: 9,
+    imageUrl: TinImg,
+    imageAlt: 'カブレラ ティン',
+    name: 'カブレラ ティン',
+    title: 'エグゼクティブアシスタント&コミュニティビルダー',
+    bio1: '人生の目的は、全ての人のために安全な空間を作ること。若い頃、性的指向や性表現が原因でいじめられた経験から、若者が恐れずに自分らしくいられる場所を提供することを誓いました。その結果、フィリピンのマリキナ市内のクリエイターや起業家、フリーランサーを支援するコワーキングスペース「コフィチナ」を共同設立。',
+    bio2: '自他共に認めるマルチポテンシャリティー、そして多様な興味の持ち主。認定ライフコーチ、Sustainability Solutions ExchangeとCreate Philippinesの元コミュニティマネージャー、Facebookのアドストラテジスト、そしてモチベーショナル・スピーカーの彼女は、エグゼクティブアシスタント&コミュニティビルダーとしてソーシャスに加わります。',
   },
 ]
 
