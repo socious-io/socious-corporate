@@ -6,6 +6,7 @@ import LawrenceImg from '../../src/images/team/Lawrence Cate.jpeg'
 import JaysonImg from '../../src/images/team/Jayson Ilagan.jpeg'
 import RiteshImg from '../../src/images/team/Ritesh Giri.jpeg'
 import XanImg from '../../src/images/team/Xan Varcoe.jpeg'
+import TinImg from '../../src/images/team/Tin Cabrera.jpeg'
 
 const teamMembers = [
   {
@@ -82,6 +83,15 @@ const teamMembers = [
     title: 'Senior Data Scientist',
     bio1: 'A published Data Scientist and technology evangelist with a multi-disciplinary background who holds degrees in both Computer Science and Anthropology. His diverse range of professional experience includes Machine Learning, Management, Marketing, Blockchain Solutions, Education, and Events.',
     bio2: 'Driven by data and design, Xan seeks to make a positive and lasting impact with his work. By applying bleeding-edge solutions to age-old problems, he wants to enable people to positively disrupt.',
+  },
+  {
+    id: 9,
+    imageUrl: TinImg,
+    imageAlt: 'Tin Cabrera',
+    name: 'Tin Cabrera',
+    title: 'Executive Assistant and Community Builder',
+    bio1: `Creating safe spaces for all is Tin's life purpose. She vowed to provide a place for the youth to be themselves without fear  after being bullied in her younger years because of her sexual orientation and gender expression. Her purpose eventually led her to cofound Cofficina, a co-working space catering to the underserved creatives, entrepreneurs, and freelancers of Marikina, Philippines.`,
+    bio2: 'Tin is a self-confessed multipotentialite pursuing different interests in varied fields. She is a certified Transformational Coach, a former community manager for Sustainability Solutions Exchange and Create Philippines, a Facebook ads strategist, a motivational speaker, and now, an Executive Assistant and Community Builder for Socious.',
   },
 ]
 
