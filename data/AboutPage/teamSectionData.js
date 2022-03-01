@@ -5,6 +5,7 @@ import RhysImg from '../../src/images/team/Rhys Malyon.jpeg'
 import LawrenceImg from '../../src/images/team/Lawrence Cate.jpeg'
 import JaysonImg from '../../src/images/team/Jayson Ilagan.jpeg'
 import RiteshImg from '../../src/images/team/Ritesh Giri.jpeg'
+import XanImg from '../../src/images/team/Xan Varcoe.jpeg'
 
 const teamMembers = [
   {
@@ -72,6 +73,15 @@ const teamMembers = [
     He started working in 2019 at PwC as a Software Developer. He was given the "Aplomb award" for helping increase client confidence and renew service contracts despite high-pressure client situations.`,
     bio2: `While he acts as a Product Manager in Socious, he is also the Senior Product Manager at Quinstreet, where he builds software products and solutions for performance-based and search engine marketing.
     His belief that 'being involved in social change is a moral responsibility' motivated him to join the team. He wants to be a part of the solution and not just benefit from the action of others. He hopes his tech skills will impact Socious design and growth as he shares the same passion with the company's mission.`,
+  },
+  {
+    id: 8,
+    imageUrl: XanImg,
+    imageAlt: 'Xan Varcoe',
+    name: 'Xan Varcoe',
+    title: 'Senior Data Scientist',
+    bio1: 'A published Data Scientist and technology evangelist with a multi-disciplinary background who holds degrees in both Computer Science and Anthropology. His diverse range of professional experience includes Machine Learning, Management, Marketing, Blockchain Solutions, Education, and Events.',
+    bio2: 'Driven by data and design, Xan seeks to make a positive and lasting impact with his work. By applying bleeding-edge solutions to age-old problems, he wants to enable people to positively disrupt.',
   },
 ]
 
