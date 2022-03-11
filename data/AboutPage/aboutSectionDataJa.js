@@ -3,7 +3,7 @@ const aboutItemsJa = [
     id: 1,
     imageUrl: '/images/collaborate.png',
     imageAlt: 'illustration of people working together',
-    header: 'ソーシャルメディアで社会を変える',
+    header: 'インパクトセクターのSNSアプリ',
     content: 'ソーシャスは同じ志を持つ人々を結びつけ、一緒に社会課題解決を目指します。社会課題に関する共通の関心による繋がりやAI推薦に基づくSNSアプリが出会うべき人との出会いを可能にします。'
   },
   {
