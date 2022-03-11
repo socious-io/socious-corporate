@@ -19,7 +19,6 @@ const jobItem = [
     icon: <StarIcon />,
     title: "Sell your socially conscious products on Socious Market",
     subtitle: `Reach and sell your products to socially conscious consumers through our marketplace for socially conscious products.
-    Directly target socially conscious customers who have explicitly consented to monetize their data and receive your ads on our socially conscious ad platform.
     Get certified as a Socious organization and access talents and customers who are otherwise inaccessible.
     `
   },
@@ -29,7 +28,7 @@ const jobItem = [
     title: "Find impact investors, cities, and impact-driven organizations to collaborate with",
     subtitle: `Meet impact investors who share your passion and raise the capital necessary for social impact.
     Collaborate with cities, schools, and impact-driven organizations.
-    Hire talents, sell socially conscious products, fundraise, find partners, and advertise to socially conscious consumers on one platform.
+    Visualize and sell your impact credits such as carbon credits and plastic credits to fund your impact projects.
     `
   }
 ]
