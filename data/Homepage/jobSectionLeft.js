@@ -26,9 +26,9 @@ const jobItem = [
   {
     id: 3,
     icon: <FilterTiltShiftIcon />,
-    title: "Take full control of and monetize your data",
-    subtitle: `You are the owner of your data and you can sell it to whomever you please through our blockchain-based platform.
-    Join social impact projects, buy & sell socially conscious products, and monetize your data. All in one platform.
+    title: "Visualize and monetize your impact",
+    subtitle: `Socious' unique algorithm quantifies and visualizes your contribution to solving social issues.
+    Receive impact tokens by contributing to a social cause including carbon credit tokens and plastic credit tokens.
     `
   }
 ]
