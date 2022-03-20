@@ -8,10 +8,9 @@ const jobItem = [
   {
     id: 4,
     icon: <PersonAddIcon />,
-    title: "Hire the right talent for your company",
+    title: "Hire the right talent for your organization",
     subtitle: `Meet like-minded people (one-off, part-time, full-time) to work with and solve social problems faster together.
-    Our proprietary algorithms recommend the most suitable candidates who share your mission, reduce the risk of mismatches, and improve retention rate, employee happiness, and performance.
-    Automate the hiring process using AI screening and chatbots to significantly reduce the cost and time spent on recruitment.
+    Our AI recommends the most suitable candidates who share your mission, reduces the risk of mismatches, and improves retention rate, employee happiness, and performance.
     `
   },
   {
@@ -28,7 +27,6 @@ const jobItem = [
     title: "Find impact investors, cities, and impact-driven organizations to collaborate with",
     subtitle: `Meet impact investors who share your passion and raise the capital necessary for social impact.
     Collaborate with cities, schools, and impact-driven organizations.
-    Visualize and sell your impact credits such as carbon credits and plastic credits to fund your impact projects.
     `
   }
 ]
