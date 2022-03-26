@@ -11,8 +11,8 @@ const valueItems = [
   },
   {
     id: 3,
-    header: 'High Performance for High Social Impact',
-    content: 'Our goal is to maximize social impact, not shareholder value or profit. Our social and financial returns are generally aligned, but if there is a conflict, we prioritize social returns. We are a highly motivated group of people. We strive to hire only the best-fit candidates so that we can maximize social impact. Socious seeks excellence because we believe that our talented employees and collaborators will accomplish more together. Being thoughtful about what kind of people we hire helps us build an effective company culture that can accelerate social change.'
+    header: 'High Performance for High Impact',
+    content: 'Our goal is to maximize social and environmental impact, not shareholder value or profit. Our social/environmental and financial returns are generally aligned, but if there is a conflict, we prioritize social/environmental returns. We are a highly motivated group of people. We strive to hire only the best-fit candidates so that we can maximize social and environmental impact. Socious seeks excellence because we believe that our talented employees and collaborators will accomplish more together. Being thoughtful about what kind of people we hire helps us build an effective company culture that can accelerate social and environmental impact.'
   },
   {
     id: 4,
