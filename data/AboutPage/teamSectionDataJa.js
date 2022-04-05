@@ -7,6 +7,8 @@ import JaysonImg from '../../src/images/team/Jayson Ilagan.jpeg'
 import RiteshImg from '../../src/images/team/Ritesh Giri.jpeg'
 import XanImg from '../../src/images/team/Xan Varcoe.jpeg'
 import TinImg from '../../src/images/team/Tin Cabrera.jpeg'
+import PranavImg from '../../src/images/team/Pranav Khanna.jpeg'
+import CristhianImg from '../../src/images/team/Cristhian Tejada.jpeg'
 
 const teamMembersJa = [
   {
@@ -92,6 +94,24 @@ const teamMembersJa = [
     title: 'エグゼクティブアシスタント&コミュニティビルダー',
     bio1: '人生の目的は、全ての人のために安全な空間を作ること。若い頃、性的指向や性表現が原因でいじめられた経験から、若者が恐れずに自分らしくいられる場所を提供することを誓いました。その結果、フィリピンのマリキナ市内のクリエイターや起業家、フリーランサーを支援するコワーキングスペース「コフィチナ」を共同設立。',
     bio2: '自他共に認めるマルチポテンシャリティー、そして多様な興味の持ち主。認定ライフコーチ、Sustainability Solutions ExchangeとCreate Philippinesの元コミュニティマネージャー、Facebookのアドストラテジスト、そしてモチベーショナル・スピーカーの彼女は、エグゼクティブアシスタント&コミュニティビルダーとしてソーシャスに加わります。',
+  },
+  {
+    id: 10,
+    imageUrl: PranavImg,
+    imageAlt: 'プラナブ カナ',
+    name: 'プラナブ カナ',
+    title: 'アドバイザー',
+    bio1: '循環型（サーキュラー）ファッションやサステナビリティ、プラスチックごみ問題の対策、暗号通貨などのバックグラウンドを持つプラナブは、環境・気候×ブロックチェーンの領域で活躍中。最近では、気候変動分野におけるDAO（分散型自律組織）やLakme Fashion Weekのサーキュラーデザインチャレンジに貢献し、現在は、より良い世界のブロックチェーンのためのラボラトリーLaoLabs社で働いています。',
+    bio2: 'ブロックチェーンによる環境対策、シードアクセラレーターでのメンターとしての活動、受賞歴のあるサステナビリティのためのツール開発などの経験から得たスキルを、ソーシャスのアドバイザーとして活かしていきたいと考えています。',
+  },
+  {
+    id: 11,
+    imageUrl: CristhianImg,
+    imageAlt: 'クリスティアン テハーダ',
+    name: 'クリスティアン テハーダ',
+    title: 'ブロックチェーンデベロッパー',
+    bio1: 'クリスティアンは、人工知能とブロックチェーンが今後数年のうちに、持続可能な開発と社会善に不可欠な役割を果たすと強く信じています。現在、データサイエンティストおよびブロックチェーンデベロッパーとして、これらの技術を主なツールとし、いくつかの社会的インパクトプロジェクトで活躍中。また、Open Bank Project社でも働いていて、金融機関向けのブロックチェーンソリューション開発に携わっています。',
+    bio2: '元々ビジネスと経済を学んでいた彼は、生活環境の改善や環境問題を解決するツールを作る必要性から、コンピューターサイエンスのスキルを身につけることに。今後数年間は、Web3技術を使った新しい経済モデルを研究する博士課程を継続する予定です。',
   },
 ]
 
