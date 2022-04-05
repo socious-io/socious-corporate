@@ -7,6 +7,8 @@ import JaysonImg from '../../src/images/team/Jayson Ilagan.jpeg'
 import RiteshImg from '../../src/images/team/Ritesh Giri.jpeg'
 import XanImg from '../../src/images/team/Xan Varcoe.jpeg'
 import TinImg from '../../src/images/team/Tin Cabrera.jpeg'
+import PranavImg from '../../src/images/team/Pranav Khanna.jpeg'
+import CristhianImg from '../../src/images/team/Cristhian Tejada.jpeg'
 
 const teamMembers = [
   {
@@ -92,6 +94,24 @@ const teamMembers = [
     title: 'Executive Assistant and Community Builder',
     bio1: `Creating safe spaces for all is Tin's life purpose. She vowed to provide a place for the youth to be themselves without fear  after being bullied in her younger years because of her sexual orientation and gender expression. Her purpose eventually led her to cofound Cofficina, a co-working space catering to the underserved creatives, entrepreneurs, and freelancers of Marikina, Philippines.`,
     bio2: 'Tin is a self-confessed multipotentialite pursuing different interests in varied fields. She is a certified Transformational Coach, a former community manager for Sustainability Solutions Exchange and Create Philippines, a Facebook ads strategist, a motivational speaker, and now, an Executive Assistant and Community Builder for Socious.',
+  },
+  {
+    id: 10,
+    imageUrl: PranavImg,
+    imageAlt: 'Pranav Khanna',
+    name: 'Pranav Khanna',
+    title: 'Advisor',
+    bio1: `Having a background in circular fashion, sustainability, plastic waste management and cryptocurrency, Pranav currently works in the climate X blockchain space. Most recently, he has been contributing to DAO's in the climate space and the Circular Design Challenge of Lakme Fashion week and currently works with LoaLabs, a laboratory for better world blockchains.`,
+    bio2: 'As an advisor for Socious, he hopes to leverage his skills gained from his experience working with blockchain for environment, acting as a mentor in start-up accelerators and developing award-winning tools for sustainability.',
+  },
+  {
+    id: 11,
+    imageUrl: CristhianImg,
+    imageAlt: 'Cristhian Tejada',
+    name: 'Cristhian Tejada',
+    title: 'Blockchain Developer',
+    bio1: 'Cristhian strongly believes that artificial intelligence and blockchain will play an essential role in sustainable development and social good in the coming years. He currently stands out as a data scientist and blockchain developer in several social impact projects using the technology as a main tool. He also works in the Open Bank Project developing blockchain based solutions for the financial and banking sector.',
+    bio2: 'Although his studies are in business and economics, the need to create tools that improve living conditions and solve environmental issues has driven him to develop his skills in computer science. In the next few years he plans to continue his doctoral studies investigating new economic models using Web3 technologies.',
   },
 ]
 
