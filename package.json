@@ -26,6 +26,7 @@
     "gatsby-plugin-google-gtag": "^4.2.0",
     "gatsby-plugin-google-tagmanager": "^4.2.0",
     "gatsby-plugin-image": "^2.0.0",
+    "gatsby-plugin-ipfs": "^2.0.2",
     "gatsby-plugin-mailchimp": "^5.2.2",
     "gatsby-plugin-react-helmet": "^5.0.0",
     "gatsby-plugin-sass": "^5.0.0",
