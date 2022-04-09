@@ -25,7 +25,6 @@ module.exports = {
       appleTouchIcon: 'favicons/apple-touch-icon.png',
     },
   },
-  pathPrefix: '__GATSBY_IPFS_PATH_PREFIX__',
   plugins: [
     {
       resolve: "gatsby-plugin-google-tagmanager",
@@ -58,7 +57,6 @@ module.exports = {
     "gatsby-transformer-sharp",
     "gatsby-plugin-anchor-links",
     "gatsby-plugin-react-helmet",
-    'gatsby-plugin-ipfs',
     {
       resolve: 'gatsby-plugin-mailchimp',
       options: {
