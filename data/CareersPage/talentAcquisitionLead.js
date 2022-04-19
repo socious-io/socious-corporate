@@ -16,9 +16,7 @@ const talentAcquisitionLead = {
           this untapped potential by helping them contribute to society in an easy, fun way through a purpose-driven community
           app, AI recommendations, and blockchain-based community currency. We are developing a decentralized application (Dapp) where users can take control of and monetize their content and data.
           <br /><br />
-          We started Socious in July 2021, so as an early employee you’ll be pivotal in shaping the direction of the company. We
-          have enough runway to last us through the end of 2022, and are about to close a seed round to allow us to accelerate
-          even faster.
+          We started Socious in July 2021, so as an early employee you’ll be pivotal in shaping the direction of the company.
           <br /><br />
           You’ll be able to work fully remotely, though we'll meet up in person several times per year, so we're looking for
           someone living in Japan. If you aren't here yet, that's fine: you’ll be able to work remotely until we help you secure a
@@ -108,7 +106,7 @@ const talentAcquisitionLead = {
       header: 'How to apply',
       content:
         <div>
-          <p>To apply, please send your letter of motivation (cover letter) and resume to <a href="mailto:jobs@socious.io">jobs@socious.io</a></p>
+          <p>To apply, please download the Socious app and apply directly through the 'Projects' tab</p>
           <br />
           <p><strong>Please Note:</strong> This role is open to remote work outside Japan and also to remote work initially, with the aim of relocating to Japan post-Covid.</p>
         </div>
