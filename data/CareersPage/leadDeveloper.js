@@ -25,9 +25,6 @@ const leadDeveloper = {
           We communicate in English, and so no Japanese ability is required, though there will be opportunities to use Japanese if
           you’d like to.
           <br /><br />
-          We’ve built a prototype version of our app using a combination of part-time freelance developers and offshore
-          developers. As we secure funding, we’re now looking to bring on our first full time hire to oversee future development.
-          <br /><br />
           In this role, you’ll work closely with senior stakeholders to understand business goals and ensure that the development
           team & technologies used are aligned with these.
         </p>
