@@ -14,7 +14,7 @@ const seniorDataScientist = {
           <br/><br/>
           Socious is a community app for social change, powered by AI and blockchain. Many people are interested in contributing to social impact projects, but few of them can do so. We leverage
           this untapped potential by helping them contribute to society in an easy, fun way through a purpose-driven community
-          app, AI recommendations, and blockchain-based community currency. We are developing a decentralized application (Dapp) where users can take control of and monetize their content and data.
+          app, AI recommendations, and blockchain-based community currency.
           <br/><br/>
           Socious Inc. was founded in July 2021 and is looking to grow it's team. As a founding member of Socious Inc., you will be at the forefront of this transformational technology assisting social change makers and in growing the company with the CEO.
         </p>
