@@ -13,10 +13,9 @@ const growthLead = {
           Do you have a passion for social impact? If yes, Socious Inc. is looking for somebody with your enthusiasm and skills to work as part of the team. We are looking for a growth expert who is curious, driven, and passionate about social and environmental impact. If you are looking for a role where you can make a major impact in the world, we want to meet you.
           <br /><br />
           Socious is a community app for social change, powered by AI and blockchain. Many people are interested in contributing to social impact projects, but few of them can do so. We leverage
-          this untapped potential by helping them contribute to society in an easy, fun way through a purpose-driven community
-          app, AI recommendations, and blockchain-based community currency.
+          this untapped potential by helping them contribute to society in an easy, fun way through AI recommendations, impact visualization, and rewards in crypto tokens.
           <br /><br />
-          We started Socious in July 2021, so as an early employee you’ll be pivotal in shaping the direction of the company.
+          We started Socious in July 2021 and are supported by 500 Startups and Microsoft for Startups. As an early employee you’ll be pivotal in shaping the direction of the company.
           <br /><br />
           You’ll be able to work fully remotely from anywhere in the world. If you prefer, we can help you secure a
           working visa.
@@ -25,7 +24,7 @@ const growthLead = {
           you’d like to.
           <br /><br />
           In this role, you’ll work closely with senior stakeholders to understand business goals and ensure that the growth
-          team & tools used are aligned with these.
+          team & tools used are aligned with these. As we grow, you’ll have the opportuntity to move into a Chief Growth Offier role in the future.
         </p>
       ,
     },
@@ -39,10 +38,10 @@ const growthLead = {
           <li>Work with Data Science/Analytics to develop real-time performance marketing reports and statistical models</li>
           <li>Optimize web pages for copy, metadata, internal and external links and landing pages for Search</li>
           <li>Set-up, manage, and monitor day-to-day performance of paid acquisition campaigns across multiple channels – SEM and social channels</li>
-          <li>Monitor SEM health via Google Analytics, Google Webmaster Tools, and related software & reporting tools</li>
+          <li>Monitor SEM health via Google Analytics, Google Ads, and related software & reporting tools</li>
           <li>Capitalize on popular trends and brainstorm wacky ideas to attract PR and attention from creators</li>
           <li>Hire and manage a team of content creators and a content strategy</li>
-          <li>Manage and operationalize acquisition channels that are working, including SEO and content marketing</li>
+          <li>Manage and operationalize acquisition channels including SEO and content marketing</li>
           <li>Own content development on the Socious resources library, YouTube channel, and website</li>
           <li>Collaborate with the CEO to develop strategic marketing initiatives that increase the number of customers</li>
           <li>Experiment with new channels to develop promising acquisition campaigns</li>
@@ -54,6 +53,7 @@ const growthLead = {
       header: 'Skills & Experience',
       content:
         <ul>
+          <li>5+ years of growth marketing experience or an analytical role at a tech company</li>
           <li>A strong passion for social and environmental impact (previous experience with impact organizations is an asset).</li>
           <li>A track record developing growth strategy either via SEO or paid Ads (Web, Video, SEM, Affiliate, Referrals)</li>
           <li>A great writer: Can efficiently write and edit blog content</li>
@@ -61,8 +61,7 @@ const growthLead = {
           <li>Community Builder: Skilled networker who builds personal relationships with partners, customers, and advocates</li>
           <li>Creative: Skilled at brainstorming newsworthy ideas and generating buzz. Plugged in to pop culture, entertainment, and social media trends</li>
           <li>Experience partnering with diverse cross-functional teams to deliver critical business outcomes</li>
-          <li>2-10 years of experience with digital marketing and organic acquisition channels: SEO, content marketing, PR, and partnerships</li>
-          <li>5+ years of growth marketing experience or an analytical role at a tech company</li>
+          <li>Experience with digital marketing and organic acquisition channels: SEO, content marketing, PR, and partnerships</li>
           <li>Ability to compile and analyze performance data and metrics for use in discovering actionable insights, an Excel master</li>
           <li>[Preferred] Network with creative agencies or corporate communications teams</li>
           <li>Results-oriented: Strategic, focused on outcomes. Experimental</li>
