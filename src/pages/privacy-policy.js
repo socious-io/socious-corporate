@@ -309,7 +309,7 @@ const PrivacyPolicyPage = () => {
               <li>
                 <span>The Company shall obtain the consent of the registered user before collecting the following user information.</span><br/>
                 <span>(1) Device information</span><br/>
-                <span>(2) Location informatio</span>
+                <span>(2) Location information</span>
               </li>
               <li>
                 <span>
