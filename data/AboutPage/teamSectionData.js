@@ -9,6 +9,9 @@ import XanImg from '../../src/images/team/Xan Varcoe.jpeg'
 import TinImg from '../../src/images/team/Tin Cabrera.jpeg'
 import PranavImg from '../../src/images/team/Pranav Khanna.jpeg'
 import CristhianImg from '../../src/images/team/Cristhian Tejada.jpeg'
+import RaphaelImg from '../../src/images/team/Raphael Hode.jpeg'
+import JesdakornImg from '../../src/images/team/Jesdakorn Samittiauttakorn.jpeg'
+import ArsalanImg from '../../src/images/team/Arsalan Ni.jpeg'
 
 const teamMembers = [
   {
@@ -112,6 +115,33 @@ const teamMembers = [
     title: 'Blockchain Developer',
     bio1: 'Cristhian strongly believes that artificial intelligence and blockchain will play an essential role in sustainable development and social good in the coming years. He currently stands out as a data scientist and blockchain developer in several social impact projects using the technology as a main tool. He also works in the Open Bank Project developing blockchain based solutions for the financial and banking sector.',
     bio2: 'Although his studies are in business and economics, the need to create tools that improve living conditions and solve environmental issues has driven him to develop his skills in computer science. In the next few years he plans to continue his doctoral studies investigating new economic models using Web3 technologies.',
+  },
+  {
+    id: 12,
+    imageUrl: RaphaelImg,
+    imageAlt: 'Raphael Hode',
+    name: 'Raphael Hode',
+    title: 'Design Advisor',
+    bio1: `Raphael is a Strategic Designer with a passion for social innovation and sustainability. After a few years in advertising agencies in Paris, Raphael moved to Tokyo in 2015 and joined Designit, a global strategic design firm. At Designit Raphael worked on growing a team and helping some of Japan's most ambitious companies make innovation happen, leading him to endorse a variety of roles across UX design, service design, business design, and strategy.`,
+    bio2: 'In parallel, he has been passionately engaging in activities related to sustainability and social innovation: giving talks and workshops, mentoring early-stage social founders, and eventually co-founding a social venture. Today, he spends most of his time working with incredible social entrepreneurs to help them define, design, and launch visionary products that contribute to creating a more sustainable society.',
+  },
+  {
+    id: 13,
+    imageUrl: JesdakornImg,
+    imageAlt: 'Jesdakorn Samittiauttakorn',
+    name: 'Jesdakorn Samittiauttakorn',
+    title: 'Advisor',
+    bio1: 'Jesdakorn is an expert in holistic technology and data management, with 10 years of experience particularly in AI and ML Development, Data Security, and Data Privacy. He has helped many leading organizations and startups across Asia to navigate complexities in large-scale architecture, structure efficient system pipelines, and ultimately capture opportunities and drive business values following key insights drawn. He finds ESG interesting and wants to use technology to make the world a better place.',
+    bio2: '',  
+  },
+  {
+    id: 14,
+    imageUrl: ArsalanImg,
+    imageAlt: 'Arsalan Ni',
+    name: 'Arsalan Ni',
+    title: 'Advisor',
+    bio1: '',
+    bio2: '',  
   },
 ]
 
