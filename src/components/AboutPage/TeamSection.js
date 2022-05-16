@@ -151,12 +151,51 @@ const TeamSection = (props) => {
           )
         }
       }
+      RaphaelHode: file(
+        relativePath: {eq: "team/Raphael Hode.jpeg"}
+      ) {
+        childImageSharp {
+          gatsbyImageData(
+            width: 197,
+            height: 224,
+            quality: 70,
+            placeholder: BLURRED,
+            blurredOptions: {width: 100}
+          )
+        }
+      }
+      JesdakornSamittiauttakorn: file(
+        relativePath: {eq: "team/Jesdakorn Samittiauttakorn.jpeg"}
+      ) {
+        childImageSharp {
+          gatsbyImageData(
+            width: 197,
+            height: 224,
+            quality: 70,
+            placeholder: BLURRED,
+            blurredOptions: {width: 100}
+          )
+        }
+      }
+      ArsalanNi: file(
+        relativePath: {eq: "team/Arsalan Ni.jpeg"}
+      ) {
+        childImageSharp {
+          gatsbyImageData(
+            width: 197,
+            height: 224,
+            quality: 70,
+            placeholder: BLURRED,
+            blurredOptions: {width: 100}
+          )
+        }
+      }
     }
   `)
 
-  const { SeiraYun, AtsushiInoue, GalinaNeydenova, RhysMalyon, LawrenceCate, JaysonIlagan, RiteshGiri, XanVarcoe, TinCabrera, PranavKhanna, CristhianTejada } = data
+  const { SeiraYun, AtsushiInoue, GalinaNeydenova, RhysMalyon, LawrenceCate, JaysonIlagan, RiteshGiri, XanVarcoe, TinCabrera, PranavKhanna, CristhianTejada, RaphaelHode, JesdakornSamittiauttakorn, ArsalanNi } = data
 
-  const teamImages = [SeiraYun, AtsushiInoue, GalinaNeydenova, RhysMalyon, LawrenceCate, JaysonIlagan, RiteshGiri, XanVarcoe, TinCabrera, PranavKhanna, CristhianTejada]
+  const teamImages = [SeiraYun, AtsushiInoue, GalinaNeydenova, RhysMalyon, LawrenceCate, JaysonIlagan, RiteshGiri, XanVarcoe, TinCabrera, PranavKhanna, CristhianTejada, RaphaelHode, JesdakornSamittiauttakorn, ArsalanNi]
 
   const { language } = props.pageContext
 
