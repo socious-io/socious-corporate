@@ -29,7 +29,8 @@ const Footer = () => {
         </div>
         <div className="footer-list">
           <ul>
-            <li><Link to="/">{jaPage ? 'ソーシャスアプリ' : 'Socious App'}</Link></li>
+            <li><Link to="/">{jaPage ? 'モバイルアプリ' : 'Mobile App'}</Link></li>
+            <li><a href="https://app.socious.io" target="_blank" rel="noreferrer">Web App</a></li>
             <li><AnchorLink to={linkLanguageSelector("/about#our-mission")} title={ourMission} /></li>
             <li><AnchorLink to={linkLanguageSelector("/about#social-issues")} title={socialIssues} /></li>
             <li><AnchorLink to={linkLanguageSelector("/about#what-we-do")} title={whatWeDo} /></li>

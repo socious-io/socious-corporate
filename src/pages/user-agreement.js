@@ -148,8 +148,8 @@ const UserAgreementPage = () => {
             <span>(1) If you violate any of the provisions of this Agreement.</span><br/>
             <span>(2) When it is found that there is a false fact in the registration information.</span><br/>
             <span>(3) In the event that the User becomes insolvent or unable to pay, or files a petition for commencement of bankruptcy proceedings, civil rehabilitation proceedings, corporate reorganization proceedings, special liquidation proceedings, or similar proceedings.</span><br/>
-            <span>(4) When there is no use of the Service for more than ● months</span><br/>
-            <span>(5) If there is no response to inquiries or other communications from the Company requesting a response for more than ● days</span><br/>
+            <span>(4) When there is no use of the Service for more than 6 months</span><br/>
+            <span>(5) If there is no response to inquiries or other communications from the Company requesting a response for more than 30 days</span><br/>
             <span>(6) If any of the items in Article 3, Paragraph 4 apply.</span><br/>
             <span>(7) In any other cases where the Company deems it inappropriate to continue using the Service or to register as a registered user.</span>
         </div>
@@ -175,7 +175,7 @@ const UserAgreementPage = () => {
                     <span>The Company does not warrant, expressly or impliedly, that the Service will be fit for the particular purpose of the Registered User, that it will have the expected functions, commercial value, accuracy, or usefulness, that the use of the Service by the Registered User will conform to the laws and regulations applicable to the Registered User or the internal rules of industry organizations, that the Service will be continuously available, or that defects will not occur. The Company makes no warranty, express or implied, that the Service will be free of defects.</span>
                 </li>
                 <li>
-                    <span>The Company shall not be liable to compensate for damages incurred by a registered user in relation to the Service beyond the amount of compensation paid by the registered user to the Company in the past ● month, nor shall the Company be liable to compensate for incidental damages, indirect damages, special damages, future damages, or damages for lost profits.</span>
+                    <span>The Company shall not be liable to compensate for damages incurred by a registered user in relation to the Service beyond the amount of compensation paid by the registered user to the Company in the past 1 month, nor shall the Company be liable to compensate for incidental damages, indirect damages, special damages, future damages, or damages for lost profits.</span>
                 </li>
                 <li>
                     <span>The registered user shall be responsible for resolving any transactions, communications, disputes, etc. between the registered user and other registered users or third parties in relation to this service or this site.</span>

@@ -2,7 +2,7 @@ const companyInfo = [
   {
     id: 1,
     title: 'Company Name',
-    info: 'Socious Global Inc.'
+    info: 'Socious Inc.'
   },
   {
     id: 3,
