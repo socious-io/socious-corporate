@@ -140,8 +140,8 @@ const teamMembers = [
     imageAlt: 'Arsalan Ni',
     name: 'Arsalan Ni',
     title: 'Advisor',
-    bio1: '',
-    bio2: '',  
+    bio1: 'Arsalan is the Managing Partner and Co-Founder of MOST Ventures in Almaty, Kazakhstan, and UNDP SDG-Climate Facility Senior Advisor in the Middle East and North Africa (MENA). He also serves as a fund management advisor to AV Ventures, a Washington DC-based impact investment fund, setting up Central Asia Impact Fund in Bishkek, Kyrgyzstan.',
+    bio2: 'With over 20 years of experience in investment and advisory in frontier and emerging markets, his impressive background includes serving as the Private Sector Facility Senior Advisor at the Green Climate Fund (GCF), the Regional Program Manager for the International Finance Corporation (IFC) SME Ventures program in Asia and the Middle East, and a technical advisor to various high-profile World Bank projects. He also co-founded three successful venture-backed enterprises in the US and Taiwan.',
   },
 ]
 
