@@ -12,6 +12,7 @@ import CristhianImg from '../../src/images/team/Cristhian Tejada.jpeg'
 import RaphaelImg from '../../src/images/team/Raphael Hode.jpeg'
 import JesdakornImg from '../../src/images/team/Jesdakorn Samittiauttakorn.jpeg'
 import ArsalanImg from '../../src/images/team/Arsalan Ni.jpeg'
+import LenaImg from '../../src/images/team/Lena Namiki.jpeg'
 
 const teamMembersJa = [
   {
@@ -142,6 +143,15 @@ const teamMembersJa = [
     title: 'アドバイザー',
     bio1: 'アルマトイ、カザフスタンのMOST Ventures社のマネージングパートナー兼共同創業者、また中東・北アフリカ地域（MENA）のUNDP SDG-Climate Facilityのシニアアドバイザーを勤めるアーサラン。彼は同時に、ワシントンDCのインパクト投資ファンドであるAV Venturesのファンドマネジメントアドバイザーとして、キルギス共和国のビシュケク市にセントラル・アジア・インパクト・ファンドを設立しています。',
     bio2: 'フロンティアおよび新興市場における投資、アドバイザリーの分野で20年以上の経験を持つアーサランは、過去に緑の気候基金(GCF)の民間セクター・ファシリティ・シニア・アドバイザーや国際金融公社(IFC)アジア・中東地域の中小企業ベンチャープログラムの地域プログラム・マネージャー、また世界有名銀行の様々プロジェクトのテクニカル・アドバイザーとしての経験もあります。',  
+  },
+  {
+    id: 15,
+    imageUrl: LenaImg,
+    imageAlt: '浪木 レナ',
+    name: '浪木 レナ',
+    title: 'ウェブ開発者',
+    bio1: 'フルスタックのウェブ開発者であるレナは、コードを通して革新的なアイデアを実現する手助けをすることに情熱を注いでいます。ソーシャスのウェブ開発者として活躍する一方、同時にAdobe社でフロントエンド開発者として、パーソナライズされた顧客体験の開発・テストに注力しています。',
+    bio2: 'ウェブ開発者としてのキャリアをスタートする前には、デジタルマーケティングの経験もあり、主にデジタル広告やソーシャルメディアマーケティング、オンライン・オフラインのカスタマーエクスペリエンスを得意とする。彼女は、さまざまな専門知識を提供し、社会問題に取り組み、ポジティブで持続的な変化をもたらすことを望んでいます。',
   },
 ]
 
