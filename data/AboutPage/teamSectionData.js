@@ -12,6 +12,7 @@ import CristhianImg from '../../src/images/team/Cristhian Tejada.jpeg'
 import RaphaelImg from '../../src/images/team/Raphael Hode.jpeg'
 import JesdakornImg from '../../src/images/team/Jesdakorn Samittiauttakorn.jpeg'
 import ArsalanImg from '../../src/images/team/Arsalan Ni.jpeg'
+import LenaImg from '../../src/images/team/Lena Namiki.jpeg'
 
 const teamMembers = [
   {
@@ -142,6 +143,15 @@ const teamMembers = [
     title: 'Advisor',
     bio1: 'Arsalan is the Managing Partner and Co-Founder of MOST Ventures in Almaty, Kazakhstan, and UNDP SDG-Climate Facility Senior Advisor in the Middle East and North Africa (MENA). He also serves as a fund management advisor to AV Ventures, a Washington DC-based impact investment fund, setting up Central Asia Impact Fund in Bishkek, Kyrgyzstan.',
     bio2: 'With over 20 years of experience in investment and advisory in frontier and emerging markets, his impressive background includes serving as the Private Sector Facility Senior Advisor at the Green Climate Fund (GCF), the Regional Program Manager for the International Finance Corporation (IFC) SME Ventures program in Asia and the Middle East, and a technical advisor to various high-profile World Bank projects. He also co-founded three successful venture-backed enterprises in the US and Taiwan.',
+  },
+  {
+    id: 15,
+    imageUrl: LenaImg,
+    imageAlt: 'Lena Namiki',
+    name: 'Lena Namiki',
+    title: 'Web Developer',
+    bio1: 'Lena is a full-stack web developer, passionate about helping others bring their innovative ideas to life through code. While serving as a web developer for Socious, she also currently works at Adobe as a front-end developer, focusing on developing and testing personalized customer experiences.',
+    bio2: 'Prior to becoming a developer, she worked as a digital marketer, focusing on digital ads, social media marketing and online/offline customer experience. She hopes to offer her different expertise to help tackle social issues and make a positive and lasting change.',
   },
 ]
 

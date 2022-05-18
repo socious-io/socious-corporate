@@ -190,12 +190,25 @@ const TeamSection = (props) => {
           )
         }
       }
+      LenaNamiki: file(
+        relativePath: {eq: "team/Lena Namiki.jpeg"}
+      ) {
+        childImageSharp {
+          gatsbyImageData(
+            width: 197,
+            height: 224,
+            quality: 70,
+            placeholder: BLURRED,
+            blurredOptions: {width: 100}
+          )
+        }
+      }
     }
   `)
 
-  const { SeiraYun, AtsushiInoue, GalinaNeydenova, RhysMalyon, LawrenceCate, JaysonIlagan, RiteshGiri, XanVarcoe, TinCabrera, PranavKhanna, CristhianTejada, RaphaelHode, JesdakornSamittiauttakorn, ArsalanNi } = data
+  const { SeiraYun, AtsushiInoue, GalinaNeydenova, RhysMalyon, LawrenceCate, JaysonIlagan, RiteshGiri, XanVarcoe, TinCabrera, PranavKhanna, CristhianTejada, RaphaelHode, JesdakornSamittiauttakorn, ArsalanNi, LenaNamiki } = data
 
-  const teamImages = [SeiraYun, AtsushiInoue, GalinaNeydenova, RhysMalyon, LawrenceCate, JaysonIlagan, RiteshGiri, XanVarcoe, TinCabrera, PranavKhanna, CristhianTejada, RaphaelHode, JesdakornSamittiauttakorn, ArsalanNi]
+  const teamImages = [SeiraYun, AtsushiInoue, GalinaNeydenova, RhysMalyon, LawrenceCate, JaysonIlagan, RiteshGiri, XanVarcoe, TinCabrera, PranavKhanna, CristhianTejada, RaphaelHode, JesdakornSamittiauttakorn, ArsalanNi, LenaNamiki]
 
   const { language } = props.pageContext
 
