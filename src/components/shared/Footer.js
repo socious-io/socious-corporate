@@ -51,6 +51,7 @@ const Footer = () => {
             <li><a href="https://www.linkedin.com/company/socious-io/" target="_blank" rel="noreferrer">LinkedIn</a></li>
             <li><a href="https://www.instagram.com/socious.io/" target="_blank" rel="noreferrer">Instagram</a></li>
             <li><a href="https://twitter.com/SociousDAO" target="_blank" rel="noreferrer">Twitter</a></li>
+            <li><a href="https://medium.com/@socious.io" target="_blank" rel="noreferrer">Medium</a></li>
           </ul>
         </div>
       </div>
