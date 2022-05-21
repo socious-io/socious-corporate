@@ -1,4 +1,4 @@
-@import url('https://cdn-images.mailchimp.com/embedcode/classic-10_7.css');
+@import url("https://cdn-images.mailchimp.com/embedcode/classic-10_7.css");
 
 /* INTRO_SECTION */
 
@@ -48,7 +48,7 @@
 
 /* the main blocks of the intro sections */
 .section-intro__block {
-  font-family: 'Inter', sans-serif;
+  font-family: "Inter", sans-serif;
   position: relative;
 }
 
@@ -79,6 +79,11 @@
 
 .section-intro__mailchimp__form {
   margin-top: 23px;
+}
+
+.intro-right-section {
+  display: flex;
+  align-items: center;
 }
 
 /* END_SECTION_INTRO */
@@ -126,7 +131,7 @@
   .section-intro__app-image-blue-square {
     display: none;
   }
-  
+
   .section-intro__app-image-paleblue-square {
     display: none;
   }

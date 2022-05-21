@@ -1,21 +1,27 @@
 #mc_embed_signup {
-  background: #fff;
+  //background: #fff;
   clear: left;
-  font: 14px 'Helvetica', 'Arial', sans-serif;
+  font: 14px "Helvetica", "Arial", sans-serif;
+  width: 40%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+#mc_embed_signup_scroll {
+  width: 100%;
 }
 
 #mc_embed_signup .button {
   padding: 0px;
-  margin-top: 20px;
   cursor: pointer;
-  background: rgb(38, 105, 160);
+  background: rgb(255, 255, 255);
   border: none;
   text-align: center;
   font-family: Barlow;
   font-size: 14px;
   font-weight: 700;
-  font-family: 'Inter';
-  color: rgb(255, 255, 255);
+  font-family: "Inter";
+  color: rgb(38, 105, 160);
   letter-spacing: 2px;
   line-height: 1;
   border-radius: 5px;
@@ -23,13 +29,21 @@
   box-shadow: none;
   width: 200px;
   height: 50px;
+  margin: 20px auto;
+  display: block;
 }
 
 #mc_embed_signup .button:hover {
-  background: none rgb(38, 105, 160);
+  background: none rgb(255, 255, 255);
 }
 
 .clear {
   display: flex;
   justify-content: center;
+}
+
+@media only screen and (max-width: 1015px) {
+  #mc_embed_signup {
+    width: 100%;
+  }
 }
