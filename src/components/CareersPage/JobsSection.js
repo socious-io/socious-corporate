@@ -50,7 +50,7 @@ const JobsSection = (props) => {
               <p>Engineering</p>
             </div>
             <div className="job-date">
-              <p>06/10/2021</p>
+              <p>01/07/2022</p>
             </div>
           </div>
           <div className="jobs-list__item">
@@ -61,7 +61,7 @@ const JobsSection = (props) => {
               <p>Data Science / Machine Learning</p>
             </div>
             <div className="job-date">
-              <p>15/10/2021</p>
+              <p>01/07/2022</p>
             </div>
           </div>
           <div className="jobs-list__item">
@@ -72,7 +72,7 @@ const JobsSection = (props) => {
               <p>Design</p>
             </div>
             <div className="job-date">
-              <p>05/12/2021</p>
+              <p>01/07/2022</p>
             </div>
           </div>
           <div className="jobs-list__item">
@@ -83,7 +83,7 @@ const JobsSection = (props) => {
               <p>Talent</p>
             </div>
             <div className="job-date">
-              <p>17/12/2021</p>
+              <p>01/07/2022</p>
             </div>
           </div>
           <div className="jobs-list__item">
@@ -94,7 +94,7 @@ const JobsSection = (props) => {
               <p>Engineering</p>
             </div>
             <div className="job-date">
-              <p>30/12/2021</p>
+              <p>01/07/2022</p>
             </div>
           </div>
           <div className="jobs-list__item">
@@ -105,7 +105,7 @@ const JobsSection = (props) => {
               <p>Operations</p>
             </div>
             <div className="job-date">
-              <p>07/01/2022</p>
+              <p>01/07/2022</p>
             </div>
           </div>
           <div className="jobs-list__item">
@@ -116,7 +116,7 @@ const JobsSection = (props) => {
               <p>Engineering</p>
             </div>
             <div className="job-date">
-              <p>21/02/2022</p>
+              <p>01/07/2022</p>
             </div>
           </div>
           <div className="jobs-list__item">
@@ -127,7 +127,7 @@ const JobsSection = (props) => {
               <p>Growth</p>
             </div>
             <div className="job-date">
-              <p>20/04/2022</p>
+              <p>01/07/2022</p>
             </div>
           </div>
         </div>
