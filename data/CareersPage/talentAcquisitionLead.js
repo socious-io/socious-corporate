@@ -2,7 +2,7 @@ import React from "react";
 
 const talentAcquisitionLead = {
   title: 'Talent Acquisition Lead',
-  location: 'Tokyo, Japan',
+  location: 'Fully Remote',
   department: 'Talent',
   body: [
     {
@@ -108,7 +108,6 @@ const talentAcquisitionLead = {
         <div>
           <p>To apply, please download the Socious app and apply directly through the 'Projects' tab</p>
           <br />
-          <p><strong>Please Note:</strong> This role is open to remote work outside Japan and also to remote work initially, with the aim of relocating to Japan post-Covid.</p>
         </div>
       ,
     },
