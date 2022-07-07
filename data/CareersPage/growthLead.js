@@ -10,10 +10,7 @@ const growthLead = {
       header: 'The Role',
       content:
         <p>
-          Do you have a passion for social impact? If yes, Socious Inc. is looking for somebody with your enthusiasm and skills to work as part of the team. We are looking for a growth expert who is curious, driven, and passionate about social and environmental impact. If you are looking for a role where you can make a major impact in the world, we want to meet you.
-          <br /><br />
-          Socious is a community app for social change, powered by AI and blockchain. Many people are interested in contributing to social impact projects, but few of them can do so. We leverage
-          this untapped potential by helping them contribute to society in an easy, fun way through AI recommendations, impact visualization, and rewards in crypto tokens.
+          Socious is an impact gig marketplace powered by blockchain and AI.
           <br /><br />
           We started Socious in July 2021 and are supported by 500 Startups and Microsoft for Startups. As an early employee you’ll be pivotal in shaping the direction of the company.
           <br /><br />
