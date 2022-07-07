@@ -10,11 +10,7 @@ const leadDesigner = {
       header: 'The Role',
       content:
         <p>
-          Do you have a passion for social impact? If yes, Socious Inc. is looking for somebody with your enthusiasm and skills to work as part of the team. We are looking for an experienced UI/UX designer who is curious, driven, and passionate about social impact. If you are looking for a role where you can make a major impact in the world, we want to meet you.
-          <br /><br />
-          Socious is a community app for social change, powered by AI and blockchain. Many people are interested in contributing to social impact projects, but few of them can do so. We leverage
-          this untapped potential by helping them contribute to society in an easy, fun way through a purpose-driven community
-          app, AI recommendations, and blockchain-based community currency.
+          Socious is an impact gig marketplace powered by blockchain and AI.
           <br /><br />
           We started Socious in July 2021, so as an early employee you’ll be pivotal in shaping the direction of the company. We
           have enough runway to last us through the end of 2022, and are about to close a seed round to allow us to accelerate
@@ -79,7 +75,7 @@ const leadDesigner = {
           <li>A supportive, trusting and transparent working environment</li>
           <li>Work-life balance with flexible hours and leave (unlimited paid leave)</li>
           <li>Flexible work arrangements (full-time, part-time freelance, side-job, onsite, remote, etc.)</li>
-          <li>A competitive salary package: 10-20 million yen (USD 87k - 175k) per year + stock options</li>
+          <li>A competitive salary package: USD 87k - 175k (10-20 million yen) per year + stock options</li>
           <li>Japan work visa sponsorship</li>
         </ul>
       ,
