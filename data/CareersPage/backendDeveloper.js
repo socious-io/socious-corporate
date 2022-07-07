@@ -46,7 +46,7 @@ const backendDeveloper = {
         <ul>
           <li>A strong passion for social impact (previous experience with social impact organizations is an asset)</li>
           <li>Degree in Computer Science, Engineering or a related field is an asset</li>
-          <li>Minimum 7 years of experience (or equivalent skills) in software development, especially with PHP Laravel, MySQL, AWS</li>
+          <li>Minimum 7 years of experience (or equivalent skills) in software development, especially with Typescript, Node.js, MySQL, AWS</li>
           <li>Strong knowledge of common algorithms and data structures</li>
           <li>Strong knowledge of blockchains is an asset</li>
           <li>Strong knowledge of concurrency and writing efficient and safe multithreaded code</li>
