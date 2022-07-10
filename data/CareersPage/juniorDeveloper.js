@@ -1,7 +1,7 @@
 import React from "react";
 
-const backendDeveloper = {
-  title: 'Lead Backend Developer',
+const juniorDeveloper = {
+  title: 'Junior Full Stack Developer',
   location: 'Fully Remote',
   department: 'Engineering',
   body: [
@@ -17,7 +17,7 @@ const backendDeveloper = {
           We communicate in English, and so no Japanese ability is required, though there will be opportunities to use Japanese if
           you’d like to.
           <br /><br />
-          You will be working with a team of talented people (three full-time employees + a number of freelancers).
+          You will be working with a team of talented people.
         </p>
       ,
     },
@@ -26,12 +26,16 @@ const backendDeveloper = {
       header: 'Responsibilities',
       content:
         <ul>
-          <li>Compile and analyze data, processes, and codes to troubleshoot problems and identify areas for improvement</li>
-          <li>Planning and documenting technical specifications for features or system design</li>
-          <li>Designing, building and configuring applications to meet business process and application requirements</li>
-          <li>Collaborating with the front-end developers and other team members to establish objectives and design more functional, cohesive codes to enhance the user experience</li>
-          <li>Recording data and reporting it to proper parties, such as clients or leadership</li>
-          <li>Writing testable, scalable and efficient code and parcipate in code reviews</li>
+          <li>Design client-side and server-side architecture</li>
+          <li>Build the front-end of applications through appealing visual design</li>
+          <li>Develop and manage well-functioning databases and applications</li>
+          <li>Write effective APIs</li>
+          <li>Test software to ensure responsiveness and efficiency</li>
+          <li>Troubleshoot, debug and upgrade software</li>
+          <li>Create security and data protection settings</li>
+          <li>Build features and applications with a mobile responsive design</li>
+          <li>Write technical documentation</li>
+          <li>Work with data scientists and analysts to improve software</li>
         </ul>
       ,
     },
@@ -41,11 +45,11 @@ const backendDeveloper = {
       content:
         <ul>
           <li>A strong passion for social impact (previous experience with social impact organizations is an asset)</li>
+          <li>Minimum 2 years of experience (or equivalent skills) in software development, especially with Typescript, Node.js, Next.js, React Native, Solidity, MySQL, AWS</li>
           <li>Degree in Computer Science, Engineering or a related field is an asset</li>
-          <li>Minimum 7 years of experience (or equivalent skills) in software development, especially with Typescript, Node.js, MySQL, AWS</li>
           <li>Strong knowledge of common algorithms and data structures</li>
           <li>Strong knowledge of blockchains is an asset</li>
-          <li>Strong knowledge of concurrency and writing efficient and safe multithreaded code</li>
+          <li>Strong knowledge of concurrency and writing efficient and safe code</li>
           <li>You possess good communication skills</li>
         </ul>
       ,
@@ -68,7 +72,7 @@ const backendDeveloper = {
           <li>A supportive, trusting and transparent working environment</li>
           <li>Work-life balance with flexible hours and leave (unlimited paid leave)</li>
           <li>Flexible work arrangements (full-time, part-time freelance, side-job, onsite, remote, etc.)</li>
-          <li>A competitive salary package: USD 70k - 140k (8-16 million yen) per year + stock options</li>
+          <li>A competitive salary package: USD 30k - 51k (4-7 million yen) per year + stock options</li>
           <li>Japan work visa sponsorship</li>
         </ul>
       ,
@@ -86,4 +90,4 @@ const backendDeveloper = {
   ]
 }
 
-export default backendDeveloper
+export default juniorDeveloper

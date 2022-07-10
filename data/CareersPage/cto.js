@@ -14,10 +14,6 @@ const cto = {
           <br /><br />
           We started Socious in July 2021, so as an early employee you’ll be pivotal in shaping the direction of the company.
           <br /><br />
-          You’ll be able to work fully remotely, though we'll meet up in person several times per year, so we're looking for
-          someone living in Japan. If you aren't here yet, that's fine: you’ll be able to work remotely until we help you secure a
-          working visa.
-          <br /><br />
           We communicate in English, and so no Japanese ability is required, though there will be opportunities to use Japanese if
           you’d like to.
           <br /><br />

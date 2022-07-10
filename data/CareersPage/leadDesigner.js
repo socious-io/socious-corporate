@@ -16,10 +16,6 @@ const leadDesigner = {
           have enough runway to last us through the end of 2022, and are about to close a seed round to allow us to accelerate
           even faster.
           <br /><br />
-          You’ll be able to work fully remotely, though we'll meet up in person several times per year, so we're looking for
-          someone living in Japan. If you aren't here yet, that's fine: you’ll be able to work remotely until we help you secure a
-          working visa.
-          <br /><br />
           We communicate in English, and so no Japanese ability is required, though there will be opportunities to use Japanese if
           you’d like to.
           <br /><br />
