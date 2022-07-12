@@ -8,25 +8,22 @@ const jobItem = [
   {
     id: 4,
     icon: <PersonAddIcon />,
-    title: "Hire the right talent for your organization",
-    subtitle: `Meet like-minded people (one-off, part-time, full-time) to work with and solve social problems faster together.
-    Our AI recommends the most suitable candidates who share your mission, reduces the risk of mismatches, and improves retention rate, employee happiness, and performance.
+    title: "Hire the right talent",
+    subtitle: `Meet like-minded talents who share your mission and have the right skills.
     `
   },
   {
     id: 5,
     icon: <StarIcon />,
-    title: "Sell your socially conscious products on Socious Market",
-    subtitle: `Reach and sell your products to socially conscious consumers through our marketplace for socially conscious products.
-    Get certified as a Socious organization and access talents and customers who are otherwise inaccessible.
+    title: "Sell your products on Socious Market",
+    subtitle: `Sell your ethical products to socially conscious consumers through our marketplace.
     `
   },
   {
     id: 6,
     icon: <FaceIcon />,
-    title: "Find impact investors, cities, and impact-driven organizations to collaborate with",
-    subtitle: `Meet impact investors who share your passion and raise the capital necessary for social impact.
-    Collaborate with cities, schools, and impact-driven organizations.
+    title: "Find partners",
+    subtitle: `Meet impact investors, cities, corporations to collaborate with.
     `
   }
 ]

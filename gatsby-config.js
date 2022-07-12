@@ -7,11 +7,11 @@ const path = require(`path`)
 module.exports = {
   siteMetadata: {
     url: "https://socious.io",
-    title: "Socious | Community App for Social Change",
-    titleJapanese: "ソーシャス | 社会変革のためのコミュニティアプリ",
+    title: "Socious | Impact Gig Marketplace powered by Blockchain & AI",
+    titleJapanese: "ソーシャス | ブロックチェーンを活用したSDG人材プラットフォーム",
     titleTemplate: "%s · Socious",
     titleTemplateJapanese: "%s · ソーシャス",
-    description: "Socious is a community app with a mission to accelerate social and environmental impact. We use AI and blockchain technologies to reward good deeds to encourage people to contribute to impact projects.",
+    description: "Socious is an impact gig marketplace with a mission to accelerate social and environmental impact. We use AI and blockchain technologies to incentivize people to contribute to impact projects.",
     descriptionJapanese: "ソーシャスは、「社会・環境インパクトを加速させる」というミッションのもと、誰でも気軽に社会貢献できるように、社会貢献にインセンティブを与えるAI・ブロックチェーンプラットフォームを開発しています。",
     image: "https://socious.io/socious-og.png",
     imageJapanese: "https://socious.io/socious-og-ja.png",
