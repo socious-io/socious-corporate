@@ -4,7 +4,7 @@ import React from 'react'
 import Layout from "../../components/Layout"
 import Seo from "../../components/seo"
 import FeaturedBlog from '../../components/BlogPage/FeaturedBlog'
-import AllBlog from '../../components/BlogPage/AllBlog'
+import Blogs from '../../components/BlogPage/Blogs'
 
 const BlogPage = () => {
 
@@ -33,7 +33,7 @@ const BlogPage = () => {
       <div className="main">
         <div className="container__blog">
           <FeaturedBlog />
-          <AllBlog />
+          <Blogs />
         </div>
       </div>
 		</Layout>
