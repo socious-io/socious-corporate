@@ -1,0 +1,49 @@
+.container__blog { 
+  h2 {
+    font-size: 36px;
+    line-height: 125%;
+    letter-spacing: -1px;
+  }
+
+  .blog-list-date {
+    font-size: 16px;
+    line-height: 150%;
+    color: #808289;
+  }
+}
+
+// BLOG BANNER
+.blog-banner {
+  height: 288px;
+  background-color: #2F4786;
+  display: flex;
+  justify-content: center;
+  
+  .container__blog h2 {
+    margin-top: 80px;
+    font-size: 48px;
+    color: white;
+  }
+}
+
+
+// ALL BLOG CARDS
+.blog-card {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid black;
+  
+  .blog-list-name {
+    font-size: 20px;
+    line-height: 150%;
+    font-weight: normal;
+
+    text-decoration: none;
+    color:black;
+    
+    &:hover {
+      color: #808289;
+    }
+  }
+}
