@@ -1,0 +1,12 @@
+.container__blog {
+  box-sizing: border-box;
+  width: 80vw;
+  margin-left: 1rem;
+  margin-right: 1rem;
+}
+
+@media screen and (max-width: 750px) {
+  .container__blog {
+    width: 90vw;
+  }
+}
