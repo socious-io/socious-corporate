@@ -53,6 +53,17 @@ module.exports = {
         path: path.join(__dirname, `src`, `images`),
       },
     },
+    {
+      resolve: "gatsby-source-wordpress",
+      options: {
+        url: process.env.WORDPRESS_ENDPOINT,
+        schema: {
+          timeout: 2000000,
+          perPage: 5,
+          requestConcurrency: 3,
+        },
+      },
+    },
     "gatsby-plugin-sharp",
     "gatsby-transformer-sharp",
     "gatsby-plugin-anchor-links",
