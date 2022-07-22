@@ -68,7 +68,7 @@ module.exports = {
     {
       resolve: "gatsby-source-wordpress",
       options: {
-        url: process.env.WORDPRESS_ENDPOINT,
+        url: `${process.env.WORDPRESS_ENDPOINT}/graphql`,
         schema: {
           timeout: 2000000,
           perPage: 5,

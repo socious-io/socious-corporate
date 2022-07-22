@@ -15,6 +15,7 @@ const FeaturedBlog = () => {
           featuredImage {
             node {
               sourceUrl
+              altText
               }
             }
           }
@@ -23,6 +24,7 @@ const FeaturedBlog = () => {
     }
   `)
 
+  const WORDPRESS_URL = process.env.WORDPRESS_ENDPOINT
 
   const { node: {
                  title,
@@ -33,7 +35,7 @@ const FeaturedBlog = () => {
 
   return (
     <div className="featured-blog">
-      <img src={ featuredImage.node.sourceUrl}/>
+      <img src={ WORDPRESS_URL + featuredImage?.node.sourceUrl} alt={ featuredImage?.node.altText || title} />
       <div>
         <p className='blog-list-date'>
           <small>{ date }</small>
