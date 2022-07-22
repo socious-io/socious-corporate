@@ -5,19 +5,16 @@
     letter-spacing: -1px;
   }
 
-  .blog-list-date {
-    font-size: 16px;
-    line-height: 150%;
-    color: #808289;
-  }
+}
+
+.blog-list-date {
+  font-size: 16px;
+  line-height: 150%;
+  color: #808289;
 }
 
 // BLOG BANNER
 .blog-banner {
-  height: 288px;
-  background-color: #2F4786;
-  display: flex;
-  justify-content: center;
   
   .container__blog h2 {
     margin-top: 80px;
@@ -32,7 +29,7 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  border-bottom: 1px solid black;
+  border-bottom: 1px solid #2F8647;
   
   .blog-list-name {
     font-size: 20px;

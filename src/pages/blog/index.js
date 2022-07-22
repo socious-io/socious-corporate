@@ -41,23 +41,3 @@ const BlogPage = () => {
 }
 
 export default BlogPage
-
-// export const query = graphql`
-//   {
-//     allWpPost(sort: {order: DESC, fields: date}) {
-//       edges {
-//         node {
-//           title
-//           date(formatString: "MMMM Do, YYYY")
-//           slug
-//           featuredImage {
-//             node {
-//               sourceUrl
-//             }
-//           }
-//         }
-//       }
-//     }
-//   }
-// `
-
