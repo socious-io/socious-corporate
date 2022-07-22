@@ -3,6 +3,7 @@ const path = require("path");
 exports.createPages = async ({ graphql, actions, reporter }) => {
   const { createPage } = actions;
   const blogPostTemplate = path.resolve("src/templates/BlogPost.js");
+  const wordpressPostTemplate = path.resolve("src/templates/WordPressBlog.js");
 
   const result = await graphql(`
     {
@@ -21,12 +22,26 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
     }
   `);
 
-  if (result.errors) {
+  const wordpressResult = await graphql(`
+    {
+      allWpPost {
+        edges {
+          node {
+            slug
+          }
+        }
+      }
+    }  
+  `);
+
+
+  if (result.errors || wordpressResult.errors) {
     reporter.panicOnBuild("Error while running GraphQL query.");
     return;
   }
 
   const posts = result.data.postsRemark.edges;
+  const wordpressPosts = wordpressResult.data.allWpPost.edges;
 
   posts.forEach(({ node }) => {
     createPage({
@@ -37,6 +52,17 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
       },
     });
   });
+
+  wordpressPosts.forEach(({ node }) => {
+    createPage({
+      path: `/blog/${node.slug}`,
+      component: wordpressPostTemplate,
+      context: {
+        slug: node.slug,
+      },
+    });
+  });
+
 };
 
 const messages = require("./src/resources/i18n-translations.json");
