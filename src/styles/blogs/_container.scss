@@ -1,0 +1,22 @@
+.container__blog {
+  box-sizing: border-box;
+  width: 80vw;
+  margin-left: 1rem;
+  margin-right: 1rem;
+}
+
+.container__blog__temp {
+  width: calc((960 / 1440) * 100vw)
+}
+
+@media screen and (max-width: 750px) {
+  .container__blog {
+    width: 90vw;
+  }
+
+  .container__blog__temp {
+    width: auto;
+    max-width: 680px;
+    margin: 0 1rem;
+  }
+}
