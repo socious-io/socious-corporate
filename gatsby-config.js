@@ -86,5 +86,13 @@ module.exports = {
 				],
 			},
 		},
+    {
+      resolve: "gatsby-source-graphql",
+      options: {
+        typeName: "WPGraphQL",
+        fieldName: "wpcontent",
+        url: process.env.WPSociousUrl+"/graphql"
+      }
+    },
   ],
 };
