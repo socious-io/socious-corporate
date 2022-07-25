@@ -41,7 +41,7 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
   }
 
   const posts = result.data.postsRemark.edges;
-  const wordpressPosts = wordpressResult.data.allWpPost.edges;
+  const wordpressPosts = wordpressResult?.data?.allWpPost?.edges || [];
 
   posts.forEach(({ node }) => {
     createPage({
