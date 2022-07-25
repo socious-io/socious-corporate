@@ -6,8 +6,8 @@ import TeamMember from "./components/TeamMember";
 const TeamSection = (props) => {
   const data = useStaticQuery(graphql`
     query TeamImages {
-      WordpressData: wpcontent {
-        teamMembers {
+      wpcontent {
+        teamMembers(where: {orderby: {field: MENU_ORDER, order: ASC}}) {
           nodes {
             featuredImage {
               node {
@@ -31,13 +31,15 @@ const TeamSection = (props) => {
               bio3
               name
               title
+              imagealt
             }
             teamMemberDataJa {
-              bio1
-              bio2
-              bio3
-              name
-              title
+              bio1Ja
+              bio2Ja
+              bio3Ja
+              nameJa
+              titleJa
+              imagealtJa
             }
           }
         }
@@ -45,31 +47,27 @@ const TeamSection = (props) => {
     }
   `)
 
-  const { WordpressData } = data
 
   const { language } = props.pageContext
 
   const meetTheTeamLanguage = language === 'ja' ? 'チーム' : 'Meet The Team'
   const teamMemberData = language === 'ja' ? "teamMemberDataJa" : "teamMemberData"
+  const languageExtension = language === 'ja' ? "Ja" : ""
 
-  const team = WordpressData.teamMembers.nodes.map((member, index) => {
-      if(!member.featuredImage)
-        return;
-
-      return (<TeamMember
+  const team = (data.wpcontent?.teamMembers?.nodes || []).map((member, index) =>
+      <TeamMember
         key={index}
         id={index}
         imageOpt={member.featuredImage.node.imageFile}
         imageUrl={member.featuredImage.node.sourceUrl}
-        imageAlt={member[teamMemberData].name}
-        name={member[teamMemberData].name}
-        title={member[teamMemberData].title}
-        bio1={member[teamMemberData].bio1}
-        bio2={member[teamMemberData].bio2}
-        bio3={member[teamMemberData].bio3}
-      />)
-    }
-  )
+        imageAlt={member[teamMemberData]["imagealt"+languageExtension] || ""}
+        name={member[teamMemberData]["name"+languageExtension]}
+        title={member[teamMemberData]["title"+languageExtension]}
+        bio1={member[teamMemberData]["bio1"+languageExtension]}
+        bio2={member[teamMemberData]["bio2"+languageExtension]}
+        bio3={member[teamMemberData]["bio3"+languageExtension]}
+      />
+  );
 
   return (
     <div className="team-section" id="our-team">
