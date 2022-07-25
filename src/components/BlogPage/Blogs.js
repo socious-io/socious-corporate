@@ -21,24 +21,27 @@ const Blogs = () => {
 
   const { edges } = query.allWpPost
 
-  console.log("edges", edges);
-
   return (
     <div>
-      <h2>The Latest</h2>
-      {
-        edges.map((edge) => {
-          return (
-            <div className='blog-card' key={edge.node.id}>
-              <Link to={`/blog/${edge.node.slug}`} className="blog-list-name">
-                { edge.node.title }  
-              </Link>
-              <p className='blog-list-date'>
-                <small>{ edge.node.date }</small>
-              </p>
-            </div>
-          )
-        })
+      {/* check for length */}
+      { edges.length > 0 && 
+        <>
+          <h2>The Latest</h2>
+          {
+            edges.map((edge) => {
+              return (
+                <div className='blog-card' key={edge.node.id}>
+                  <Link to={`/blog/${edge.node.slug}`} className="blog-list-name">
+                    { edge.node.title }  
+                  </Link>
+                  <p className='blog-list-date'>
+                    <small>{ edge.node.date }</small>
+                  </p>
+                </div>
+              )
+            })
+          }
+        </>
       }
     </div>
   )
