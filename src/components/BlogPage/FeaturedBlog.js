@@ -40,7 +40,7 @@ const FeaturedBlog = () => {
         <p className='blog-list-date'>
           <small>{ date }</small>
         </p>
-        <h2>
+        <h2 className="featured-title">
           { title }
         </h2>
         <Link to={`/blog/${slug}`}>

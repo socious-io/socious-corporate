@@ -18,8 +18,6 @@ const WordPressBlog = ({ data }) => {
 
 	const WORDPRESS_URL = process.env.WORDPRESS_ENDPOINT
 
-	console.log("URL", WORDPRESS_URL)
-
 	const { title, content, date, featuredImage }  = data.wpPost
 
 	const { edges } = data.allWpPost
@@ -48,15 +46,13 @@ const WordPressBlog = ({ data }) => {
 			</div>
 
 			{/* Main Body */}
-			<div className="main">
-				<div className='container__blog__temp'>
-					<img className='main-blog-image' alt={ featuredImage?.node.altText || title} src={ WORDPRESS_URL + featuredImage?.node.sourceUrl} />
-					<div className='blog-content' dangerouslySetInnerHTML={{ __html: content }}></div>
-				</div>
+			<div className='container__blog__temp'>
+				<img className='main-blog-image' alt={ featuredImage?.node.altText || title} src={ WORDPRESS_URL + featuredImage?.node.sourceUrl} />
+				<div className='blog-content' dangerouslySetInnerHTML={{ __html: content }}></div>
 			</div>
 
 			{/* More Blogs */}
-			<div className="main more-articles-box">
+			<div className="more-articles-box">
 				<div className='container__blog__temp'>
 					<h2 className="more-articles-header">More articles</h2>
 					{
