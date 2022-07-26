@@ -27,7 +27,7 @@ const BlogPage = () => {
       {/* Likely temporary Blog */}
       <div className="blog-banner">
         <div className="container__blog">
-          <h2>Blog</h2>
+          <h2 className='hahmlet'>Blog</h2>
         </div>
       </div>
       <div className="main">

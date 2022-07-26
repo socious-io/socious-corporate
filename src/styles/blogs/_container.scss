@@ -1,20 +1,36 @@
+@use 'fonts';
+
 .container__blog {
+  @extend %font-work-sans;
+
   box-sizing: border-box;
   width: 80vw;
   margin-left: 1rem;
   margin-right: 1rem;
-
+  
+  // Default styling for every link and h2
   a {
     text-decoration: none;
+  }
+
+  h2 {
+    font-weight: 600;
   }
 }
 
 .container__blog__temp {
+  @extend %font-work-sans;
+
   width: calc((960 / 1440) * 100vw);
   margin: 0 auto;
   
+  // Default styling for every link and h2
   a {
     text-decoration: none;
+  }
+  
+  h2 {
+    font-weight: 600;
   }
 }
 
