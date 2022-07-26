@@ -92,7 +92,7 @@ exports.createResolvers = async (
       imageFile: {
         type: "File",
         async resolve(source) {
-          let sourceUrl = process.env.WPSociousUrl + source.sourceUrl
+          let sourceUrl = process.env.WORDPRESS_ENDPOINT + source.sourceUrl
 
           if (source.mediaItemUrl !== undefined) {
             sourceUrl = source.mediaItemUrl

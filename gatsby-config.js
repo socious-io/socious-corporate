@@ -91,7 +91,7 @@ module.exports = {
       options: {
         typeName: "WPGraphQL",
         fieldName: "wpcontent",
-        url: process.env.WPSociousUrl+"/graphql"
+        url: process.env.WORDPRESS_ENDPOINT+"/graphql"
       }
     },
   ],
