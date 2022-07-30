@@ -68,6 +68,14 @@
   .header__language-switcher:link,
   .header__language-switcher:visited {
     color: #fff;
+
+    svg {
+      margin-right: 8px;
+
+      path {
+        stroke: #fff;
+      }
+    }
   }
 
   .header__logo-container {

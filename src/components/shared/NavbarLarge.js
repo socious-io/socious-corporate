@@ -2,6 +2,8 @@ import React from 'react';
 import {Link} from 'gatsby';
 import {useIntl, FormattedMessage} from 'react-intl';
 
+import IconWeb from '../../images/icons/line/web.svg';
+
 const NavbarLarge = (props) => {
   const {headerStyle, homePage, aboutLink, careersLink, newsroomLink, altPage} =
     props;
@@ -32,6 +34,7 @@ const NavbarLarge = (props) => {
             </Link>
           </div>
           <a className="header__language-switcher" href={altPage}>
+            <IconWeb />
             {jaPage ? 'English' : '日本語'}
           </a>
         </div>
