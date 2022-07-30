@@ -44,30 +44,41 @@
 
 /* For use on pages with transparent nav */
 
-.header-fixed {
+.header-transparent {
   width: 100vw;
   position: absolute;
   margin-top: 1rem;
   padding: 0;
-}
 
-.header__language-switcher-transparent {
-  display: flex;
-  align-items: center;
-  margin-right: 2rem;
-}
+  .header__language-switcher {
+    display: flex;
+    align-items: center;
+    margin-right: 2rem;
+  }
 
-.header__language-switcher-transparent:link,
-.header__language-switcher-transparent:visited {
-  text-decoration: inherit;
-  color: #FFF;
-  cursor: pointer;
-}
+  .header__language-switcher:link,
+  .header__language-switcher:visited {
+    text-decoration: inherit;
+    color: #fff;
+    cursor: pointer;
+  }
 
-.header__logo-image-transparent {
-  margin-left: 2rem;
-  height: 52px;
-  width: 39px;
+  .header__logo-image {
+    margin-left: 2rem;
+    height: 52px;
+    width: 39px;
+  }
+
+  .nav-item {
+    margin-right: 1rem;
+  }
+
+  .nav-item a:link,
+  .nav-item a:visited {
+    text-decoration: none;
+    color: #fff;
+    cursor: pointer;
+  }
 }
 
 .header__logo-image {
@@ -78,17 +89,6 @@
 .header__logo-container {
   display: flex;
   align-items: center;
-}
-
-.nav-item-transparent {
-  margin-right: 1rem;
-}
-
-.nav-item-transparent a:link,
-.nav-item-transparent a:visited {
-  text-decoration: none;
-  color: #FFF;
-  cursor: pointer;
 }
 
 .active {

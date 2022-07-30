@@ -1,14 +1,14 @@
-import React from 'react'
-import { graphql } from 'gatsby'
+import React from 'react';
+import {graphql} from 'gatsby';
 
-import Layout from '../components/Layout'
-import Seo from '../components/seo'
+import Layout from '../components/Layout';
+import Seo from '../components/seo';
 
-const BlogPost = ({ data }) => {
-  const { frontmatter, html } = data.markdownRemark
+const BlogPost = ({data}) => {
+  const {frontmatter, html} = data.markdownRemark;
 
   return (
-    <Layout>
+    <Layout {...props}>
       <Seo
         title={frontmatter.title}
         description={frontmatter.Meta_Description}
@@ -21,17 +21,21 @@ const BlogPost = ({ data }) => {
             <h1>{frontmatter.title}</h1>
             <p>{frontmatter.Date.start}</p>
           </div>
-          <img src={frontmatter.Hero_Image[0].external.url} className="image__article" alt={frontmatter.Hero_Image_Alt} />
+          <img
+            src={frontmatter.Hero_Image[0].external.url}
+            className="image__article"
+            alt={frontmatter.Hero_Image_Alt}
+          />
           <div className="article__body">
-            <div dangerouslySetInnerHTML={{ __html: html }} />
+            <div dangerouslySetInnerHTML={{__html: html}} />
           </div>
         </div>
       </div>
     </Layout>
-  )
-}
+  );
+};
 
-export default BlogPost
+export default BlogPost;
 
 export const query = graphql`
   query PageContents($slug: String) {
@@ -56,4 +60,4 @@ export const query = graphql`
       html
     }
   }
-`
+`;
