@@ -44,6 +44,7 @@
 
 /* For use on pages with transparent nav */
 
+.header-primary,
 .header-transparent {
   width: 100vw;
   position: absolute;
@@ -79,6 +80,10 @@
     color: #fff;
     cursor: pointer;
   }
+}
+
+.header-primary {
+  background: #2f4786;
 }
 
 .header__logo-image {

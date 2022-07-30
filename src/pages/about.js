@@ -1,5 +1,4 @@
 import React from 'react';
-import {useLocation} from '@reach/router';
 
 import Layout from '../components/Layout';
 import Seo from '../components/seo';
@@ -15,17 +14,9 @@ import CompanySection from '../components/AboutPage/CompanySection';
 import ContactSection from '../components/AboutPage/ContactSection';
 
 const AboutPage = (props) => {
-  const location = useLocation();
-  const jaPage = location.pathname.includes('/ja');
-
-  const seoDescription = jaPage
-    ? 'ソーシャスは社会変革のためのコミュニティアプリです。'
-    : 'Learn more about Socious and what we do, who we are, and what we stand for';
-
-  const seoTitle = jaPage ? 'ソーシャスについて' : 'About';
   return (
-    <Layout {...props} pageTitle="About">
-      <Seo title={seoTitle} description={seoDescription} />
+    <Layout {...props} header="transparent" pageTitle="About">
+      <Seo key="about" />
       <HeroSection {...props} />
       <ScrollArrow {...props} />
       <IssueSection {...props} />

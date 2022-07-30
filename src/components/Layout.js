@@ -7,7 +7,14 @@ import '../styles/main.scss';
 import Navbar from './shared/Navbar';
 import Footer from './shared/Footer';
 
-const Layout = ({pageContext: {language, messages}, pageTitle, children}) => {
+const Layout = (props) => {
+  const {
+    pageContext: {language, messages},
+    header,
+    pageTitle,
+    children,
+  } = props;
+
   return (
     <IntlProvider defaultLocale="en" locale={language} messages={messages}>
       <div>
@@ -15,7 +22,7 @@ const Layout = ({pageContext: {language, messages}, pageTitle, children}) => {
           <FormattedMessage id={pageTitle || 'site-title'} />
         </title>
         <div id="scroll-top"></div>
-        <Navbar />
+        <Navbar header={header} />
         <main>{children}</main>
         <Footer />
       </div>

@@ -34,11 +34,6 @@ const Navbar = ({header}) => {
       // DEPRECATED
       const location = useLocation();
       const transparentNavPaths =
-        location.pathname.includes('/about') ||
-        location.pathname === '/careers' ||
-        location.pathname === '/careers/' ||
-        location.pathname === '/ja/careers' ||
-        location.pathname === '/ja/careers/' ||
         location.pathname === '/newsroom' ||
         location.pathname === '/newsroom/' ||
         location.pathname === '/ja/newsroom' ||
