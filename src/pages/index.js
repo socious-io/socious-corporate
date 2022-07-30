@@ -10,7 +10,7 @@ import JobsSection from '../components/Homepage/JobsSection/JobsSection';
 
 const IndexPage = (props) => {
   return (
-    <Layout {...props}>
+    <Layout {...props} header="">
       <Seo {...props} />
       <Intro {...props} />
       <AppLinks {...props} />

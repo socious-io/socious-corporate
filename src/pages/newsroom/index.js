@@ -1,6 +1,5 @@
 import React from 'react';
 import {graphql} from 'gatsby';
-import {useLocation} from '@reach/router';
 
 import Layout from '../../components/Layout';
 import Seo from '../../components/seo';
@@ -12,20 +11,11 @@ import JapaneseNews from '../../components/NewsroomPage/JapaneseNews';
 import EnglishNews from '../../components/NewsroomPage/EnglishNews';
 
 const NewsroomPage = (props) => {
-  const location = useLocation();
-  const jaPage = location.pathname.includes('/ja');
-
   const {pageContext} = props;
 
-  const seoDescription = jaPage
-    ? 'ソーシャスは社会変革のためのコミュニティアプリです。'
-    : 'Learn more about Socious and what we do, who we are, and what we stand for';
-
-  const seoTitle = jaPage ? 'ニュースルーム' : 'Newsroom';
-
   return (
-    <Layout {...props}>
-      <Seo title={seoTitle} description={seoDescription} />
+    <Layout {...props} header="transparent">
+      <Seo key="news" />
       <Banner />
       <div className="main">
         <div className="container__articles">

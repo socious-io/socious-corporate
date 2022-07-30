@@ -5,36 +5,38 @@ html {
 
 body {
   font-family: 'Inter', sans-serif;
-  font-weight: 800;
-  font-size: 18px;
 }
 
-.body{
+.body {
   padding: 7% 10% 7% 10%;
 }
 
-.header{
+.header {
   display: flex;
   flex-direction: row;
   color: red;
   align-items: flex-end;
 }
 
-.textHeader{
+main {
+  font-size: 18px;
+}
+
+.textHeader {
   margin-left: 20px;
   font-family: 'Inter', sans-serif;
   font-weight: 700;
   font-size: 36px;
   line-height: 54px;
   text-align: center;
-  color: #2768A0;
+  color: #2768a0;
 }
 
 .icon {
   object-fit: contain;
 }
 
-.title{
+.title {
   margin-top: 8%;
   margin-left: 8%;
   font-family: 'Inter', sans-serif;
@@ -42,22 +44,22 @@ body {
   font-size: 20px;
   line-height: 32px;
   text-align: left;
-  color: #1F2128;
+  color: #1f2128;
 }
 
-.content{
+.content {
   font-family: 'Inter', sans-serif;
   font-weight: normal;
   font-size: 16px;
   line-height: 30px;
-  color: #1F2128;
+  color: #1f2128;
   margin-top: 52px;
   margin-left: 8%;
 }
 
 @media only screen and (min-width: 1200px) {
   /* For windows: */
-  .title{
+  .title {
     margin-top: 100px;
     margin-left: 8%;
     font-family: 'Inter', sans-serif;
@@ -65,15 +67,15 @@ body {
     font-size: 20px;
     line-height: 32px;
     text-align: left;
-    color: #1F2128;
+    color: #1f2128;
   }
 
-  .content{
+  .content {
     font-family: 'Inter', sans-serif;
     font-weight: normal;
     font-size: 16px;
     line-height: 30px;
-    color: #1F2128;
+    color: #1f2128;
     margin-top: 52px;
     margin-left: 8%;
     text-align: left;
@@ -82,27 +84,27 @@ body {
 
 @media only screen and (max-width: 768px) {
   /* For mobile phones: */
-  .body{
+  .body {
     padding: 20px;
   }
 
-  .header{
+  .header {
     display: flex;
     flex-direction: row;
     align-items: center;
   }
 
-  .textHeader{
+  .textHeader {
     margin-left: 10px;
     font-family: 'Inter', sans-serif;
     font-weight: 700;
     font-size: 28px;
     line-height: 42px;
     text-align: center;
-    color: #2768A0;
+    color: #2768a0;
   }
 
-  .title{
+  .title {
     margin-top: 113px;
     margin-left: 8%;
     font-family: 'Inter', sans-serif;
@@ -110,15 +112,15 @@ body {
     font-size: 20px;
     line-height: 32px;
     text-align: left;
-    color: #1F2128;
+    color: #1f2128;
   }
 
-  .content{
+  .content {
     font-family: 'Inter', sans-serif;
     font-weight: normal;
     font-size: 16px;
     line-height: 30px;
-    color: #1F2128;
+    color: #1f2128;
     margin-top: 42px;
     text-align: left;
     margin-left: 8%;

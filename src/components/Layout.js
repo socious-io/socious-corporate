@@ -17,15 +17,13 @@ const Layout = (props) => {
 
   return (
     <IntlProvider defaultLocale="en" locale={language} messages={messages}>
-      <div>
-        <title>
-          <FormattedMessage id={pageTitle || 'site-title'} />
-        </title>
-        <div id="scroll-top"></div>
-        <Navbar header={header} />
-        <main>{children}</main>
-        <Footer />
-      </div>
+      <title>
+        <FormattedMessage id={pageTitle || 'site-title'} />
+      </title>
+      <div id="scroll-top"></div>
+      <Navbar header={header} />
+      <main>{children}</main>
+      <Footer />
     </IntlProvider>
   );
 };

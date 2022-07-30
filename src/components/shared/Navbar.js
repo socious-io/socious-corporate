@@ -21,28 +21,14 @@ const Navbar = ({header}) => {
 
   let headerStyle;
   switch (header) {
-    case '':
-      headerStyle = 'header';
-      break;
     case 'primary':
       headerStyle = 'header header-primary';
       break;
     case 'transparent':
       headerStyle = 'header header-transparent';
       break;
-    default: {
-      // DEPRECATED
-      const location = useLocation();
-      const transparentNavPaths =
-        location.pathname === '/newsroom' ||
-        location.pathname === '/newsroom/' ||
-        location.pathname === '/ja/newsroom' ||
-        location.pathname === '/ja/newsroom/';
-
-      headerStyle = transparentNavPaths
-        ? 'header header-transparent'
-        : 'header';
-    }
+    default:
+      headerStyle = 'header header-default';
   }
 
   const intl = useIntl();
@@ -60,7 +46,7 @@ const Navbar = ({header}) => {
   let navSelector = '';
 
   if (windowWidth && windowWidth <= 600) {
-    navSelector = (
+    return (
       <NavbarMobile
         headerStyle={headerStyle}
         homePage={homePage}
@@ -71,7 +57,7 @@ const Navbar = ({header}) => {
       />
     );
   } else {
-    navSelector = (
+    return (
       <NavbarLarge
         headerStyle={headerStyle}
         homePage={homePage}
@@ -82,8 +68,6 @@ const Navbar = ({header}) => {
       />
     );
   }
-
-  return <div>{navSelector}</div>;
 };
 
 export default Navbar;
