@@ -4,7 +4,8 @@ import {graphql} from 'gatsby';
 import Layout from '../components/Layout';
 import Seo from '../components/seo';
 
-const BlogPost = ({data}) => {
+const BlogPost = (props) => {
+  const {data} = props;
   const {frontmatter, html} = data.markdownRemark;
 
   return (
