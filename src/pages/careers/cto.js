@@ -7,7 +7,7 @@ import cto from '../../../data/CareersPage/cto';
 import PositionHeader from '../../components/JobPage/PositionHeader';
 import DescriptionRow from '../../components/JobPage/DescriptionRow';
 
-const Cto = () => {
+const Cto = (props) => {
   const {title, location, department} = cto;
 
   const jobInformation = cto.body.map((data) => (

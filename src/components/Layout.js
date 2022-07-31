@@ -1,6 +1,5 @@
 import * as React from 'react';
 import {FormattedMessage} from 'react-intl';
-import {useStaticQuery, graphql} from 'gatsby';
 import {IntlProvider} from 'react-intl';
 import '../styles/main.scss';
 

@@ -7,7 +7,7 @@ import executiveAssistant from '../../../data/CareersPage/executiveAssistant';
 import PositionHeader from '../../components/JobPage/PositionHeader';
 import DescriptionRow from '../../components/JobPage/DescriptionRow';
 
-const ExecutiveAssistant = () => {
+const ExecutiveAssistant = (props) => {
   const {title, location, department} = executiveAssistant;
 
   const jobInformation = executiveAssistant.body.map((data) => (

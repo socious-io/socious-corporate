@@ -7,7 +7,7 @@ import juniorDeveloper from '../../../data/CareersPage/juniorDeveloper';
 import PositionHeader from '../../components/JobPage/PositionHeader';
 import DescriptionRow from '../../components/JobPage/DescriptionRow';
 
-const JuniorDeveloper = () => {
+const JuniorDeveloper = (props) => {
   const {title, location, department} = juniorDeveloper;
 
   const jobInformation = juniorDeveloper.body.map((data) => (

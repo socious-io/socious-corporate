@@ -7,7 +7,7 @@ import leadDeveloper from '../../../data/CareersPage/leadDeveloper';
 import PositionHeader from '../../components/JobPage/PositionHeader';
 import DescriptionRow from '../../components/JobPage/DescriptionRow';
 
-const LeadDeveloper = () => {
+const LeadDeveloper = (props) => {
   const {title, location, department} = leadDeveloper;
 
   const jobInformation = leadDeveloper.body.map((data) => (

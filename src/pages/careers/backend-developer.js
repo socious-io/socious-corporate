@@ -7,7 +7,7 @@ import backendDeveloper from '../../../data/CareersPage/backendDeveloper';
 import PositionHeader from '../../components/JobPage/PositionHeader';
 import DescriptionRow from '../../components/JobPage/DescriptionRow';
 
-const BackendDeveloper = () => {
+const BackendDeveloper = (props) => {
   const {title, location, department} = backendDeveloper;
 
   const jobInformation = backendDeveloper.body.map((data) => (

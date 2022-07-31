@@ -7,7 +7,7 @@ import growthLead from '../../../data/CareersPage/growthLead';
 import PositionHeader from '../../components/JobPage/PositionHeader';
 import DescriptionRow from '../../components/JobPage/DescriptionRow';
 
-const GrowthLead = () => {
+const GrowthLead = (props) => {
   const {title, location, department} = growthLead;
 
   const jobInformation = growthLead.body.map((data) => (

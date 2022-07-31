@@ -7,7 +7,7 @@ import talentAcquisitionLead from '../../../data/CareersPage/talentAcquisitionLe
 import PositionHeader from '../../components/JobPage/PositionHeader';
 import DescriptionRow from '../../components/JobPage/DescriptionRow';
 
-const TalentAcquisitionLead = () => {
+const TalentAcquisitionLead = (props) => {
   const {title, location, department} = talentAcquisitionLead;
 
   const jobInformation = talentAcquisitionLead.body.map((data) => (
