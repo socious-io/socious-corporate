@@ -6,7 +6,7 @@
 
 Live website: https://socious.io/
 
-Gatsby build (in progress): https://sociousgatsbymaster.gatsbyjs.io/
+Gatsby build: https://sociousiostaging.gtsb.io/
 
 App Store: https://apps.apple.com/jp/app/socious/id1581904474
 
