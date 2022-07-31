@@ -1,11 +1,4 @@
-<p align="center">
-  <a href="https://socious.io/">
-    <img alt="Gatsby" src="https://media-exp1.licdn.com/dms/image/C560BAQH4gHoQxIBVvA/company-logo_200_200/0/1630919891632?e=1643241600&v=beta&t=dagbkNMv02QTDeVuvmRyjsDSsOvkqrdnoJyiSIaMWoU" />
-  </a>
-</p>
-<h1 align="center">
-  Socious
-</h1>
+# Socious
 
 > Socious.io is a social networking app for social change. Socious.io helps social entrepreneurs hire talented people who are passionate about their companies’ missions through its social passion search function and data-driven mechanism for mutually relevant connections. Unlike its competitors, Socious.io allows mission-fit and culture-fit analyses and its AI will recommend suitable candidates for their social startups.
 

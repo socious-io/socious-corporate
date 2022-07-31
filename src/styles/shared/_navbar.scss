@@ -38,13 +38,17 @@
 .header__language-switcher {
   display: flex;
   align-items: center;
-}
 
-.header__language-switcher:link,
-.header__language-switcher:visited {
-  text-decoration: inherit;
-  color: $primary;
-  cursor: pointer;
+  &:link,
+  &:visited {
+    text-decoration: inherit;
+    color: $black;
+    cursor: pointer;
+  }
+
+  svg {
+    margin-right: 8px;
+  }
 }
 
 .nav-links {
@@ -69,12 +73,8 @@
   .header__language-switcher:visited {
     color: #fff;
 
-    svg {
-      margin-right: 8px;
-
-      path {
-        stroke: #fff;
-      }
+    svg path {
+      stroke: #fff;
     }
   }
 

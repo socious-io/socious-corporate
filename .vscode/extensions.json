@@ -1,6 +1,5 @@
 {
     "recommendations": [
-      "hookyqr.beautify",
       "dbaeumer.vscode-eslint",
       "irongeek.vscode-env",
       "ghmcadams.lintlens",
