@@ -32,6 +32,7 @@ const Navbar = ({header}) => {
   }
 
   const intl = useIntl();
+  const location = useLocation();
 
   const jaPage = intl.locale === 'ja';
   const homePage = jaPage ? '/ja/' : '/';
