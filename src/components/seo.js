@@ -29,13 +29,12 @@ const Seo = ({ title, description, image, twitterImage }) => {
   const descriptionSelector = jaPage ? descriptionJapanese : defaultDescription
   const titleTemplateSelector = jaPage ? titleTemplateJapanese : titleTemplate
 
-
-  let absoluteURL = process.env.URL + pathname
-  if (!absoluteURL.endsWith("/")) absoluteURL = absoluteURL + "/"
-  console.log("PATHNAME: ", absoluteURL);
-
-  let langURL = process.env.URL + (jaPage ? pathname.replace('/ja', "") : `/ja${pathname}`);
-  if (!langURL.endsWith("/")) langURL = langURL + "/"
+  const pathWithSlash = pathname.endsWith("/") ? pathname : pathname + "/";
+  const absoluteURL = process.env.URL + pathWithSlash  
+  const langURL = process.env.URL + (jaPage ? pathWithSlash.replace('/ja', "") : `/ja${pathWithSlash}`);
+  
+  const duplicate = !!(["/ja/privacy-policy-ja/", "/ja/privacy-policy/", "/ja/user-agreement/", "/ja/user-agreement-ja/"].includes(pathWithSlash) || pathWithSlash.match((/\/ja(\/careers\/\S+|\/blog\/.*)/)));
+  const haveLang = !(["/privacy-policy-ja/", "/privacy-policy/", "/user-agreement/", "/user-agreement-ja/"].includes(pathWithSlash) || pathWithSlash.match((/(\/careers\/\S+|\/blog\/.*)/)));
 
   const seo = {
     title: title || titleSelector,
@@ -50,40 +49,47 @@ const Seo = ({ title, description, image, twitterImage }) => {
   }
 
   return (
-    <Helmet title={seo.title} titleTemplate={titleTemplateSelector}>
-      <meta name="description" content={seo.description} />
-      <meta name="image" content={seo.image} />
+    <>
+      <Helmet title={seo.title} titleTemplate={titleTemplateSelector}>
+        <meta name="description" content={seo.description} />
+        <meta name="image" content={seo.image} />
 
-      {seo.url && <meta property="og:url" content={seo.url} />}
-      {seo.title && <meta property="og:title" content={seo.title} />}
-      {seo.description && (
-        <meta property="og:description" content={seo.description} />
-        )}
-      {seo.image && <meta property="og:image" content={seo.image} />}
-      <meta property="og:type" content="article" />
-      <meta property="og:image:width" content="1200" />
-      <meta property="og:image:height" content="630" />
-      
-      <meta name="twitter:card" content="summary_large_image" />
-      {seo.title && <meta name="twitter:title" content={seo.title} />}
-      {seo.description && (
-        <meta name="twitter:description" content={seo.description} />
-      )}
-      {seo.twitterImage && <meta name="twitter:image" content={seo.twitterImage} />}
+        {seo.url && <meta property="og:url" content={seo.url} />}
+        {seo.title && <meta property="og:title" content={seo.title} />}
+        {seo.description && (
+          <meta property="og:description" content={seo.description} />
+          )}
+        {seo.image && <meta property="og:image" content={seo.image} />}
+        <meta property="og:type" content="article" />
+        <meta property="og:image:width" content="1200" />
+        <meta property="og:image:height" content="630" />
+        
+        <meta name="twitter:card" content="summary_large_image" />
+        {seo.title && <meta name="twitter:title" content={seo.title} />}
+        {seo.description && (
+          <meta name="twitter:description" content={seo.description} />
+          )}
+        {seo.twitterImage && <meta name="twitter:image" content={seo.twitterImage} />}
 
-      <link rel="apple-touch-icon" sizes="180x180" href={fixedFaviconLink(favicon.appleTouchIcon)} />
-      <link rel="icon" type="image/png" sizes="16x16" href={fixedFaviconLink(favicon.ico)} />
-      <link rel="icon" type="image/png" sizes="16x16" href={fixedFaviconLink(favicon.sm)} />
-      <link rel="icon" type="image/png" sizes="32x32" href={fixedFaviconLink(favicon.lg)} />
-      <link rel="mask-icon" href={fixedFaviconLink(favicon.safariPinnedTab)} color="#5bbad5" />
-      <link rel="manifest" href={fixedFaviconLink(favicon.manifest)} />
-      <meta name="msapplication-TileColor" content="#2b5797" />
-      <meta name="theme-color" content="#ffffff" />
+        <link rel="apple-touch-icon" sizes="180x180" href={fixedFaviconLink(favicon.appleTouchIcon)} />
+        <link rel="icon" type="image/png" sizes="16x16" href={fixedFaviconLink(favicon.ico)} />
+        <link rel="icon" type="image/png" sizes="16x16" href={fixedFaviconLink(favicon.sm)} />
+        <link rel="icon" type="image/png" sizes="32x32" href={fixedFaviconLink(favicon.lg)} />
+        <link rel="mask-icon" href={fixedFaviconLink(favicon.safariPinnedTab)} color="#5bbad5" />
+        <link rel="manifest" href={fixedFaviconLink(favicon.manifest)} />
+        <meta name="msapplication-TileColor" content="#2b5797" />
+        <meta name="theme-color" content="#ffffff" />
 
-      <link rel="canonical" href={absoluteURL} />
-      <link rel="alternate" hreflang={jaPage ? "ja" : "en"} href={absoluteURL} />
-      <link rel="alternate" hreflang={jaPage ? "en" : "ja"} href={langURL} />
-    </Helmet>
+        <link rel="canonical" href={duplicate ? langURL : absoluteURL} />
+      </Helmet>
+      { haveLang && (!duplicate) && (
+          <Helmet>
+            <link rel="alternate" hreflang={jaPage ? "ja" : "en"} href={absoluteURL} />
+            <link rel="alternate" hreflang={jaPage ? "en" : "ja"} href={langURL} />
+            <link rel="alternate" hreflang="x-default" href={ jaPage ? langURL : absoluteURL } />
+          </Helmet>
+          )}
+    </>
   )
 }
 
