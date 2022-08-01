@@ -4,7 +4,7 @@ import { Helmet } from "react-helmet"
 import { useLocation } from "@reach/router"
 import { useStaticQuery, graphql } from "gatsby"
 
-const Seo = ({ title, description, image, twitterImage }) => {
+const Seo = ({ title, description, image, twitterImage, children }) => {
   const { pathname } = useLocation()
   const { site } = useStaticQuery(query)
 
@@ -88,7 +88,14 @@ const Seo = ({ title, description, image, twitterImage }) => {
             <link rel="alternate" hreflang={jaPage ? "en" : "ja"} href={langURL} />
             <link rel="alternate" hreflang="x-default" href={ jaPage ? langURL : absoluteURL } />
           </Helmet>
-          )}
+        )
+      }
+      { children &&
+        <Helmet>
+          { children }
+        </Helmet>
+      }
+
     </>
   )
 }

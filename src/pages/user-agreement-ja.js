@@ -3,11 +3,17 @@ import Seo from '../components/seo'
 import '../styles/terms/index.scss'
 
 const UserAgreementPageJa = () => {
+  const enURL = process.env.URL + "/user-agreement/"; 
+  const jaURL = process.env.URL + "/user-agreement-ja/";
   return (
     <>
       <Seo
         title="ソーシャス利用規約"
-      />
+      >
+        <link rel="alternate" hreflang="en" href={ enURL } />
+        <link rel="alternate" hreflang="ja" href={ jaURL } />
+        <link rel="alternate" hreflang="x-default" href={ enURL } />
+      </Seo>
       <div id="content">
           <div className="section">
               <span>ソーシャス株式会社（以下、「当社」といいます）は、より良い世界を共創することをミッションとし、ソーシャルチェンジメーカーのためのソーシャルネットワーキングサービスを本ウェブサイト及び本アプリで提供するサービス（以下、「本サービス」といいます）において提供しています。本利用規約（以下「本規約」といいます）では、本サービスの提供条件及び当社と登録ユーザーの皆様との間の権利義務関係が定められています。本サービスの利用に際しては、本規約の全文をお読みいただいたうえで、本規約に同意いただく必要があります。</span>

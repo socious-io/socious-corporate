@@ -3,11 +3,17 @@ import Seo from '../components/seo'
 import '../styles/terms/index.scss'
 
 const PrivacyPolicyPage = () => {
+  const enURL = process.env.URL + "/privacy-policy/"; 
+  const jaURL = process.env.URL + "/privacy-policy-ja/";
   return (
     <>
       <Seo
         title="Privacy Policy"
-      />
+      >
+        <link rel="alternate" hreflang="en" href={ enURL } />
+        <link rel="alternate" hreflang="ja" href={ jaURL } />
+        <link rel="alternate" hreflang="x-default" href={ enURL } />
+      </Seo>
       <div id="content">
           <div className="section">
               <span>

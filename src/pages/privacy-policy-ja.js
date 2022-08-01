@@ -3,11 +3,17 @@ import Seo from '../components/seo'
 import '../styles/terms/index.scss'
 
 const PrivacyPolicyPageJa = () => {
+  const jaURL = process.env.URL + "/privacy-policy-ja/";
+  const enURL = process.env.URL + "/privacy-policy/"; 
   return (
     <>
         <Seo
             title="プライバシーポリシー"
-        />
+        >
+            <link rel="alternate" hreflang="ja" href={ jaURL } />
+            <link rel="alternate" hreflang="en" href={ enURL } />
+            <link rel="alternate" hreflang="x-default" href={ enURL } />
+        </Seo>
         <div id="content">
             <div className="section">
                 <span>ソーシャス株式会社（以下、「当社」といいます）は、 当社の提供する「ソーシャス」という名称のアプリケーションおよびそのドメインが「socious.io/」であり、「ソーシャス」という名称の当社が運営するウェブサイトにおけるサービス（以下「本サービス」といいます。）において、以下のプライバシーポリシー（以下「本ポリシー」といいます。）に則り、登録ユーザーについての個人情報を含む利用者情報を取り扱います。</span>

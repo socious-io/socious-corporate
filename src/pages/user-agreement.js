@@ -3,11 +3,17 @@ import Seo from '../components/seo'
 import '../styles/terms/index.scss'
 
 const UserAgreementPage = () => {
+  const enURL = process.env.URL + "/user-agreement/"; 
+  const jaURL = process.env.URL + "/user-agreement-ja/";
   return (
     <>
       <Seo
       title="Terms of Use"
-      />
+      >
+        <link rel="alternate" hreflang="en" href={ enURL } />
+        <link rel="alternate" hreflang="ja" href={ jaURL } />
+        <link rel="alternate" hreflang="x-default" href={ enURL } />
+      </Seo>
       <div id="content">
         <div className="section">
           <span>With a mission to accelerate social and environmental impact, Socious Inc. (hereinafter referred to as 'the Company') provides social networking services for social changemakers through this website and the services provided in this application (hereinafter referred to as 'the Services'). (1) Terms of Use This Terms of Service (hereinafter referred to as the 'Terms') sets forth the terms and conditions of the Service and the relationship of rights and obligations between the Company and registered users. In order to use the Service, you must read and agree to these Terms of Use in their entirety.</span>
