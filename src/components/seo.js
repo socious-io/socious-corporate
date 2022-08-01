@@ -22,11 +22,20 @@ const Seo = ({ title, description, image, twitterImage }) => {
     favicon,
   } = site.siteMetadata
 
+  
   const jaPage = pathname.includes('/ja')
   const titleSelector = jaPage ? titleJapanese : defaultTitle
   const imageSelector = jaPage ? imageJapanese : defaultImage
   const descriptionSelector = jaPage ? descriptionJapanese : defaultDescription
   const titleTemplateSelector = jaPage ? titleTemplateJapanese : titleTemplate
+
+
+  let absoluteURL = process.env.URL + pathname
+  if (!absoluteURL.endsWith("/")) absoluteURL = absoluteURL + "/"
+  console.log("PATHNAME: ", absoluteURL);
+
+  let langURL = process.env.URL + (jaPage ? pathname.replace('/ja', "") : `/ja${pathname}`);
+  if (!langURL.endsWith("/")) langURL = langURL + "/"
 
   const seo = {
     title: title || titleSelector,
@@ -70,6 +79,10 @@ const Seo = ({ title, description, image, twitterImage }) => {
       <link rel="manifest" href={fixedFaviconLink(favicon.manifest)} />
       <meta name="msapplication-TileColor" content="#2b5797" />
       <meta name="theme-color" content="#ffffff" />
+
+      <link rel="canonical" href={absoluteURL} />
+      <link rel="alternate" hreflang={jaPage ? "ja" : "en"} href={absoluteURL} />
+      <link rel="alternate" hreflang={jaPage ? "en" : "ja"} href={langURL} />
     </Helmet>
   )
 }
