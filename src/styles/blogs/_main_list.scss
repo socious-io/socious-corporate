@@ -7,40 +7,38 @@
 
 }
 
-.blog-list-date {
-  font-size: 16px;
-  line-height: 150%;
-  color: #808289;
-}
 
-// BLOG BANNER
-.blog-banner {
-  
-  .container__blog h2 {
-    margin-top: 80px;
-    font-size: 48px;
-    color: white;
+.blogs-list {
+  padding: 3rem 0;
+
+  .load-more {
+    padding: 12px 32px;
+    border-radius: 50px;
+    background-color: #00BA88;
+    font-size: 20px;
+    font-weight: 600;
+    line-height: 150%;
+    color: #FFFFFF;
+    border: 0;
+    display: block;
+    margin: 5rem auto;
   }
 }
 
-
 // ALL BLOG CARDS
 .blog-card {
+  padding-bottom: 1em;
+  border-bottom: 1px solid #E4E2E0;
 
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  border-bottom: 1px solid #2F8647;
-  
-  .blog-list-name {
+  h3 {
+    font-weight: 600;
     font-size: 20px;
-    line-height: 150%;
-    font-weight: normal;
+    line-height: 150%;  
 
     color:black;
-    
-    &:hover {
-      color: #808289;
-    }
+  }
+  img {
+    width: 30%;
+    max-width: 304px;
   }
 }
