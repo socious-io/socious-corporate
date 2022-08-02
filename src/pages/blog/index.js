@@ -27,15 +27,12 @@ const BlogPage = () => {
       {/* Likely temporary Blog */}
       <div className="blog-banner">
         <div className="container__blog">
-          <h2 className='hahmlet'>Blog</h2>
+          <h2>Blog</h2>
+          <p>Thoughts and opinions from the Socious team</p>
         </div>
       </div>
-      <div className="main">
-        <div className="container__blog">
-          <FeaturedBlog />
-          <Blogs />
-        </div>
-      </div>
+      <FeaturedBlog />
+      <Blogs />
 		</Layout>
 	)
 }
