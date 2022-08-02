@@ -1,5 +1,6 @@
-import { graphql, Link } from 'gatsby'
+import { graphql } from 'gatsby'
 import React from 'react'
+import BlogCard from '../components/BlogPage/BlogCard'
 
 import Layout from '../components/Layout'
 import Seo from '../components/seo'
@@ -29,19 +30,13 @@ const WordPressBlog = ({ data }) => {
         title={seoTitle}
         description={title}
       />
-
-			{/* Banner */}
-			<div className="blog-banner">
-				<div className="container__blog__temp">
-					<div>
-						<div className="back-to-blogs">
-							<Link to="/blog">&lt; Back to Blog</Link>
-						</div>
-						<h2 className='blog-title'>{title}</h2>
-						<div className='blog-date'>
-							Posted on { date }
-						</div>
+			
+			<div className='blog-show-banner'>
+				<div className='container__blog__temp'>
+					<div className='blog-date'>
+						{ date }
 					</div>
+					<h1 className='blog-show-title'>{title}</h1>
 				</div>
 			</div>
 
@@ -54,17 +49,12 @@ const WordPressBlog = ({ data }) => {
 			{/* More Blogs */}
 			<div className="more-articles-box">
 				<div className='container__blog__temp'>
-					<h2 className="more-articles-header">More articles</h2>
+					<h2 className="more-articles-header">You might also like</h2>
 					{
 						edges.map((edge) => {
 							return (
 								<div className='blog-card' key={edge.node.id}>
-									<Link to={`/blog/${edge.node.slug}`} className="blog-list-name">
-										{ edge.node.title }  
-									</Link>
-									<p className='blog-list-date'>
-										<small>{ edge.node.date }</small>
-									</p>
+									<BlogCard edge={edge} alternate />
 								</div>
 							)
 						})
@@ -83,7 +73,7 @@ export const query = graphql`
 			title
 			slug
 			content
-			date(formatString: "Do MMMM YYYY")
+			date(formatString: "MMM DD, YYYY")
 			featuredImage {
 				node {
 					sourceUrl
@@ -101,7 +91,14 @@ export const query = graphql`
 					id
 					slug
 					title
-					date(formatString: "YYYY-MM-DD")
+					content
+					date(formatString: "MMM DD, YYYY")
+					featuredImage {
+						node {
+							sourceUrl
+							altText
+						}
+					}
 				}
 			}
 		}
