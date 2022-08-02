@@ -1,6 +1,6 @@
-import React from "react"
+import React, { useState, useEffect }from "react"
 
-import { graphql, Link, useStaticQuery  } from "gatsby"
+import { graphql, useStaticQuery  } from "gatsby"
 
 import BlogCard from "./BlogCard"
 
@@ -8,7 +8,7 @@ const Blogs = () => {
 
   const query = useStaticQuery(graphql`
     {
-      allWpPost(sort: {order: ASC, fields: date}, skip: 1, limit: 2) {
+      allWpPost(sort: {order: ASC, fields: date}, skip: 1) {
         edges {
           node {
             id
@@ -30,6 +30,31 @@ const Blogs = () => {
 
   const { edges } = query.allWpPost
 
+  const [displayList, setDisplayList] = useState([...edges.slice(0, 5)])
+
+  const [hasMore, setHasMore ] = useState(edges.length > 5)
+
+  const [loadMore, setLoadMore] = useState(false)
+
+  const handleLoadMore = () => {
+    setLoadMore(true)
+  }
+  useEffect(() => {
+    if (loadMore && hasMore) {
+      const currentLength = displayList.length
+      const isMore = currentLength < edges.length
+      const nextResults = isMore
+        ? edges.slice(currentLength, currentLength + 5)
+        : []
+      setDisplayList([...displayList, ...nextResults])
+      setLoadMore(false)
+    }
+  }, [loadMore, hasMore])
+
+  useEffect(() => {
+    setHasMore(()=> displayList.length < edges.length)
+  }, [displayList])
+
   return (
     <div className="main blogs-list">
       <div className="container__articles">
@@ -37,7 +62,7 @@ const Blogs = () => {
         { edges.length > 0 && 
           <>
             {
-              edges.map((edge) => {
+              displayList.map((edge) => {
                 return (
                   <div className="blog-card">
                     <BlogCard edge={edge} key={edge.node.id} alternate/>
@@ -47,7 +72,7 @@ const Blogs = () => {
             }
           </>
         }
-        <button className="load-more">Load more news</button>
+        <button onClick={handleLoadMore} className="load-more">Load more news</button>
       </div>
     </div>
   )
