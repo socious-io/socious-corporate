@@ -22,6 +22,12 @@
   }
 }
 
+.blog-date {
+  font-size: 1.25rem;
+  line-height: 150%;
+  color: #595959;
+}
+
 .blog {
   width: 100%;
   display: flex;
@@ -33,11 +39,6 @@
     padding: 0 0 2em 2rem;
   }
 
-  .blog-date {
-    font-size: 1.25rem;
-    line-height: 150%;
-    color: #595959;
-  }
 
   .blog-para {
     color: #595959;
@@ -68,6 +69,7 @@
   img {
     height: 100%;
     object-fit: cover;
+    border-radius: 8px;
   }
 }
 

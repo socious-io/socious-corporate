@@ -4,7 +4,7 @@
   @extend %font-work-sans;
 
   box-sizing: border-box;
-  width: 90vw;
+  width: 84vw;
   margin-left: 1rem;
   margin-right: 1rem;
   
@@ -21,7 +21,7 @@
 .container__blog__temp {
   @extend %font-work-sans;
 
-  width: calc((960 / 1440) * 100vw);
+  width: calc((864 / 1440) * 100vw);
   margin: 0 auto;
   
   // Default styling for every link and h2

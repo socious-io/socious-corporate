@@ -8,7 +8,7 @@ const FeaturedBlog = () => {
 
   const query = useStaticQuery(graphql`
   {
-    allWpPost(sort: {order: ASC, fields: date}, limit: 2) {
+    allWpPost(sort: {order: DESC, fields: date}, limit: 2) {
       edges {
         node {
           title

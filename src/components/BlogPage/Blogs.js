@@ -8,7 +8,7 @@ const Blogs = () => {
 
   const query = useStaticQuery(graphql`
     {
-      allWpPost(sort: {order: ASC, fields: date}, skip: 1) {
+      allWpPost(sort: {order: DESC, fields: date}, skip: 2) {
         edges {
           node {
             id
@@ -27,7 +27,6 @@ const Blogs = () => {
       }
     }
   `)
-
   const { edges } = query.allWpPost
 
   const [displayList, setDisplayList] = useState([...edges.slice(0, 5)])
