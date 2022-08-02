@@ -6,12 +6,13 @@ const FeaturedBlog = () => {
 
   const query = useStaticQuery(graphql`
   {
-    allWpPost(sort: {order: DESC, fields: date}, limit: 1) {
+    allWpPost(sort: {order: ASC, fields: date}, limit: 2) {
       edges {
         node {
           title
-          date(formatString: "YYYY-MM-DD")
+          date(formatString: "MMM DD, YYYY")
           slug
+          content
           featuredImage {
             node {
               sourceUrl
@@ -26,27 +27,39 @@ const FeaturedBlog = () => {
 
   const WORDPRESS_URL = process.env.WORDPRESS_ENDPOINT
 
-  const { node: {
-                 title,
-                 date,
-                 slug,
-                 featuredImage       
-                } } = query.allWpPost.edges[0]
+  // const { node: {
+  //                title,
+  //                date,
+  //                slug,
+  //                content,
+  //                featuredImage       
+  //               } } = query.allWpPost.edges[0]
+  const { edges } = query.allWpPost
+  console.log("EDGES", edges);
 
   return (
-    <div className="featured-blog">
-      <img src={ WORDPRESS_URL + featuredImage?.node.sourceUrl} alt={ featuredImage?.node.altText || title} />
-      <div>
-        <p className='blog-list-date'>
-          <small>{ date }</small>
-        </p>
-        <h2 className="featured-title">
-          { title }
-        </h2>
-        <Link to={`/blog/${slug}`}>
-          Read article
-        </Link>
-      </div>            
+    <div className="main featured-box">
+      <div className="container__blog">
+        <h1>Featured posts</h1>
+        {  edges.map(edge => (
+          <div className="featured-blog">
+            <img src={ WORDPRESS_URL + edge.node.featuredImage?.node.sourceUrl} alt={ edge.node.featuredImage?.node.altText || edge.node.title} />
+            <div>
+              <p className='blog-list-date'>
+                <small>{ edge.node.date }</small>
+              </p>
+              <h1 className="featured-title">
+                { edge.node.title }
+              </h1>
+              <div className="featured-para" dangerouslySetInnerHTML={{ __html: edge.node.content }}/>
+              <Link to={`/blog/${edge.node.slug}`}>
+                Read more
+              </Link>
+            </div>            
+          </div>
+        ))}
+
+      </div>
     </div>
   )
 }

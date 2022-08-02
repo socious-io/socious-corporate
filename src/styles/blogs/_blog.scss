@@ -2,12 +2,28 @@
 .blog-banner {
 
   min-height: 288px;
-  background-color: #2F4786;
   display: flex;
   justify-content: center;
-  font-size: 16px;
-  line-height: 150%;
-  font-weight: 400;
+  text-align: center;
+  margin: 4rem auto;
+  
+  h2 {
+    font-size: 24px;
+    line-height: 125%;
+    color: #92A8E3;
+  }
+  
+  p {
+    line-height: 125%;
+    max-width: 640px;
+    font-weight: bold;
+    font-size: 44px;
+    letter-spacing: -1px;
+    margin: 0 auto;
+  }
+
+  h2 {
+  }
 
   a {
     text-decoration: none;
@@ -19,7 +35,6 @@
     font-size: 36px;
     line-height: 125%;
     letter-spacing: -1px;
-    color: white;
   }
 
   .blog-date {
@@ -28,7 +43,7 @@
     color: #FFF;
   }
 
-  & .container__blog__temp > div {
+  .container__blog__temp > div {
     box-sizing: border-box;
     height: 100%;
     display: flex;
