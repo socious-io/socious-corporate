@@ -2,17 +2,26 @@ import React from "react"
 
 import { graphql, Link, useStaticQuery  } from "gatsby"
 
+import BlogCard from "./BlogCard"
+
 const Blogs = () => {
 
   const query = useStaticQuery(graphql`
     {
-      allWpPost(sort: {order: DESC, fields: date}, skip: 1) {
+      allWpPost(sort: {order: ASC, fields: date}, skip: 1, limit: 2) {
         edges {
           node {
             id
             title
-            date(formatString: "YYYY-MM-DD")
+            date(formatString: "MMM DD, YYYY")
             slug
+            content
+            featuredImage {
+              node {
+                sourceUrl
+                altText
+              }
+            }
           }
         }
       }
@@ -22,27 +31,24 @@ const Blogs = () => {
   const { edges } = query.allWpPost
 
   return (
-    <div>
-      {/* check for length */}
-      { edges.length > 0 && 
-        <>
-          <h2>The Latest</h2>
-          {
-            edges.map((edge) => {
-              return (
-                <div className='blog-card' key={edge.node.id}>
-                  <Link to={`/blog/${edge.node.slug}`} className="blog-list-name">
-                    { edge.node.title }  
-                  </Link>
-                  <p className='blog-list-date'>
-                    <small>{ edge.node.date }</small>
-                  </p>
-                </div>
-              )
-            })
-          }
-        </>
-      }
+    <div className="main blogs-list">
+      <div className="container__articles">
+        {/* check for length */}
+        { edges.length > 0 && 
+          <>
+            {
+              edges.map((edge) => {
+                return (
+                  <div className="blog-card">
+                    <BlogCard edge={edge} key={edge.node.id} alternate/>
+                  </div>
+                )
+              })
+            }
+          </>
+        }
+        <button className="load-more">Load more news</button>
+      </div>
     </div>
   )
 }
