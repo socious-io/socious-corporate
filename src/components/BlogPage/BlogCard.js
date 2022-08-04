@@ -10,9 +10,10 @@ const BlogCard = ({ edge, alternate }) => {
     title,
     slug,
     featuredImage,
-    content,
+    excerpt,
     date
   }} = edge
+
 
   return (
     <div  className={ alternate ? "alternate blog" : "blog"}>
@@ -31,8 +32,8 @@ const BlogCard = ({ edge, alternate }) => {
             { title }
           </h1>
         )}
-        { content && 
-          <div className="blog-para" dangerouslySetInnerHTML={{ __html: content }}/>
+        { excerpt && 
+          <div className="blog-para" dangerouslySetInnerHTML={{ __html: excerpt }}/>
         }
         <Link to={`/blog/${slug}`}>
           Read more

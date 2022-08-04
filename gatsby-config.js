@@ -74,6 +74,10 @@ module.exports = {
           perPage: 5,
           requestConcurrency: 3,
         },
+        html: {
+          useGatsbyImage: false,
+        },
+        
       },
     },
     "gatsby-plugin-sharp",

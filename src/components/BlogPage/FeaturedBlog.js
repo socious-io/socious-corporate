@@ -14,7 +14,7 @@ const FeaturedBlog = () => {
           title
           date(formatString: "MMM DD, YYYY")
           slug
-          content
+          excerpt
           featuredImage {
             node {
               sourceUrl

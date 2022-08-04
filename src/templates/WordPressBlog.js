@@ -23,6 +23,7 @@ const WordPressBlog = ({ data }) => {
 
 	const { edges } = data.allWpPost
 
+  const newContent = content.replaceAll("/wp-content/uploads/", "https://socious-wp.azurewebsites.net/wp-content/uploads/")
 
 	return (
 		<Layout>
@@ -43,7 +44,7 @@ const WordPressBlog = ({ data }) => {
 			{/* Main Body */}
 			<div className='container__blog__temp'>
 				<img className='main-blog-image' alt={ featuredImage?.node.altText || title} src={ WORDPRESS_URL + featuredImage?.node.sourceUrl} />
-				<div className='blog-content' dangerouslySetInnerHTML={{ __html: content }}></div>
+				<div className='blog-content' dangerouslySetInnerHTML={{ __html: newContent }}></div>
 			</div>
 
 			{/* More Blogs */}
@@ -91,7 +92,7 @@ export const query = graphql`
 					id
 					slug
 					title
-					content
+					excerpt
 					date(formatString: "MMM DD, YYYY")
 					featuredImage {
 						node {
