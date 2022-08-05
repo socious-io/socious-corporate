@@ -113,6 +113,7 @@ const Seo = ({key, title, description, image, twitterImage, children}) => {
         <link rel="manifest" href={fixedFaviconLink(favicon.manifest)} />
         <meta name="msapplication-TileColor" content="#2b5797" />
         <meta name="theme-color" content="#ffffff" />
+        <link rel="canonical" href={duplicate ? langURL : absoluteURL} />
       </Helmet>
       { haveLang && (!duplicate) && (
           <Helmet>
