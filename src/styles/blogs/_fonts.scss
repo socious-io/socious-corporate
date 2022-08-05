@@ -1,0 +1,27 @@
+@import url('https://fonts.googleapis.com/css2?family=Hahmlet:wght@400;600&family=Work+Sans:wght@400;600&display=swap');
+
+%font-work-sans {
+  font-family: 'Work Sans', sans-serif;
+}
+
+%font-hahmlet {
+  font-family: 'Hahmlet', serif;
+}
+
+.work-sans {
+  @extend %font-work-sans;
+}
+
+.hahmlet {
+  @extend %font-hahmlet;
+}
+
+.hahmlet-600 {
+  @extend %font-hahmlet;
+  font-weight: 600;
+}
+
+.work-sans-600 {
+  @extend %font-work-sans;
+  font-weight: 600;
+}

@@ -1,33 +1,30 @@
-import * as React from 'react'
-import { useStaticQuery, graphql } from 'gatsby'
-import "../styles/main.scss"
+import * as React from 'react';
+import {FormattedMessage} from 'react-intl';
+import {IntlProvider} from 'react-intl';
+import '../styles/main.scss';
 
-import Navbar from './shared/Navbar'
-import Footer from './shared/Footer'
+import Navbar from './shared/Navbar';
+import Footer from './shared/Footer';
 
-const Layout = ({ pageTitle, children }) => {
-  const data = useStaticQuery(graphql`
-    query SiteInfo {
-      site {
-        siteMetadata {
-          title
-        }
-      }
-    }
-  `)
+const Layout = (props) => {
+  const {
+    pageContext: {language, messages},
+    header,
+    pageTitle,
+    children,
+  } = props;
 
   return (
-    <div>
-
-      <title>{pageTitle} | { data.site.siteMetadata.title }</title>
+    <IntlProvider defaultLocale="en" locale={language} messages={messages}>
+      <title>
+        <FormattedMessage id={pageTitle || 'site-title'} />
+      </title>
       <div id="scroll-top"></div>
-      <Navbar />
-      <main>
-        {children}
-      </main>
+      <Navbar header={header} />
+      <main>{children}</main>
       <Footer />
-    </div>
-  )
-}
+    </IntlProvider>
+  );
+};
 
-export default Layout
+export default Layout;

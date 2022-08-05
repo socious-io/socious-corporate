@@ -1,64 +1,46 @@
-import React from "react";
-import { Link } from 'gatsby'
-import { StaticImage } from 'gatsby-plugin-image'
+import React from 'react';
+import {Link} from 'gatsby';
+import {useIntl, FormattedMessage} from 'react-intl';
+
+import IconWeb from '../../images/icons/line/web.svg';
 
 const NavbarLarge = (props) => {
-  const {
-    headerStyle,
-    navLinkStyle,
-    homePage,
-    logoImageStyle,
-    aboutLink,
-    careersLink,
-    newsroomLink,
-    languageSwitcher,
-    jaPage
-  } = props
+  const {headerStyle, homePage, aboutLink, careersLink, newsroomLink, altPage} =
+    props;
 
-  const activeLinkStyle = {
-    paddingBottom: "0.5rem",
-    borderBottom: "2px solid white"
-  }
-  
+  const intl = useIntl();
+  const jaPage = intl.locale === 'ja';
+
   return (
-    <nav className={headerStyle}>
-      <div className="header__logo-container">
-        <Link to={homePage}>
-          <StaticImage src="../../images/socious-logo.png" className={logoImageStyle} alt="Socious brand logo" />
-        </Link>
-      </div>
-      <div className="nav-links">
-        <div className={navLinkStyle}>
-          <Link 
-          to={aboutLink}
-          activeStyle={activeLinkStyle}
-          partiallyActive={true}
-          >
-            {jaPage ? 'ソーシャスについて' : 'About'}
-          </Link>
+    <div className={headerStyle}>
+      <nav>
+        <div className="header__logo-container">
+          <Link to={homePage}>Home</Link>
         </div>
-        <div className={navLinkStyle}>
-          <Link 
-          to={careersLink}
-          activeStyle={activeLinkStyle}
-          partiallyActive={true}
-          >
-            {jaPage ? '採用情報' : 'Careers'}
-          </Link>
+        <div className="nav-links">
+          <div className="nav-item">
+            <Link to={aboutLink}>
+              <FormattedMessage id="about-title" />
+            </Link>
+          </div>
+          <div className="nav-item">
+            <Link to={careersLink}>
+              <FormattedMessage id="careers-title" />
+            </Link>
+          </div>
+          <div className="nav-item">
+            <Link to={newsroomLink}>
+              <FormattedMessage id="news-title" />
+            </Link>
+          </div>
+          <a className="header__language-switcher" href={altPage}>
+            <IconWeb />
+            {jaPage ? 'English' : '日本語'}
+          </a>
         </div>
-        <div className={navLinkStyle}>
-          <Link 
-          to={newsroomLink}
-          activeStyle={activeLinkStyle}
-          partiallyActive={true}
-          >
-            {jaPage ? 'ニュース' : 'Newsroom'}
-          </Link>
-        </div>
-        {languageSwitcher}
-      </div>
-    </nav>
-  )
-}
+      </nav>
+    </div>
+  );
+};
 
-export default NavbarLarge
+export default NavbarLarge;
