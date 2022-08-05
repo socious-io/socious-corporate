@@ -77,9 +77,6 @@ module.exports = {
         html: {
           useGatsbyImage: false,
         },
-        develop: {
-          hardCacheMediaFiles: true,
-        },
       },
     },
     "gatsby-plugin-sharp",

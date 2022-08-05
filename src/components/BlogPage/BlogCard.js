@@ -5,7 +5,6 @@ const BlogCard = ({ edge, alternate }) => {
 
   const WORDPRESS_URL = process.env.WORDPRESS_ENDPOINT
 
-  console.log("ALTERNATE", alternate);
   const { node: {
     title,
     slug,
@@ -13,7 +12,6 @@ const BlogCard = ({ edge, alternate }) => {
     excerpt,
     date
   }} = edge
-
 
   return (
     <div  className={ alternate ? "alternate blog" : "blog"}>
