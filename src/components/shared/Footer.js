@@ -1,7 +1,14 @@
+
 import * as React from 'react'
 import { useLocation } from '@reach/router';
 import { Link } from 'gatsby'
 import { AnchorLink } from "gatsby-plugin-anchor-links";
+
+import FacebookRoundedIcon from '@mui/icons-material/FacebookRounded';
+import FacebookIcon from '@mui/icons-material/Facebook';
+import TwitterIcon from '@mui/icons-material/Twitter';
+import InstagramIcon from '@mui/icons-material/Instagram';
+import LinkedInIcon from '@mui/icons-material/LinkedIn';
 
 const Footer = () => {
   const location = useLocation();
@@ -23,53 +30,77 @@ const Footer = () => {
 
   return (
     <footer>
-      <div className="footer-item">
-        <div className="footer-title">
-          <h4>{jaPage ? 'ソーシャスについて' : 'About'}</h4>
+      <div className='footer-links'>
+        <div className="footer-item-box">
+          <div className="footer-item">
+            <div className="footer-title">
+              <h4>{jaPage ? 'ソーシャスについて' : 'About Us'}</h4>
+            </div>
+            <div className="footer-list">
+              <ul>
+                <li><AnchorLink to={linkLanguageSelector("/about#our-mission")} title={ourMission} /></li>
+                <li><AnchorLink to={linkLanguageSelector("/about#our-team")} title={ourTeam} /></li>
+                <li><Link to={linkLanguageSelector("/careers")}>{jaPage ? '採用情報' : 'Careers'}</Link></li>
+              </ul>
+            </div>
+          </div>
+          <div className="footer-item">
+            <div className="footer-title">
+              <h4>{jaPage ? 'お問い合わせ' : 'Contact'}</h4>
+            </div>
+            <div className="footer-list">
+              <ul>
+                <li><AnchorLink to={linkLanguageSelector("/about#contact-us")} title={contactUs} /></li>
+                <li><Link to={linkLanguageSelector("/support")}>{jaPage ? 'サポート' : 'Support'}</Link></li>
+                <li><Link to={linkLanguageSelector("/newsroom")}>{jaPage ? 'ニュースルーム' : 'Newsroom'}</Link></li>
+              </ul>
+            </div>
+          </div>
+          <div className="footer-item">
+            <div className="footer-title">
+              <h4>{jaPage ? 'コーポレート' : 'Download'}</h4>
+            </div>
+            <div className="footer-list">
+              <ul>
+                <li>
+                  <a
+                      href="https://apps.apple.com/jp/app/socious/id1581904474"
+                      target="_blank"
+                      rel="noreferrer"
+                    >iOS app</a>
+                </li>
+                <li>
+                  <a
+                      href="https://play.google.com/store/apps/details?id=com.dissocialnetwork"
+                      target="_blank"
+                      rel="noreferrer"
+                    >Android app</a>
+                </li>
+              </ul>
+            </div>
+          </div>
         </div>
-        <div className="footer-list">
+        <div className='footer-social'>
           <ul>
-            <li><Link to="/">{jaPage ? 'モバイルアプリ' : 'Mobile App'}</Link></li>
-            <li><a href="https://app.socious.io" target="_blank" rel="noreferrer">Web App</a></li>
-            <li><AnchorLink to={linkLanguageSelector("/about#our-mission")} title={ourMission} /></li>
-            <li><AnchorLink to={linkLanguageSelector("/about#social-issues")} title={socialIssues} /></li>
-            <li><AnchorLink to={linkLanguageSelector("/about#what-we-do")} title={whatWeDo} /></li>
-            <li><AnchorLink to={linkLanguageSelector("/about#our-vision")} title={ourVision} /></li>
-            <li><AnchorLink to={linkLanguageSelector("/about#our-values")} title={cultureAndValues} /></li>
-            <li><AnchorLink to={linkLanguageSelector("/about#our-team")} title={ourTeam} /></li>
+          <li><a href="https://www.facebook.com/socious.io" target="_blank" rel="noreferrer"><FacebookRoundedIcon style={{ fontSize: "2rem"}} /></a></li>
+          <li><a href="https://www.linkedin.com/company/socious-io/" target="_blank" rel="noreferrer"><LinkedInIcon style={{ fontSize: "2rem"}} /></a></li>
+          <li><a href="https://www.instagram.com/socious.io/" target="_blank" rel="noreferrer"><InstagramIcon style={{ fontSize: "2rem"}} /></a></li>
+          <li><a href="https://twitter.com/SociousDAO" target="_blank" rel="noreferrer"><TwitterIcon style={{ fontSize:  "2rem"}} /></a></li>
           </ul>
         </div>
       </div>
-      <div className="footer-item">
-        <div className="footer-title">
-          <h4>{jaPage ? '最新情報' : 'Latest News'}</h4>
+      <div className="footer-ending">
+        <div>
+          <p>
+            Copyright &copy; 2022 Socious Inc.
+          </p>
+          <p>
+            All rights reserved.
+          </p>
         </div>
-        <div className="footer-list">
-          <ul>
-            <li><Link to={linkLanguageSelector("/newsroom")}>{jaPage ? 'ニュースルーム' : 'Newsroom'}</Link></li>
-            <li><Link to="/blog">{jaPage ? 'ブログ' : 'blog'}</Link></li>
-            <li><a href="https://www.facebook.com/socious.io" target="_blank" rel="noreferrer">Facebook</a></li>
-            <li><a href="https://www.linkedin.com/company/socious-io/" target="_blank" rel="noreferrer">LinkedIn</a></li>
-            <li><a href="https://www.instagram.com/socious.io/" target="_blank" rel="noreferrer">Instagram</a></li>
-            <li><a href="https://twitter.com/SociousDAO" target="_blank" rel="noreferrer">Twitter</a></li>
-            <li><a href="https://medium.com/@socious.io" target="_blank" rel="noreferrer">Medium</a></li>
-            <li><a href="https://www.youtube.com/channel/UCPyZSOlMNPN2dmyIgAXbnBQ" target="_blank" rel="noreferrer">Youtube</a></li>
-            <li><a href="https://discord.gg/84U6KPjj7u" target="_blank" rel="noreferrer">Discord</a></li>
-            <li><a href="https://t.me/SociousDAO" target="_blank" rel="noreferrer">Telegram</a></li>
-          </ul>
-        </div>
-      </div>
-      <div className="footer-item">
-        <div className="footer-title">
-          <h4>{jaPage ? 'コーポレート' : 'Corporate'}</h4>
-        </div>
-        <div className="footer-list">
-          <ul>
-            <li><Link to={linkLanguageSelector("/careers")}>{jaPage ? '採用情報' : 'Join Us'}</Link></li>
-            <li><AnchorLink to={linkLanguageSelector("/about#contact-us")} title={contactUs} /></li>
-            <li><AnchorLink to={linkLanguageSelector("/about#company-profile")} title={companyProfile} /></li>
-            <li><Link to={linkLanguageSelector("/support")}>{jaPage ? 'サポート' : 'Support'}</Link></li>
-          </ul>
+        <div className="links">
+          <a target="_blank"  rel="noreferrer" href="https//socious.co">Terms</a>
+          <a target="_blank"  rel="noreferrer" href="https//socious.co">Privacy</a>
         </div>
       </div>
     </footer>
