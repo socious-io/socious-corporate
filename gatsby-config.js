@@ -101,17 +101,25 @@ module.exports = {
       },
     },
     {
-      resolve: 'gatsby-transformer-remark',
+			resolve: "gatsby-transformer-remark",
+			options: {
+				plugins: [
+					{
+						resolve: `gatsby-remark-katex`,
+						options: {
+							strict: false,
+						},
+					},
+				],
+			},
+		},
+    {
+      resolve: "gatsby-source-graphql",
       options: {
-        plugins: [
-          {
-            resolve: `gatsby-remark-katex`,
-            options: {
-              strict: false,
-            },
-          },
-        ],
-      },
+        typeName: "WPGraphQL",
+        fieldName: "wpcontent",
+        url: process.env.WORDPRESS_ENDPOINT+"/graphql"
+      }
     },
   ],
 };

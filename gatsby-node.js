@@ -1,3 +1,7 @@
+require("dotenv").config({
+  path: `.env.${process.env.NODE_ENV}`,
+})
+
 const path = require("path");
 
 exports.createPages = async ({ graphql, actions, reporter }) => {
@@ -93,3 +97,43 @@ exports.onCreatePage = async ({ page, actions }) => {
     resolve();
   });
 };
+
+
+const { createRemoteFileNode } = require(`gatsby-source-filesystem`)
+
+exports.createResolvers = async (
+  {
+    actions,
+    cache,
+    createNodeId,
+    createResolvers,
+    store,
+    reporter,
+  },
+) => {
+  const { createNode } = actions
+
+  await createResolvers({
+    WPGraphQL_MediaItem: {
+      imageFile: {
+        type: "File",
+        async resolve(source) {
+          let sourceUrl = process.env.WORDPRESS_ENDPOINT + source.sourceUrl
+
+          if (source.mediaItemUrl !== undefined) {
+            sourceUrl = source.mediaItemUrl
+          }
+
+          return await createRemoteFileNode({
+            url: encodeURI(sourceUrl),
+            store,
+            cache,
+            createNode,
+            createNodeId,
+            reporter,
+          })
+        },
+      },
+    },
+  })
+}
