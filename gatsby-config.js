@@ -77,7 +77,6 @@ module.exports = {
         html: {
           useGatsbyImage: false,
         },
-        
       },
     },
     "gatsby-plugin-sharp",

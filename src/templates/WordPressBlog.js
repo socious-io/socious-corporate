@@ -43,7 +43,7 @@ const WordPressBlog = ({ data }) => {
 
 			{/* Main Body */}
 			<div className='container__blog__temp'>
-				<img className='main-blog-image' alt={ featuredImage?.node.altText || title} src={ WORDPRESS_URL + featuredImage?.node.sourceUrl} />
+				{/* <img className='main-blog-image' alt={ featuredImage?.node.altText || title} src={ WORDPRESS_URL + featuredImage?.node.sourceUrl} /> */}
 				<div className='blog-content' dangerouslySetInnerHTML={{ __html: newContent }}></div>
 			</div>
 
