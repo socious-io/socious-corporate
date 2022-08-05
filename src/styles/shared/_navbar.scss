@@ -1,99 +1,109 @@
 /* HEADER */
 
 .header {
-  height: 70px;
+  height: 96px;
+  width: 100vw;
+  padding: 28px 0;
+  box-sizing: border-box;
 
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: center;
+  &.header-default {
+    box-shadow: inset 0px -0.5px 0px #e4e6ed;
+  }
+  &.header-transparent {
+    background: transparent;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+  }
+  &.header-primary {
+    background: $primary-bg;
+  }
 
-  padding: 15px;
   position: relative;
   z-index: 1;
+
+  > nav {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0px;
+    width: 1140px;
+    height: 40px;
+    margin: 0 auto;
+  }
 }
 
 .header__language-switcher {
   display: flex;
   align-items: center;
-}
 
-.header__language-switcher:link,
-.header__language-switcher:visited {
-  text-decoration: inherit;
-  color: $primary;
-  cursor: pointer;
+  &:link,
+  &:visited {
+    text-decoration: inherit;
+    color: $black;
+    cursor: pointer;
+  }
+
+  svg {
+    margin-right: 8px;
+  }
 }
 
 .nav-links {
   display: flex;
   align-items: center;
-  margin-right: 1rem;
-}
-
-.nav-item {
-  margin-right: 1rem;
+  gap: 32px;
 }
 
 .nav-item a:link,
 .nav-item a:visited {
   text-decoration: none;
-  color: $primary;
+  color: $black;
+  font-size: 16px;
   cursor: pointer;
 }
 
 /* For use on pages with transparent nav */
 
-.header-fixed {
-  width: 100vw;
-  position: absolute;
-  margin-top: 1rem;
-  padding: 0;
-}
+.header-primary,
+.header-transparent {
+  .header__language-switcher:link,
+  .header__language-switcher:visited {
+    color: #fff;
 
-.header__language-switcher-transparent {
-  display: flex;
-  align-items: center;
-  margin-right: 2rem;
-}
+    svg path {
+      stroke: #fff;
+    }
+  }
 
-.header__language-switcher-transparent:link,
-.header__language-switcher-transparent:visited {
-  text-decoration: inherit;
-  color: #FFF;
-  cursor: pointer;
-}
+  .header__logo-container {
+    a:link,
+    a:visited,
+    a:hover {
+      background-image: url(/images/logo-horizontal-white.svg);
+    }
+  }
 
-.header__logo-image-transparent {
-  margin-left: 2rem;
-  height: 52px;
-  width: 39px;
-}
-
-.header__logo-image {
-  height: 52px;
-  width: 39px;
+  .nav-item a:link,
+  .nav-item a:visited {
+    color: #fff;
+  }
 }
 
 .header__logo-container {
   display: flex;
   align-items: center;
-}
 
-.nav-item-transparent {
-  margin-right: 1rem;
-}
-
-.nav-item-transparent a:link,
-.nav-item-transparent a:visited {
-  text-decoration: none;
-  color: #FFF;
-  cursor: pointer;
-}
-
-.active {
-  border-bottom: 2px solid white;
-  color: white;
+  a:link,
+  a:visited,
+  a:hover {
+    color: transparent;
+    width: 160.38px;
+    height: 56px;
+    background-image: url(/images/logo-horizontal.svg);
+  }
 }
 
 /* END_HEADER */

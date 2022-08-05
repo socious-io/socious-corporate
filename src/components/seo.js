@@ -1,12 +1,13 @@
-import React from "react"
-import PropTypes from "prop-types"
-import { Helmet } from "react-helmet"
-import { useLocation } from "@reach/router"
-import { useStaticQuery, graphql } from "gatsby"
+import React from 'react';
+import PropTypes from 'prop-types';
+import {Helmet} from 'react-helmet';
+import {useLocation} from '@reach/router';
+import {useStaticQuery, graphql} from 'gatsby';
+import {useIntl} from 'react-intl';
 
-const Seo = ({ title, description, image, twitterImage, children }) => {
-  const { pathname } = useLocation()
-  const { site } = useStaticQuery(query)
+const Seo = ({key, title, description, image, twitterImage, children}) => {
+  const {pathname} = useLocation();
+  const {site} = useStaticQuery(query);
 
   const {
     defaultTitle,
@@ -20,14 +21,22 @@ const Seo = ({ title, description, image, twitterImage, children }) => {
     imageJapanese,
     defaultTwitterImage,
     favicon,
-  } = site.siteMetadata
+  } = site.siteMetadata;
 
-  
-  const jaPage = pathname.includes('/ja')
-  const titleSelector = jaPage ? titleJapanese : defaultTitle
-  const imageSelector = jaPage ? imageJapanese : defaultImage
-  const descriptionSelector = jaPage ? descriptionJapanese : defaultDescription
-  const titleTemplateSelector = jaPage ? titleTemplateJapanese : titleTemplate
+
+  const intl = useIntl();
+  const jaPage = intl.locale === 'ja';
+
+  const titleSelector = jaPage ? titleJapanese : defaultTitle;
+  const imageSelector = jaPage ? imageJapanese : defaultImage;
+  const descriptionSelector = jaPage ? descriptionJapanese : defaultDescription;
+  const titleTemplateSelector = jaPage ? titleTemplateJapanese : titleTemplate;
+
+  if (key) {
+    if (!title) title = intl.formatMessage({id: `${key}-title`});
+    if (!description)
+      description = intl.formatMessage({id: `${key}-description`});
+  }
 
   const pathWithSlash = pathname.endsWith("/") ? pathname : pathname + "/";
   const absoluteURL = process.env.URL + pathWithSlash  
@@ -42,11 +51,11 @@ const Seo = ({ title, description, image, twitterImage, children }) => {
     image: image || imageSelector,
     url: `${siteUrl}${pathname}`,
     twitterImage: twitterImage || defaultTwitterImage,
-  }
-  
+  };
+
   const fixedFaviconLink = (icon) => {
-    return `${siteUrl}/${icon}`
-  }
+    return `${siteUrl}/${icon}`;
+  };
 
   return (
     <>
@@ -58,29 +67,52 @@ const Seo = ({ title, description, image, twitterImage, children }) => {
         {seo.title && <meta property="og:title" content={seo.title} />}
         {seo.description && (
           <meta property="og:description" content={seo.description} />
-          )}
+        )}
         {seo.image && <meta property="og:image" content={seo.image} />}
         <meta property="og:type" content="article" />
         <meta property="og:image:width" content="1200" />
         <meta property="og:image:height" content="630" />
-        
+
         <meta name="twitter:card" content="summary_large_image" />
         {seo.title && <meta name="twitter:title" content={seo.title} />}
         {seo.description && (
           <meta name="twitter:description" content={seo.description} />
-          )}
-        {seo.twitterImage && <meta name="twitter:image" content={seo.twitterImage} />}
+        )}
+        {seo.twitterImage && (
+          <meta name="twitter:image" content={seo.twitterImage} />
+        )}
 
-        <link rel="apple-touch-icon" sizes="180x180" href={fixedFaviconLink(favicon.appleTouchIcon)} />
-        <link rel="icon" type="image/png" sizes="16x16" href={fixedFaviconLink(favicon.ico)} />
-        <link rel="icon" type="image/png" sizes="16x16" href={fixedFaviconLink(favicon.sm)} />
-        <link rel="icon" type="image/png" sizes="32x32" href={fixedFaviconLink(favicon.lg)} />
-        <link rel="mask-icon" href={fixedFaviconLink(favicon.safariPinnedTab)} color="#5bbad5" />
+        <link
+          rel="apple-touch-icon"
+          sizes="180x180"
+          href={fixedFaviconLink(favicon.appleTouchIcon)}
+        />
+        <link
+          rel="icon"
+          type="image/png"
+          sizes="16x16"
+          href={fixedFaviconLink(favicon.ico)}
+        />
+        <link
+          rel="icon"
+          type="image/png"
+          sizes="16x16"
+          href={fixedFaviconLink(favicon.sm)}
+        />
+        <link
+          rel="icon"
+          type="image/png"
+          sizes="32x32"
+          href={fixedFaviconLink(favicon.lg)}
+        />
+        <link
+          rel="mask-icon"
+          href={fixedFaviconLink(favicon.safariPinnedTab)}
+          color="#5bbad5"
+        />
         <link rel="manifest" href={fixedFaviconLink(favicon.manifest)} />
         <meta name="msapplication-TileColor" content="#2b5797" />
         <meta name="theme-color" content="#ffffff" />
-
-        <link rel="canonical" href={duplicate ? langURL : absoluteURL} />
       </Helmet>
       { haveLang && (!duplicate) && (
           <Helmet>
@@ -100,21 +132,24 @@ const Seo = ({ title, description, image, twitterImage, children }) => {
   )
 }
 
-export default Seo
+
+export default Seo;
 
 Seo.propTypes = {
   title: PropTypes.string,
   description: PropTypes.string,
   image: PropTypes.string,
   article: PropTypes.bool,
-}
+  children: PropTypes.elementType,
+};
 
 Seo.defaultProps = {
   title: null,
   description: null,
   image: null,
   article: false,
-}
+  children: null,
+};
 
 const query = graphql`
   query Seo {
@@ -141,4 +176,4 @@ const query = graphql`
       }
     }
   }
-`
+`;
