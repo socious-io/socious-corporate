@@ -65,10 +65,27 @@ module.exports = {
         },
       },
     },
-    'gatsby-plugin-sharp',
-    'gatsby-transformer-sharp',
-    'gatsby-plugin-anchor-links',
-    'gatsby-plugin-react-helmet',
+    {
+      resolve: "gatsby-source-wordpress",
+      options: {
+        url: `${process.env.WORDPRESS_ENDPOINT}/graphql`,
+        schema: {
+          timeout: 200000,
+          perPage: 5,
+          requestConcurrency: 3,
+        },
+        html: {
+          useGatsbyImage: false,
+        },
+        develop: {
+          hardCacheMediaFiles: true,
+        },
+      },
+    },
+    "gatsby-plugin-sharp",
+    "gatsby-transformer-sharp",
+    "gatsby-plugin-anchor-links",
+    "gatsby-plugin-react-helmet",
     {
       resolve: 'gatsby-plugin-mailchimp',
       options: {

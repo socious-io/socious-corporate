@@ -15,6 +15,7 @@
     "clean": "gatsby clean"
   },
   "dependencies": {
+    "@draftbox-co/gatsby-wordpress-inline-images": "^1.0.6",
     "@emotion/react": "^11.9.3",
     "@emotion/styled": "^11.9.3",
     "@mui/icons-material": "^5.8.4",
@@ -35,6 +36,7 @@
     "gatsby-source-filesystem": "^4.19.0",
     "gatsby-source-graphql": "^4.19.0",
     "gatsby-source-notion-api": "^0.12.0",
+    "gatsby-source-wordpress": "^6.20.0",
     "gatsby-transformer-remark": "^5.19.0",
     "gatsby-transformer-sharp": "^4.19.0",
     "gbimage-bridge": "^0.2.2",

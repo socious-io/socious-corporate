@@ -1,0 +1,47 @@
+@use 'fonts';
+
+.container__blog {
+  @extend %font-work-sans;
+
+  box-sizing: border-box;
+  width: 84vw;
+  margin-left: 1rem;
+  margin-right: 1rem;
+  
+  // Default styling for every link and h2
+  a {
+    text-decoration: none;
+  }
+
+  h1, h2 {
+    font-weight: 600;
+  }
+}
+
+.container__blog__temp {
+  @extend %font-work-sans;
+
+  width: calc((864 / 1440) * 100vw);
+  margin: 0 auto;
+  
+  // Default styling for every link and h2
+  a {
+    text-decoration: none;
+  }
+  
+  h2 {
+    font-weight: 600;
+  }
+}
+
+@media screen and (max-width: 750px) {
+  .container__blog {
+    width: 90vw;
+  }
+
+  .container__blog__temp {
+    width: auto;
+    max-width: 680px;
+    margin: 0 1rem;
+  }
+}
