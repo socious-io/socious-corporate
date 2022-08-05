@@ -5,7 +5,7 @@ import BlogCard from '../components/BlogPage/BlogCard'
 import Layout from '../components/Layout'
 import Seo from '../components/seo'
 
-const WordPressBlog = ({ data }) => {
+const WordPressBlog = (props) => {
   
 	const jaPage = false
 
@@ -19,6 +19,8 @@ const WordPressBlog = ({ data }) => {
 
 	const WORDPRESS_URL = process.env.WORDPRESS_ENDPOINT
 
+  const { data } = props
+
 	const { title, content, date, featuredImage }  = data.wpPost
 
 	const { edges } = data.allWpPost
@@ -26,7 +28,7 @@ const WordPressBlog = ({ data }) => {
   const newContent = content.replaceAll("/wp-content/uploads/", "https://socious-wp.azurewebsites.net/wp-content/uploads/")
 
 	return (
-		<Layout>
+		<Layout {...props}>
 			<Seo
         title={seoTitle}
         description={title}

@@ -70,7 +70,7 @@ module.exports = {
       options: {
         url: `${process.env.WORDPRESS_ENDPOINT}/graphql`,
         schema: {
-          timeout: 2000000,
+          timeout: 200000,
           perPage: 5,
           requestConcurrency: 3,
         },

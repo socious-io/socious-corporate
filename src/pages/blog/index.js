@@ -6,7 +6,7 @@ import Seo from "../../components/seo"
 import FeaturedBlog from '../../components/BlogPage/FeaturedBlog'
 import Blogs from '../../components/BlogPage/Blogs'
 
-const BlogPage = () => {
+const BlogPage = (props) => {
 
   const jaPage = false
 
@@ -19,7 +19,7 @@ const BlogPage = () => {
                    'Blog'
   
 	return (
-		<Layout>
+		<Layout {...props} header="transparent">
 			<Seo
         title={seoTitle}
         description={seoDescription}
