@@ -8,9 +8,18 @@ const PrivacyPolicyPageJa = (props) => {
     pageContext: {messages},
   } = props;
 
+  const jaURL = process.env.URL + "/privacy-policy-ja/";
+  const enURL = process.env.URL + "/privacy-policy/"; 
+        
   return (
     <IntlProvider defaultLocale="ja" locale="ja" messages={messages}>
-      <Seo title="プライバシーポリシー" />
+      <Seo
+            title="プライバシーポリシー"
+        >
+            <link rel="alternate" hreflang="ja" href={ jaURL } />
+            <link rel="alternate" hreflang="en" href={ enURL } />
+            <link rel="alternate" hreflang="x-default" href={ enURL } />
+      </Seo>
       <div id="content">
         <div className="section">
           <span>

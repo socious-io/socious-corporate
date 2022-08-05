@@ -8,9 +8,18 @@ const UserAgreementPageJa = (props) => {
     pageContext: {messages},
   } = props;
 
+  const enURL = process.env.URL + "/user-agreement/"; 
+  const jaURL = process.env.URL + "/user-agreement-ja/";
+      
   return (
     <IntlProvider defaultLocale="en" locale="ja" messages={messages}>
-      <Seo title="ソーシャス利用規約" />
+      <Seo
+        title="ソーシャス利用規約"
+      >
+        <link rel="alternate" hreflang="en" href={ enURL } />
+        <link rel="alternate" hreflang="ja" href={ jaURL } />
+        <link rel="alternate" hreflang="x-default" href={ enURL } />
+      </Seo>
       <div id="content">
         <div className="section">
           <span>
