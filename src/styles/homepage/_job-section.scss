@@ -1,20 +1,31 @@
 /* SECTION_JOBS */
 
 .section-jobs {
-  width: 80%;
+  width: 100%;
   margin: 0 auto;
+  padding: 50px 0;
+  background: linear-gradient(1.45deg, #F8F8F8 52.4%, rgba(248, 248, 248, 0) 92.55%);;
 }
 
 .section-jobs__sup-header {
-  color: $primary;
-  font-size: 16px;
+  color: $black;
+  font-size: 36px;
+  text-align: center;
+  font-weight: 600;
 }
 
 .section-jobs__header {
-  font-weight: 800;
+  font-weight: 400;
   margin-top: 20px;
-  margin-bottom: 2rem;
-  font-size: 36px;
+  margin-bottom: 3rem;
+  font-size: 20px;
+  text-align: center;
+  
+}
+
+.section-jobs__list {
+  width: 50%;
+  padding: 10px;
 }
 
 .section-jobs__img-container,
@@ -26,10 +37,10 @@
 }
 
 .section-jobs__block {
-  max-width: 90rem;
-  margin: 48px auto;
+  // max-width: 90rem;
+  // margin: 48px auto;
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   justify-content: space-between;
   align-items: center;
   margin-top: 48px;
@@ -103,34 +114,56 @@
 }
 
 .section-jobs__list-item {
-  margin-top: 79px;
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
+  width:25em;
+  height: 20em;
+  justify-content: center;
+  align-items: center;
+  background: $white;
+  border-radius: 20px;
+  
+}
+
+.section-jobs__list-container{
+  display: flex;
+  flex-direction: column;
+  width:60%;
+  justify-content: center;
+  align-items: center;
+
+
+}
+.section-jobs__list-jobs{
+  display: flex;
+  width: 100%;
+  justify-content: space-around;
+  align-items: center;
+
 }
 
 .section-jobs__list-item-title {
-  font-size: 18px;
+  font-size: 20px;
   font-weight: 600;
-  margin-bottom: 8px;
+  padding: 15px;
 }
 
 .section-jobs__list-item-subtitle {
-  font-size: 16px;
+  font-size: 18px;
   color: rgb(107, 114, 128);
   font-weight: 400;
-  max-width: 45rem;
-  white-space: pre-line;
+  text-align: center;
   line-height: 1.8rem;
 }
 
 .section-jobs__list-icon {
-  background-color: $primary;
-  color: white;
-  border-radius: 5px;
+  background-color: rgb(228,230,237);
+  color: $primary;
+  border-radius: 100px;
   font-size: 24px;
   padding: 10px;
   height: 24px;
-  margin-right: 10px;
+  // margin-right: 10px;
 }
 
 /* END_SECTION_JOBS */
@@ -139,7 +172,19 @@
 
 @media only screen and (max-width: 1230px) {
   .section-jobs__header {
-    max-width: 40rem;
+    max-width: 20rem;
+  }
+
+  .section-jobs__list-jobs{
+    flex-direction: column;
+  
+  }
+  .section-jobs__list-item {
+    margin: 5%;
+    width: 15em;
+  }
+  .section-jobs__list-container{
+    width: 70%;
   }
 }
 
@@ -149,7 +194,7 @@
   }
 
   .section-jobs__list {
-    width: 100%;
+    width: 90%;
   }
 
   .section-jobs__img-entrepreneurs-container {

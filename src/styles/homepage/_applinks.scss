@@ -26,13 +26,24 @@
   margin: 0 auto;
   margin-bottom: 2.5rem;
 }
-
+// hire talents button
 .section-app-links__app-links-button {
   background: none rgb(255, 255, 255);
   border: 1px none $primary;
   text-align: center;
   color: $primary;
-  border-radius: 3px;
+  border-radius: 50px;
+  padding: 10px 30px;
+  margin: 0 1rem;
+  cursor: pointer;
+}
+// green find work button
+.section-app-links__app-links-button-work {
+  background: none rgb(0,186,136);
+  border: 1px none $primary;
+  text-align: center;
+  color: $white;
+  border-radius: 50px;
   padding: 10px 30px;
   margin: 0 1rem;
   cursor: pointer;
@@ -41,7 +52,7 @@
 .section-app-links__app-links-block {
   display: flex;
   flex-direction: row;
-  margin: 0 auto;
+  margin: 5% auto;
   margin-bottom: 50px;
   width: max-content;
 }
@@ -60,8 +71,8 @@
     padding: 0;
   }
 
-  .section-app-links__app-links-button:first-child {
-    margin-bottom: 20px;
+  .section-app-links__app-links-button{
+    margin-top: 20px;
   }
 
   .section-app-links__app-links {

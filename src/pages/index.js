@@ -7,14 +7,16 @@ import Seo from '../components/seo';
 import Intro from '../components/Homepage/Intro/Intro';
 import AppLinks from '../components/Homepage/AppLinks';
 import JobsSection from '../components/Homepage/JobsSection/JobsSection';
+import FeaturesSection from '../components/Homepage/Features/FeaturesSection';
 
 const IndexPage = (props) => {
   return (
-    <Layout {...props} header="">
+    <Layout {...props} header="transparent" >
       <Seo {...props} />
       <Intro {...props} />
-      <AppLinks {...props} />
+      {/* <AppLinks {...props} /> */}
       <JobsSection {...props} />
+      <FeaturesSection {...props}/>
     </Layout>
   );
 };

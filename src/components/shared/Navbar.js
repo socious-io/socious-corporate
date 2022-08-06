@@ -51,9 +51,11 @@ const Navbar = ({header}) => {
       <NavbarMobile
         headerStyle={headerStyle}
         homePage={homePage}
+        organization={""}
         aboutLink={aboutLink}
         careersLink={careersLink}
         newsroomLink={newsroomLink}
+        blog={""}
         altPage={altPage}
       />
     );
@@ -62,9 +64,11 @@ const Navbar = ({header}) => {
       <NavbarLarge
         headerStyle={headerStyle}
         homePage={homePage}
+        organization={""}
         aboutLink={aboutLink}
         careersLink={careersLink}
         newsroomLink={newsroomLink}
+        blog={""}
         altPage={altPage}
       />
     );
