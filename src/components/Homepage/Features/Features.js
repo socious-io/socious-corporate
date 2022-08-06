@@ -1,6 +1,5 @@
 import React from "react";
 
-import Video from "../../../GifVideo"
 import { Player } from 'video-react';
 import 'video-react/dist/video-react.css';
 
