@@ -3,12 +3,38 @@
 /* INTRO_SECTION */
 
 .section-intro {
-  margin: 61px auto;
-  max-width: 90rem;
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap-reverse;
   justify-content: space-around;
+  height: 100vh;
+  background-size: cover;
+  background-position: 50% 50%;
+  width: 100%;
+
+}
+
+.intro-banner__text {
+  height: 100%;
+  width: 60%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+  flex-direction:column;
+  color: #FFF;
+}
+
+.intro-banner__text h1 {
+  font-family: 'Inter', sans-serif;
+  font-weight: 600;
+  font-size: 84px;
+  letter-spacing: 1.5px;
+  text-align: center;
+}
+.intro-banner__text h3 {
+  font-family: 'Inter', sans-serif;
+  font-weight: 300;
+  padding:10px;
+  text-align: center;
+  letter-spacing: 1.5px;
 }
 
 .section-intro__app-image {
@@ -63,7 +89,7 @@
 }
 
 .section-intro__mailchimp--blue {
-  color: $primary;
+  color: $white;
 }
 
 .section-intro__mailchimp__form-container {
@@ -100,6 +126,11 @@
     margin: 0 auto;
     text-align: center;
   }
+
+.intro-banner__text h1 {
+  font-size: 44px;
+
+}
 
   .section-intro__app-image {
     margin: 0 auto;

@@ -1,0 +1,130 @@
+.section-features {
+  width: 100%;
+  margin: 0 auto;
+  justify-content: center;
+  align-items: center;
+  padding-top: 100px;
+  margin-bottom: 20%;
+}
+
+.section-features__list-item{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  // width: 50%;
+
+}
+.section-features__list-video{
+  width: 25em;
+  height: 30em;
+  margin: 0 5%;
+  justify-content: center;
+  padding-top: 50px;
+  background: $extra-light-grey;
+  border-radius: 20px;
+}
+
+.section-features__list-content{
+  display: flex;
+  justify-content: flex-start;
+  align-items:flex-start;
+  flex-direction: column;
+  width: 20em;
+  padding: 20px;
+}
+.section-features__list-slide{
+  color: $primary;
+  text-align: left;
+}
+.section-features__list-item-title{
+  font-weight: 600;
+  font-size: 30px;
+  padding: 10px 0;
+  letter-spacing: 0.5px;
+  line-height: 1.8rem;
+
+}
+.section-features__list-item-subtitle{
+  font-size: 18px;
+  color: $black;
+  padding: 10px 0;
+  line-height: 1.8rem;
+}
+.section-features__list-item-link a{
+  text-decoration: none;
+  color: $green;
+  font-size: 20px;
+}
+
+//call to action section
+.job-action{
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+  padding: 50px;
+  background: $primary-dark;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+  border-radius: 20px;
+}
+.job-action__header{
+  color: $white;
+  font-weight: 600;
+  text-align: center;
+}
+
+.job-action__get{
+  background: $green;
+  color: $white;
+  border-radius: 50px;
+  border: none;
+  padding: 10px 30px;
+  text-align: center;
+  margin: 0 auto;
+  cursor: pointer;
+}
+.job-action__subtitle{
+  color: $white;
+  text-align: center;
+  font-weight: lighter;
+  width: 25em;
+  padding: 5px;
+  line-height: 1.8rem;
+}
+
+.job-action__link{
+  text-decoration: none;
+  color: $white;
+  font-size: 20px;
+  font-weight: 600;
+
+}
+
+// Media-queries for smaller screens
+
+@media only screen and (max-width: 1230px) {
+  .section-features__list-item{
+    flex-direction: column;
+  }
+  .section-features__list-video{
+    width: 15em;
+    height: 20em;
+  }
+  .section-features__list-item-title{
+    font-size: 20px;
+  
+  }
+  .section-features__list-item-subtitle{
+    font-size: 16px;
+  }
+  .section-features__list-item-link a{
+    font-size: 19px;
+  }
+  .section-features__list-content{
+    width: 15em;
+  }
+
+
+}

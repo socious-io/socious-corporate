@@ -1,29 +1,27 @@
 import React from "react"
-
-import WhatshotIcon from '@mui/icons-material/Whatshot';
-import DeveloperModeIcon from '@mui/icons-material/DeveloperMode';
-import FilterTiltShiftIcon from '@mui/icons-material/FilterTiltShift';
+import PublicOutlinedIcon from '@mui/icons-material/PublicOutlined';
+import FavoriteBorderOutlinedIcon from '@mui/icons-material/FavoriteBorderOutlined';
+import PaidOutlinedIcon from '@mui/icons-material/PaidOutlined';
 
 const jobItem = [
   {
     id: 1,
-    icon: <WhatshotIcon />,
-    title: "Discover impact projects that help you grow",
-    subtitle: `Find opportunities at impact organizations where you can learn new skills.
-    `
+    icon: <PublicOutlinedIcon />,
+    title: "Impactful",
+    subtitle: `Contribute to solving a social or environmental issue.`
   },
   {
     id: 2,
-    icon: <DeveloperModeIcon />,
-    title: "Get rewarded for your impact",
-    subtitle: `Contribute and receive THANK tokens as rewards based on your Impact Score.
+    icon: <FavoriteBorderOutlinedIcon />,
+    title: "Fulfilling",
+    subtitle: `Help you achieve your career goals.
     `
   },
   {
     id: 3,
-    icon: <FilterTiltShiftIcon />,
-    title: "Be part of the growing community",
-    subtitle: `Meet like-minded people and be part of the impact community.
+    icon: <PaidOutlinedIcon />,
+    title: "Rewarding",
+    subtitle: `Get compensated fairly and earn crypto tokens.
     `
   }
 ]
