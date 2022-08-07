@@ -18,7 +18,7 @@ const IndexPage = (props) => {
       {/* <AppLinks {...props} /> */}
       <JobsSection {...props} />
       <FeaturesSection {...props}/>
-      {/* <SkillSection {...props}/> */}
+      <SkillSection {...props}/>
     </Layout>
   );
 };

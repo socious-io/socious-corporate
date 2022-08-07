@@ -4,7 +4,7 @@ import React from "react"
 const features = [
   {
     id: 1,
-    gifUrl:"/images/gif/projects.mp4",
+    gifUrl:"/images/gif/projects.png",
     gifAlt:"Find social impact jobs",
     slide: "1/4",
     title: "自分にとって有意義なSDGジョブに出会う",
@@ -16,7 +16,7 @@ const features = [
   },
   {
     id: 2,
-    gifUrl:"/images/gif/hired.mp4",
+    gifUrl:"/images/gif/hired.png",
     gifAlt:"Safely get hired and paid",
     slide: "2/4",
     title: "安全に仕事と報酬を得る",
@@ -26,7 +26,7 @@ const features = [
   },
   {
     id: 3,
-    gifUrl:"/images/gif/impact.mp4",
+    gifUrl:"/images/gif/impact.png",
     gifAlt:"See your impact grow",
     slide: "3/4",
     title: "あなたのインパクトの成長を見る",
@@ -37,7 +37,7 @@ const features = [
   },
   {
     id: 4,
-    gifUrl:"/images/gif/payment.mp4",
+    gifUrl:"/images/gif/payment.png",
     gifAlt:"Earn tokens",
     slide: "4/4",
     title: "トークンを獲得する",

@@ -8,41 +8,42 @@ import Slider from "react-slick";
 import "slick-carousel/slick/slick.css"; 
 import "slick-carousel/slick/slick-theme.css";
 import skillsItems from "../../../../data/Homepage/skills";
+import { FormattedMessage } from "react-intl";
 
 const SkillSection = (props) => {
   const data = useStaticQuery(graphql`
     query SkillSection {
-      climate: file(relativePath: {eq: "climate.png"}) {
+      climate: file(relativePath: {eq: "skills/climate.png"}) {
         childImageSharp {
           gatsbyImageData(placeholder: BLURRED, blurredOptions: {width: 100})
         }
       }
-      sustainability: file(relativePath: {eq: "sustainability.png"}) {
+      sustainability: file(relativePath: {eq: "skills/sustainability.png"}) {
         childImageSharp {
           gatsbyImageData(placeholder: BLURRED, blurredOptions: {width: 100})
         }
       }
-      gender: file(relativePath: {eq: "gender-equality.png"}) {
+      gender: file(relativePath: {eq: "skills/gender-equality.png"}) {
         childImageSharp {
           gatsbyImageData(placeholder: BLURRED, blurredOptions: {width: 100})
         }
       }
-      refugees: file(relativePath: {eq: "refugees.png"}) {
+      refugees: file(relativePath: {eq: "skills/refugees.png"}) {
         childImageSharp {
           gatsbyImageData(placeholder: BLURRED, blurredOptions: {width: 100})
         }
       }
-      waste: file(relativePath: {eq: "zero-waste.png"}) {
+      waste: file(relativePath: {eq: "skills/zero-waste.png"}) {
         childImageSharp {
           gatsbyImageData(placeholder: BLURRED, blurredOptions: {width: 100})
         }
       }
-      blackLives: file(relativePath: {eq: "black-lives.png"}) {
+      blackLives: file(relativePath: {eq: "skills/black-lives.png"}) {
         childImageSharp {
           gatsbyImageData(placeholder: BLURRED, blurredOptions: {width: 100})
         }
       }
-      childProtection: file(relativePath: {eq: "child-protection.png"}) {
+      childProtection: file(relativePath: {eq: "skills/child-protection.png"}) {
         childImageSharp {
           gatsbyImageData(placeholder: BLURRED, blurredOptions: {width: 100})
         }
@@ -91,15 +92,19 @@ community
     const settings={
       dots: false,
       infinite: true,
-      slidesToShow: 3,
-      slidesToScroll: 1,
+      slidesToShow: 6,
+      slidesToScroll: 3,
       autoplay: true,
       speed: 5000,
-      autoplaySpeed: 3000,
+      autoplaySpeed: 5000,
+      variableWidth: false,
       cssEase: "linear"
     }
 
-  const skillsComponents = skillsItems.map(item => 
+    const { language } = props.pageContext
+    const skillComponentLanguageSelector = language === 'ja' ? skillsItems : skillsItems
+
+  const skillsComponents = skillComponentLanguageSelector.map(item => 
     <SkillItem
       key={item.id}
       imageOpt={skillImages[item.id - 1]}
@@ -114,9 +119,18 @@ community
           Use your skills for
         </div>
         <div className="skills-section-slider">
-        {/* <Slider {...settings} className="skills-slider"> */}
+        <Slider {...settings} className="skills-slider">
           {skillsComponents}
-          {/* </Slider> */}
+          </Slider>
+        </div>
+        <div className="skills-section-career">
+          <FormattedMessage
+          id="careers-header-black-one"/>
+
+          <br/><br/>
+          <button><FormattedMessage
+          id="get-socious"
+          /></button>
         </div>
       </section>
     </SimpleLocalize>

@@ -1,8 +1,53 @@
-.skills-section{
-  width: 100%;
-}
-.skills-item{
-  width: 20em;
-  height: 20em;
 
+.skills-item{
+  width: 100%;
+  height: 20em;
+  margin: 0 5%;
+
+}
+.skill-section{
+  padding: 20px;
+}
+// .skills-image{
+//   width:50%
+// }
+
+.skills-slider{
+  width: 100%;
+  flex-wrap: wrap;
+  
+}
+.skills-header{
+  text-align: center;
+  margin: 5% auto;
+  font-size: 36px;
+  font-weight: 500;
+}
+
+.skills-section-career{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 5% auto;
+  color: $black;
+  font-size: 30px;
+  font-weight: 200;
+
+}
+// .skills-section-career h3{
+//   color: $black;
+//   font-size: 30px;
+//   font-weight: 200;
+
+// }
+.skills-section-career button{
+  background: none rgb(0,186,136);
+  border: 1px none $primary;
+  text-align: center;
+  color: $white;
+  border-radius: 50px;
+  padding: 10px 30px;
+  cursor: pointer;
+  font-size: 18px;
 }
