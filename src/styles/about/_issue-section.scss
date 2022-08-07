@@ -3,12 +3,16 @@
 .issue-section {
   height: max-content;
   width: 100%;
+  margin: 0 auto;
+  background: linear-gradient(180deg, #F8F8F8 4.35%, rgba(248, 248, 248, 0) 96.76%);
+  padding: 20px 0;
 }
 
 .issue-banner {
   height: 100%;
-  width: 100%;
+  width: 50%;
   display: flex;
+  margin: 5% auto;
 }
 
 .issue-banner__image {
@@ -20,12 +24,10 @@
 }
 
 .issue-banner__content {
-  width: 50%;
   display: flex;
-  flex-direction: column;
-  justify-content: center;
+  flex-direction: row;
+  justify-content: space-between;
   align-items: flex-start;
-  margin-left: 15rem;
 }
 
 .issue-banner__content h2 {
@@ -34,14 +36,19 @@
   font-size: 3rem;
 }
 
-.issue-banner__content p {
-  width: 80%;
-  font-size: 1.4rem;
-
+.issue-banner__content-one{
+  font-size: 18px;
   font-weight: 400;
-  line-height: 3rem;
+  line-height: 1.8rem;
+  margin: 0 2%;
 
-  padding-bottom: 1rem;
+}
+.issue-banner__content-two{
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 1.8rem;
+  margin: 0 2%;
+
 }
 
 .issue-item {
@@ -94,6 +101,10 @@
     flex-direction: column;
     margin-top: 0;
   }
+
+.issue-banner__content {
+  flex-direction: column;
+}
 
   .issue-banner__image {
     width: 100%;

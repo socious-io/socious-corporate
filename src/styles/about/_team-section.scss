@@ -1,18 +1,21 @@
 /* SECTION_TEAM */
 .team-section {
-  background-color: $primary;
+  background-color: $extra-light-grey;
   padding: 2rem;
 }
 
 .team-title {
   text-align: center;
-  color: #FFF;
+  color: $black;
   font-size: 2rem;
   margin-top: 0;
 }
 
 .team-title h2 {
   margin-top: 0;
+}
+.team-title p{
+  font-size: 18px;
 }
 
 .team-container {
@@ -22,24 +25,24 @@
 }
 
 .team-member {
-  width: 12rem;
+  width: 20rem;
   height: 95%;
   background-color: #FFF;
   border-radius: 0.5rem;
   margin: 1rem;
   position: relative;
   transition: 200ms ease-in-out;
-  box-shadow: 4px 4px 8px #133C5E;
 }
 
 .team-member:hover {
   transform: scale(1.05);
 }
+// }
+.team-member-image{
+  border-radius: 100px;
+  // padding: 0 20px;
+  margin: 5% 20%;
 
-.team-member img {
-  border-radius: 8px 8px 0 0;
-  object-fit: cover;
-  object-position: 50% 50%;
 }
 
 .member-content {
