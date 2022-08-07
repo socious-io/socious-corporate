@@ -1,21 +1,40 @@
 import React from "react";
 
-import { Player } from 'video-react';
 import 'video-react/dist/video-react.css';
+import { GatsbyImage, getImage } from "gatsby-plugin-image";
+import { graphql, useStaticQuery } from 'gatsby';
+import { BgImage } from 'gbimage-bridge';
 
 const Feature = (props) => {
+  const image = getImage(props.gifOpt)
+  const { gifBackgroundImage } = useStaticQuery(
+    graphql`
+      query {
+        gifBackgroundImage: file(relativePath: {eq: "gif/Rectangle.png"}) {
+          childImageSharp {
+            gatsbyImageData(
+              width: 2000,
+              quality: 100,
+              webpOptions: {quality: 100}
+              placeholder: BLURRED
+            )
+          }
+        }
+      }
+    `
+  )
 
- 
+ const background = getImage(gifBackgroundImage)
   return (
    
     <div className="section-features__list-item">
       
+     <div className="section-features__list-image-container">
+     <GatsbyImage image={image} alt={props.gifAlt} className="section-features__list-image"/>
+      {/* <BgImage image={background}className="section-features__list-image-container-two" >
      
-      <div className="section-features__list-video">
-      <Player>
-      <source src={props.gifUrl}/>
-    </Player>  
 
+      </BgImage> */}
       </div>
 
       <div className="section-features__list-content">

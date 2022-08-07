@@ -24,8 +24,11 @@
 }
 
 .section-jobs__list {
-  width: 50%;
-  padding: 10px;
+ display: flex;
+ flex-direction: column;
+ justify-content: center;
+ align-items: center;
+ margin: 0 auto;
 }
 
 .section-jobs__img-container,
@@ -144,7 +147,7 @@
 
 .section-jobs__list-item-title {
   font-size: 20px;
-  font-weight: 600;
+  font-weight: 500;
   padding: 15px;
 }
 
@@ -171,9 +174,9 @@
 /* MOBILE JOBS SECTION */
 
 @media only screen and (max-width: 1230px) {
-  .section-jobs__header {
-    max-width: 20rem;
-  }
+  // .section-jobs__header {
+  //   max-width: 20rem;
+  // }
 
   .section-jobs__list-jobs{
     flex-direction: column;

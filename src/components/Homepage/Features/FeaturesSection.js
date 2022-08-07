@@ -1,5 +1,6 @@
 import React from "react";
 import { StaticImage } from "gatsby-plugin-image";
+import { graphql, useStaticQuery } from "gatsby";
 
 import SimpleLocalize from "../../shared/SimpleLocalize";
 
@@ -14,7 +15,37 @@ import Cta from "../CTA";
 
 
 
+
 const FeaturesSection = (props) => {
+  const data = useStaticQuery(graphql`
+    query FeatureSection {
+      projects: file(relativePath: {eq: "gif/projects.png"}) {
+        childImageSharp {
+          gatsbyImageData(placeholder: BLURRED, blurredOptions: {width: 100})
+        }
+      }
+      hired: file(relativePath: {eq: "gif/hired.png"}) {
+        childImageSharp {
+          gatsbyImageData(placeholder: BLURRED, blurredOptions: {width: 100})
+        }
+      }
+      impact: file(relativePath: {eq: "gif/impact.png"}) {
+        childImageSharp {
+          gatsbyImageData(placeholder: BLURRED, blurredOptions: {width: 100})
+        }
+      }
+      payment: file(relativePath: {eq: "gif/payment.png"}) {
+        childImageSharp {
+          gatsbyImageData(placeholder: BLURRED, blurredOptions: {width: 100})
+        }
+      }
+    }
+  `)
+
+  const {project, hired, impact, payment} = data
+  const featureImages = [project, hired, impact, payment]
+
+  console.log(data);
   const settings={
     dots: false,
     infinite: true,
@@ -32,8 +63,7 @@ const FeaturesSection = (props) => {
   const featureItems = languageSelector.map(feature => 
    
       <Feature
-        gifUrl={feature.gifUrl}
-        gitAlt={feature.gifAlt}
+        gifOpt={featureImages[feature.id-1]}
         slide={feature.slide}
         key={feature.id}
         title={feature.title}
