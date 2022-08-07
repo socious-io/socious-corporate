@@ -41,7 +41,7 @@ const TeamMember = (props) => {
   return (
     <div>
       <div className="team-member">
-        <GatsbyImage image={image} alt={props.imageAlt} />
+        <GatsbyImage image={image} alt={props.imageAlt} className="team-member-image" />
         <div className="member-content">
           <div className="member-title">
             <p>{props.title}</p>

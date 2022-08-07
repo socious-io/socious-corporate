@@ -3,29 +3,22 @@
 .about-section {
   min-height: 50vh;
   padding: 3rem 0;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  max-width: 70%;
   margin: 0 auto;
 }
 
-.about-title {
-  color: #FFF;
-  text-align: center;
-  text-shadow: 0 0.2rem 0.5rem $light-grey;
 
-  background-color: $primary;
+.about-title {
+  color: $black;
+  text-align: center;
   padding: 2rem;
 }
 
 .about-title h2 {
-  font-size: 3rem;
+  font-size: 24px;
 }
 
 .about-title p {
-  font-size: 1.25rem;
+  font-size: 18px;
   font-weight: 400;
   line-height: 3rem;
   margin: 0 auto;
@@ -35,16 +28,18 @@
 
 .about-item {
   display: flex;
-  margin-top: 2rem;
-  padding-top: 2rem;
-
+  justify-content: center;
+  margin: 0 auto;
+  padding: 5rem 0;
+  background: $extra-light-grey;
+  border-radius: 20px;
+  width: 50%;
   border-top: $dark-grey;
 }
 
 .about-image {
-  width: 30rem;
+  width: 10rem;
   height: 50%;
-
   display: flex;
   justify-content: flex-end;
 }
@@ -62,8 +57,8 @@
 }
 
 .about-header {
-  width: 100%;
-  color: $primary;
+  color: $black;
+  font-weight: 600;
 }
 
 .about-content {

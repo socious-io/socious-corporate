@@ -1,19 +1,26 @@
-import React from 'react'
+import React, {useState} from 'react'
 
 import SimpleLocalize from "../shared/SimpleLocalize";
 import { FormattedMessage } from "react-intl";
+import BasicModal from '../shared/QR-Modal';
 
 const Cta = (props) => {
+  const [open, setOpen] = useState(false);
+  const handleOpen = () => setOpen(true);
+  const handleClose = () => setOpen(false);
 
   return (
     <SimpleLocalize {...props}>
         <div className="job-action">
+          <div className="job-action__container">        
           <h2 className='job-action__header'>
             <FormattedMessage
               id="call-to-action-job-header"
             />
           </h2>
-          <button className='job-action__get'>
+          <button 
+          onClick={handleOpen}
+          className='job-action__get'>
           <FormattedMessage
               id="get-socious"
             />
@@ -30,7 +37,9 @@ const Cta = (props) => {
               id="learn-more"
             />
           </a>
+          </div>
         </div>
+        <BasicModal open={open} handleClose={handleClose}/>
     </SimpleLocalize>
   )
 }

@@ -1,25 +1,41 @@
 const aboutItemsJa = [
   {
     id: 1,
-    imageUrl: '/images/collaborate.png',
-    imageAlt: 'illustration of people working together',
-    header: 'インパクトセクターのSNSアプリ',
-    content: 'ソーシャスは同じ志を持つ人々を結びつけ、一緒に社会課題解決を目指します。社会課題に関する共通の関心による繋がりやAI推薦に基づくSNSアプリが出会うべき人との出会いを可能にします。'
+    imageUrl: '/images/Illustration_Diversity_Inclusion_Belonging.png',
+    imageAlt: 'illustration of Diversity, Inclusion and Belonging',
+    header: 'ダイバーシティ、インクルージョン、ビロンギング',
+    content: 'ダイバーシティ（多様性）、インクルージョン（包摂性）、ビロンギング（帰属意識）はソーシャスのDNAの一部です。業界のベストプラクティスに従うとともに、どうすればより多様性を尊重する会社を築けるかについてメンバーからのフィードバックを受けるよう努めています。'
   },
   {
     id: 2,
-    imageUrl: '/images/environment.png',
-    imageAlt: 'illustration of environmental considerations',
-    header: '分散型SDGsジョブマーケットプレイス',
-    content: 'SDGs達成に興味ある人材に、自分にぴったりのSDGsプロジェクトとの出会いを提供し、インパクト団体の人材採用の課題を解決します。ブロックチェーン技術を利用することにより、透明性、分散型意思決定、廉価な手数料を確保します。'
+    imageUrl: '/images/Illustration_Life-First.png',
+    imageAlt: 'illustration of Life First, Work Second',
+    header: '人生あっての仕事',
+    content: '家族、友人、健康よりも大事な仕事はありません。この精神に基づき、ソーシャスでは無制限の休暇制度を設け、従業員が必要に応じて休暇を取ることができるようにしています。'
   },
   {
     id: 3,
-    imageUrl: '/images/development.png',
-    imageAlt: 'illustration of teamwork and development',
-    header: 'インパクトスコアとソーシャスコイン *開発中',
-    content: 'ユーザーは、マッチングしたSDGsプロジェクトに時間やお金を貢献することができます。ソーシャスのAIはユーザーの善行を追跡し、「インパクトスコア」を算出します。スコアが高い人ほど多くのソーシャスコイン（ブロックチェーン上の暗号通貨）を受け取ることができます。'
+    imageUrl: '/images/Illustration_high_performance.png',
+    imageAlt: 'illustration of High Performance for High Impact',
+    header: '社会的インパクトのためのハイパフォーマンス',
+    content: 'ソーシャスの目標は、株主価値や利益ではなく、社会・環境インパクトを最大化することです。社会的インパクトと利益は概ね一致していますが、相反する場合は、社会的インパクトを優先します。'
   },
+  {
+    id: 4,
+    imageUrl: '/images/Illustration_autonomy.png',
+    imageAlt: 'illustration of Autonomy and Accountability',
+    header: '自由と責任',
+    content: '大いなる力は大いなる責任が伴う。それはソーシャスのメンバーにとっても同じです。ソーシャスでは、社員一人ひとりが何をするのか、どの程度のリソースを割くのかに対する広範な決定権限があります。メンバーが自己決断できる予算に制限はありませんが、全てのメンバーが自分の決断・ハイパフォーマンスに責任を持つことで、社会的インパクトを最大化できます。'
+  },
+
+{
+  id: 5,
+  imageUrl: '/images/illustration_candor.png',
+  imageAlt: 'illustration of Candor and Collaboration',
+  header: '率直なコミュニケーションと協働',
+  content: 'ソーシャスは、社員が互いに敬意を持って率直に話し合える環境を醸成することに努めています。互いに率直なフィードバックを受け容れる環境が成長と協働に繋がると信じています。'
+},
+
 ]
 
 export default aboutItemsJa

@@ -1,24 +1,41 @@
 const aboutItems = [
   {
     id: 1,
-    imageUrl: '/images/collaborate.png',
-    imageAlt: 'illustration of people working together',
-    header: 'Social Media for Social Change',
-    content: 'We connect like-minded people and organizations who are passionate about the same social causes through our social networking app based on mutual interests in social causes and AI-based recommendations.'
+    imageUrl: '/images/Illustration_Diversity_Inclusion_Belonging.png',
+    imageAlt: 'illustration of Diversity, Inclusion and Belonging',
+    header: 'Diversity, Inclusion and Belonging',
+    content: 'Inclusion is part of our DNA. We are fully committed to Diversity, Inclusion, and Belonging, and we strive to follow industry best practices.'
   },
   {
     id: 2,
-    imageUrl: '/images/environment.png',
-    imageAlt: 'illustration of environmental considerations',
-    header: 'Impact Gig Marketplace',
-    content: 'We connect impact talents with impact projects that help them grow, visualize their social/environmental impact, and get rewarded for their contributions.'
+    imageUrl: '/images/Illustration_Life-First.png',
+    imageAlt: 'illustration of Life First, Work Second',
+    header: 'Life First, Work Second',
+    content: 'No job is more important than family, friends, and health. In this spirit, we offer an unlimited vacation policy and the autonomy for employees to take leave whenever necessary.'
   },
   {
     id: 3,
-    imageUrl: '/images/development.png',
-    imageAlt: 'illustration of teamwork and development',
-    header: 'Marketplace for socially conscious products *to be developed',
-    content: `In the future, users will also be able to improve their impact scores and earn rewards by buying and selling ethical products/carbon credits, creating and consuming content for social impact, and many more.`
+    imageUrl: '/images/Illustration_high_performance.png',
+    imageAlt: 'illustration of High Performance for High Impact',
+    header: 'High Performance for High Impact',
+    content: `Our goal is to maximize social and environmental impact, not shareholder value or profit. Our social/environmental and financial returns are generally aligned, but if there is a conflict, we prioritize social/environmental returns.
+    `
+  },
+  {
+    id: 4,
+    imageUrl: '/images/Illustration_autonomy.png',
+    imageAlt: 'illustration of Autonomy and Accountability',
+    header: 'Autonomy and Accountability',
+    content: `With great power comes great responsibility, and so it is for employees at Socious. We want employees to decide what they will take on and the level of resources they need. There are no budget or scope limits, but all employees are accountable for a great performance that maximizes impact returns..
+    `
+  },
+  {
+    id: 5,
+    imageUrl: '/images/illustration_candor.png',
+    imageAlt: 'illustration of Candor and Collaboration',
+    header: 'Candor and Collaboration',
+    content: `We want to foster an environment where employees can speak to one another honestly and with respect. We believe that being honest is better than being nice..
+    `
   },
 ]
 

@@ -15,9 +15,9 @@ const TeamSection = (props) => {
                 imageFile {
                   childImageSharp {
                     gatsbyImageData(
-                      width: 197
-                      height: 224
-                      quality: 70
+                      width: 200
+                      height: 200
+                      quality: 100
                       placeholder: BLURRED
                       blurredOptions: {width: 100}
                     )
@@ -73,6 +73,7 @@ const TeamSection = (props) => {
     <div className="team-section" id="our-team">
       <div className="team-title">
         <h2>{meetTheTeamLanguage}</h2>
+        <p>Socious is powered by a network of changemakers, passionate about contributing to social and environmental impact.</p>
       </div>
       <div className="team-container">
         {team}

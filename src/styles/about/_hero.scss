@@ -1,9 +1,8 @@
 /* SECTION_HERO */
 
 .hero-section {
-  height: 100vh;
-  background-size: cover;
-  background-position: 50% 50%;
+  height: 50vh;
+
 }
 
 .hero-text {
@@ -16,18 +15,20 @@
   flex-direction: column;
   justify-content: center;
 
-  color: #FFF;
+
 }
 
 .hero-text h5 {
   font-size: 2rem;
   margin: 0;
+  color: $primary;
+  text-transform: uppercase;
 }
 
 .hero-text h1 {
   font-family: 'Inter', sans-serif;
-  font-weight: 800;
-  font-size: 4rem;
+  font-weight: 600;
+  font-size: 44px;
   letter-spacing: 1.5px;
 }
 

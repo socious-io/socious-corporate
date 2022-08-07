@@ -15,17 +15,17 @@ import ContactSection from '../components/AboutPage/ContactSection';
 
 const AboutPage = (props) => {
   return (
-    <Layout {...props} header="transparent" pageTitle="About">
+    <Layout {...props} header="" pageTitle="About">
       <Seo key="about" />
       <HeroSection {...props} />
       <ScrollArrow {...props} />
       <IssueSection {...props} />
       <AboutSection {...props} />
-      <VisionSection {...props} />
-      <ValuesSection {...props} />
+      {/* <VisionSection {...props} /> */}
+      {/* <ValuesSection {...props} /> */}
       <TeamSection {...props} />
       <CompanySection {...props} />
-      <ContactSection {...props} />
+      {/* <ContactSection {...props} /> */}
     </Layout>
   );
 };

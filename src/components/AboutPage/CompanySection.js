@@ -1,38 +1,34 @@
-import React from "react";
+import React, {useState} from 'react'
 
 import SimpleLocalize from "../shared/SimpleLocalize";
 import { FormattedMessage } from "react-intl";
-
-import CompanyItem from "./components/CompanyItem";
-import companyInfo from "../../../data/AboutPage/companySectionData";
-import companyInfoJa from "../../../data/AboutPage/companySectionDataJa";
+import BasicModal from '../shared/QR-Modal';
 
 const CompanySection = (props) => {
-  const { language } = props.pageContext
-  const companyComponentLanguageSelector = language === 'ja' ? companyInfoJa : companyInfo
-
-  const companyRow = companyComponentLanguageSelector.map(data => 
-      <CompanyItem 
-        key={data.id}
-        title={data.title}
-        info={data.info}
-      />
-    )
+  const [open, setOpen] = useState(false);
+  const handleOpen = () => setOpen(true);
+  const handleClose = () => setOpen(false);
 
   return (
     <SimpleLocalize {...props}>
-      <div className="company-section" id="company-profile">
-        <div className="company-title">
-          <h2>
-            <FormattedMessage
-              id="company-profile-header"
-            />
+      
+        <div className="job-action">
+          <div className="job-action__container">        
+          <h2 className='job-action__header'>
+           Join us!
           </h2>
+          <p className='job-action__subtitle'>
+          We are always on the look out for passionate and talented people
+          </p>
+          <button 
+          // onClick={handleOpen}
+          className='job-action__get'>
+         View Openings
+          </button>
+
+          </div>
         </div>
-        <div className="company-content">
-          {companyRow}
-        </div>
-      </div>
+        <BasicModal open={open} handleClose={handleClose}/>
     </SimpleLocalize>
   )
 }
