@@ -56,7 +56,7 @@ const Blogs = () => {
 
   return (
     <div className="main blogs-list">
-      <div className="container__articles">
+      <div className="container__blog__temp">
         {/* check for length */}
         { edges.length > 0 && 
           <>

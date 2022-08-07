@@ -19,7 +19,7 @@ const BlogPage = (props) => {
                    'Blog'
   
 	return (
-		<Layout {...props} header="transparent">
+		<Layout {...props} header="">
 			<Seo
         title={seoTitle}
         description={seoDescription}
