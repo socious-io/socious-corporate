@@ -14,17 +14,17 @@ const NewsroomPage = (props) => {
   const {pageContext} = props;
 
   return (
-    <Layout {...props} header="transparent">
+    <Layout {...props} header="">
       <Seo key="news" />
       <Banner />
       <div className="main">
         <div className="container__articles">
-          <h2>Latest News</h2>
-          {pageContext.language === 'ja' ? (
+          {/* <h2>Latest News</h2> */}
+          {/* {pageContext.language === 'ja' ? (
             <JapaneseNewsHeadline />
           ) : (
             <EnglishNewsHeadline />
-          )}
+          )} */}
           {pageContext.language === 'ja' ? <JapaneseNews /> : <EnglishNews />}
         </div>
       </div>

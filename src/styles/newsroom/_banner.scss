@@ -1,25 +1,42 @@
 .newsroom-banner {
-  height: 50vh;
+  // height: 50vh;
   background-size: cover;
   background-position: 50% 50%;
   width: 100%;
 }
 
 .newsroom-banner__text {
-  height: 100%;
-  width: 100%;
-
+  margin: 0 auto;
+  margin-top: 5%;
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
 
-  color: #FFF;
 }
 
 .newsroom-banner__text h1 {
   font-family: 'Inter', sans-serif;
-  font-weight: 800;
-  font-size: clamp(2rem, 8vw, 6rem);
+  font-size:24px;
   letter-spacing: 1.5px;
   text-align: center;
+  color: $secondary;
+  text-transform: uppercase;
+}
+
+.newsroom-banner__text h3 {
+  font-family: 'Inter', sans-serif;
+  font-size:44px;
+  letter-spacing: 1.5px;
+  text-align: center;
+}
+
+@media only screen and (max-width: 1230px) {
+  .newsroom-banner__text h3 {
+    font-size:24px;
+  }
+  .newsroom-banner__text h1 {
+    font-size:14px;
+  }
+
 }

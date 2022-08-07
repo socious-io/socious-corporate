@@ -8,7 +8,7 @@ import SimpleLocalize from "../shared/SimpleLocalize";
 import { FormattedMessage } from "react-intl";
 
 const Hero = (props) => {
-  const { images } = useStaticQuery(
+  const  images  = useStaticQuery(
     graphql`
       query {
         imageOne: file(relativePath: {eq: "about-banner-1.png"}) {
@@ -43,9 +43,11 @@ const Hero = (props) => {
   );
 
 
-
+const {imageOne, imageTwo, imageThree} = images
+const homeImage = [imageOne, imageTwo, imageThree]
  
   const pluginImage = getImage(images)
+  console.log(homeImage);
   const backgroundFluidImageStack = [
     pluginImage,
     `linear-gradient(rgba(10, 10, 10, 0.8), rgba(10, 10, 10, 0.2))`,
@@ -54,6 +56,7 @@ const Hero = (props) => {
   return (
     <SimpleLocalize {...props}>
       <div className='hero-section'>
+        
       <GatsbyImage image={pluginImage} />
       {/* <GatsbyImage image={pluginImage} /> */}
         <div className="hero-text">
