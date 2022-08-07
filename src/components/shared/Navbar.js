@@ -43,6 +43,7 @@ const Navbar = ({header}) => {
   const aboutLink = jaPage ? '/ja/about' : '/about';
   const careersLink = jaPage ? '/ja/careers' : '/careers';
   const newsroomLink = jaPage ? '/ja/newsroom' : '/newsroom';
+  const blogLink = jaPage ? '/ja/blog' : '/blog';
 
   let navSelector = '';
 
@@ -55,7 +56,7 @@ const Navbar = ({header}) => {
         aboutLink={aboutLink}
         careersLink={careersLink}
         newsroomLink={newsroomLink}
-        blog={""}
+        blogLink={blogLink}
         altPage={altPage}
       />
     );
@@ -68,7 +69,7 @@ const Navbar = ({header}) => {
         aboutLink={aboutLink}
         careersLink={careersLink}
         newsroomLink={newsroomLink}
-        blog={""}
+        blogLink={blogLink}
         altPage={altPage}
       />
     );

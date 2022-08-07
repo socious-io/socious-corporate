@@ -6,7 +6,7 @@ import {StaticImage} from 'gatsby-plugin-image';
 import IconWeb from '../../images/icons/line/web.svg';
 
 const NavbarLarge = (props) => {
-  const {headerStyle, homePage, aboutLink, careersLink, newsroomLink, altPage} =
+  const {headerStyle, homePage, aboutLink, careersLink, newsroomLink, altPage, blogLink} =
     props;
 
     // let headerStyle;
@@ -50,6 +50,11 @@ const NavbarLarge = (props) => {
           <div className="nav-item">
             <Link to={newsroomLink}>
               <FormattedMessage id="news-title" />
+            </Link>
+          </div>
+          <div className="nav-item">
+            <Link to={blogLink}>
+              Blog
             </Link>
           </div>
           <a className="header__language-switcher" href={altPage}>

@@ -34,7 +34,7 @@ const BlogCard = ({ edge, alternate }) => {
           <div className="blog-para" dangerouslySetInnerHTML={{ __html: excerpt }}/>
         }
         <Link to={`/blog/${slug}`}>
-          Read more
+          Read more &rarr;
         </Link>
       </div>            
     </div>
