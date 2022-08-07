@@ -58,6 +58,7 @@ const JapaneseNews = () => {
   return (
     <div className="news-container">
       {posts}
+      <button className='news-container__more'>Load more news</button>
     </div>
   )
 }
