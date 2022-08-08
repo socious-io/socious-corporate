@@ -1,10 +1,10 @@
 /* SECTION_JOBS */
 
-.section-jobs {
+.section-reason {
   width: 100%;
   margin: 0 auto;
-  padding: 50px 0;
-  background: linear-gradient(1.45deg, #F8F8F8 52.4%, rgba(248, 248, 248, 0) 92.55%);;
+  // padding: 50px 0;
+  background:$white;
 }
 
 .section-jobs__sup-header {
@@ -116,19 +116,20 @@
   display: none;
 }
 
-.section-jobs__list-item {
+.section-reason__list-item {
   display: flex;
   flex-direction: column;
-  width:25em;
+  width:20em;
   height: 20em;
   justify-content: center;
   align-items: center;
-  background: $white;
+  background: $extra-light-grey;
   border-radius: 20px;
+
   
 }
 
-.section-jobs__list-container{
+.section-reason__list-container{
   display: flex;
   flex-direction: column;
   width:60%;
@@ -137,36 +138,44 @@
 
 
 }
-.section-jobs__list-jobs{
+.section-reason__list-jobs{
   display: flex;
   width: 100%;
   justify-content: space-around;
   align-items: center;
+  // margin: 0 auto;
+  
 
 }
 
-.section-jobs__list-item-title {
+.section-reason__list-item-link {
   font-size: 20px;
   font-weight: 500;
   padding: 15px;
+ 
+}
+.section-reason__list-item-link a{
+text-decoration: none;
+color: #595959;
 }
 
-.section-jobs__list-item-subtitle {
+.section-reason__list-item-subtitle {
   font-size: 18px;
-  color: rgb(107, 114, 128);
+  color: r$black;
   font-weight: 400;
   text-align: center;
   line-height: 1.8rem;
 }
 
-.section-jobs__list-icon {
-  // background-color: rgb(228,230,237);
+.section-reason__list-icon {
   color: $primary;
   border-radius: 100px;
-  font-size: 24px;
-  padding: 10px;
+  padding: 20px;
   height: 24px;
   // margin-right: 10px;
+}
+.section-reason__list-icon svg{
+  font-size: 30px;
 }
 
 /* END_SECTION_JOBS */
@@ -178,13 +187,12 @@
   //   max-width: 20rem;
   // }
 
-  .section-jobs__list-jobs{
+  .section-reason__list-jobs{
     flex-direction: column;
   
   }
-  .section-jobs__list-item {
-    margin: 5%;
-    width: 15em;
+  .section-reason__list-item {
+     margin: 2% 0;
   }
   .section-jobs__list-container{
     width: 70%;

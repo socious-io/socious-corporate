@@ -18,7 +18,7 @@ const ReasonsSection = (props) => {
       <Reason
         icon={reason.icon}
         key={reason.id}
-        subtitle={reason.title}
+        subtitle={reason.subtitle}
         link={reason.link}
         linkName={reason.linkName}
       />
@@ -27,7 +27,7 @@ const ReasonsSection = (props) => {
     
   return (
     <SimpleLocalize {...props}>
-      <div className="section-jobs">
+      <div className="section-reason">
         <div className="section-jobs__block">
           <div className="section-jobs__list">
             <div className="section-jobs__sup-header">
@@ -41,7 +41,7 @@ const ReasonsSection = (props) => {
               />
                </div>
                </div>
-              <div className="section-jobs__list-jobs">{reasonItems}</div>
+              <div className="section-reason__list-jobs">{reasonItems}</div>
            
           </div>
       </div>

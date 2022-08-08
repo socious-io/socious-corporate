@@ -1,4 +1,5 @@
 import React from 'react'
+import { useLocation } from '@reach/router';
 
 import { graphql, useStaticQuery } from 'gatsby'
 import { getImage } from 'gatsby-plugin-image'
@@ -8,6 +9,9 @@ import SimpleLocalize from "../shared/SimpleLocalize";
 import { FormattedMessage } from "react-intl";
 
 const IssueSection = (props) => {
+  const location = useLocation();
+
+  const jaPage = location.pathname.includes('/ja')
 
   return (
     <SimpleLocalize {...props}>
@@ -20,9 +24,7 @@ const IssueSection = (props) => {
                 id="issue-section-body-one"
               />
               <br/><br/>
-              <FormattedMessage
-                id="issue-section-body-two"
-              />
+              {jaPage? <span>一方で、<b>94％の若者が自分のスキルを社会貢献に活かしたいと考えていますが、実際に行動に移せる人はわずか10％にすぎません。</b></span>:<span>The paradox is that <b>94% of young people declare wanting to use their skills for good, but only 10% are able to do so</b>.</span>}
                 <br/><br/>
                 <FormattedMessage
                 id="issue-section-body-three"

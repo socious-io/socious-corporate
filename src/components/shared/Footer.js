@@ -99,8 +99,8 @@ const Footer = () => {
           </p>
         </div>
         <div className="links">
-          <a target="_blank"  rel="noreferrer" href="https//socious.co">Terms</a>
-          <a target="_blank"  rel="noreferrer" href="https//socious.co">Privacy</a>
+          <a target="_blank"  rel="noreferrer" href={jaPage ? '/user-agreement-ja/' : '/user-agreement/'}>Terms</a>
+          <a target="_blank"  rel="noreferrer" href={jaPage ? '/privacy-policy-ja/' : '/privacy-policy/'}>Privacy</a>
         </div>
       </div>
     </footer>

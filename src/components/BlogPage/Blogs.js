@@ -28,6 +28,7 @@ const Blogs = () => {
     }
   `)
   const { edges } = query.allWpPost
+  console.log(edges);
 
   const [displayList, setDisplayList] = useState([...edges.slice(0, 5)])
 
@@ -71,7 +72,7 @@ const Blogs = () => {
             }
           </>
         }
-        <button onClick={handleLoadMore} className="load-more">Load more news</button>
+        <button onClick={handleLoadMore} className="load-more">Load more blogs</button>
       </div>
     </div>
   )

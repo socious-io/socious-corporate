@@ -5,7 +5,7 @@ import {slide as Menu} from 'react-burger-menu';
 import {useIntl} from 'react-intl';
 
 const NavbarMobile = (props) => {
-  const {headerStyle, homePage, aboutLink, careersLink, newsroomLink, altPage} =
+  const {headerStyle, homePage, aboutLink, careersLink, newsroomLink, altPage, organizationLink} =
     props;
 
   const activeLinkStyleMobile = {
@@ -35,6 +35,14 @@ const NavbarMobile = (props) => {
           className="menu-item"
         >
           {jaPage ? 'ソーシャスについて' : 'About'}
+        </Link>
+        <Link
+          to={organizationLink}
+          activeStyle={activeLinkStyleMobile}
+          partiallyActive={true}
+          className="menu-item"
+        >
+          {jaPage ? '団体' : 'Organizations'}
         </Link>
         <Link
           to={careersLink}
