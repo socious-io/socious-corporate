@@ -73,9 +73,22 @@
 
   .section-app-links__app-links-button{
     margin-top: 20px;
+    padding: 10px 90px;
+  }
+  .section-app-links__app-links-button-work {
+    padding: 10px 96px;
+
   }
 
   .section-app-links__app-links {
     display: flex;
+  
+  }
+  .section-app-links__app-links-block {
+    display: flex;
+    flex-direction: column;
+    margin: 5% 5%;
+    margin-bottom: 50px;
+    width: max-content;
   }
 }
