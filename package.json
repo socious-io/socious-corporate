@@ -21,6 +21,7 @@
     "@mui/icons-material": "^5.8.4",
     "@mui/material": "^5.9.2",
     "dotenv": "^16.0.1",
+    "formik": "^2.2.9",
     "gatsby": "^4.19.2",
     "gatsby-background-image": "^1.6.0",
     "gatsby-plugin-anchor-links": "^1.2.1",
@@ -52,6 +53,7 @@
     "react-slick": "^0.29.0",
     "sass": "^1.54.0",
     "slick-carousel": "^1.8.1",
-    "video-react": "^0.15.0"
+    "video-react": "^0.15.0",
+    "yup": "^0.32.11"
   }
 }
