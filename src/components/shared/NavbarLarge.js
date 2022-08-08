@@ -1,7 +1,8 @@
 import React from 'react';
 import {Link} from 'gatsby';
 import {useIntl, FormattedMessage} from 'react-intl';
-import {StaticImage} from 'gatsby-plugin-image';
+import {GatsbyImage, getImage, StaticImage} from 'gatsby-plugin-image';
+import { graphql, useStaticQuery } from 'gatsby';
 
 import IconWeb from '../../images/icons/line/web.svg';
 
@@ -21,6 +22,25 @@ const NavbarLarge = (props) => {
     //     headerStyle = 'header header-default';
     // }
 
+    const  {logo } = useStaticQuery(
+      graphql`
+        query {
+          logo: file(relativePath: {eq: "logo-horizontal.svg"}) {
+            childImageSharp {
+              gatsbyImageData(
+                width: 2000,
+                quality: 100,
+                webpOptions: {quality: 100}
+                placeholder: BLURRED
+              )
+            }
+          }
+        }
+      `
+    )
+    const blueLogo = getImage(logo)
+    console.log(logo);
+
   const intl = useIntl();
   const jaPage = intl.locale === 'ja';
 
@@ -29,11 +49,12 @@ const NavbarLarge = (props) => {
       <nav>
         <div className="header__logo-container">
           <Link to={homePage}>
-          <StaticImage
-            src="./images/logo-horizontal-white.svg"
+            <GatsbyImage image={blueLogo} alt="logo"/>
+          {/* <StaticImage
+            src="/images/logo-horizontal-white.svg"
             className="header__logo-image"
             alt="Socious brand logo"
-          />
+          /> */}
           </Link>
         </div>
         <div className="nav-links">

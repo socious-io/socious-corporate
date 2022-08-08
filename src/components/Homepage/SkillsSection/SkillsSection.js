@@ -1,4 +1,4 @@
-import React from "react";
+import React, {useState} from "react";
 import { graphql, useStaticQuery } from "gatsby";
 
 
@@ -9,8 +9,13 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import skillsItems from "../../../../data/Homepage/skills";
 import { FormattedMessage } from "react-intl";
+import BasicModal from "../../shared/QR-Modal";
 
 const SkillSection = (props) => {
+
+  const [open, setOpen] = useState(false);
+  const handleOpen = () => setOpen(true);
+  const handleClose = () => setOpen(false);
   const data = useStaticQuery(graphql`
     query SkillSection {
       climate: file(relativePath: {eq: "skills/climate.png"}) {
@@ -48,17 +53,17 @@ const SkillSection = (props) => {
           gatsbyImageData(placeholder: BLURRED, blurredOptions: {width: 100})
         }
       }
-      animalRights: file(relativePath: {eq: "animal-rights.png"}) {
+      animalRights: file(relativePath: {eq: "skills/animal-rights.png"}) {
         childImageSharp {
           gatsbyImageData(placeholder: BLURRED, blurredOptions: {width: 100})
         }
       }
-      bioDiversity: file(relativePath: {eq: "biodiversity.png"}) {
+      bioDiversity: file(relativePath: {eq: "skills/biodiversity.png"}) {
         childImageSharp {
           gatsbyImageData(placeholder: BLURRED, blurredOptions: {width: 100})
         }
       }
-      community: file(relativePath: {eq: "community-dev.png"}) {
+      community: file(relativePath: {eq: "skills/community-dev.png"}) {
         childImageSharp {
           gatsbyImageData(placeholder: BLURRED, blurredOptions: {width: 100})
         }
@@ -128,11 +133,14 @@ community
           id="careers-header-black-one"/>
 
           <br/><br/>
-          <button><FormattedMessage
+          <button
+          onClick={handleOpen} >
+            <FormattedMessage
           id="get-socious"
           /></button>
         </div>
       </section>
+      <BasicModal open={open} handleClose={handleClose}/>
     </SimpleLocalize>
   )
 }
