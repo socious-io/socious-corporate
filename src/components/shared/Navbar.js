@@ -45,6 +45,7 @@ const Navbar = ({header}) => {
   const newsroomLink = jaPage ? '/ja/newsroom' : '/newsroom';
   const blogLink = jaPage ? '/ja/blog' : '/blog';
   const organizationLink = jaPage ? '/ja/organization' : '/organization';
+  const contactLink = jaPage ? '/ja/contact' : '/contact';
 
   let navSelector = '';
 

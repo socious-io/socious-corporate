@@ -50,7 +50,7 @@ const Footer = () => {
             </div>
             <div className="footer-list">
               <ul>
-                <li><AnchorLink to={linkLanguageSelector("/about#contact-us")} title={contactUs} /></li>
+                <li><AnchorLink to={linkLanguageSelector("/contact")} title={contactUs} /></li>
                 <li><Link to={linkLanguageSelector("/support")}>{jaPage ? 'サポート' : 'Support'}</Link></li>
                 <li><Link to={linkLanguageSelector("/newsroom")}>{jaPage ? 'ニュースルーム' : 'Newsroom'}</Link></li>
               </ul>

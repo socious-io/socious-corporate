@@ -9,6 +9,7 @@ import AppLinks from '../components/Homepage/AppLinks';
 import JobsSection from '../components/Homepage/JobsSection/JobsSection';
 import FeaturesSection from '../components/Homepage/Features/FeaturesSection';
 import SkillSection from '../components/Homepage/SkillsSection/SkillsSection';
+import LatestJobs from '../components/Homepage/LatestJobs/LatestJobs';
 
 const IndexPage = (props) => {
   return (
@@ -18,6 +19,7 @@ const IndexPage = (props) => {
       {/* <AppLinks {...props} /> */}
       <JobsSection {...props} />
       <FeaturesSection {...props}/>
+      <LatestJobs {...props}/>
       <SkillSection {...props}/>
     </Layout>
   );
