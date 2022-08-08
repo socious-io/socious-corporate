@@ -5,7 +5,7 @@
   width: 100%;
   margin: 0 auto;
   background: linear-gradient(180deg, #F8F8F8 4.35%, rgba(248, 248, 248, 0) 96.76%);
-  padding: 20px 0;
+  padding: 250px 0 20px 0;
 }
 
 .issue-banner {
@@ -100,6 +100,7 @@
   .issue-banner {
     flex-direction: column;
     margin-top: 0;
+    width: 15em;
   }
 
 .issue-banner__content {

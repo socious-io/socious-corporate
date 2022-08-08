@@ -11,54 +11,34 @@ const Hero = (props) => {
   const  images  = useStaticQuery(
     graphql`
       query {
-        imageOne: file(relativePath: {eq: "about-banner-1.png"}) {
+        imageOne: file(relativePath: {eq: "about-landing-image.png"}) {
           childImageSharp {
             gatsbyImageData(
-              width: 200,
+              width: 600,
+              height:700
               webpOptions: {quality: 100}
               placeholder: BLURRED
             )
           }
         }
-        imageTwo: file(relativePath: {eq: "about-banner-2.png"}) {
-          childImageSharp {
-            gatsbyImageData(
-              width: 200,
-              webpOptions: {quality: 100}
-              placeholder: BLURRED
-            )
-          }
-        }
-        imageThree: file(relativePath: {eq: "about-banner-3.png"}) {
-          childImageSharp {
-            gatsbyImageData(
-              width: 200,
-              webpOptions: {quality: 100}
-              placeholder: BLURRED
-            )
-          }
-        }
+        
       }
     `
   );
 
 
-const {imageOne, imageTwo, imageThree} = images
-const homeImage = [imageOne, imageTwo, imageThree]
+const {imageOne} = images;
+const aboutImage = [imageOne]
  
-  const pluginImage = getImage(images)
-  console.log(homeImage);
-  const backgroundFluidImageStack = [
-    pluginImage,
-    `linear-gradient(rgba(10, 10, 10, 0.8), rgba(10, 10, 10, 0.2))`,
-  ].reverse();
+  const pluginImage = getImage(aboutImage[0])
+  console.log(aboutImage);
+  console.log(pluginImage);
+ 
 
   return (
     <SimpleLocalize {...props}>
       <div className='hero-section'>
-        
-      <GatsbyImage image={pluginImage} />
-      {/* <GatsbyImage image={pluginImage} /> */}
+      
         <div className="hero-text">
           <h5 className='hero-text-header'>
             <FormattedMessage
@@ -70,6 +50,9 @@ const homeImage = [imageOne, imageTwo, imageThree]
               id="mission-statement"
             />
           </h1>
+        </div>
+        <div className='hero-image-holder'>
+        <GatsbyImage image={pluginImage} alt="about image" className='hero-image'/>
         </div>
         </div>
      

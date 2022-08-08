@@ -2,8 +2,17 @@
 
 .hero-section {
   height: 50vh;
+  display: flex;
+  padding-top: 30px;
+  // justify-content: center;
+  // flex-direction: row-reverse;
 
 }
+
+
+// .hero-image{
+//   width: 100%;
+// }
 
 .hero-text {
   height: 100%;
@@ -37,9 +46,20 @@
 /* SECTION_HERO_MOBILE */
 
 @media only screen and (max-width: 1350px) {
-  .hero-text h5 {
-    font-size: 1.8rem;
+  .hero-text-header {
+    font-size: 16px;
   }
+
+.hero-section {
+  flex-direction: column;
+  padding: 20px;
+
+}
+.hero-text h1 {
+  font-size: 30px;
+
+}
+
 }
 
 @media only screen and (max-width: 900px) {
