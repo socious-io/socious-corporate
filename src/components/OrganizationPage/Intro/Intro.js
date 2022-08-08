@@ -1,7 +1,5 @@
 import * as React from 'react';
 
-import MobileImageBlock from './MobileImageBlock';
-import EarlyAccessForm from './EarlyAccessForm';
 import { graphql, useStaticQuery } from 'gatsby';
 import { getImage } from 'gatsby-plugin-image';
 import { BgImage } from 'gbimage-bridge';
@@ -9,10 +7,10 @@ import SimpleLocalize from '../../shared/SimpleLocalize';
 import { FormattedMessage } from 'react-intl';
 
 const Intro = (props) => {
-  const { introBackgroundImage } = useStaticQuery(
+  const { orgBackgroundImage } = useStaticQuery(
     graphql`
       query {
-        introBackgroundImage: file(relativePath: {eq: "homepage-banner-2.png"}) {
+        orgBackgroundImage: file(relativePath: {eq: "org-banner.png"}) {
           childImageSharp {
             gatsbyImageData(
               width: 2000,
@@ -26,7 +24,7 @@ const Intro = (props) => {
     `
   )
 
-  const pluginImage = getImage(introBackgroundImage)
+  const pluginImage = getImage(orgBackgroundImage)
   const backgroundFluidImageStack = [
     pluginImage,
     `linear-gradient(0deg, rgba(0, 0, 0, 0.16), rgba(0, 0, 0, 0.16))`,
@@ -38,12 +36,12 @@ const Intro = (props) => {
        <div className="intro-banner__text">
          <h1>
            <FormattedMessage
-             id="intro-hero-title"
+             id="organization-hero-header"
            />
          </h1>
          <h3> 
          <FormattedMessage
-             id="intro-hero-subtitle"
+             id="organization-hero-subtitle"
            /></h3>
 
          <div className="section-app-links__app-links-block">
@@ -54,21 +52,11 @@ const Intro = (props) => {
                   rel="noreferrer"
                 >
                   <button className="section-app-links__app-links-button-work">
-                Find work
+                Start hiring
                   </button>
                 </a>
               </div>
-              <div className="section-app-links__app-links">
-                <a
-                  href="#"
-                  target="_blank"
-                  rel="noreferrer"
-                >
-                  <button className="section-app-links__app-links-button">
-                   Hire talents
-                  </button>
-                </a>
-              </div>
+              
             </div>
        </div>
      </BgImage>

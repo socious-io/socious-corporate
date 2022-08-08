@@ -44,6 +44,7 @@ const Navbar = ({header}) => {
   const careersLink = jaPage ? '/ja/careers' : '/careers';
   const newsroomLink = jaPage ? '/ja/newsroom' : '/newsroom';
   const blogLink = jaPage ? '/ja/blog' : '/blog';
+  const organizationLink = jaPage ? '/ja/organization' : '/organization';
 
   let navSelector = '';
 
@@ -52,8 +53,8 @@ const Navbar = ({header}) => {
       <NavbarMobile
         headerStyle={headerStyle}
         homePage={homePage}
-        organization={""}
         aboutLink={aboutLink}
+        organizationLink={organizationLink}
         careersLink={careersLink}
         newsroomLink={newsroomLink}
         blogLink={blogLink}
@@ -65,8 +66,8 @@ const Navbar = ({header}) => {
       <NavbarLarge
         headerStyle={headerStyle}
         homePage={homePage}
-        organization={""}
         aboutLink={aboutLink}
+        organizationLink={organizationLink}
         careersLink={careersLink}
         newsroomLink={newsroomLink}
         blogLink={blogLink}
