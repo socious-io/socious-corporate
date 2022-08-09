@@ -21,7 +21,7 @@ const EnglishNews = () => {
                   name
                 }
                 Date {
-                  start(formatString: "YYYY-MM-DD")
+                  start(formatString: "MM-DD-YYYY")
                 }
                 Hero_Image {
                   external {

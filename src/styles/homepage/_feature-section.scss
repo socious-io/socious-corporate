@@ -173,6 +173,27 @@
   background: none;
 }
 
+
+.job-action-links__app-links-block {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  margin: 5% auto;
+  margin-bottom: 50px;
+  // width: 60%;
+  
+}
+.job-action-links__app-links-button {
+  background: none rgb(255, 255, 255);
+  border: 1px none $primary;
+  text-align: center;
+  // color: $primary;
+  // border-radius: 50px;
+  // padding: 10px 30px;
+  // margin: 0 1rem;
+  cursor: pointer;
+}
+
 // Media-queries for smaller screens
 
 @media only screen and (max-width: 1230px) {
@@ -222,6 +243,15 @@
   }
   .job-action__modal-image-holder{
     width: 100%;
+  }
+  .job-action-links__app-links-block {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    margin: 5% auto;
+    margin-bottom: 50px;
+    width: 60%;
+    
   }
 
 

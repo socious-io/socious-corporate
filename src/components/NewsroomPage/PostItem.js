@@ -15,6 +15,7 @@ const PostItem = (props) => {
         <div class="news-content-date">
             <small>{date}</small>
           </div>
+          <br/>
           <div class="news-content-title">
             <h3>{title}</h3>
           </div>

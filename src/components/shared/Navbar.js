@@ -30,6 +30,7 @@ const Navbar = ({header}) => {
     default:
       headerStyle = 'header header-default';
   }
+  console.log(header);
 
   const intl = useIntl();
   const location = useLocation();

@@ -54,7 +54,7 @@ const LatestJobs = (props) => {
 
   const { language } = props.pageContext
   const latestJobComponentLanguageSelector = language === 'ja' ? latestJobs : latestJobs
-
+console.log(latestJobs);
 
   const latestComponents = latestJobComponentLanguageSelector.map(item => 
     <Latest

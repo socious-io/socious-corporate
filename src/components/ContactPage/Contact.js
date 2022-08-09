@@ -1,6 +1,6 @@
 import React from 'react'
 import SimpleLocalize from "../shared/SimpleLocalize";
-import { Button, TextField } from '@mui/material';
+import { Button, TextField, InputLabel } from '@mui/material';
 import { FormattedMessage } from "react-intl";
 import { useFormik } from 'formik';
 import * as yup from 'yup';
@@ -42,6 +42,8 @@ const ContactForm = (props) => {
      <form onSubmit={formik.handleSubmit}>
 
       <div className='form-inputs'>
+      
+      
         <TextField
           fullWidth
           className='form-inputs-name'
@@ -54,6 +56,7 @@ const ContactForm = (props) => {
           error={formik.touched.name && Boolean(formik.errors.name)}
           helperText={formik.touched.name && formik.errors.name}
         />
+      
         <TextField
           fullWidth
           className='form-inputs-email'

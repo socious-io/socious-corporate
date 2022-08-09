@@ -31,8 +31,6 @@ const {imageOne} = images;
 const aboutImage = [imageOne]
  
   const pluginImage = getImage(aboutImage[0])
-  console.log(aboutImage);
-  console.log(pluginImage);
  
 
   return (

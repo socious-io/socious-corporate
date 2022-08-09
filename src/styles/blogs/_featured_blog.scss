@@ -8,8 +8,8 @@
     font-size: 36px;
     line-height: 125%;
     letter-spacing: -1px;
-    margin-top: 80px;
-    margin: 16px 0 40px;
+    // margin-top: 80px;
+    margin: 16px 0 50px 15%;
   }
 }
 
@@ -76,6 +76,8 @@
 }
 
 .featured-blog {
+  margin: 0 auto;
+  width: 70%;
 
   h1 {
     margin: 1rem 0;
@@ -86,6 +88,11 @@
     max-width: 528px;
   }
 }
+
+// .blog-content-words{
+//   // width: 50%;
+//   border: solid 1px black;
+// }
 
 
 @media screen and (max-width: 750px) {

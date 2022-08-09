@@ -25,9 +25,9 @@ const Latest = (props) => {
           </p>
         </div>
         <div className="latest-content">
-          <p>
+        
             {props.location}
-          </p>
+          
         </div>
       </div>
           <button onClick={handleOpen} className="latest-link">View &rarr;</button>          
