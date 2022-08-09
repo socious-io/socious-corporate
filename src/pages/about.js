@@ -15,7 +15,7 @@ import ContactSection from '../components/AboutPage/ContactSection';
 
 const AboutPage = (props) => {
   return (
-    <Layout {...props} header="" pageTitle="About">
+    <Layout {...props} header="default" pageTitle="About">
       <Seo key="about" />
       <HeroSection {...props} />
       <ScrollArrow {...props} />

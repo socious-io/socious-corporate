@@ -1,13 +1,17 @@
 import React, {useState} from 'react'
-
+import { useLocation } from '@reach/router';
 import SimpleLocalize from "../shared/SimpleLocalize";
 import { FormattedMessage } from "react-intl";
-import BasicModal from '../shared/QR-Modal';
+import { Link } from 'gatsby'
+
 
 const CompanySection = (props) => {
-  const [open, setOpen] = useState(false);
-  const handleOpen = () => setOpen(true);
-  const handleClose = () => setOpen(false);
+  const location = useLocation();
+
+  const jaPage = location.pathname.includes('/ja')
+  const linkLanguageSelector = (pageUrl) => {
+    return jaPage ? `/ja${pageUrl}` : pageUrl
+  }
 
   return (
     <SimpleLocalize {...props}>
@@ -21,14 +25,12 @@ const CompanySection = (props) => {
           We are always on the look out for passionate and talented people
           </p>
           <button 
-          // onClick={handleOpen}
           className='job-action__get'>
-         View Openings
+            <Link to={linkLanguageSelector("/careers")} className="get-link">View Openings</Link>
           </button>
 
           </div>
         </div>
-        <BasicModal open={open} handleClose={handleClose}/>
     </SimpleLocalize>
   )
 }

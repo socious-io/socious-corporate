@@ -5,7 +5,7 @@ import {slide as Menu} from 'react-burger-menu';
 import {useIntl} from 'react-intl';
 
 const NavbarMobile = (props) => {
-  const {headerStyle, homePage, aboutLink, careersLink, newsroomLink, altPage, organizationLink} =
+  const {headerStyle, homePage, aboutLink, careersLink, newsroomLink, altPage, organizationLink, blogLink} =
     props;
 
   const activeLinkStyleMobile = {
@@ -19,13 +19,13 @@ const NavbarMobile = (props) => {
   return (
     <nav className={headerStyle} style={{zIndex: '100'}}>
       <div className="header__logo-container">
-        <Link to={homePage}>
-          <StaticImage
+        <Link to={homePage}/>
+          {/* <StaticImage
             src="../../images/socious-logo.png"
             className="header__logo-image"
             alt="Socious brand logo"
-          />
-        </Link>
+          /> */}
+        
       </div>
       <Menu right>
         <Link
@@ -58,7 +58,15 @@ const NavbarMobile = (props) => {
           partiallyActive={true}
           className="menu-item"
         >
-          {jaPage ? 'ニュース' : 'Newsroom'}
+          {jaPage ? 'ニュース' : 'News'}
+        </Link>
+        <Link
+          to={blogLink}
+          activeStyle={activeLinkStyleMobile}
+          partiallyActive={true}
+          className="menu-item"
+        >
+          {jaPage ? 'ブログ（英語）' : 'Blog'}
         </Link>
         <a className="header__language-switcher" href={altPage}>
           {jaPage ? 'English' : '日本語'}
