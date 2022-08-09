@@ -36,6 +36,10 @@
   margin: 2%;
   border-radius: 50px;
 }
+.form-submit :hover{
+  background: $green;
+
+}
 @media only screen and (max-width: 1500px) {
   .form{
     width: 70%;
