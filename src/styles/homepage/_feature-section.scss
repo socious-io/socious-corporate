@@ -177,12 +177,15 @@
 .job-action-links__app-links-block {
   display: flex;
   flex-direction: row;
-  justify-content: space-around;
-  margin: 5% auto;
-  margin-bottom: 50px;
-  // width: 60%;
+  justify-content: center;
+  align-items: center;
+  // margin: 5% auto;
+  // margin-bottom: 50px;
+  // width: 50%;
   
 }
+
+
 .job-action-links__app-links-button {
   background: none rgb(255, 255, 255);
   border: 1px none $primary;

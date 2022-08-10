@@ -32,6 +32,7 @@ const TeamSection = (props) => {
               name
               title
               imagealt
+              
             }
             teamMemberDataJa {
               bio1Ja
@@ -40,6 +41,7 @@ const TeamSection = (props) => {
               nameJa
               titleJa
               imagealtJa
+              
             }
           }
         }
@@ -66,6 +68,7 @@ const TeamSection = (props) => {
         bio1={member[teamMemberData]["bio1"+languageExtension]}
         bio2={member[teamMemberData]["bio2"+languageExtension]}
         bio3={member[teamMemberData]["bio3"+languageExtension]}
+        linkedIn={member[teamMemberData]["linkedIn"+languageExtension]}
       />
   );
 

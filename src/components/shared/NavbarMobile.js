@@ -1,10 +1,15 @@
-import React from 'react';
+import React, {useState }from 'react';
 import {Link} from 'gatsby';
 import {StaticImage} from 'gatsby-plugin-image';
 import {slide as Menu} from 'react-burger-menu';
 import {useIntl} from 'react-intl';
+import { FormattedMessage } from "react-intl";
+import BasicModal from '../shared/QR-Modal';
 
 const NavbarMobile = (props) => {
+  const [open, setOpen] = useState(false);
+  const handleOpen = () => setOpen(true);
+  const handleClose = () => setOpen(false);
   const {headerStyle, homePage, aboutLink, careersLink, newsroomLink, altPage, organizationLink, blogLink} =
     props;
 
@@ -28,6 +33,15 @@ const NavbarMobile = (props) => {
         
       </div>
       <Menu right>
+      <div className="header_mobile-container">
+        <Link to={homePage}/>
+          {/* <StaticImage
+            src="static/images/logo-horizontal-blue.png"
+            className="header__logo-image"
+            alt="Socious brand logo"
+          /> */}
+        
+      </div>
         <Link
           to={aboutLink}
           activeStyle={activeLinkStyleMobile}
@@ -71,6 +85,14 @@ const NavbarMobile = (props) => {
         <a className="header__language-switcher" href={altPage}>
           {jaPage ? 'English' : '日本語'}
         </a>
+        <button 
+          onClick={handleOpen}
+          className='job-action__get'>
+          <FormattedMessage
+              id="get-socious"
+            />
+          </button>
+          <BasicModal open={open} handleClose={handleClose}/>
       </Menu>
     </nav>
   );

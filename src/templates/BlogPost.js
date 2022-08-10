@@ -7,9 +7,11 @@ import Seo from '../components/seo';
 const BlogPost = (props) => {
   const {data} = props;
   const {frontmatter, html} = data.markdownRemark;
+  const time = new Date(frontmatter.Date.start).toDateString().split(' ').slice(1).join(' ')
+
 
   return (
-    <Layout {...props}>
+    <Layout {...props} header="default" >
       <Seo
         title={frontmatter.title}
         description={frontmatter.Meta_Description}
@@ -19,8 +21,8 @@ const BlogPost = (props) => {
       <div className="main">
         <div className="container__article">
           <div className="article__info">
+          <p>{time}</p>
             <h1>{frontmatter.title}</h1>
-            <p>{frontmatter.Date.start}</p>
           </div>
           <img
             src={frontmatter.Hero_Image[0].external.url}

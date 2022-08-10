@@ -85,7 +85,7 @@
 
   img {
     width: calc((720 /1140) * 100%);
-    max-width: 528px;
+    max-width: 500px;
   }
 }
 
@@ -95,7 +95,7 @@
 // }
 
 
-@media screen and (max-width: 750px) {
+@media screen and (max-width: 1230px) {
   .blog {
     flex-direction: column;
     height: auto;
@@ -110,3 +110,9 @@
     }
   }
 }
+// @media only screen and (max-width: 1230px){
+//   .featured-blog {
+//     margin: 0 auto;
+//     width: 80%;
+//   }
+// }

@@ -28,14 +28,22 @@
 
   h1 {
     margin-bottom: 0;
-    font-size: clamp(2.5rem, 7vw, 4rem);
+    font-size: 36px;
+  }
+  p{
+    padding-top: 10px;
   }
 }
 
 .article__body {
   line-height: 2rem;
-  width: 95%;
+  width: 70%;
   padding: 1rem 0;
+  // text-align: center;
+  align-items: flex-start;
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
 
   h3 {
     margin: 2.5rem 0;

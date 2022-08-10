@@ -49,11 +49,11 @@ const NavbarLarge = (props) => {
       <nav>
         <div className="header__logo-container">
           <Link to={homePage}>
-          <StaticImage
+          {/* <StaticImage
             src="../../images/logo-horizontal-white.svg"
             className="header__logo-image"
             alt="Socious brand logo"
-          />
+          /> */}
           </Link>
         </div>
         <div className="nav-links">
