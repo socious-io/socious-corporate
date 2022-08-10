@@ -11,6 +11,7 @@ import skillsItems from "../../../../data/Homepage/skills";
 import { FormattedMessage } from "react-intl";
 import BasicModal from "../../shared/QR-Modal";
 
+
 const SkillSection = (props) => {
 
   const [open, setOpen] = useState(false);
@@ -103,7 +104,8 @@ community
       speed: 5000,
       autoplaySpeed: 5000,
       variableWidth: false,
-      cssEase: "linear"
+      cssEase: "linear",
+      adaptiveHeight:true
     }
 
     const { language } = props.pageContext

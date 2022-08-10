@@ -22,6 +22,7 @@
     "@mui/material": "^5.9.2",
     "dotenv": "^16.0.1",
     "formik": "^2.2.9",
+    "framer-motion": "^7.0.0",
     "gatsby": "^4.19.2",
     "gatsby-background-image": "^1.6.0",
     "gatsby-plugin-anchor-links": "^1.2.1",

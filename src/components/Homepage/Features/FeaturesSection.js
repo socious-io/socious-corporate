@@ -1,4 +1,4 @@
-import React from "react";
+import React, {useEffect} from "react";
 import { StaticImage } from "gatsby-plugin-image";
 import { graphql, useStaticQuery } from "gatsby";
 
@@ -11,12 +11,29 @@ import Slider from "react-slick";
 import "slick-carousel/slick/slick.css"; 
 import "slick-carousel/slick/slick-theme.css";
 import Cta from "../CTA";
+import { motion, useAnimation } from "framer-motion";
+import { useInView } from "react-intersection-observer";
 
 
 
+const featureVariant = {
+  visible: { opacity: 1, scale: 1, transition: { duration: 0.5 } },
+  hidden: { opacity: 0, scale: 0 }
+};
 
 
 const FeaturesSection = (props) => {
+
+  const control = useAnimation();
+  const [ref, inView] = useInView();
+
+  useEffect(() => {
+    if (inView) {
+      control.start("visible");
+    } else {
+      control.start("hidden");
+    }
+  }, [control, inView]);
   const data = useStaticQuery(graphql`
     query FeatureSection {
       projects: file(relativePath: {eq: "gif/projects.png"}) {
@@ -42,8 +59,8 @@ const FeaturesSection = (props) => {
     }
   `)
 
-  const {project, hired, impact, payment} = data
-  const featureImages = [project, hired, impact, payment]
+  const {projects, hired, impact, payment} = data
+  const featureImages = [projects, hired, impact, payment]
 
   console.log(data);
   const settings={
@@ -51,9 +68,9 @@ const FeaturesSection = (props) => {
     infinite: true,
     slidesToShow: 1,
     autoplay: true,
-    fade:true,
+    vertical:true,
     speed: 2000,
-    autoplaySpeed: 3000,
+    autoplaySpeed: 2000,
   }
 
   const { language } = props.pageContext
