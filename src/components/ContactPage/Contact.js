@@ -4,6 +4,8 @@ import { Button, TextField, InputLabel } from '@mui/material';
 import { FormattedMessage } from "react-intl";
 import { useFormik } from 'formik';
 import * as yup from 'yup';
+import { navigate } from "gatsby";
+
 
 const validationSchema = yup.object({
   name: yup
@@ -29,6 +31,9 @@ const ContactForm = (props) => {
     validationSchema: validationSchema,
     onSubmit: (values) => {
       alert(JSON.stringify(values, null, 2));
+
+      navigate("/contact-accepted")
+
     },
   });
 
@@ -43,7 +48,8 @@ const ContactForm = (props) => {
 
       <div className='form-inputs'>
       
-      
+      <div className='name'>
+        <InputLabel className='form-message-title'>Your Name</InputLabel>
         <TextField
           fullWidth
           className='form-inputs-name'
@@ -56,13 +62,16 @@ const ContactForm = (props) => {
           error={formik.touched.name && Boolean(formik.errors.name)}
           helperText={formik.touched.name && formik.errors.name}
         />
-      
+      </div>
+   
+      <div className='email'>
+        <InputLabel className='form-message-title'>Your Email</InputLabel>
         <TextField
           fullWidth
           className='form-inputs-email'
           id="email"
           name="email"
-          label="Email"
+          label=" Your Email"
           type="email"
           placeholder='Your Email'
           value={formik.values.email}
@@ -70,7 +79,10 @@ const ContactForm = (props) => {
           error={formik.touched.email && Boolean(formik.errors.email)}
           helperText={formik.touched.email && formik.errors.email}
         />
+      </div>
+   
         </div>
+        <InputLabel className='form-message-title'>Your Message</InputLabel>
           <TextField
           fullWidth
           className='form-message'

@@ -1,4 +1,4 @@
-import React from "react";
+import React, {useEffect} from "react";
 import { StaticImage } from "gatsby-plugin-image";
 import { graphql, useStaticQuery } from "gatsby";
 
@@ -13,10 +13,8 @@ import "slick-carousel/slick/slick-theme.css";
 import Cta from "../CTA";
 
 
-
-
-
 const FeaturesSection = (props) => {
+
   const data = useStaticQuery(graphql`
     query FeatureSection {
       projects: file(relativePath: {eq: "gif/projects.png"}) {
@@ -42,8 +40,8 @@ const FeaturesSection = (props) => {
     }
   `)
 
-  const {project, hired, impact, payment} = data
-  const featureImages = [project, hired, impact, payment]
+  const {projects, hired, impact, payment} = data
+  const featureImages = [projects, hired, impact, payment]
 
   console.log(data);
   const settings={
@@ -51,9 +49,9 @@ const FeaturesSection = (props) => {
     infinite: true,
     slidesToShow: 1,
     autoplay: true,
-    fade:true,
+    vertical:true,
     speed: 2000,
-    autoplaySpeed: 3000,
+    autoplaySpeed: 2000,
   }
 
   const { language } = props.pageContext

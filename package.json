@@ -48,7 +48,6 @@
     "react-burger-menu": "^3.0.8",
     "react-dom": "^17.0.2",
     "react-helmet": "^6.1.0",
-    "react-intersection-observer": "^9.4.0",
     "react-intl": "^6.0.5",
     "react-slick": "^0.29.0",
     "sass": "^1.54.0",

@@ -13,20 +13,33 @@
 }
 .form-inputs{
   display: flex;
-  justify-content: space-between;
+  // justify-content: space-between;
   // margin: 2%;
 }
-
+.name{
+  width: 50%;
+  margin-right: 2%;
+}
+.email{
+  width: 50%;
+}
 .form-inputs-name{
-  margin: 0 2%;
+  // margin: 0 2%;
   background: #f8f8f8;
 }
 .form-inputs-email{
   background: #f8f8f8;
+  width: 100%;
 }
 .form-message{
-  margin: 5% 2% 5% 2%;
+  margin: 0 0% 5% 0%;
   background: #f8f8f8;
+}
+.form-message-title{
+  margin-top: 3%;
+  font-weight: bold;
+  color: $black;
+  padding-bottom: 2%;
 }
 
 .form-submit{
@@ -39,6 +52,22 @@
 .form-submit :hover{
   background: $green;
 
+}
+.form-feedback-header{
+  margin-top: 5%;
+}
+.form-feedback{
+  margin: 5% auto;
+  background: #f9f9f9;
+  width: 50%;
+  padding: 50px 10px;
+  border-radius: 20px;
+
+}
+.form-feedback h2{
+  font-size: 24px;
+  text-align: center;
+  margin: 10%;
 }
 @media only screen and (max-width: 1500px) {
   .form{
@@ -57,5 +86,12 @@
   }
   .form-holder h2{
     font-size: 16px;
+  }
+  .name{
+    width: 100%;
+
+  }
+  .email{
+    width: 100%;
   }
 }
