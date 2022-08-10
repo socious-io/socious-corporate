@@ -21,7 +21,7 @@ const JapaneseNews = () => {
                   name
                 }
                 Date {
-                  start(formatString: "YYYY-MM-DD")
+                  start(formatString: "MM-DD-YYYY")
                 }
                 Hero_Image {
                   external {
@@ -66,15 +66,16 @@ const JapaneseNews = () => {
 
   const posts = data.allMarkdownRemark.edges.map(post => {
     const { id,
-            frontmatter: { title, slug, Date, Hero_Image, Publish }
+            frontmatter: { title, slug, Date:date, Hero_Image, Publish }
     } = post.node
+    const one = new Date(date.start).toDateString().split(' ').slice(1).join(' ')
 
     const completeArticle = Publish ?
       <PostItem
         key={id}
         slug={slug}
         title={title}
-        date={Date.start}
+        date={one}
         imageSrc={Hero_Image[0].external.url}
       /> :
       null
@@ -88,13 +89,15 @@ const JapaneseNews = () => {
           <>
             {
               displayList.map((edge) => {
+                const time = new Date(edge.node.frontmatter.Date.start).toDateString().split(' ').slice(1).join(' ')
+
                 return (
                   <div >
                     <PostItem
                     key={edge.node.id}
                     slug={edge.node.frontmatter.slug}
                     title={edge.node.frontmatter.title}
-                    date={edge.node.frontmatter.Date.start}
+                    date={time}
                     imageSrc={edge.node.frontmatter.Hero_Image[0].external.url}       
                   />
                   </div>
