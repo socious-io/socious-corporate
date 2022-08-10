@@ -28,7 +28,6 @@ const Blogs = () => {
     }
   `)
   const { edges } = query.allWpPost
-  console.log(edges);
 
   const [displayList, setDisplayList] = useState([...edges.slice(0, 5)])
 

@@ -1,5 +1,8 @@
 import React, { useEffect } from "react";
 import { GatsbyImage, getImage } from "gatsby-plugin-image";
+import { BsMedium } from "react-icons/bs"; 
+import { GrLinkedinOption } from "react-icons/gr"; 
+import { FiTwitter } from "react-icons/fi"; 
 
 const TeamMember = (props) => {
   const modalId = `myModal${props.id}`
@@ -43,12 +46,23 @@ const TeamMember = (props) => {
       <div className="team-member">
         <GatsbyImage image={image} alt={props.imageAlt} className="team-member-image" />
         <div className="member-content">
+        <div className="member-name">
+            <h3>{props.name}</h3>
+          </div>
           <div className="member-title">
             <p>{props.title}</p>
           </div>
-          <div className="member-name">
-            <h3>{props.name}</h3>
+          <hr className="member-divider"/>
+          <div className="member-description">
+          {props.bio1}
           </div>
+          <div>
+            <FiTwitter className="member-icon"/>
+            <BsMedium className="member-icon"/>
+            <a href={props.linkedIn}> <GrLinkedinOption className="member-icon"/></a> 
+           
+          </div>
+         
         </div>
         <div className="modal-overlay" href={modalRef}></div>
       </div>

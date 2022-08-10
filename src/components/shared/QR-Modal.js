@@ -65,18 +65,18 @@ export default function BasicModal({open, handleClose}) {
                     />
                 </a>
               </div>
-              <div className="job-action-links__app-links">
+              <div className="job-action-links__app-links playstore">
                 <a
                   href="https://play.google.com/store/apps/details?id=com.dissocialnetwork"
                   target="_blank"
                   rel="noreferrer"
                 >
                     <StaticImage
-                      src="../../../images/google-logo.png" 
+                      src="../../images/google-logo.png" 
                       alt="Get it on Google Play"
                       loading="eager"
                       objectFit="cover"
-                      width={180}
+                      width={150}
                     />
                 </a>
               </div>

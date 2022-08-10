@@ -10,15 +10,16 @@
 
 /* Color/shape of burger icon bars */
 .bm-burger-bars {
-  background: $primary;
-  box-shadow: rgba(10, 10, 10, 0.3) 0px 2px 4px;
+  background: $white;
+  // box-shadow: rgba(10, 10, 10, 0.3) 0px 2px 4px;
   transition: ease-in-out 0.2s;
-  border: 1px solid $dark-grey;
+  border: 1px solid $white;
+  margin-right: 20%;
 }
 
 /* Color/shape of burger icon bars on hover*/
 .bm-burger-bars-hover {
-  background: $primary-light;
+  background: $extra-light-grey;
 }
 
 /* Position and sizing of clickable cross button */
@@ -60,6 +61,7 @@ Note: Beware of modifying this element as it can break the animations - you shou
 .bm-item-list {
   color: #b8b7ad;
   padding: 0.8em;
+  text-align: left;
 
   a {
     text-decoration: none;
@@ -71,9 +73,19 @@ Note: Beware of modifying this element as it can break the animations - you shou
 /* Individual item */
 .bm-item {
   display: inline-block;
+
 }
 
 /* Styling of overlay */
 .bm-overlay {
   background: rgba(0, 0, 0, 0.3);
+}
+
+
+.header__mobile-container {
+  display: flex;
+  align-items: center;
+  background-image: url(/images/logo-horizontal.svg);
+
+ 
 }

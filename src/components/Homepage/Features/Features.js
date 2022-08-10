@@ -13,12 +13,7 @@ const Feature = (props) => {
    
     <div className="section-features__list-item">
       
-     <div 
-      ref={ref}
-      variants={featureVariant}
-      initial="hidden"
-      animate={control}
-     
+     <div     
      className="section-features__list-image-container">
      <GatsbyImage image={image} alt={props.gifAlt} className="section-features__list-image"/>
       </div>

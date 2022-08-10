@@ -24,7 +24,7 @@ const Latest = (props) => {
             {props.company}
           </p>
         </div>
-        <div className="latest-content">
+        <div className="latest-content ">
         
             {props.location}
           

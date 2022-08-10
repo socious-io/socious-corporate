@@ -12,6 +12,8 @@ const BlogCard = ({ edge, alternate }) => {
     excerpt,
     date
   }} = edge
+  const link =edge.node.slug.substring( 0, slug.indexOf( "%" ) )
+  console.log({link});
 
   return (
     <div  className={ alternate ? "alternate blog" : "blog"}>
@@ -31,7 +33,10 @@ const BlogCard = ({ edge, alternate }) => {
           </h1>
         )}
         { excerpt && 
+        
           <div className="blog-para" dangerouslySetInnerHTML={{ __html: excerpt }}/>
+        
+          
         }
         <Link to={`/blog/${slug}`}>
           Read more &rarr;
