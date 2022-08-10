@@ -2,26 +2,10 @@ import React, {useEffect} from "react";
 
 import 'video-react/dist/video-react.css';
 import { GatsbyImage, getImage } from "gatsby-plugin-image";
-import { motion, useAnimation } from "framer-motion";
-import { useInView } from "react-intersection-observer";
 
-const featureVariant = {
-  visible: { opacity: 1, scale: 1, transition: { duration: 0.5 } },
-  hidden: { opacity: 0, scale: 0 }
-};
 
 const Feature = (props) => {
 
-  const control = useAnimation();
-  const [ref, inView] = useInView();
-
-  useEffect(() => {
-    if (inView) {
-      control.start("visible");
-    } else {
-      control.start("hidden");
-    }
-  }, [control, inView]);
 
   const image = getImage(props.gifOpt)
 
@@ -29,7 +13,7 @@ const Feature = (props) => {
    
     <div className="section-features__list-item">
       
-     <motion.div 
+     <div 
       ref={ref}
       variants={featureVariant}
       initial="hidden"
@@ -37,9 +21,9 @@ const Feature = (props) => {
      
      className="section-features__list-image-container">
      <GatsbyImage image={image} alt={props.gifAlt} className="section-features__list-image"/>
-      </motion.div>
+      </div>
 
-      <motion.div 
+      <div 
     
       className="section-features__list-content">
       <div className="section-features__list-slide">
@@ -54,7 +38,7 @@ const Feature = (props) => {
         <div className="section-features__list-item-link">
           <a href={props.linkUrl}>{props.link}&rarr;</a>          
         </div>
-        </motion.div>
+        </div>
     </div>
   
    

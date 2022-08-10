@@ -11,29 +11,10 @@ import Slider from "react-slick";
 import "slick-carousel/slick/slick.css"; 
 import "slick-carousel/slick/slick-theme.css";
 import Cta from "../CTA";
-import { motion, useAnimation } from "framer-motion";
-import { useInView } from "react-intersection-observer";
-
-
-
-const featureVariant = {
-  visible: { opacity: 1, scale: 1, transition: { duration: 0.5 } },
-  hidden: { opacity: 0, scale: 0 }
-};
 
 
 const FeaturesSection = (props) => {
 
-  const control = useAnimation();
-  const [ref, inView] = useInView();
-
-  useEffect(() => {
-    if (inView) {
-      control.start("visible");
-    } else {
-      control.start("hidden");
-    }
-  }, [control, inView]);
   const data = useStaticQuery(graphql`
     query FeatureSection {
       projects: file(relativePath: {eq: "gif/projects.png"}) {
