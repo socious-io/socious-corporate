@@ -14,7 +14,6 @@ const LatestJobs = (props) => {
   const [open, setOpen] = useState(false);
   const handleOpen = () => setOpen(true);
   const handleClose = () => setOpen(false);
-  console.log("asdasdad")
 
   const data = useStaticQuery(graphql`
     query LatestJobs {
