@@ -18,9 +18,9 @@ const IndexPage = (props) => {
       <Intro {...props} />
       {/* <AppLinks {...props} /> */}
       <JobsSection {...props} />
-      <FeaturesSection {...props}/>
-      <LatestJobs {...props}/>
-      <SkillSection {...props}/>
+      <FeaturesSection {...props} />
+      <LatestJobs {...props} />
+      <SkillSection {...props} />
     </Layout>
   );
 };

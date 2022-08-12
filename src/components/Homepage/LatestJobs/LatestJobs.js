@@ -1,4 +1,4 @@
-import React, {useState} from "react";
+import React, { useState } from "react";
 import { graphql, useStaticQuery } from "gatsby";
 import { GatsbyImage, getImage } from "gatsby-plugin-image";
 
@@ -14,6 +14,8 @@ const LatestJobs = (props) => {
   const [open, setOpen] = useState(false);
   const handleOpen = () => setOpen(true);
   const handleClose = () => setOpen(false);
+  console.log("asdasdad")
+
   const data = useStaticQuery(graphql`
     query LatestJobs {
       partnerships: file(relativePath: {eq: "latest-jobs/cdp.png"}) {
@@ -49,14 +51,13 @@ const LatestJobs = (props) => {
     }
   `)
 
-  const { partnerships, habitat, developer, designer,nutritionist, producer } = data
-  const latestImages = [partnerships, habitat, developer, designer,nutritionist, producer]
+  const { partnerships, habitat, developer, designer, nutritionist, producer } = data
+  const latestImages = [partnerships, habitat, developer, designer, nutritionist, producer]
 
   const { language } = props.pageContext
   const latestJobComponentLanguageSelector = language === 'ja' ? latestJobs : latestJobs
-console.log(latestJobs);
 
-  const latestComponents = latestJobComponentLanguageSelector.map(item => 
+  const latestComponents = latestJobComponentLanguageSelector.map(item =>
     <Latest
       key={item.id}
       imageOpt={latestImages[item.id - 1]}
@@ -66,7 +67,7 @@ console.log(latestJobs);
       location={item.location}
     />
   )
-  
+
   return (
     <SimpleLocalize {...props}>
       <section className="latest-section-main">
@@ -81,10 +82,10 @@ console.log(latestJobs);
         <div className="latest-section">
           {latestComponents}
         </div>
-        <button onClick={handleOpen} className="latest-more">View more jobs</button>   
+        <button onClick={handleOpen} className="latest-more">View more jobs</button>
 
       </section>
-      <BasicModal open={open} handleClose={handleClose}/>
+      <BasicModal open={open} handleClose={handleClose} />
     </SimpleLocalize>
   )
 }
