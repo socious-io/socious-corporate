@@ -40,15 +40,19 @@ const JobInfo = styled.div`
     font-weight: bold;
   }
 
-  .job-opening-info {
-    display: none;
+  .company-details p {
+    margin: 0;
+  }
+
+  .company-details > * {
+    margin-bottom: 8px;
+  }
+
+  .company-details > *:last-child {
+    margin-bottom: 0;
   }
 
   @media (min-width: 600px) {
-    .job-opening-info {
-      display: flex;
-    }
-
     .company-image {
       max-width: 130px;
       width: 130px;
@@ -57,44 +61,36 @@ const JobInfo = styled.div`
   }
 `
 
-const JobOpeningInfo = styled.div`
-  margin-top: 8px;
-
-  @media (min-width: 600px) {
-    display: none;
-  }
-`
-
-const Latest = (props) => {
+const Latest = ({ latestJobDetails = {}, imageOpt }) => {
   const [open, setOpen] = useState(false);
   const handleOpen = () => setOpen(true);
   const handleClose = () => setOpen(false);
-  const image = getImage(props.imageOpt)
+  const image = getImage(imageOpt)
+
 
   return (
     <JobContainer>
       <JobInfo>
         <div className="company-image">
-          <GatsbyImage image={image} alt={props.imageAlt} />
+          <GatsbyImage image={image} alt={latestJobDetails.imageAlt} />
         </div>
         <div className="company-details">
           <div className="job-role">
-            {props.role}
+            {latestJobDetails.role}
           </div>
           <div className="">
             <p>
-              {props.company}
+              {latestJobDetails.company}
             </p>
           </div>
-          <div className='job-opening-info' style={{ marginTop: 8 }}>
-            {props.location}
+          <div>
+            {latestJobDetails.location}
+          </div>
+          <div>
+            {latestJobDetails.jobTags?.join(' | ')}
           </div>
         </div>
       </JobInfo>
-
-      <JobOpeningInfo>
-        {props.location}
-      </JobOpeningInfo>
       <button onClick={handleOpen} className="latest-link">View &rarr;</button>
 
       <BasicModal open={open} handleClose={handleClose} />

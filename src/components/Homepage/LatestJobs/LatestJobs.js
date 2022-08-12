@@ -56,14 +56,13 @@ const LatestJobs = (props) => {
   const { language } = props.pageContext
   const latestJobComponentLanguageSelector = language === 'ja' ? latestJobs : latestJobs
 
+  console.log({ latestJobs })
+
   const latestComponents = latestJobComponentLanguageSelector.map(item =>
     <Latest
       key={item.id}
       imageOpt={latestImages[item.id - 1]}
-      imageAlt={item.imageAlt}
-      role={item.role}
-      company={item.company}
-      location={item.location}
+      latestJobDetails={item}
     />
   )
 
