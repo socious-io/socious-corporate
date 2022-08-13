@@ -33,46 +33,46 @@ const Intro = (props) => {
   ].reverse();
 
   return (
-     <SimpleLocalize {...props}>
-     <BgImage image={backgroundFluidImageStack} className="section-intro">
-       <div className="intro-banner__text">
-         <h1>
-           <FormattedMessage
-             id="intro-hero-title"
-           />
-         </h1>
-         <h3> 
-         <FormattedMessage
-             id="intro-hero-subtitle"
-           /></h3>
+    <SimpleLocalize {...props}>
+      <BgImage image={backgroundFluidImageStack} className="section-intro">
+        <div className="intro-banner__text pt-40">
+          <h1>
+            <FormattedMessage
+              id="intro-hero-title"
+            />
+          </h1>
+          <h3>
+            <FormattedMessage
+              id="intro-hero-subtitle"
+            /></h3>
 
-         <div className="section-app-links__app-links-block">
-              <div className="section-app-links__app-links">
-                <a
-                  href="#"
-                  target="_blank"
-                  rel="noreferrer"
-                >
-                  <button className="section-app-links__app-links-button-work">
-                Find work
-                  </button>
-                </a>
-              </div>
-              <div className="section-app-links__app-links">
-                <a
-                  href="#"
-                  target="_blank"
-                  rel="noreferrer"
-                >
-                  <button className="section-app-links__app-links-button">
-                   Hire talents
-                  </button>
-                </a>
-              </div>
+          <div className="section-app-links__app-links-block">
+            <div className="section-app-links__app-links">
+              <a
+                href="#"
+                target="_blank"
+                rel="noreferrer"
+              >
+                <button className="section-app-links__app-links-button-work">
+                  Find work
+                </button>
+              </a>
             </div>
-       </div>
-     </BgImage>
-   </SimpleLocalize>
+            <div className="section-app-links__app-links">
+              <a
+                href="#"
+                target="_blank"
+                rel="noreferrer"
+              >
+                <button className="section-app-links__app-links-button">
+                  Hire talents
+                </button>
+              </a>
+            </div>
+          </div>
+        </div>
+      </BgImage>
+    </SimpleLocalize>
   )
 }
 

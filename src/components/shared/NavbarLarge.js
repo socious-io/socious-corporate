@@ -1,29 +1,29 @@
 import React from 'react';
-import {Link} from 'gatsby';
-import {useIntl, FormattedMessage} from 'react-intl';
-import {GatsbyImage, getImage, StaticImage} from 'gatsby-plugin-image';
+import { Link } from 'gatsby';
+import { useIntl, FormattedMessage } from 'react-intl';
+import { GatsbyImage, getImage, StaticImage } from 'gatsby-plugin-image';
 import { graphql, useStaticQuery } from 'gatsby';
 
 import IconWeb from '../../images/icons/line/web.svg';
 
 const NavbarLarge = (props) => {
-  const {headerStyle, homePage, aboutLink, careersLink, newsroomLink, altPage, blogLink, organizationLink} =
+  const { headerStyle, homePage, aboutLink, careersLink, newsroomLink, altPage, blogLink, organizationLink } =
     props;
 
-    // let headerStyle;
-    // switch (header) {
-    //   case 'primary':
-    //     headerStyle = 'header header-primary';
-    //     break;
-    //   case 'transparent':
-    //     headerStyle = 'header header-transparent';
-    //     break;
-    //   default:
-    //     headerStyle = 'header header-default';
-    // }
+  // let headerStyle;
+  // switch (header) {
+  //   case 'primary':
+  //     headerStyle = 'header header-primary';
+  //     break;
+  //   case 'transparent':
+  //     headerStyle = 'header header-transparent';
+  //     break;
+  //   default:
+  //     headerStyle = 'header header-default';
+  // }
 
-    const  {logo } = useStaticQuery(
-      graphql`
+  const { logo } = useStaticQuery(
+    graphql`
         query {
           logo: file(relativePath: {eq: "logo-horizontal.svg"}) {
             childImageSharp {
@@ -37,9 +37,9 @@ const NavbarLarge = (props) => {
           }
         }
       `
-    )
-    const blueLogo = getImage(logo)
-    console.log(logo);
+  )
+  const blueLogo = getImage(logo)
+  console.log(logo);
 
   const intl = useIntl();
   const jaPage = intl.locale === 'ja';
@@ -49,7 +49,7 @@ const NavbarLarge = (props) => {
       <nav>
         <div className="header__logo-container">
           <Link to={homePage}>
-          {/* <StaticImage
+            {/* <StaticImage
             src="../../images/logo-horizontal-white.svg"
             className="header__logo-image"
             alt="Socious brand logo"

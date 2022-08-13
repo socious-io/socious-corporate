@@ -5,6 +5,7 @@
   height: 30px;
   right: 36px;
   top: 36px;
+  display: none;
 
 }
 
@@ -41,13 +42,13 @@ Note: Beware of modifying this element as it can break the animations - you shou
   position: fixed;
   height: 100%;
   top: 0;
-  width: 100%;
+  width: 100% !important;
 }
 
 /* General sidebar styles */
 .bm-menu {
   background: #ffffff;
-  padding: 2.5em 1.5em 0;
+  padding: 24px 26px;
   font-size: 1.15em;
   overflow: hidden !important;
 }
@@ -66,14 +67,14 @@ Note: Beware of modifying this element as it can break the animations - you shou
   a {
     text-decoration: none;
     color: $primary;
-    margin-bottom: 1rem;
+    // margin-bottom: 1rem;
   }
 }
 
 /* Individual item */
 .bm-item {
   display: inline-block;
-
+  margin-bottom: 0.5em;
 }
 
 /* Styling of overlay */
@@ -87,5 +88,5 @@ Note: Beware of modifying this element as it can break the animations - you shou
   align-items: center;
   background-image: url(/images/logo-horizontal.svg);
 
- 
+
 }

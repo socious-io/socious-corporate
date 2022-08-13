@@ -9,6 +9,7 @@
   &.header-default {
     box-shadow: inset 0px -0.5px 0px #e4e6ed;
   }
+
   &.header-transparent {
     background: transparent;
     position: absolute;
@@ -16,6 +17,7 @@
     left: 0;
     right: 0;
   }
+
   &.header-primary {
     background: $primary-bg;
   }
@@ -23,7 +25,7 @@
   position: relative;
   z-index: 1;
 
-  > nav {
+  >nav {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -69,6 +71,7 @@
 
 .header-primary,
 .header-transparent {
+
   .header__language-switcher:link,
   .header__language-switcher:visited {
     color: #fff;
@@ -79,6 +82,7 @@
   }
 
   .header__logo-container {
+
     a:link,
     a:visited,
     a:hover {
@@ -106,4 +110,63 @@
   }
 }
 
+.header__logoblue-container {
+  display: flex !important;
+  align-items: center;
+
+  a:link,
+  a:visited,
+  a:hover {
+    color: transparent;
+    background-repeat: no-repeat;
+    width: 160.38px;
+    height: 56px;
+    background-image: url(/images/logo-horizontal-blue.svg);
+  }
+}
+
 /* END_HEADER */
+
+.menu-item {
+  /* Header/Work Sans/h1 */
+
+  font-family: 'Work Sans';
+  font-style: normal;
+  font-weight: 600;
+  font-size: 36px;
+  line-height: 125%;
+  /* identical to box height, or 45px */
+
+  letter-spacing: -1px;
+
+  /* Primary/01 */
+
+  color: #2F4786;
+
+}
+
+.select-lang {
+  font-family: 'Work Sans';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 150%;
+  padding-top: 1.5em;
+  padding-bottom: 2em;
+  align-items: center;
+
+}
+
+.seperator-lang {
+  /* Line 22 */
+
+
+  width: 32px;
+  height: 0px;
+
+  /* Neutral / 300 */
+
+  border: 0.5px solid #E4E2E0;
+  transform: rotate(90deg);
+
+}

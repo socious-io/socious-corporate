@@ -1,23 +1,11 @@
 import React, { useState, useEffect } from 'react';
 import { useLocation } from '@reach/router';
-
 import NavbarLarge from './NavbarLarge';
 import NavbarMobile from './NavbarMobile';
 import { useIntl } from 'react-intl';
 
 const Navbar = ({ header }) => {
-  const [windowWidth, setWindowWidth] = useState(null);
-
-  useEffect(() => {
-    setWindowWidth(window.innerWidth);
-    function currentWidth() {
-      setWindowWidth(window.innerWidth);
-    }
-    window.addEventListener('resize', currentWidth);
-    return () => {
-      window.removeEventListener('resize', currentWidth);
-    };
-  }, []);
+  const [sidebar, setSidebar] = useState(false)
 
   let headerStyle;
   switch (header) {
@@ -50,21 +38,9 @@ const Navbar = ({ header }) => {
 
   let navSelector = '';
 
-  if (windowWidth && windowWidth <= 600) {
-    return (
-      <NavbarMobile
-        headerStyle={headerStyle}
-        homePage={homePage}
-        aboutLink={aboutLink}
-        organizationLink={organizationLink}
-        careersLink={careersLink}
-        newsroomLink={newsroomLink}
-        blogLink={blogLink}
-        altPage={altPage}
-      />
-    );
-  } else {
-    return (
+
+  return <>
+    <div className="flex xxs:hidden mdp:flex justify-end">
       <NavbarLarge
         headerStyle={headerStyle}
         homePage={homePage}
@@ -75,8 +51,29 @@ const Navbar = ({ header }) => {
         blogLink={blogLink}
         altPage={altPage}
       />
-    );
-  }
+
+    </div>
+    <div className="hidden xxs:flex mdp:hidden justify-end">
+      <NavbarMobile
+        headerStyle={headerStyle}
+        sidebar={sidebar}
+        setSidebar={setSidebar}
+        homePage={homePage}
+        aboutLink={aboutLink}
+        organizationLink={organizationLink}
+        careersLink={careersLink}
+        newsroomLink={newsroomLink}
+        blogLink={blogLink}
+        altPage={altPage}
+      />
+    </div>
+  </>
+
+
+
+
+
+
 };
 
 export default Navbar;

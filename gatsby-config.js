@@ -49,6 +49,7 @@ module.exports = {
       },
     },
     'gatsby-plugin-sass',
+    'gatsby-plugin-postcss',
     'gatsby-plugin-image',
     {
       resolve: `gatsby-source-filesystem`,
@@ -101,24 +102,24 @@ module.exports = {
       },
     },
     {
-			resolve: "gatsby-transformer-remark",
-			options: {
-				plugins: [
-					{
-						resolve: `gatsby-remark-katex`,
-						options: {
-							strict: false,
-						},
-					},
-				],
-			},
-		},
+      resolve: "gatsby-transformer-remark",
+      options: {
+        plugins: [
+          {
+            resolve: `gatsby-remark-katex`,
+            options: {
+              strict: false,
+            },
+          },
+        ],
+      },
+    },
     {
       resolve: "gatsby-source-graphql",
       options: {
         typeName: "WPGraphQL",
         fieldName: "wpcontent",
-        url: process.env.WORDPRESS_ENDPOINT+"/graphql"
+        url: process.env.WORDPRESS_ENDPOINT + "/graphql"
       }
     },
   ],
