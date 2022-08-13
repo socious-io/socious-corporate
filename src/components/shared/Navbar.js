@@ -1,11 +1,11 @@
-import React, {useState, useEffect} from 'react';
-import {useLocation} from '@reach/router';
+import React, { useState, useEffect } from 'react';
+import { useLocation } from '@reach/router';
 
 import NavbarLarge from './NavbarLarge';
 import NavbarMobile from './NavbarMobile';
-import {useIntl} from 'react-intl';
+import { useIntl } from 'react-intl';
 
-const Navbar = ({header}) => {
+const Navbar = ({ header }) => {
   const [windowWidth, setWindowWidth] = useState(null);
 
   useEffect(() => {

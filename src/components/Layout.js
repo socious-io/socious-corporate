@@ -1,14 +1,38 @@
 import * as React from 'react';
-import {FormattedMessage} from 'react-intl';
-import {IntlProvider} from 'react-intl';
+import { FormattedMessage } from 'react-intl';
+import { IntlProvider } from 'react-intl';
 import '../styles/main.scss';
 
 import Navbar from './shared/Navbar';
 import Footer from './shared/Footer';
+import styled from '@emotion/styled';
+import { ThemeProvider } from '@emotion/react'
+
+const theme = {
+  colors: {
+    primary: '#2f4786',
+    ['primary-bg']: '#2f4786',
+    ['primary-dark']: '#1f2f59',
+    ['primary-light']: '#92a8e3',
+    ['light-grey']: 'rgba(10, 10, 10, 0.3)',
+    ['dark-grey']: 'rgba(10, 10, 10, 0.8)',
+    black: '#020305',
+    white: '#ffffff',
+    green: '#00BA88',
+    ['extra-light-grey']: '#f8f8f8',
+    secondary: '#2F8647',
+  }
+}
+
+const AppLayout = styled.div`
+  max-width: 100vw;
+  width: 100vw;
+  overflow: hidden;
+`
 
 const Layout = (props) => {
   const {
-    pageContext: {language, messages},
+    pageContext: { language, messages },
     header,
     pageTitle,
     children,
@@ -16,13 +40,17 @@ const Layout = (props) => {
 
   return (
     <IntlProvider defaultLocale="en" locale={language} messages={messages}>
-      <title>
-        <FormattedMessage id={pageTitle || 'site-title'} />
-      </title>
-      <div id="scroll-top"></div>
-      <Navbar header={header} />
-      <main>{children}</main>
-      <Footer />
+      <ThemeProvider theme={theme}>
+        <AppLayout>
+          <title>
+            <FormattedMessage id={pageTitle || 'site-title'} />
+          </title>
+          <div id="scroll-top"></div>
+          <Navbar header={header} />
+          <main>{children}</main>
+          <Footer />
+        </AppLayout>
+      </ThemeProvider>
     </IntlProvider>
   );
 };
