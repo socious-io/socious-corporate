@@ -2,12 +2,13 @@ import * as React from 'react';
 import { FormattedMessage } from 'react-intl';
 import { IntlProvider } from 'react-intl';
 import '../styles/main.scss';
-
+import { createTheme } from "@material-ui/core/styles";
 import Navbar from './shared/Navbar';
 import Footer from './shared/Footer';
 import styled from '@emotion/styled';
 import { ThemeProvider } from '@emotion/react'
 
+const muiTheme = createTheme()
 const theme = {
   colors: {
     primary: '#2f4786',
@@ -40,7 +41,7 @@ const Layout = (props) => {
 
   return (
     <IntlProvider defaultLocale="en" locale={language} messages={messages}>
-      <ThemeProvider theme={theme}>
+      <ThemeProvider theme={{ ...theme, ...muiTheme }}>
         <AppLayout>
           <title>
             <FormattedMessage id={pageTitle || 'site-title'} />

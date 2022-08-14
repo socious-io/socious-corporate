@@ -1,3 +1,19 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.title-page {
+  font-family: 'Work Sans';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 44px !important;
+  line-height: 125%;
+  /* identical to box height, or 55px */
+
+  text-align: center;
+  letter-spacing: -1px;
+
+  /* Black / 01 */
+
+  color: #020305;
+}

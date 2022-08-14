@@ -18,21 +18,32 @@
   justify-content: center;
   align-items: center;
   margin: 0 auto;
-  flex-direction:column;
+  flex-direction: column;
   color: #FFF;
 }
 
 .intro-banner__text h1 {
-  font-family: 'Inter', sans-serif;
+  // font-family: 'Inter', sans-serif;
+  // font-weight: 600;
+  // font-size: 84px;
+  // letter-spacing: 1.5px;
+  // text-align: center;
+  font-family: 'Work Sans';
+  font-style: normal;
   font-weight: 600;
-  font-size: 84px;
-  letter-spacing: 1.5px;
+  font-size: 36px;
+  line-height: 125%;
+  /* or 45px */
+
   text-align: center;
+  letter-spacing: -1px;
+
 }
+
 .intro-banner__text h3 {
   font-family: 'Inter', sans-serif;
   font-weight: 300;
-  padding:10px;
+  padding: 10px;
   text-align: center;
   letter-spacing: 1.5px;
 }
@@ -127,10 +138,10 @@
     text-align: center;
   }
 
-.intro-banner__text h1 {
-  font-size: 44px;
+  .intro-banner__text h1 {
+    font-size: 44px;
 
-}
+  }
 
   .section-intro__app-image {
     margin: 0 auto;

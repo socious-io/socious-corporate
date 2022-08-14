@@ -1,5 +1,6 @@
 import React from 'react'
 import SimpleLocalize from "../shared/SimpleLocalize";
+import addToMailchimp from 'gatsby-plugin-mailchimp'
 import { Button, TextField, InputLabel } from '@mui/material';
 import { FormattedMessage } from "react-intl";
 import { useFormik } from 'formik';
@@ -26,84 +27,93 @@ const ContactForm = (props) => {
     initialValues: {
       name: '',
       email: '',
-      message:''
+      message: ''
     },
     validationSchema: validationSchema,
     onSubmit: (values) => {
-      alert(JSON.stringify(values, null, 2));
+      // console.log(JSON.stringify(values, null, 2));
+      addToMailchimp(values.email, { FNAME: values.name, MSG: values.message }) // listFields are optional if you are only capturing the email address.
+        .then(data => {
+          // I recommend setting data to React state
+          // but you can do whatever you want (including ignoring this `then()` altogether)
+          // console.log(data)
+          navigate("/contact-accepted")
+        })
+        .catch(() => {
+          // unnecessary because Mailchimp only ever
+          // returns a 200 status code
+          // see below for how to handle errors
+        })
 
-      navigate("/contact-accepted")
 
     },
   });
 
- 
+
+
 
   return (
     <SimpleLocalize {...props}>
       <section className='form-holder'>
-        <h2>We’d love to hear from you!</h2>
-      <div className='form'>
-     <form onSubmit={formik.handleSubmit}>
+        <h2 className='title-page'>We’d love to hear from you!</h2>
+        <div className='form'>
+          <form onSubmit={formik.handleSubmit}>
 
-      <div className='form-inputs'>
-      
-      <div className='name'>
-        <InputLabel className='form-message-title'>Your Name</InputLabel>
-        <TextField
-          fullWidth
-          className='form-inputs-name'
-          id="name"
-          name="name"
-          label="Your name"
-          placeholder='Your name'
-          value={formik.values.name}
-          onChange={formik.handleChange}
-          error={formik.touched.name && Boolean(formik.errors.name)}
-          helperText={formik.touched.name && formik.errors.name}
-        />
-      </div>
-   
-      <div className='email'>
-        <InputLabel className='form-message-title'>Your Email</InputLabel>
-        <TextField
-          fullWidth
-          className='form-inputs-email'
-          id="email"
-          name="email"
-          label=" Your Email"
-          type="email"
-          placeholder='Your Email'
-          value={formik.values.email}
-          onChange={formik.handleChange}
-          error={formik.touched.email && Boolean(formik.errors.email)}
-          helperText={formik.touched.email && formik.errors.email}
-        />
-      </div>
-   
+            <div className='form-inputs'>
+
+              <div className='name'>
+                <InputLabel className='form-message-title'>Your Name</InputLabel>
+                <TextField
+                  fullWidth
+                  className='form-inputs-name'
+                  id="name"
+                  name="name"
+                  placeholder='Your name'
+                  value={formik.values.name}
+                  onChange={formik.handleChange}
+                  error={formik.touched.name && Boolean(formik.errors.name)}
+                  helperText={formik.touched.name && formik.errors.name}
+                />
+              </div>
+
+              <div className='email'>
+                <InputLabel className='form-message-title'>Your Email</InputLabel>
+                <TextField
+                  fullWidth
+                  className='form-inputs-email'
+                  id="email"
+                  name="email"
+                  type="email"
+                  placeholder='Your Email'
+                  value={formik.values.email}
+                  onChange={formik.handleChange}
+                  error={formik.touched.email && Boolean(formik.errors.email)}
+                  helperText={formik.touched.email && formik.errors.email}
+                />
+              </div>
+
+            </div>
+            <InputLabel className='form-message-title'>Your Message</InputLabel>
+            <TextField
+              fullWidth
+              className='form-message'
+              multiline
+              minRows={6}
+              id="message"
+              name="message"
+              placeholder='Your Message'
+              value={formik.values.message}
+              onChange={formik.handleChange}
+              error={formik.touched.message && Boolean(formik.errors.message)}
+              helperText={formik.touched.message && formik.errors.message}
+            />
+            <Button color="primary" variant="contained" fullWidth={false} type="submit" className='form-submit'>
+              Send your message
+            </Button>
+          </form>
         </div>
-        <InputLabel className='form-message-title'>Your Message</InputLabel>
-          <TextField
-          fullWidth
-          className='form-message'
-          multiline
-          minRows={6}
-          id="message"
-          name="message"
-          label="Your Message"
-          placeholder='Your Message'
-          value={formik.values.message}
-          onChange={formik.handleChange}
-          error={formik.touched.message && Boolean(formik.errors.message)}
-          helperText={formik.touched.message && formik.errors.message}
-        />
-        <Button color="primary" variant="contained" fullWidth={false} type="submit" className='form-submit'>
-          Send your message
-        </Button>
-      </form>
-      </div>
       </section>
-     
+
     </SimpleLocalize>
   )
 }
