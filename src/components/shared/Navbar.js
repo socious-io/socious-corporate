@@ -57,6 +57,7 @@ const Navbar = ({ header }) => {
       <NavbarMobile
         headerStyle={headerStyle}
         sidebar={sidebar}
+        location={location}
         setSidebar={setSidebar}
         homePage={homePage}
         aboutLink={aboutLink}
