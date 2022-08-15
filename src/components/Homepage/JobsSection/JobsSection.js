@@ -14,20 +14,20 @@ const JobsSection = (props) => {
 
   const leftLanguageSelector = language === 'ja' ? jobsSectionLeftJa : jobsSectionLeft
 
-  const jobItemsLeft = leftLanguageSelector.map(job => 
-      <Job
-        icon={job.icon}
-        key={job.id}
-        title={job.title}
-        subtitle={job.subtitle}
-      />
+  const jobItemsLeft = leftLanguageSelector.map(job =>
+    <Job
+      icon={job.icon}
+      key={job.id}
+      title={job.title}
+      subtitle={job.subtitle}
+    />
   )
 
 
-  
+
   return (
     <SimpleLocalize {...props}>
-      <div className="section-jobs">
+      <div className="section-jobs pb-10">
         <div className="section-jobs__block">
           <div className="section-jobs__list">
             <div className="section-jobs__sup-header">
@@ -39,16 +39,16 @@ const JobsSection = (props) => {
               <FormattedMessage
                 id="benefits-header-left"
               />
-               </div>
-               <div className="section-jobs__header">
+            </div>
+            <div className="section-jobs__header">
               <FormattedMessage
                 id="benefits-header-bottom"
               />
-               </div>
-               </div>
-              <div className="section-jobs__list-jobs">{jobItemsLeft}</div>
-           
+            </div>
           </div>
+          <div className="section-jobs__list-jobs">{jobItemsLeft}</div>
+
+        </div>
       </div>
     </SimpleLocalize>
   )

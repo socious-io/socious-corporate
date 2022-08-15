@@ -1,20 +1,20 @@
-import React, {useEffect} from "react";
+import React, { useEffect, createRef, useCallback } from "react";
 import { StaticImage } from "gatsby-plugin-image";
 import { graphql, useStaticQuery } from "gatsby";
-
+import { useInView } from "react-intersection-observer";
 import SimpleLocalize from "../../shared/SimpleLocalize";
 
 import Feature from "./Features";
 import features from "../../../../data/Homepage/features";
 import featuresJa from "../../../../data/Homepage/featuresJa";
 import Slider from "react-slick";
-import "slick-carousel/slick/slick.css"; 
+import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import Cta from "../CTA";
 
 
 const FeaturesSection = (props) => {
-
+  const { ref: areaSlide, inView: areaSlideVisible, entry } = useInView();
   const data = useStaticQuery(graphql`
     query FeatureSection {
       projects: file(relativePath: {eq: "gif/projects.png"}) {
@@ -40,49 +40,65 @@ const FeaturesSection = (props) => {
     }
   `)
 
-  const {projects, hired, impact, payment} = data
+  const { projects, hired, impact, payment } = data
   const featureImages = [projects, hired, impact, payment]
 
-  console.log(data);
-  const settings={
+  const settings = {
     dots: false,
-    infinite: true,
+    vertical: true,
+    fade: false,
+    speed: 3000,
     slidesToShow: 1,
-    autoplay: true,
-    vertical:true,
-    speed: 2000,
-    autoplaySpeed: 2000,
-  }
+    slidesToScroll: 1,
+  };
+
+  const sliderRef = createRef();
+  const scroll = useCallback(
+    y => {
+      if (y > 50 && areaSlideVisible) {
+        return sliderRef?.current?.slickNext(); /// ? <- using description below 
+      } else {
+        return sliderRef?.current?.slickPrev();
+      }
+    },
+    [sliderRef]
+  );
+  useEffect(() => {
+    window.addEventListener("wheel", e => {
+      scroll(e.deltaY);
+    });
+  }, [scroll]);
 
   const { language } = props.pageContext
 
   const languageSelector = language === 'ja' ? featuresJa : features
 
-  const featureItems = languageSelector.map(feature => 
-   
-      <Feature
-        gifOpt={featureImages[feature.id-1]}
-        slide={feature.slide}
-        key={feature.id}
-        title={feature.title}
-        subtitle={feature.subtitle}
-        link={feature.link}
-        linkUrl={feature.linkUrl}
-      />
-    
+  const featureItems = languageSelector.map(feature =>
+
+    <Feature
+      gifOpt={featureImages[feature.id - 1]}
+      slide={feature.slide}
+      key={feature.id}
+      title={feature.title}
+      subtitle={feature.subtitle}
+      link={feature.link}
+      linkUrl={feature.linkUrl}
+    />
+
   )
 
-  
+
   return (
     <SimpleLocalize {...props}>
-      
-      <div className="section-features">
-      <Slider {...settings} className="section-features__list-slider">
-            {featureItems}
-        </Slider>
-      </div>
-      <Cta {...props}/>
-    
+
+      <main class="max-h-screen overflow-y-scroll snap snap-y snap-mandatory">
+        {featureItems}
+      </main>
+
+
+
+      <Cta {...props} />
+
     </SimpleLocalize>
   )
 }
