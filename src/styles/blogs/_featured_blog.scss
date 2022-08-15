@@ -1,7 +1,7 @@
 // FEATURED BLOG
 .featured-box {
   background-color: #F8F8F8;
-  padding: 2rem  7rem;
+  padding: 2rem 7rem;
   margin: 0 auto;
 
   h1 {
@@ -18,7 +18,7 @@
 .alternate {
   flex-direction: row-reverse;
 
-  & > div {
+  &>div {
     padding: 0 2rem 2rem 0 !important;
   }
 }
@@ -32,11 +32,12 @@
 .blog {
   width: 100%;
   display: flex;
-  align-items: center;
+  height: 14em;
+  // align-items: center;
   justify-content: center;
   margin: 0 0 1.5rem;
-  
-  & > div {
+
+  &>div {
     flex-grow: 1;
     padding: 0 0 2em 2rem;
   }
@@ -49,13 +50,22 @@
     overflow: hidden;
     text-overflow: ellipsis;
     display: -webkit-box;
-    line-height: 150%; /* fallback */
-    max-height: 9rem; /* fallback */
-    -webkit-line-clamp: 3; /* number of lines to show */
+    line-height: 150%;
+    /* fallback */
+    max-height: 9rem;
+    /* fallback */
+    -webkit-line-clamp: 3;
+    /* number of lines to show */
     -webkit-box-orient: vertical;
-    
-    p, h1, h2, h3, h4, h5, h6 {
-      margin: 0 ;
+
+    p,
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+      margin: 0;
     }
   }
 
@@ -67,7 +77,7 @@
     display: inline-block;
     margin-top: .5rem;
   }
-  
+
   img {
     // height: 100%;
     object-fit: cover;
@@ -102,14 +112,16 @@
     padding-bottom: 1.5rem;
     text-align: left;
 
-    & > div {
+    &>div {
       padding: 0;
     }
+
     img {
       width: 100%;
     }
   }
 }
+
 // @media only screen and (max-width: 1230px){
 //   .featured-blog {
 //     margin: 0 auto;
