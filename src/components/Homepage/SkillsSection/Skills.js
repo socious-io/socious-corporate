@@ -6,7 +6,7 @@ const SkillItem = (props) => {
   const image = getImage(props.imageOpt)
 
   return (
-    <div className="skills-item">
+    <div className="skills-item pr-2 pl-2">
       <div className="skills-image">
         <GatsbyImage image={image} alt={props.imageAlt} />
       </div>

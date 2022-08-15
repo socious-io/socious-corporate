@@ -1,11 +1,11 @@
-import React, {useState} from "react";
+import React, { useEffect, useState } from "react";
 import { graphql, useStaticQuery } from "gatsby";
 
 
 import SimpleLocalize from "../../shared/SimpleLocalize";
 import SkillItem from "./Skills";
 import Slider from "react-slick";
-import "slick-carousel/slick/slick.css"; 
+import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import skillsItems from "../../../../data/Homepage/skills";
 import { FormattedMessage } from "react-intl";
@@ -15,6 +15,47 @@ import BasicModal from "../../shared/QR-Modal";
 const SkillSection = (props) => {
 
   const [open, setOpen] = useState(false);
+  const settings = {
+    dots: false,
+    infinite: true,
+    speed: 500,
+    // centerMode: true,
+    slidesToShow: 6,
+    slidesToScroll: 3,
+    responsive: [
+      {
+        breakpoint: 1024,
+        settings: {
+          slidesToShow: 3,
+          slidesToScroll: 2,
+          infinite: true,
+          dots: false,
+          centerMode: true,
+        }
+      },
+      {
+        breakpoint: 600,
+        settings: {
+          slidesToShow: 2,
+          slidesToScroll: 2,
+          initialSlide: 2,
+          infinite: true,
+          dots: false,
+          centerMode: true,
+        }
+      },
+      {
+        breakpoint: 480,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1,
+          infinite: true,
+          dots: false,
+          centerMode: true,
+        }
+      }
+    ]
+  }
   const handleOpen = () => setOpen(true);
   const handleClose = () => setOpen(false);
   const data = useStaticQuery(graphql`
@@ -73,17 +114,17 @@ const SkillSection = (props) => {
   `)
 
   const { climate,
-sustainability,
-gender,
-refugees,
-waste,
-blackLives,
-childProtection,
-animalRights,
-bioDiversity,
-community
- } = data
- 
+    sustainability,
+    gender,
+    refugees,
+    waste,
+    blackLives,
+    childProtection,
+    animalRights,
+    bioDiversity,
+    community
+  } = data
+
   const skillImages = [climate,
     sustainability,
     gender,
@@ -95,30 +136,20 @@ community
     bioDiversity,
     community]
 
-    const settings={
-      dots: false,
-      infinite: true,
-      slidesToShow: 6,
-      slidesToScroll: 3,
-      autoplay: true,
-      speed: 5000,
-      autoplaySpeed: 5000,
-      variableWidth: false,
-      cssEase: "linear",
-      adaptiveHeight:true
-    }
 
-    const { language } = props.pageContext
-    const skillComponentLanguageSelector = language === 'ja' ? skillsItems : skillsItems
 
-  const skillsComponents = skillComponentLanguageSelector.map(item => 
+  const { language } = props.pageContext
+  const skillComponentLanguageSelector = language === 'ja' ? skillsItems : skillsItems
+
+
+  const skillsComponents = skillComponentLanguageSelector.map(item =>
     <SkillItem
       key={item.id}
       imageOpt={skillImages[item.id - 1]}
       imageAlt={item.imageAlt}
     />
   )
-  
+
   return (
     <SimpleLocalize {...props}>
       <section className="skills-section">
@@ -126,23 +157,23 @@ community
           Use your skills for
         </div>
         <div className="skills-section-slider">
-        <Slider {...settings} className="skills-slider">
-          {skillsComponents}
+          <Slider {...settings} className="skills-slider">
+            {skillsComponents}
           </Slider>
         </div>
         <div className="skills-section-career">
           <FormattedMessage
-          id="careers-header-black-one"/>
+            id="careers-header-black-one" />
 
-          <br/><br/>
+          <br /><br />
           <button
-          onClick={handleOpen} >
+            onClick={handleOpen} >
             <FormattedMessage
-          id="get-socious"
-          /></button>
+              id="get-socious"
+            /></button>
         </div>
       </section>
-      <BasicModal open={open} handleClose={handleClose}/>
+      <BasicModal open={open} handleClose={handleClose} />
     </SimpleLocalize>
   )
 }
