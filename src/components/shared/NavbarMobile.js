@@ -10,7 +10,7 @@ import MenuIcon from '@mui/icons-material/Menu';
 import CheckMarkLang from './CheckMarkLang';
 
 const NavbarMobile = (props) => {
-  const { headerStyle, homePage, aboutLink, careersLink, newsroomLink, altPage, organizationLink, blogLink, sidebar, setSidebar } =
+  const { headerStyle, homePage, aboutLink, careersLink, newsroomLink, altPage, organizationLink, blogLink, sidebar, setSidebar, location } =
     props;
   const [open, setOpen] = useState(false);
   const handleOpen = () => setOpen(true);
@@ -110,7 +110,7 @@ const NavbarMobile = (props) => {
           <BasicModal open={open} handleClose={handleClose} />
         </Menu>
         :
-        <MenuIcon onClick={() => setSidebar(true)} className="mr-3 !fill-white" />
+        <MenuIcon onClick={() => setSidebar(true)} className={`mr-3 fixed top-6 right-0 ${location.pathname == '/' ? '!fill-white' : '!fill-[#2f4786]'}`} />
       }
     </nav>
   );
