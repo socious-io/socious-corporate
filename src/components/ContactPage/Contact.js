@@ -36,7 +36,7 @@ const ContactForm = (props) => {
         .then(data => {
           // I recommend setting data to React state
           // but you can do whatever you want (including ignoring this `then()` altogether)
-          // console.log(data)
+          console.log(data)
           navigate("/contact-accepted")
         })
         .catch(() => {

@@ -3,8 +3,8 @@
 .section-jobs {
   width: 100%;
   margin: 0 auto;
-  padding: 50px 0;
-  background: linear-gradient(1.45deg, #F8F8F8 52.4%, rgba(248, 248, 248, 0) 92.55%);;
+  padding: 50px 0 0 0;
+  background: linear-gradient(1.45deg, #F8F8F8 52.4%, rgba(248, 248, 248, 0) 92.55%);
 }
 
 .section-jobs__sup-header {
@@ -20,15 +20,15 @@
   margin-bottom: 3rem;
   font-size: 20px;
   text-align: center;
-  
+
 }
 
 .section-jobs__list {
- display: flex;
- flex-direction: column;
- justify-content: center;
- align-items: center;
- margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
 }
 
 .section-jobs__img-container,
@@ -119,25 +119,26 @@
 .section-jobs__list-item {
   display: flex;
   flex-direction: column;
-  width:25em;
+  width: 25em;
   height: 20em;
   justify-content: center;
   align-items: center;
   background: $white;
   border-radius: 20px;
-  
+
 }
 
-.section-jobs__list-container{
+.section-jobs__list-container {
   display: flex;
   flex-direction: column;
-  width:60%;
+  width: 60%;
   justify-content: center;
   align-items: center;
 
 
 }
-.section-jobs__list-jobs{
+
+.section-jobs__list-jobs {
   display: flex;
   width: 100%;
   justify-content: space-around;
@@ -160,7 +161,7 @@
 }
 
 .section-jobs__list-icon {
-  background-color: rgb(228,230,237);
+  background-color: rgb(228, 230, 237);
   color: $primary;
   border-radius: 100px;
   font-size: 24px;
@@ -178,15 +179,17 @@
   //   max-width: 20rem;
   // }
 
-  .section-jobs__list-jobs{
+  .section-jobs__list-jobs {
     flex-direction: column;
-  
+
   }
+
   .section-jobs__list-item {
     margin: 5%;
     width: 15em;
   }
-  .section-jobs__list-container{
+
+  .section-jobs__list-container {
     width: 70%;
   }
 }
