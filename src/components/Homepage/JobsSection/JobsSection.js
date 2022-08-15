@@ -27,7 +27,7 @@ const JobsSection = (props) => {
 
   return (
     <SimpleLocalize {...props}>
-      <div className="section-jobs pb-10">
+      <div className="section-jobs !pb-8">
         <div className="section-jobs__block">
           <div className="section-jobs__list">
             <div className="section-jobs__sup-header">
