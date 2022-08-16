@@ -7,6 +7,10 @@ import SimpleLocalize from "../../shared/SimpleLocalize";
 import Feature from "./Features";
 import features from "../../../../data/Homepage/features";
 import featuresJa from "../../../../data/Homepage/featuresJa";
+import gif0 from "../../../images/gif-new/0.gif"
+import gif1 from "../../../images/gif-new/1.gif"
+import gif2 from "../../../images/gif-new/2.gif"
+import gif3 from "../../../images/gif-new/3.gif"
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
@@ -17,22 +21,22 @@ const FeaturesSection = (props) => {
   const { ref: areaSlide, inView: areaSlideVisible, entry } = useInView();
   const data = useStaticQuery(graphql`
     query FeatureSection {
-      projects: file(relativePath: {eq: "gif/projects.png"}) {
+      projects: file(relativePath: {eq: "gif-new/0.gif"}) {
         childImageSharp {
           gatsbyImageData(placeholder: BLURRED, blurredOptions: {width: 100})
         }
       }
-      hired: file(relativePath: {eq: "gif/hired.png"}) {
+      hired: file(relativePath: {eq: "gif-new/1.gif"}) {
         childImageSharp {
           gatsbyImageData(placeholder: BLURRED, blurredOptions: {width: 100})
         }
       }
-      impact: file(relativePath: {eq: "gif/impact.png"}) {
+      impact: file(relativePath: {eq: "gif-new/2.gif"}) {
         childImageSharp {
           gatsbyImageData(placeholder: BLURRED, blurredOptions: {width: 100})
         }
       }
-      payment: file(relativePath: {eq: "gif/payment.png"}) {
+      payment: file(relativePath: {eq: "gif-new/3.gif"}) {
         childImageSharp {
           gatsbyImageData(placeholder: BLURRED, blurredOptions: {width: 100})
         }
@@ -42,7 +46,7 @@ const FeaturesSection = (props) => {
 
   const { projects, hired, impact, payment } = data
   const featureImages = [projects, hired, impact, payment]
-
+  const gifs = [gif0, gif1, gif2, gif3]
   const settings = {
     dots: false,
     vertical: true,
@@ -73,10 +77,11 @@ const FeaturesSection = (props) => {
 
   const languageSelector = language === 'ja' ? featuresJa : features
 
-  const featureItems = languageSelector.map(feature =>
+  const featureItems = languageSelector.map((feature, idx) =>
 
     <Feature
-      gifOpt={featureImages[feature.id - 1]}
+      idx={idx}
+      gifOpt={gifs[feature.id - 1]}
       slide={feature.slide}
       key={feature.id}
       title={feature.title}
@@ -91,9 +96,11 @@ const FeaturesSection = (props) => {
   return (
     <SimpleLocalize {...props}>
 
-      <main class="max-h-screen overflow-y-scroll overflow-x-hidden snap snap-y snap-mandatory">
+      {/* <main class="max-h-screen overflow-y-scroll overflow-x-hidden snap snap-y snap-mandatory"> */}
+      <div className="flex-col p-10">
         {featureItems}
-      </main>
+      </div>
+      {/* </main> */}
 
 
 
