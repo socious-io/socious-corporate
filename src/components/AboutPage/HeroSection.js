@@ -8,7 +8,7 @@ import SimpleLocalize from "../shared/SimpleLocalize";
 import { FormattedMessage } from "react-intl";
 
 const Hero = (props) => {
-  const  images  = useStaticQuery(
+  const images = useStaticQuery(
     graphql`
       query {
         imageOne: file(relativePath: {eq: "about-landing-image.png"}) {
@@ -27,17 +27,17 @@ const Hero = (props) => {
   );
 
 
-const {imageOne} = images;
-const aboutImage = [imageOne]
- 
+  const { imageOne } = images;
+  const aboutImage = [imageOne]
+
   const pluginImage = getImage(aboutImage[0])
- 
+
 
   return (
     <SimpleLocalize {...props}>
-      <div className='hero-section'>
-      
-        <div className="hero-text">
+      <div className='!mt-4 xxs:!flex-col xxs:!gap-8 !justify-center mdp:!flex-row xxs:!pt-56 mdp:!pt-20 hero-section'>
+
+        <div className="xxs:!mx-4 hero-text">
           <h5 className='hero-text-header'>
             <FormattedMessage
               id="mission-header"
@@ -49,11 +49,11 @@ const aboutImage = [imageOne]
             />
           </h1>
         </div>
-        <div className='hero-image-holder'>
-        <GatsbyImage image={pluginImage} alt="about image" className='hero-image'/>
+        <div className='!flex !self-center hero-image-holder'>
+          <GatsbyImage style={{ maxWidth: '340px' }} image={pluginImage} alt="about image" className='hero-image' />
         </div>
-        </div>
-     
+      </div>
+
     </SimpleLocalize>
   )
 }
