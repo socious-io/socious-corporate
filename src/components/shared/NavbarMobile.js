@@ -8,6 +8,7 @@ import BasicModal from '../shared/QR-Modal';
 import CrossButtonSidebar from './CrossButtonSidebar';
 import MenuIcon from '@mui/icons-material/Menu';
 import CheckMarkLang from './CheckMarkLang';
+import QRModal from '../shared/QR-Modal';
 
 const NavbarMobile = (props) => {
   const { headerStyle, homePage, aboutLink, careersLink, newsroomLink, altPage, organizationLink, blogLink, sidebar, setSidebar, location } =
@@ -107,7 +108,7 @@ const NavbarMobile = (props) => {
               id="get-socious"
             />
           </button>
-          <BasicModal open={open} handleClose={handleClose} />
+          <QRModal open={open} handleClose={handleClose} />
         </Menu>
         :
         <MenuIcon onClick={() => setSidebar(true)} className={`mr-3 fixed top-6 right-0 ${location.pathname == '/' ? '!fill-white' : '!fill-[#2f4786]'}`} />
