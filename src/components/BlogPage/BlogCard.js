@@ -17,8 +17,11 @@ const BlogCard = ({ edge, alternate }) => {
 
   return (
     <div className={alternate ? "alternate blog" : "blog"}>
-      <img src={WORDPRESS_URL + featuredImage?.node.sourceUrl} alt={featuredImage?.node.altText || title} />
-      <div className='blog-content-words'>
+
+      <img className='flex-1 object-cover' src={WORDPRESS_URL + featuredImage?.node.sourceUrl} alt={featuredImage?.node.altText || title} />
+
+
+      <div className='flex-1 blog-content-words'>
         <p className='blog--date'>
           <small>{date}</small>
         </p>
