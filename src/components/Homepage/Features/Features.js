@@ -10,17 +10,17 @@ const Feature = (props) => {
   const image = getImage(props.gifOpt)
 
   return (
-    <section class="flex items-center justify-center w-full h-screen bg-pattern-striped snap-start">
-      <div className="!flex-row section-features__list-item">
+    <section className="flex items-center pt-14 justify-center bg-pattern-striped">
+      <div className={`${(props.idx - 1) % 2 != 0 ? '!flex-row' : '!flex-row-reverse'} xxs:!flex-col ${(props.idx - 1) % 2 != 0 ? 'sm:!flex-row' : 'sm:!flex-row-reverse'} gap-2 section-features__list-item`}>
 
         <div
-          className="section-features__list-image-container">
-          <GatsbyImage image={image} alt={props.gifAlt} className="section-features__list-image" />
+          className="flex-1 py-10 section-features__list-image-container">
+          <img src={props.gifOpt} alt={props.gifAlt} className="!max-h-[23em] section-features__list-image" />
         </div>
 
         <div
 
-          className="section-features__list-content">
+          className="flex-1 section-features__list-content">
           <div className="section-features__list-slide">
             {props.slide}
           </div>

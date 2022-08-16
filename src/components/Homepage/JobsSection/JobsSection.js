@@ -46,7 +46,7 @@ const JobsSection = (props) => {
               />
             </div>
           </div>
-          <div className="!flex-row gap-4 px-4 xxs:!flex-col mdp:!flex-row  !w-[90%] section-jobs__list-jobs">{jobItemsLeft}</div>
+          <div className="!flex-row gap-8 px-4 xxs:!flex-col mdp:!flex-row  !w-[90%] section-jobs__list-jobs">{jobItemsLeft}</div>
 
         </div>
       </div>
