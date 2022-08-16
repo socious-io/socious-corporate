@@ -28,7 +28,7 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  margin: 0 auto;
+  // margin: 0 auto;
 }
 
 .section-jobs__img-container,
@@ -131,7 +131,7 @@
 .section-jobs__list-container {
   display: flex;
   flex-direction: column;
-  width: 60%;
+  // width: 60%;
   justify-content: center;
   align-items: center;
 
@@ -153,6 +153,11 @@
 }
 
 .section-jobs__list-item-subtitle {
+  font-family: 'Work Sans';
+  width: 15em;
+  font-style: normal;
+  display: flex;
+  align-items: flex-end;
   font-size: 18px;
   color: rgb(107, 114, 128);
   font-weight: 400;
@@ -185,12 +190,12 @@
   }
 
   .section-jobs__list-item {
-    margin: 5%;
-    width: 15em;
+    // margin: 5%;
+    min-width: 15em;
   }
 
   .section-jobs__list-container {
-    width: 70%;
+    // width: 70%;
   }
 }
 
@@ -200,7 +205,7 @@
   }
 
   .section-jobs__list {
-    width: 90%;
+    // width: 90%;
   }
 
   .section-jobs__img-entrepreneurs-container {
