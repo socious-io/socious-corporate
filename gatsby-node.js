@@ -3,13 +3,16 @@ require("dotenv").config({
 })
 
 const path = require("path");
+const messages = require("./src/resources/i18n-translations.json");
+const { languages, defaultLanguage } = require("./src/resources/i18n");
 
 exports.createPages = async ({ graphql, actions, reporter }) => {
   const { createPage } = actions;
-  const blogPostTemplate = path.resolve("src/templates/BlogPost.js");
-  const wordpressPostTemplate = path.resolve("src/templates/WordPressBlog.js");
+  return new Promise(async (resolve) => {
+    const blogPostTemplate = path.resolve("src/templates/BlogPost.js");
+    const wordpressPostTemplate = path.resolve("src/templates/WordPressBlog.js");
 
-  const result = await graphql(`
+    const result = await graphql(`
     {
       postsRemark: allMarkdownRemark(
         sort: { order: DESC, fields: frontmatter___Date___start }
@@ -26,7 +29,7 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
     }
   `);
 
-  const wordpressResult = await graphql(`
+    const wordpressResult = await graphql(`
     {
       allWpPost {
         edges {
@@ -39,38 +42,83 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
   `);
 
 
-  if (result.errors || wordpressResult.errors) {
-    reporter.panicOnBuild("Error while running GraphQL query.");
-    return;
-  }
+    if (result.errors || wordpressResult.errors) {
+      reporter.panicOnBuild("Error while running GraphQL query.");
+      return;
+    }
 
-  const posts = result.data.postsRemark.edges;
-  const wordpressPosts = wordpressResult?.data?.allWpPost?.edges || [];
+    const posts = result.data.postsRemark.edges;
+    const wordpressPosts = wordpressResult?.data?.allWpPost?.edges || [];
+    posts.forEach(({ node }) => {
+      let path = node.frontmatter.slug;
+      for (let language of languages) {
+        const isDefaultLanguage = language === defaultLanguage;
+        if (!isDefaultLanguage) {
+          path = "/" + language + '/' + node.frontmatter.slug;
+        }
 
-  posts.forEach(({ node }) => {
-    createPage({
-      path: node.frontmatter.slug,
-      component: blogPostTemplate,
-      context: {
-        slug: node.frontmatter.slug,
-      },
+        const pageForLanguage = Object.assign({}, node, {
+          originalPath: node.frontmatter.slug,
+          path: path,
+          component: blogPostTemplate,
+          context: {
+            language,
+            messages: messages[language],
+            slug: node.frontmatter.slug
+          },
+        });
+        createPage(pageForLanguage);
+      }
+
+      // createPage({
+      //   path: node.frontmatter.slug,
+      //   component: blogPostTemplate,
+      //   context: {
+      //     slug: node.frontmatter.slug,
+      //   },
+      // });
+    }
+    )
+
+
+
+
+
+
+    wordpressPosts.forEach(({ node }) => {
+      let path = `/blog/${node.slug}`;
+      for (let language of languages) {
+        const isDefaultLanguage = language === defaultLanguage;
+        if (!isDefaultLanguage) {
+          path = "/" + language + '/blog/' + node.slug;
+        }
+
+        const pageForLanguage = Object.assign({}, node, {
+          originalPath: `/blog/${node.slug}`,
+          path: path,
+          component: wordpressPostTemplate,
+          context: {
+            language,
+            messages: messages[language],
+            slug: node.slug
+          },
+        });
+        createPage(pageForLanguage);
+      }
+
+      // createPage({
+      //   path: `/blog/${node.slug}`,
+      //   component: wordpressPostTemplate,
+      //   context: {
+      //     slug: node.slug,
+      //   },
+      // });
     });
-  });
-
-  wordpressPosts.forEach(({ node }) => {
-    createPage({
-      path: `/blog/${node.slug}`,
-      component: wordpressPostTemplate,
-      context: {
-        slug: node.slug,
-      },
-    });
-  });
-
+    resolve()
+  })
 };
 
-const messages = require("./src/resources/i18n-translations.json");
-const { languages, defaultLanguage } = require("./src/resources/i18n");
+
 
 exports.onCreatePage = async ({ page, actions }) => {
   const { createPage, deletePage } = actions;
