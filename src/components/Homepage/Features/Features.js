@@ -10,7 +10,7 @@ const Feature = (props) => {
   const image = getImage(props.gifOpt)
 
   return (
-    <section className="flex items-center pt-14 justify-center bg-pattern-striped">
+    <section className="flex items-center xxs:!pt-10 md:!pt-4 justify-center bg-pattern-striped">
       <div className={`${(props.idx - 1) % 2 != 0 ? '!flex-row' : '!flex-row-reverse'} xxs:!flex-col ${(props.idx - 1) % 2 != 0 ? 'sm:!flex-row' : 'sm:!flex-row-reverse'} gap-2 section-features__list-item`}>
 
         <div

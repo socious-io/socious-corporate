@@ -97,7 +97,7 @@ const FeaturesSection = (props) => {
     <SimpleLocalize {...props}>
 
       {/* <main class="max-h-screen overflow-y-scroll overflow-x-hidden snap snap-y snap-mandatory"> */}
-      <div className="flex-col p-10">
+      <div className="flex-col">
         {featureItems}
       </div>
       {/* </main> */}
