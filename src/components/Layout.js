@@ -25,12 +25,6 @@ const theme = {
   }
 }
 
-const AppLayout = styled.div`
-  max-width: 100vw;
-  width: 100vw;
-  overflow: hidden;
-`
-
 const Layout = (props) => {
   const {
     pageContext: { language, messages },
@@ -42,15 +36,13 @@ const Layout = (props) => {
   return (
     <IntlProvider defaultLocale="en" locale={language} messages={messages}>
       <ThemeProvider theme={{ ...theme, ...muiTheme }}>
-        <AppLayout>
-          <title>
-            <FormattedMessage id={pageTitle || 'site-title'} />
-          </title>
-          <div id="scroll-top"></div>
-          <Navbar header={header} />
-          <main>{children}</main>
-          <Footer />
-        </AppLayout>
+        <title>
+          <FormattedMessage id={pageTitle || 'site-title'} />
+        </title>
+        <div id="scroll-top"></div>
+        <Navbar header={header} />
+        {children}
+        <Footer />
       </ThemeProvider>
     </IntlProvider>
   );
