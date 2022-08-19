@@ -1,42 +1,30 @@
-import React, { useEffect } from "react";
+import React from "react";
+import styled from "@emotion/styled";
 
-import 'video-react/dist/video-react.css';
-import { GatsbyImage, getImage } from "gatsby-plugin-image";
+const FeatureContent = styled.div`
+  justify-content: flex-start;
+  align-items: flex-start;
+  flex-direction: column;
+  width: 100%;
+  padding: 20px;
+`
 
-
-const Feature = (props) => {
-
-
-  const image = getImage(props.gifOpt)
-
+const Feature = ({ feature }) => {
   return (
-    <section className="flex items-center xxs:!pt-10 md:!pt-4 justify-center bg-pattern-striped">
-      <div className={`${(props.idx - 1) % 2 != 0 ? '!flex-row' : '!flex-row-reverse'} xxs:!flex-col ${(props.idx - 1) % 2 != 0 ? 'sm:!flex-row' : 'sm:!flex-row-reverse'} gap-2 section-features__list-item`}>
-
-        <div
-          className="flex-1 py-10 section-features__list-image-container">
-          <img src={props.gifOpt} alt={props.gifAlt} className="!max-h-[23em] section-features__list-image" />
-        </div>
-
-        <div
-
-          className="flex-1 section-features__list-content">
-          <div className="section-features__list-slide">
-            {props.slide}
-          </div>
-          <div className="section-features__list-item-title">
-            {props.title}
-          </div>
-          <div className="section-features__list-item-subtitle">
-            {props.subtitle}
-          </div>
-          <div className="section-features__list-item-link">
-            <a href={props.linkUrl}>{props.link}&rarr;</a>
-          </div>
-        </div>
+    <>
+      <div className="section-features__list-slide">
+        {feature.slide}
       </div>
-    </section>
-
+      <div className="section-features__list-item-title">
+        {feature.title}
+      </div>
+      <div className="section-features__list-item-subtitle">
+        {feature.subtitle}
+      </div>
+      <div className="section-features__list-item-link">
+        <a href={feature.linkUrl}>{feature.link}&rarr;</a>
+      </div>
+    </>
   )
 }
 
