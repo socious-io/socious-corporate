@@ -5,7 +5,6 @@ import '../styles/main.scss';
 import { createTheme } from "@material-ui/core/styles";
 import Navbar from './shared/Navbar';
 import Footer from './shared/Footer';
-import styled from '@emotion/styled';
 import { ThemeProvider } from '@emotion/react'
 
 const muiTheme = createTheme()

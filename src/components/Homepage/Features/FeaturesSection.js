@@ -1,8 +1,5 @@
-import React, { useEffect, createRef, useCallback } from "react";
-import { StaticImage } from "gatsby-plugin-image";
-import { graphql, useStaticQuery } from "gatsby";
+import React from "react";
 import { useInView } from "react-intersection-observer";
-import SimpleLocalize from "../../shared/SimpleLocalize";
 
 import Feature from "./Features";
 import features from "../../../../data/Homepage/features";
@@ -11,13 +8,11 @@ import gif0 from "../../../images/gif-new/0.gif"
 import gif1 from "../../../images/gif-new/1.gif"
 import gif2 from "../../../images/gif-new/2.gif"
 import gif3 from "../../../images/gif-new/3.gif"
-import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import Cta from "../CTA";
 import styled from '@emotion/styled';
 import { motion } from 'framer-motion';
-import { InView } from "react-intersection-observer";
 
 const Container = styled.div`
   -webkit-box-align: center;
