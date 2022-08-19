@@ -39,8 +39,8 @@ const Seo = ({key, title, description, image, twitterImage, children}) => {
   }
 
   const pathWithSlash = pathname.endsWith("/") ? pathname : pathname + "/";
-  const absoluteURL = process.env.URL + pathWithSlash  
-  const langURL = process.env.URL + (jaPage ? pathWithSlash.replace('/ja', "") : `/ja${pathWithSlash}`);
+  const absoluteURL = "https://socious.io" + pathWithSlash  
+  const langURL = "https://socious.io" + (jaPage ? pathWithSlash.replace('/ja', "") : `/ja${pathWithSlash}`);
   
   const duplicate = !!(["/ja/privacy-policy-ja/", "/ja/privacy-policy/", "/ja/user-agreement/", "/ja/user-agreement-ja/"].includes(pathWithSlash) || pathWithSlash.match((/\/ja(\/careers\/\S+|\/blog\/.*)/)));
   const haveLang = !(["/privacy-policy-ja/", "/privacy-policy/", "/user-agreement/", "/user-agreement-ja/"].includes(pathWithSlash) || pathWithSlash.match((/(\/careers\/\S+|\/blog\/.*)/)));
