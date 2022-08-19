@@ -10,7 +10,7 @@ const Job = (props) => {
         <div className="section-jobs__list-item-title">
           {props.title}
         </div>
-        <div className="section-jobs__list-item-subtitle">
+        <div className="xxs:!w-[14em] mdp:!w-[15em] section-jobs__list-item-subtitle">
           {props.subtitle}
         </div>
       </div>

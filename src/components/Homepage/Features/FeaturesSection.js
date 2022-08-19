@@ -138,6 +138,7 @@ const FeaturesSection = (props) => {
   })
 
   return (
+
     <Container>
       <SlideContainer>
         <SlideImg>

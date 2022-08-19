@@ -1,14 +1,22 @@
 import * as React from 'react';
-
+import { useState } from 'react';
 import MobileImageBlock from './MobileImageBlock';
 import EarlyAccessForm from './EarlyAccessForm';
+import BasicModal from '../../shared/QR-Modal';
 import { graphql, useStaticQuery } from 'gatsby';
 import { getImage } from 'gatsby-plugin-image';
 import { BgImage } from 'gbimage-bridge';
 import SimpleLocalize from '../../shared/SimpleLocalize';
 import { FormattedMessage } from 'react-intl';
+import { useIntl } from 'react-intl';
 
 const Intro = (props) => {
+  const [open, setOpen] = useState(false);
+  const handleOpen = () => setOpen(true);
+  const handleClose = () => setOpen(false);
+  const intl = useIntl();
+
+  const jaPage = intl.locale === 'ja';
   const { introBackgroundImage } = useStaticQuery(
     graphql`
       query {
@@ -48,19 +56,15 @@ const Intro = (props) => {
 
           <div className="section-app-links__app-links-block">
             <div className="section-app-links__app-links">
-              <a
-                href="#"
-                target="_blank"
-                rel="noreferrer"
-              >
-                <button className="section-app-links__app-links-button-work">
-                  Find work
-                </button>
-              </a>
+
+              <button onClick={handleOpen} className="section-app-links__app-links-button-work">
+                Find work
+              </button>
+
             </div>
             <div className="section-app-links__app-links">
               <a
-                href="#"
+                href={jaPage ? '/ja/organization' : '/organization'}
                 target="_blank"
                 rel="noreferrer"
               >
@@ -72,6 +76,7 @@ const Intro = (props) => {
           </div>
         </div>
       </BgImage>
+      <BasicModal open={open} handleClose={handleClose} />
     </SimpleLocalize>
   )
 }

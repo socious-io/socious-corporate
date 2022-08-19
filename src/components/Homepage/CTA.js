@@ -11,8 +11,8 @@ const Cta = (props) => {
 
   return (
     <SimpleLocalize {...props}>
-      <div className="job-action">
-        <div className="job-action__container max-w-[50%]">
+      <div className="!py-[5px] job-action xxs:!mt-10">
+        <div className="!p-[35px] !w-full job-action__container">
           <h2 className='job-action__header mb-5'>
             <FormattedMessage
               id="call-to-action-job-header"
@@ -32,7 +32,7 @@ const Cta = (props) => {
             />
           </p>
 
-          <a className='job-action__link' href='https://www.notion.so/socious/Socious-Whitepaper-58fbe2c106f547898df42e409a00c73e#231ee8eab5384092a91d5fb4e114044e'>
+          <a className='pt-4 job-action__link' href='https://www.notion.so/socious/Socious-Whitepaper-58fbe2c106f547898df42e409a00c73e#231ee8eab5384092a91d5fb4e114044e'>
             <FormattedMessage
               id="learn-more"
             />
