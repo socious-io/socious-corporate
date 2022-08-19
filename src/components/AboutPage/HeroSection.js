@@ -37,7 +37,7 @@ const Hero = (props) => {
     <SimpleLocalize {...props}>
       <div className='!mt-4 xxs:!flex-col xxs:!gap-8 !justify-center mdp:!flex-row xxs:!pt-56 mdp:!pt-20 hero-section'>
 
-        <div className="xxs:!mx-4 hero-text">
+        <div className="xxs:!mx-4 hero-text" id='mission'>
           <h5 className='hero-text-header'>
             <FormattedMessage
               id="mission-header"

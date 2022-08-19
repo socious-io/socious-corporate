@@ -15,7 +15,7 @@
   margin-top: 0;
 }
 .team-title p{
-  font-size: 18px;
+  font-size: 16px;
 }
 
 .team-container {
@@ -52,21 +52,28 @@
 
 .member-name {
   color: $black;
-  font-size: 20px;
+  font-size: 18px;
+  font-weight: bold;
 }
 
 .member-icon{
 
-  margin: 2%;
+  margin: 5% auto;
   padding: 10px;
+  width: 45px;
   border-radius: 100px;
   background: #f3f2f1;
   color: #ffffff;
+  bottom: 0;
+  
 }
 
 .member-description{
   padding: 5px;
   margin-bottom: 2%;
+  font-size: 14px;
+ 
+  
 }
 .member-divider{
   margin: 2px;

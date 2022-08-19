@@ -34,7 +34,9 @@ const TalentCta = (props) => {
             />
           </p>
 
-          <a className='hire-action__link' href='https://www.notion.so/socious/Socious-Whitepaper-58fbe2c106f547898df42e409a00c73e#231ee8eab5384092a91d5fb4e114044e'>
+          <a className='hire-action__link'
+          target="_blank"
+          href='https://www.notion.so/socious/Socious-Whitepaper-58fbe2c106f547898df42e409a00c73e#231ee8eab5384092a91d5fb4e114044e'>
           <FormattedMessage
               id="learn-more"
             />

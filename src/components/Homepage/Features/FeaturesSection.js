@@ -138,7 +138,7 @@ const FeaturesSection = (props) => {
   })
 
   return (
-    <Container>
+    <Container className="slides-cont">
       <SlideContainer>
         <SlideImg>
           <div className="relative w-full" style={{ paddingTop: '100%' }}>

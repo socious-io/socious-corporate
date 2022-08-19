@@ -1,4 +1,4 @@
-import * as React from 'react';
+import React, {useState} from 'react';
 
 import MobileImageBlock from './MobileImageBlock';
 import EarlyAccessForm from './EarlyAccessForm';
@@ -7,8 +7,13 @@ import { getImage } from 'gatsby-plugin-image';
 import { BgImage } from 'gbimage-bridge';
 import SimpleLocalize from '../../shared/SimpleLocalize';
 import { FormattedMessage } from 'react-intl';
+import { useIntl } from 'react-intl';
+import BasicModal from "../../shared/QR-Modal"
 
 const Intro = (props) => {
+  const [open, setOpen] = useState(false);
+  const handleOpen = () => setOpen(true);
+  const handleClose = () => setOpen(false);
   const { introBackgroundImage } = useStaticQuery(
     graphql`
       query {
@@ -32,6 +37,11 @@ const Intro = (props) => {
     `linear-gradient(0deg, rgba(0, 0, 0, 0.16), rgba(0, 0, 0, 0.16))`,
   ].reverse();
 
+  const intl = useIntl();
+
+  const jaPage = intl.locale === 'ja';
+  const organizationLink = jaPage ? '/ja/organization' : '/organization';
+
   return (
     <SimpleLocalize {...props}>
       <BgImage image={backgroundFluidImageStack} className="section-intro">
@@ -48,20 +58,15 @@ const Intro = (props) => {
 
           <div className="section-app-links__app-links-block">
             <div className="section-app-links__app-links">
-              <a
-                href="#"
-                target="_blank"
-                rel="noreferrer"
-              >
-                <button className="section-app-links__app-links-button-work">
+                <button className="section-app-links__app-links-button-work"
+                onClick={handleOpen}
+                >
                   Find work
                 </button>
-              </a>
             </div>
             <div className="section-app-links__app-links">
               <a
-                href="#"
-                target="_blank"
+                href={organizationLink}
                 rel="noreferrer"
               >
                 <button className="section-app-links__app-links-button">
@@ -72,6 +77,7 @@ const Intro = (props) => {
           </div>
         </div>
       </BgImage>
+      <BasicModal open={open} handleClose={handleClose} />
     </SimpleLocalize>
   )
 }

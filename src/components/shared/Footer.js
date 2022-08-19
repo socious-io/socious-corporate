@@ -38,7 +38,7 @@ const Footer = () => {
             </div>
             <div className="footer-list">
               <ul>
-                <li><AnchorLink to={linkLanguageSelector("/about#our-mission")} title={ourMission} /></li>
+                <li><AnchorLink to={linkLanguageSelector("/about#mission")} title={ourMission} /></li>
                 <li><AnchorLink to={linkLanguageSelector("/about#our-team")} title={ourTeam} /></li>
                 <li><Link to={linkLanguageSelector("/careers")}>{jaPage ? '採用情報' : 'Careers'}</Link></li>
               </ul>
