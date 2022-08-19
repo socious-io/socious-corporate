@@ -178,29 +178,9 @@ const FeaturesSection = (props) => {
             >
               <img
                 style={{ margin: 'auto' }}
-                // src={gifs[inViewArray.indexOf(true)]}
-                src={gifs[0]}
+                src={gifs[inViewArray.indexOf(true)]}
                 height={500}
               />
-              {/* {featuresList?.map((feature, index) => {
-                return (
-                  <SlideText>
-                    <SlideTextContentMobile
-                      ref={feature.ref}
-                      initial={contentVariants.hidden}
-                      whileInView={contentVariants.visible}
-                      transition={{ duration: .4 }}
-                      viewport={{ once: false, amount: .6 }}
-                      style={{
-                        paddingTop: index === 0 ? 'calc(40%)' : 0,
-                        paddingBottom: index === featuresList?.length - 1 ? 'calc(60%)' : 0
-                      }}
-                    >
-                      <Feature feature={feature} />
-                    </SlideTextContentMobile>
-                  </SlideText>
-                )
-              })} */}
             </ImageContainer>
           </SlideImgChild>
         </SlideImg>
