@@ -5,6 +5,7 @@ import Layout from '../components/Layout';
 import { graphql, useStaticQuery } from 'gatsby';
 import { getImage } from 'gatsby-plugin-image';
 import { BgImage } from 'gbimage-bridge';
+import { autocompleteClasses } from '@mui/material';
 
 // styles
 const pageStyles = {
@@ -13,13 +14,32 @@ const pageStyles = {
   fontFamily: '-apple-system, Roboto, sans-serif, serif',
 };
 const headingStyles = {
-  marginTop: 0,
-  marginBottom: 64,
-  maxWidth: 320,
+  marginTop: 3,
+  textAlign:"center",
+  // marginBottom: 64,
+  // maxWidth: 320,
+  fontSize:"320px",
+  color:"#ffffff"
 };
 
 const paragraphStyles = {
-  marginBottom: 48,
+  color:"#ffffff",
+  textAlign:"center",
+  fontSize:"24px",
+  fontWeight:600,
+  marginTop: "-12%",
+
+  
+};
+
+const buttonStyles = {
+  color:"#2F4786",
+  textAlign:"center",
+  fontSize:"18px",
+  margin:5,
+  backgroundColor:"#ffffff",
+  padding: "12px 32px",
+  borderRadius: "50px",
 };
 const codeStyles = {
   color: '#8A6534',
@@ -52,7 +72,7 @@ const NotFoundPage = (props) => {
     `
   )
 
-  const pluginImage = getImage(notFoundBackgroundIma)
+  const pluginImage = getImage(notFoundBackgroundImage)
   const backgroundFluidImageStack = [
     pluginImage,
     `linear-gradient(0deg, rgba(0, 0, 0, 0.16), rgba(0, 0, 0, 0.16))`,
@@ -70,7 +90,7 @@ const NotFoundPage = (props) => {
           <br />
           
           <br />
-          <Link to="/">Home</Link>.
+          <Link to="/" style={buttonStyles}>Home</Link>
         </p>
       </main>
     </IntlProvider>

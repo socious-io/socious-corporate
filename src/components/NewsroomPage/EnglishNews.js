@@ -68,7 +68,9 @@ const EnglishNews = () => {
     const { id,
             frontmatter: { title, slug, Date:date, Hero_Image, Publish }
     } = post.node
-  const one = new Date(date.start).toDateString().split('').slice(1).join(' ')
+  const one = new Date(date.start).toDateString().split('').slice(1).join('')
+  // const two = new Date(date.start).toDateString().split(' ').slice(1).join(' ,')
+  // console.log({two});
     const completeArticle = Publish ?
       <PostItem
         key={id}
