@@ -8,7 +8,7 @@ import { BgImage } from 'gbimage-bridge';
 import SimpleLocalize from '../../shared/SimpleLocalize';
 import { FormattedMessage } from 'react-intl';
 import { useIntl } from 'react-intl';
-import BasicModal from "../../shared/QR-Modal"
+
 
 const Intro = (props) => {
   const [open, setOpen] = useState(false);
