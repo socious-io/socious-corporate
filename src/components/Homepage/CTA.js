@@ -11,8 +11,8 @@ const Cta = (props) => {
 
   return (
     <SimpleLocalize {...props}>
-      <div className="job-action">
-        <div className="job-action__container max-w-[50%]">
+      <div className="!py-[5px] job-action xxs:!mt-10">
+        <div className="!p-[35px] !w-full job-action__container">
           <h2 className='job-action__header mb-5'>
             <FormattedMessage
               id="call-to-action-job-header"

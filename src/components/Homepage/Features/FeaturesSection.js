@@ -1,8 +1,5 @@
-import React, { useEffect, createRef, useCallback } from "react";
-import { StaticImage } from "gatsby-plugin-image";
-import { graphql, useStaticQuery } from "gatsby";
+import React from "react";
 import { useInView } from "react-intersection-observer";
-import SimpleLocalize from "../../shared/SimpleLocalize";
 
 import Feature from "./Features";
 import features from "../../../../data/Homepage/features";
@@ -11,13 +8,11 @@ import gif0 from "../../../images/gif-new/0.gif"
 import gif1 from "../../../images/gif-new/1.gif"
 import gif2 from "../../../images/gif-new/2.gif"
 import gif3 from "../../../images/gif-new/3.gif"
-import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import Cta from "../CTA";
 import styled from '@emotion/styled';
 import { motion } from 'framer-motion';
-import { InView } from "react-intersection-observer";
 
 const Container = styled.div`
   -webkit-box-align: center;
@@ -35,9 +30,9 @@ const SlideContainer = styled.div`
   max-width: 900px;
   z-index: 2;
 
-
   @media only screen and (max-width: 600px) {
     flex-direction: column;
+    height: 250vh;
   }
 `
 
@@ -54,6 +49,13 @@ const SlideImg = styled.div`
   opacity: 1;
   transform: translate(0px, 0px);
   margin: 64px 64px 128px 0;
+
+  @media only screen and (max-width: 600px) {
+    margin: 0;
+    width: 100%;
+    height: 50vh;
+    z-index: 5;
+  }
 `
 
 const SlideText = styled.div`
@@ -68,6 +70,13 @@ const SlideText = styled.div`
   @media only screen and (max-width: 600px) {
     width: 100%;
     padding: 20px;
+    div:first-child {
+      padding-top: 20px !important;
+    }
+
+    div:last-child {
+      padding-bottom: 0 !important;
+    }
   }
 `
 
@@ -79,7 +88,7 @@ const SlideTextContent = styled(motion.div)`
   justify-content: center;
 
   @media only screen and (max-width: 600px) {
-    display: none;
+    height: 50vh;
   }
 `
 
@@ -91,17 +100,24 @@ const SlideTextContentMobile = styled(motion.div)`
     flex-direction: column;
     -webkit-box-pack: center;
     justify-content: center;
+    height: 50vh;
+    background: red;
   }
 `
 
-const ImageContainer = styled.div`
+const ImageContainer = styled(motion.div)`
   position: absolute;
   top: calc(50% - 224.5px);
   left: 0px;
   width: 100%;
   height: 100%;
   opacity: 1;
-}
+
+  @media only screen and (max-width: 600px) {
+    padding: 60px 20px 0 20px;
+    top: 0;
+    height: 100vh;
+  }
 `
 
 const contentVariants = {
@@ -114,6 +130,13 @@ const contentVariants = {
     scale: .1
   }
 }
+
+const SlideImgChild = styled.div`
+  padding-top: 100%;
+  background: white;
+  position: relative;
+  width: 100%;
+`
 
 const FeaturesSection = (props) => {
   const gifs = [gif0, gif1, gif2, gif3]
@@ -138,37 +161,24 @@ const FeaturesSection = (props) => {
   })
 
   return (
-    <Container className="slides-cont">
+
+    <Container>
       <SlideContainer>
         <SlideImg>
-          <div className="relative w-full" style={{ paddingTop: '100%' }}>
-            <ImageContainer>
+          <SlideImgChild>
+            <ImageContainer
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              exit={{ opacity: 0 }}
+              transition={{ duration: .4 }}
+            >
               <img
                 style={{ margin: 'auto' }}
                 src={gifs[inViewArray.indexOf(true)]}
                 height={500}
               />
-              {featuresList?.map((feature, index) => {
-                return (
-                  <SlideText>
-                    <SlideTextContentMobile
-                      ref={feature.ref}
-                      initial={contentVariants.hidden}
-                      whileInView={contentVariants.visible}
-                      transition={{ duration: .4 }}
-                      viewport={{ once: false, amount: .6 }}
-                      style={{
-                        paddingTop: index === 0 ? 'calc(40%)' : 0,
-                        paddingBottom: index === featuresList?.length - 1 ? 'calc(60%)' : 0
-                      }}
-                    >
-                      <Feature feature={feature} />
-                    </SlideTextContentMobile>
-                  </SlideText>
-                )
-              })}
             </ImageContainer>
-          </div>
+          </SlideImgChild>
         </SlideImg>
         <SlideText>
           {featuresList?.map((feature, index) => {

@@ -162,10 +162,6 @@ const SkillSection = (props) => {
           </Slider>
         </div>
         <div className="skills-section-career">
-          <FormattedMessage
-            id="careers-header-black-one" />
-
-          <br /><br />
           <button
             onClick={handleOpen} >
             <FormattedMessage

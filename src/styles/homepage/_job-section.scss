@@ -120,8 +120,11 @@
 .section-jobs__list-item {
   display: flex;
   flex-direction: column;
-  width: 25em;
+  // width: 25em;
+  margin: 0 1em;
+  padding: 3em 0;
   height: 20em;
+  max-height: 14em;
   justify-content: center;
   align-items: center;
   background: $white;
@@ -155,7 +158,8 @@
 
 .section-jobs__list-item-subtitle {
   font-family: 'Work Sans';
-  width: 15em;
+  width: 13em;
+  max-width: 15em;
   font-style: normal;
   display: flex;
   align-items: flex-end;
