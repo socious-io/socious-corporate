@@ -53,6 +53,7 @@ const Seo = ({key, title, description, image, twitterImage, children}) => {
     twitterImage: twitterImage || defaultTwitterImage,
   };
 
+
   const fixedFaviconLink = (icon) => {
     return `${siteUrl}/${icon}`;
   };

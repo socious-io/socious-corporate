@@ -69,6 +69,7 @@ const EnglishNews = () => {
             frontmatter: { title, slug, Date:date, Hero_Image, Publish }
     } = post.node
   const one = new Date(date.start).toDateString().split('').slice(1).join('')
+
   // const two = new Date(date.start).toDateString().split(' ').slice(1).join(' ,')
   // console.log({two});
     const completeArticle = Publish ?

@@ -85,6 +85,11 @@ footer {
   }
 }
 
+
+
+// 404 page styles
+
+
 /* SECTION_FOOTER_MOBILE */
 
 @media screen and (max-width: 600px) {
@@ -93,6 +98,12 @@ footer {
     .footer-item-box {
       flex-direction: column;
       gap: 2rem;
+    }
+    .heading{
+      font-size:104px,
+    }
+    .heading-subtitle{
+      font-size: 14px;
     }
   }
   .footer-ending {

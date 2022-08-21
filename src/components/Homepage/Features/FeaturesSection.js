@@ -21,6 +21,7 @@ const Container = styled.div`
   display: flex;
   flex-direction: column;
   color: white;
+  
 `
 
 const SlideContainer = styled.div`

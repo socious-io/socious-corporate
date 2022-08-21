@@ -19,7 +19,10 @@ const headingStyles = {
   // marginBottom: 64,
   // maxWidth: 320,
   fontSize:"320px",
-  color:"#ffffff"
+  color:"#ffffff",
+  '@media (max-width: 1100px)':{
+    fontSize:"104px",
+  }
 };
 
 const paragraphStyles = {
@@ -27,7 +30,12 @@ const paragraphStyles = {
   textAlign:"center",
   fontSize:"24px",
   fontWeight:600,
-  marginTop: "-12%",
+  marginTop: "-14%",
+
+  "@media only screen and (max-width: 600px)":{
+    fontSize:"14px",
+
+  }
 
   
 };
@@ -84,13 +92,13 @@ const NotFoundPage = (props) => {
     <IntlProvider defaultLocale="en" locale={language} messages={messages}>
       <main style={pageStyles}>
         <title>Not found</title>
-        <h1 style={headingStyles}>404</h1>
-        <p style={paragraphStyles}>
+        <h1 style={headingStyles} className="heading">404</h1>
+        <p style={paragraphStyles} className="heading-subtitle">
           Something went wrong. Let’s take you back home.
           <br />
           
           <br />
-          <Link to="/" style={buttonStyles}>Home</Link>
+          <Link to="/" style={buttonStyles} className="heading-button">Home</Link>
         </p>
       </main>
     </IntlProvider>
