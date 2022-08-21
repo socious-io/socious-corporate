@@ -13,7 +13,6 @@ const BlogCard = ({ edge, alternate }) => {
     date
   } } = edge
   const link = edge.node.slug.substring(0, slug.indexOf("%"))
-  console.log({ link });
 
   return (
     <div className={alternate ? "alternate blog" : "blog"}>

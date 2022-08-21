@@ -1,6 +1,11 @@
 import * as React from 'react';
 import {IntlProvider} from 'react-intl';
 import {Link} from 'gatsby';
+import Layout from '../components/Layout';
+import { graphql, useStaticQuery } from 'gatsby';
+import { getImage } from 'gatsby-plugin-image';
+import { BgImage } from 'gbimage-bridge';
+import { autocompleteClasses } from '@mui/material';
 
 // styles
 const pageStyles = {
@@ -9,13 +14,32 @@ const pageStyles = {
   fontFamily: '-apple-system, Roboto, sans-serif, serif',
 };
 const headingStyles = {
-  marginTop: 0,
-  marginBottom: 64,
-  maxWidth: 320,
+  marginTop: 3,
+  textAlign:"center",
+  // marginBottom: 64,
+  // maxWidth: 320,
+  fontSize:"320px",
+  color:"#ffffff"
 };
 
 const paragraphStyles = {
-  marginBottom: 48,
+  color:"#ffffff",
+  textAlign:"center",
+  fontSize:"24px",
+  fontWeight:600,
+  marginTop: "-12%",
+
+  
+};
+
+const buttonStyles = {
+  color:"#2F4786",
+  textAlign:"center",
+  fontSize:"18px",
+  margin:5,
+  backgroundColor:"#ffffff",
+  padding: "12px 32px",
+  borderRadius: "50px",
 };
 const codeStyles = {
   color: '#8A6534',
@@ -31,30 +55,47 @@ const NotFoundPage = (props) => {
     pageContext: {language, messages},
   } = props;
 
+  const { notFoundBackgroundImage } = useStaticQuery(
+    graphql`
+      query {
+        notFoundBackgroundImage: file(relativePath: {eq: "404-banner.png"}) {
+          childImageSharp {
+            gatsbyImageData(
+              width: 2000,
+              quality: 100,
+              webpOptions: {quality: 100}
+              placeholder: BLURRED
+            )
+          }
+        }
+      }
+    `
+  )
+
+  const pluginImage = getImage(notFoundBackgroundImage)
+  const backgroundFluidImageStack = [
+    pluginImage,
+    `linear-gradient(0deg, rgba(0, 0, 0, 0.16), rgba(0, 0, 0, 0.16))`,
+  ].reverse();
+
   return (
+    <Layout {...props} header="transparent" >
+      <BgImage image={backgroundFluidImageStack} className="section-intro">
     <IntlProvider defaultLocale="en" locale={language} messages={messages}>
       <main style={pageStyles}>
         <title>Not found</title>
-        <h1 style={headingStyles}>Page not found</h1>
+        <h1 style={headingStyles}>404</h1>
         <p style={paragraphStyles}>
-          Sorry{' '}
-          <span role="img" aria-label="Pensive emoji">
-            😔
-          </span>{' '}
-          we couldn’t find what you were looking for.
+          Something went wrong. Let’s take you back home.
           <br />
-          {process.env.NODE_ENV === 'development' ? (
-            <>
-              <br />
-              Try creating a page in <code style={codeStyles}>src/pages/</code>.
-              <br />
-            </>
-          ) : null}
+          
           <br />
-          <Link to="/">Go home</Link>.
+          <Link to="/" style={buttonStyles}>Home</Link>
         </p>
       </main>
     </IntlProvider>
+    </BgImage>
+    </Layout>
   );
 };
 

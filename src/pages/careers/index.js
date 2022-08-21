@@ -8,7 +8,7 @@ import JobsSection from '../../components/CareersPage/JobsSection';
 
 const CareersPage = (props) => {
   return (
-    <Layout {...props} header="primary">
+    <Layout {...props} header="">
       <Seo key="careers" />
       <Banner {...props} />
       <JobsSection {...props} />

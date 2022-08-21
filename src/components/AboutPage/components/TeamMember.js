@@ -52,9 +52,11 @@ const TeamMember = (props) => {
             {props.bio3}
           </div>
 
-          <a href={props.linkedIn}>
+          <div className="member-icon">
+          <a href={props.linkedIn} >
             <LinkedInIcon />
           </a>
+          </div>
 
 
         </div>

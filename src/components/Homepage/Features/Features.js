@@ -22,7 +22,9 @@ const Feature = ({ feature }) => {
         {feature.subtitle}
       </div>
       <div className="section-features__list-item-link">
-        <a href={feature.linkUrl}>{feature.link}&rarr;</a>
+        <a href={feature.linkUrl}
+        target="_blank"
+        >{feature.link}&rarr;</a>
       </div>
     </>
   )

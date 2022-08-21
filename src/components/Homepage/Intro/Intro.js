@@ -1,5 +1,4 @@
-import * as React from 'react';
-import { useState } from 'react';
+import React, {useState} from 'react';
 import MobileImageBlock from './MobileImageBlock';
 import EarlyAccessForm from './EarlyAccessForm';
 import BasicModal from '../../shared/QR-Modal';
@@ -10,13 +9,11 @@ import SimpleLocalize from '../../shared/SimpleLocalize';
 import { FormattedMessage } from 'react-intl';
 import { useIntl } from 'react-intl';
 
+
 const Intro = (props) => {
   const [open, setOpen] = useState(false);
   const handleOpen = () => setOpen(true);
   const handleClose = () => setOpen(false);
-  const intl = useIntl();
-
-  const jaPage = intl.locale === 'ja';
   const { introBackgroundImage } = useStaticQuery(
     graphql`
       query {
@@ -40,6 +37,11 @@ const Intro = (props) => {
     `linear-gradient(0deg, rgba(0, 0, 0, 0.16), rgba(0, 0, 0, 0.16))`,
   ].reverse();
 
+  const intl = useIntl();
+
+  const jaPage = intl.locale === 'ja';
+  const organizationLink = jaPage ? '/ja/organization' : '/organization';
+
   return (
     <SimpleLocalize {...props}>
       <BgImage image={backgroundFluidImageStack} className="section-intro">
@@ -56,16 +58,15 @@ const Intro = (props) => {
 
           <div className="section-app-links__app-links-block">
             <div className="section-app-links__app-links">
-
-              <button onClick={handleOpen} className="section-app-links__app-links-button-work">
-                Find work
-              </button>
-
+                <button className="section-app-links__app-links-button-work"
+                onClick={handleOpen}
+                >
+                  Find work
+                </button>
             </div>
             <div className="section-app-links__app-links">
               <a
-                href={jaPage ? '/ja/organization' : '/organization'}
-                target="_blank"
+                href={organizationLink}
                 rel="noreferrer"
               >
                 <button className="section-app-links__app-links-button">

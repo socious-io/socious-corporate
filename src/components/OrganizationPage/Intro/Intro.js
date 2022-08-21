@@ -1,12 +1,17 @@
-import * as React from 'react';
+import React, {useState} from 'react';
 
 import { graphql, useStaticQuery } from 'gatsby';
 import { getImage } from 'gatsby-plugin-image';
 import { BgImage } from 'gbimage-bridge';
 import SimpleLocalize from '../../shared/SimpleLocalize';
 import { FormattedMessage } from 'react-intl';
+import BasicModal from "../../shared/QR-Modal"
 
 const Intro = (props) => {
+
+  const [open, setOpen] = useState(false);
+  const handleOpen = () => setOpen(true);
+  const handleClose = () => setOpen(false);
   const { orgBackgroundImage } = useStaticQuery(
     graphql`
       query {
@@ -46,20 +51,17 @@ const Intro = (props) => {
 
          <div className="section-app-links__app-links-block">
               <div className="section-app-links__app-links">
-                <a
-                  href="#"
-                  target="_blank"
-                  rel="noreferrer"
-                >
-                  <button className="section-app-links__app-links-button-work">
+                  <button className="section-app-links__app-links-button-work"
+                  onClick={handleOpen}
+                  >
                 Start hiring
                   </button>
-                </a>
               </div>
               
             </div>
        </div>
      </BgImage>
+     <BasicModal open={open} handleClose={handleClose} />
    </SimpleLocalize>
   )
 }
