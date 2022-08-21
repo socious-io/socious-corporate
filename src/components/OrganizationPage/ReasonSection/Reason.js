@@ -11,7 +11,9 @@ const Reason = (props) => {
           {props.subtitle}
         </div>
         <div className="section-reason__list-item-link">
-          <a href={props.link}>{props.linkName}</a>
+          <a href={props.link}
+          target="_blank"
+          >{props.linkName}</a>
         </div>
       </div>
     </div>
