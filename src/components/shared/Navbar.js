@@ -48,7 +48,7 @@ const Navbar = ({ header }) => {
         organizationLink={organizationLink}
         careersLink={careersLink}
         newsroomLink={newsroomLink}
-        blogLink={blogLink}
+        // blogLink={blogLink}
         altPage={altPage}
       />
 
@@ -64,7 +64,7 @@ const Navbar = ({ header }) => {
         organizationLink={organizationLink}
         careersLink={careersLink}
         newsroomLink={newsroomLink}
-        blogLink={blogLink}
+        // blogLink={blogLink}
         altPage={altPage}
       />
     </div>
