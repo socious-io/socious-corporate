@@ -7,55 +7,8 @@ import { getImage } from 'gatsby-plugin-image';
 import { BgImage } from 'gbimage-bridge';
 import { autocompleteClasses } from '@mui/material';
 
-// styles
-const pageStyles = {
-  color: '#232129',
-  padding: '96px',
-  fontFamily: '-apple-system, Roboto, sans-serif, serif',
-};
-const headingStyles = {
-  marginTop: 3,
-  textAlign:"center",
-  // marginBottom: 64,
-  // maxWidth: 320,
-  fontSize:"320px",
-  color:"#ffffff",
-  '@media (max-width: 1100px)':{
-    fontSize:"104px",
-  }
-};
+// styles found in footer
 
-const paragraphStyles = {
-  color:"#ffffff",
-  textAlign:"center",
-  fontSize:"24px",
-  fontWeight:600,
-  marginTop: "-14%",
-
-  "@media only screen and (max-width: 600px)":{
-    fontSize:"14px",
-
-  }
-
-  
-};
-
-const buttonStyles = {
-  color:"#2F4786",
-  textAlign:"center",
-  fontSize:"18px",
-  margin:5,
-  backgroundColor:"#ffffff",
-  padding: "12px 32px",
-  borderRadius: "50px",
-};
-const codeStyles = {
-  color: '#8A6534',
-  padding: 4,
-  backgroundColor: '#FFF4DB',
-  fontSize: '1.25rem',
-  borderRadius: 4,
-};
 
 // markup
 const NotFoundPage = (props) => {
@@ -90,16 +43,19 @@ const NotFoundPage = (props) => {
     <Layout {...props} header="transparent" >
       <BgImage image={backgroundFluidImageStack} className="section-intro">
     <IntlProvider defaultLocale="en" locale={language} messages={messages}>
-      <main style={pageStyles}>
-        <title>Not found</title>
-        <h1 style={headingStyles} className="heading">404</h1>
-        <p style={paragraphStyles} className="heading-subtitle">
-          Something went wrong. Let’s take you back home.
-          <br />
+      <main  className="pageStyles">
+        {/* <title>Not found</title> */}
+        <p  className="headingStyles">404</p>
+        <p  className="paragraphStyles">
+          Something went wrong. Let’s <br />take you back home.
+          
           
           <br />
-          <Link to="/" style={buttonStyles} className="heading-button">Home</Link>
+          <br/>
+          
+          <Link to="/"  className="buttonStyles">Home</Link>
         </p>
+       
       </main>
     </IntlProvider>
     </BgImage>

@@ -53,7 +53,9 @@ const TeamMember = (props) => {
           </div>
 
           <div className="member-icon">
-          <a href={props.linkedIn} >
+          <a href={props.linkedIn}
+          target="_blank"
+          >
             <LinkedInIcon />
           </a>
           </div>
