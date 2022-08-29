@@ -33,7 +33,7 @@ const Banner = (props) => {
 
   return (
     <SimpleLocalize {...props}>
-      <BgImage image={backgroundFluidImageStack} className="career-banner">
+      <BgImage image={backgroundFluidImageStack} className="career-banner" alt='career banner'>
         <div className="career-banner__text">
           <h1>
             <FormattedMessage
