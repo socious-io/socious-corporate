@@ -77,11 +77,11 @@ const NavbarLarge = (props) => {
               <FormattedMessage id="news-title" />
             </Link>
           </div>
-          {/* <div className="nav-item">
+          <div className="nav-item">
             <Link to={blogLink}>
               Blog
             </Link>
-          </div> */}
+          </div>
           <a className="header__language-switcher" href={altPage}>
             <IconWeb />
             {jaPage ? 'English(US)' : '日本語'}

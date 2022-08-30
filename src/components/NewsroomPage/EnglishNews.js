@@ -9,7 +9,7 @@ const EnglishNews = () => {
       query {
         allMarkdownRemark(
           sort: {fields: frontmatter___Date___start, order: DESC}
-          skip: 1
+          skip: 0
           filter: {frontmatter: {Language: {eq: "en"}, Publish: {eq: true}}}
         ) {
           edges {
@@ -68,16 +68,16 @@ const EnglishNews = () => {
     const { id,
             frontmatter: { title, slug, Date:date, Hero_Image, Publish }
     } = post.node
-  const one = new Date(date.start).toDateString().split('').slice(1).join('')
+  const dates = new Date(date.start).toDateString().split('').slice(1).join('')
+const newDates = [dates.slice(0, 9), ",", dates.slice(9)].join('');
+  
 
-  // const two = new Date(date.start).toDateString().split(' ').slice(1).join(' ,')
-  // console.log({two});
     const completeArticle = Publish ?
       <PostItem
         key={id}
         slug={slug}
         title={title}
-        date={one}
+        date={newDates}
         imageSrc={Hero_Image[0].external.url}
       /> :
       null
@@ -91,14 +91,15 @@ const EnglishNews = () => {
           <>
             {
               displayList.map((edge) => {
-                const time = new Date(edge.node.frontmatter.Date.start).toDateString().split(' ').slice(1).join(' ')
+                const time = new Date(edge.node.frontmatter.Date.start).toDateString().split(' ').slice(1).join(' ');
+                const newTime = [time.slice(0, 6), ", ", time.slice(6)].join('');
                 return (
                   <div >
                     <PostItem
                     key={edge.node.id}
                     slug={edge.node.frontmatter.slug}
                     title={edge.node.frontmatter.title}
-                    date={time}
+                    date={newTime}
                     imageSrc={edge.node.frontmatter.Hero_Image[0].external.url}       
                   />
                   </div>
