@@ -20,6 +20,15 @@ const Blogs = () => {
               node {
                 sourceUrl
                 altText
+                localFile {
+                  childImageSharp {
+                    gatsbyImageData(
+                      quality: 100
+                      placeholder: BLURRED
+                      blurredOptions: {width: 100}
+                    )
+                  }
+                }
               }
             }
           }
