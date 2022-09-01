@@ -14,7 +14,7 @@ module.exports = {
     titleTemplate: '%s · Socious',
     titleTemplateJapanese: '%s · ソーシャス',
     description:
-      'Socious is an impact gig marketplace with a mission to accelerate social and environmental impact. We use AI and blockchain technologies to incentivize people to contribute to impact projects.',
+      'Socious is an impact network with a mission to help make a difference. We use AI and blockchain technologies to connect change makers',
     descriptionJapanese:
       'ソーシャスは、「社会・環境インパクトを加速させる」というミッションのもと、誰でも気軽に社会貢献できるように、社会貢献にインセンティブを与えるAI・ブロックチェーンプラットフォームを開発しています。',
     image: 'https://socious.io/socious-og.png',
@@ -86,9 +86,9 @@ module.exports = {
     "gatsby-plugin-react-helmet",
     {
       resolve: 'gatsby-plugin-mailchimp',
-      options: {
+      option: {
         endpoint:
-          'https://socious.us6.list-manage.com/subscribe/post?u=131eb0c7f6b2c3a36daf52940&amp;id=521f139131',
+          'https://us6.list-manage.com/contact-form?u=131eb0c7f6b2c3a36daf52940&form_id=8ac2ed4e02b1104cad3be462bb898bb4',
         timeout: 3500,
       },
     },

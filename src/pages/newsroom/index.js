@@ -15,7 +15,11 @@ const NewsroomPage = (props) => {
 
   return (
     <Layout {...props} header="">
-      <Seo key="news" />
+      <Seo key="news"
+      title="Newsroom | Latest News from our Company & Team" 
+      description="Learn about the latest news from Socious: Updates from the company & team, what we do, who we are, and what we stand for."
+      />
+      
       <Banner />
       <div className="main">
         <div className="container__articles">

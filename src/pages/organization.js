@@ -13,7 +13,10 @@ import TalentCta from '../components/OrganizationPage/TalentCta';
 const OrganizationPage = (props) => {
   return (
     <Layout {...props} header="transparent" >
-      <Seo key="organization" />
+      <Seo key="organization"
+      title="Matching Impact Organizations with Talents | Socious"
+      description="Find the right talents to grow your impact organization. Socious provides an innovative solution that uses machine-learning for hasselfree social impact hiring."
+      />
       <Intro {...props} />
       <ReasonsSection {...props}/>
       <TalentSection  {...props}/>

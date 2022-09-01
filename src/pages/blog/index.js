@@ -12,11 +12,11 @@ const BlogPage = (props) => {
 
   const seoDescription = jaPage ?
                          'ソーシャスは社会変革のためのコミュニティアプリです。' :
-                         'Learn more about Socious and what we do, who we are, and what we stand for'
+                         'Stay up to date about social impact topics: From social impact organizations to impact investing and climate change solutions, Socious got you covered.'
 
   const seoTitle = jaPage ?
                    'ブログ' :
-                   'Blog'
+                   'Blog | All about Social Impact | Socious'
   
 	return (
 		<Layout {...props} header="">

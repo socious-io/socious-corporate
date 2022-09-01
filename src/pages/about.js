@@ -16,7 +16,10 @@ import ContactSection from '../components/AboutPage/ContactSection';
 const AboutPage = (props) => {
   return (
     <Layout {...props} header="default" pageTitle="About">
-      <Seo key="about" />
+      <Seo key="about"
+      title="Join Impact Organizations with Talents | Socious"
+      description="Socious connects change-makers with impact projects & ethical organizations. Join our impact community and help us make a difference!"
+      />
       <HeroSection {...props} />
       <ScrollArrow {...props} />
       <IssueSection {...props} />
