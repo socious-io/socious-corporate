@@ -8,13 +8,13 @@ import { FormattedMessage } from "react-intl";
 import Latest from "./Latest";
 import latestJobs from "../../../../data/Homepage/latestJobs";
 import BasicModal from "../../shared/QR-Modal";
+import { trackButtunClick } from "../../segmentUtils" 
 
 
 const LatestJobs = (props) => {
   const [open, setOpen] = useState(false);
   const handleOpen = () => setOpen(true);
   const handleClose = () => setOpen(false);
-
   const data = useStaticQuery(graphql`
     query LatestJobs {
       partnerships: file(relativePath: {eq: "latest-jobs/cdp.png"}) {
@@ -80,7 +80,10 @@ const LatestJobs = (props) => {
         <div className="latest-section">
           {latestComponents}
         </div>
-        <button onClick={handleOpen} className="latest-more">View more jobs</button>
+        <button 
+          onClick={(event) => {trackButtunClick(event); handleOpen();} }
+          className="latest-more"
+        >View more jobs</button>
 
       </section>
       <BasicModal open={open} handleClose={handleClose} />
