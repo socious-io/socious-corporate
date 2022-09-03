@@ -8,7 +8,7 @@ import { FormattedMessage } from "react-intl";
 import Latest from "./Latest";
 import latestJobs from "../../../../data/Homepage/latestJobs";
 import BasicModal from "../../shared/QR-Modal";
-import { trackButtunClick } from "../../segmentUtils" 
+import { trackButtonClick } from "../../segmentUtils" 
 
 
 const LatestJobs = (props) => {
@@ -81,7 +81,7 @@ const LatestJobs = (props) => {
           {latestComponents}
         </div>
         <button 
-          onClick={(event) => {trackButtunClick(event); handleOpen();} }
+          onClick={(event) => {trackButtonClick(event); handleOpen();} }
           className="latest-more"
         >View more jobs</button>
 

@@ -3,7 +3,7 @@ import { GatsbyImage, getImage } from "gatsby-plugin-image";
 import BasicModal from '../../shared/QR-Modal';
 import styled from '@emotion/styled'
 import { css } from '@emotion/react'
-import { trackButtunClick } from '../../segmentUtils'
+import { trackButtonClick } from '../../segmentUtils'
 
 const JobContainer = styled.div`
   display: flex;
@@ -93,7 +93,7 @@ const Latest = ({ latestJobDetails = {}, imageOpt }) => {
         </div>
       </JobInfo>
       <button 
-        onClick={(event) => {handleOpen(); trackButtunClick(event);}} 
+        onClick={(event) => {handleOpen(); trackButtonClick(event);}} 
         className="latest-link"
       >
         View &rarr;

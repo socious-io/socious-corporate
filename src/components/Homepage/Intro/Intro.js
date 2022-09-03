@@ -8,7 +8,7 @@ import { BgImage } from 'gbimage-bridge';
 import SimpleLocalize from '../../shared/SimpleLocalize';
 import { FormattedMessage } from 'react-intl';
 import { useIntl } from 'react-intl';
-import { trackButtunClick } from '../../segmentUtils';
+import { trackButtonClick } from '../../segmentUtils';
 
 const Intro = (props) => {
   const [open, setOpen] = useState(false);
@@ -60,7 +60,7 @@ const Intro = (props) => {
             <div className="section-app-links__app-links">
                 <button 
                   className="section-app-links__app-links-button-work"
-                  onClick={(event) => {handleOpen(); trackButtunClick(event);}}
+                  onClick={(event) => {handleOpen(); trackButtonClick(event);}}
                 >
                   Find work
                 </button>
@@ -69,7 +69,7 @@ const Intro = (props) => {
               <a
                 href={organizationLink}
                 rel="noreferrer"
-                onClick={trackButtunClick}
+                onClick={trackButtonClick}
               >
                 <button className="section-app-links__app-links-button">
                   Hire talents
