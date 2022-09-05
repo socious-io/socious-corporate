@@ -1,5 +1,7 @@
 import React from 'react';
-import { Link } from 'gatsby'
+import { Link } from 'gatsby';
+import { getSrc } from "gatsby-plugin-image";
+
 
 const BlogCard = ({ edge, alternate }) => {
 
@@ -14,11 +16,12 @@ const BlogCard = ({ edge, alternate }) => {
   } } = edge
   const link = edge.node.slug.substring(0, slug.indexOf("%"))
 
+  const imageData = featuredImage?.node?.localFile?.childImageSharp?.gatsbyImageData;
+
   return (
     <div className={alternate ? "alternate blog" : "blog"}>
 
-      <img className='flex-1 object-cover' src={WORDPRESS_URL + featuredImage?.node.sourceUrl} alt={featuredImage?.node.altText || title} />
-
+      {imageData ? (<img className='flex-1 object-cover' src={getSrc(imageData)} alt={featuredImage?.node.altText || title} />) : (<></>)}
 
       <div className='flex-1 blog-content-words'>
         <p className='blog--date'>
