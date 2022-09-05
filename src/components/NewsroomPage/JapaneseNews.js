@@ -1,6 +1,7 @@
 import React, {useState, useEffect} from 'react'
 import PostItem from "./PostItem"
 import { useStaticQuery, graphql } from "gatsby"
+import { trackButtonClick } from '../segmentUtils'
 
 const JapaneseNews = () => {
 
@@ -106,7 +107,10 @@ const JapaneseNews = () => {
             }
           </>
         }
-      <button onClick={handleLoadMore} className='news-container__more'>Load more news</button>
+      <button 
+        onClick={(event) => {handleLoadMore(); trackButtonClick(event)}} 
+        className='news-container__more'>
+          Load more news</button>
     </div>
   )
 }

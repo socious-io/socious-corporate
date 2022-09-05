@@ -129,5 +129,17 @@ module.exports = {
         url: process.env.WORDPRESS_ENDPOINT + "/graphql"
       }
     },
+    {
+      resolve: `gatsby-plugin-segment-js`,
+      options: {
+        prodKey: process.env.SEGMENT_PRODUCTION_WRITE_KEY,
+        devKey: process.env.SEGMENT_DEV_WRITE_KEY,
+        trackPage: true,
+        trackPageDelay: 50, 
+        delayLoad: false,
+        delayLoadTime: 1000,
+        manuaLoad: false
+      }
+    }
   ],
 };

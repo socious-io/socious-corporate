@@ -10,6 +10,7 @@ import "slick-carousel/slick/slick-theme.css";
 import skillsItems from "../../../../data/Homepage/skills";
 import { FormattedMessage } from "react-intl";
 import BasicModal from "../../shared/QR-Modal";
+import { trackButtonClick } from "../../segmentUtils"
 
 
 const SkillSection = (props) => {
@@ -163,7 +164,7 @@ const SkillSection = (props) => {
         </div>
         <div className="skills-section-career">
           <button
-            onClick={handleOpen} >
+            onClick={(event) => {handleOpen();trackButtonClick(event)}} >
             <FormattedMessage
               id="get-socious"
             /></button>

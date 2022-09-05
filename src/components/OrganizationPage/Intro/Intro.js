@@ -6,6 +6,7 @@ import { BgImage } from 'gbimage-bridge';
 import SimpleLocalize from '../../shared/SimpleLocalize';
 import { FormattedMessage } from 'react-intl';
 import BasicModal from "../../shared/QR-Modal"
+import { trackButtonClick } from '../../segmentUtils';
 
 const Intro = (props) => {
 
@@ -52,7 +53,7 @@ const Intro = (props) => {
          <div className="section-app-links__app-links-block">
               <div className="section-app-links__app-links">
                   <button className="section-app-links__app-links-button-work"
-                  onClick={handleOpen}
+                    onClick={(event) => {handleOpen(); trackButtonClick(event);}}
                   >
                 Start hiring
                   </button>
