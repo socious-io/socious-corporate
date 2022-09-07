@@ -8,7 +8,6 @@ import talentPools from "../../../../data/OrganizationPage/talents";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css"; 
 import "slick-carousel/slick/slick-theme.css";
-import { FormattedMessage } from "react-intl";
 
 const TalentSection = (props) => {
   const data = useStaticQuery(graphql`

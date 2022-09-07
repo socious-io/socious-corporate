@@ -4,9 +4,6 @@ import addToMailchimp from "gatsby-plugin-mailchimp";
 import SimpleLocalize from "../shared/SimpleLocalize";
 import { FormattedMessage } from "react-intl";
 
-import AppleIcon from "@mui/icons-material/Apple";
-import AndroidIcon from "@mui/icons-material/Android";
-
 export default class AppLinks extends React.Component {
   constructor() {
     super();

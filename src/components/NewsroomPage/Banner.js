@@ -2,7 +2,6 @@ import React from 'react'
 
 import { graphql, useStaticQuery } from 'gatsby'
 import { getImage } from 'gatsby-plugin-image'
-import { BgImage } from 'gbimage-bridge'
 
 const Banner = () => {
   const { newsroomBackgroundImage } = useStaticQuery(

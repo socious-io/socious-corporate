@@ -1,5 +1,4 @@
 import React from "react";
-import addToMailchimp from "gatsby-plugin-mailchimp";
 
 import SimpleLocalize from "../../shared/SimpleLocalize";
 import { FormattedMessage } from "react-intl";

@@ -1,5 +1,4 @@
 import React from "react";
-import { StaticImage } from "gatsby-plugin-image";
 
 import SimpleLocalize from "../../shared/SimpleLocalize";
 import { FormattedMessage } from "react-intl";

@@ -1,10 +1,8 @@
 import React, { useState } from 'react';
 import { Link } from 'gatsby';
-import { StaticImage } from 'gatsby-plugin-image';
 import { slide as Menu } from 'react-burger-menu';
 import { useIntl } from 'react-intl';
 import { FormattedMessage } from "react-intl";
-import BasicModal from '../shared/QR-Modal';
 import CrossButtonSidebar from './CrossButtonSidebar';
 import MenuIcon from '@mui/icons-material/Menu';
 import CheckMarkLang from './CheckMarkLang';

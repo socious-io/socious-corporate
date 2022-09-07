@@ -5,8 +5,6 @@ import Layout from '../../components/Layout';
 import Seo from '../../components/seo';
 import Banner from '../../components/NewsroomPage/Banner';
 
-import EnglishNewsHeadline from '../../components/NewsroomPage/EnglishNewsHeadline';
-import JapaneseNewsHeadline from '../../components/NewsroomPage/JapaneseNewsHeadline';
 import JapaneseNews from '../../components/NewsroomPage/JapaneseNews';
 import EnglishNews from '../../components/NewsroomPage/EnglishNews';
 
@@ -35,7 +33,7 @@ const NewsroomPage = (props) => {
 export default NewsroomPage;
 
 export const query = graphql`
-  query IndexPage {
+  query {
     allMarkdownRemark(
       sort: {fields: frontmatter___Date___start, order: DESC}
       skip: 1

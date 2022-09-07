@@ -4,6 +4,7 @@ require('dotenv').config({
 
 const path = require(`path`);
 
+
 module.exports = {
   siteMetadata: {
     url: 'https://socious.io',
@@ -30,6 +31,13 @@ module.exports = {
     },
   },
   plugins: [
+    // {
+    //   resolve: "gatsby-plugin-webpack-bundle-analyser-v2",
+    //   options: {
+    //     devMode: true,
+    //   },
+    // },
+    'gatsby-plugin-loadable-components-ssr',
     {
       resolve: 'gatsby-plugin-google-tagmanager',
       options: {
@@ -135,7 +143,7 @@ module.exports = {
         prodKey: process.env.SEGMENT_PRODUCTION_WRITE_KEY,
         devKey: process.env.SEGMENT_DEV_WRITE_KEY,
         trackPage: true,
-        trackPageDelay: 50, 
+        trackPageDelay: 50,
         delayLoad: false,
         delayLoadTime: 1000,
         manuaLoad: false

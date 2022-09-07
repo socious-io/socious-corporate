@@ -1,10 +1,6 @@
 import React from 'react'
 import { useLocation } from '@reach/router';
 
-import { graphql, useStaticQuery } from 'gatsby'
-import { getImage } from 'gatsby-plugin-image'
-import { BgImage } from 'gbimage-bridge'
-
 import SimpleLocalize from "../shared/SimpleLocalize";
 import { FormattedMessage } from "react-intl";
 

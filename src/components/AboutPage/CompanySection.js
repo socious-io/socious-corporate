@@ -1,7 +1,6 @@
-import React, {useState} from 'react'
+import React from 'react'
 import { useLocation } from '@reach/router';
 import SimpleLocalize from "../shared/SimpleLocalize";
-import { FormattedMessage } from "react-intl";
 import { Link } from 'gatsby'
 
 

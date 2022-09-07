@@ -2,7 +2,6 @@ import React from 'react'
 
 import { graphql, useStaticQuery } from 'gatsby'
 import { getImage, GatsbyImage } from 'gatsby-plugin-image'
-import { BgImage } from 'gbimage-bridge'
 
 import SimpleLocalize from "../shared/SimpleLocalize";
 import { FormattedMessage } from "react-intl";
