@@ -1,13 +1,4 @@
 import React from "react";
-import styled from "@emotion/styled";
-
-const FeatureContent = styled.div`
-  justify-content: flex-start;
-  align-items: flex-start;
-  flex-direction: column;
-  width: 100%;
-  padding: 20px;
-`
 
 const Feature = ({ feature }) => {
   return (

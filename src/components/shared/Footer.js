@@ -5,7 +5,6 @@ import { Link } from 'gatsby'
 import { AnchorLink } from "gatsby-plugin-anchor-links";
 
 import FacebookRoundedIcon from '@mui/icons-material/FacebookRounded';
-import FacebookIcon from '@mui/icons-material/Facebook';
 import TwitterIcon from '@mui/icons-material/Twitter';
 import InstagramIcon from '@mui/icons-material/Instagram';
 import LinkedInIcon from '@mui/icons-material/LinkedIn';

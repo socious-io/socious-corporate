@@ -2,7 +2,6 @@ import React, { useState } from 'react'
 import { GatsbyImage, getImage } from "gatsby-plugin-image";
 import BasicModal from '../../shared/QR-Modal';
 import styled from '@emotion/styled'
-import { css } from '@emotion/react'
 import { trackButtonClick } from '../../segmentUtils'
 
 const JobContainer = styled.div`

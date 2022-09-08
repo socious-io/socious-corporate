@@ -5,7 +5,6 @@ import Layout from '../components/Layout';
 import { graphql, useStaticQuery } from 'gatsby';
 import { getImage } from 'gatsby-plugin-image';
 import { BgImage } from 'gbimage-bridge';
-import { autocompleteClasses } from '@mui/material';
 
 // styles
 const pageStyles = {

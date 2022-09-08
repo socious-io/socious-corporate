@@ -1,6 +1,5 @@
 import React, { useState } from "react";
 import { graphql, useStaticQuery } from "gatsby";
-import { GatsbyImage, getImage } from "gatsby-plugin-image";
 
 import SimpleLocalize from "../../shared/SimpleLocalize";
 import { FormattedMessage } from "react-intl";

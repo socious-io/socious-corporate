@@ -1,6 +1,4 @@
 import React, {useState} from 'react';
-import MobileImageBlock from './MobileImageBlock';
-import EarlyAccessForm from './EarlyAccessForm';
 import BasicModal from '../../shared/QR-Modal';
 import { graphql, useStaticQuery } from 'gatsby';
 import { getImage } from 'gatsby-plugin-image';

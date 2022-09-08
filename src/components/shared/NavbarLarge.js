@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'gatsby';
 import { useIntl, FormattedMessage } from 'react-intl';
-import { GatsbyImage, getImage, StaticImage } from 'gatsby-plugin-image';
+import { getImage } from 'gatsby-plugin-image';
 import { graphql, useStaticQuery } from 'gatsby';
 
 import IconWeb from '../../images/icons/line/web.svg';

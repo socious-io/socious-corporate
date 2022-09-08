@@ -2,7 +2,6 @@ import React from 'react'
 import SimpleLocalize from "../shared/SimpleLocalize";
 import addToMailchimp from 'gatsby-plugin-mailchimp'
 import { Button, TextField, InputLabel } from '@mui/material';
-import { FormattedMessage } from "react-intl";
 import { useFormik } from 'formik';
 import * as yup from 'yup';
 import { navigate } from "gatsby";

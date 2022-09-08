@@ -5,13 +5,11 @@ import ContactForm from '../components/ContactPage/Contact';
 
 
 
-
 const ContactPage = (props) => {
   return (
     <Layout {...props} header="" >
       <Seo key="organization" />
       <ContactForm {...props} />
-
     </Layout>
   );
 };

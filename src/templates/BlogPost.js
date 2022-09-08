@@ -41,7 +41,7 @@ const BlogPost = (props) => {
 export default BlogPost;
 
 export const query = graphql`
-  query PageContents($slug: String) {
+  query ($slug: String) {
     markdownRemark(frontmatter: {slug: {eq: $slug}}) {
       frontmatter {
         Author {
