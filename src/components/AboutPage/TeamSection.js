@@ -78,7 +78,7 @@ const TeamSection = (props) => {
     <div className="team-section" id="our-team">
       <div className="team-title">
         <h2>{meetTheTeamLanguage}</h2>
-        <p>Socious is powered by a network of changemakers, passionate about contributing to social and environmental impact.</p>
+        <p>Socious is powered by a network of changemakers, passionate<br/> about contributing to social and environmental impact.</p>
       </div>
       <div className="team-container">
         {team}

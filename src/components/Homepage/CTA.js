@@ -20,7 +20,7 @@ const Cta = (props) => {
           </h2>
           <button
             onClick={handleOpen}
-            className='job-action__get !mb-4'>
+            className='job-action__get '>
             <FormattedMessage
               id="get-socious"
             />
