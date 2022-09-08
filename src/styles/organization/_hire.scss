@@ -5,6 +5,7 @@
   justify-content: center;
   align-items: center;
   background: $white;
+  margin: -5% 0 5% 0;
   
   
 }
@@ -42,7 +43,7 @@
   border: none;
   padding: 10px 30px;
   text-align: center;
-  margin: 0 auto;
+  margin: 2% auto;
   cursor: pointer;
 }
 .hire-action__subtitle{
@@ -58,6 +59,8 @@
   color: $white;
   font-size: 20px;
   font-weight: 600;
+  margin: 2% auto;
+  
 
 }
 

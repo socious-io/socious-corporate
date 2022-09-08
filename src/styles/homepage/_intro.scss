@@ -23,11 +23,6 @@
 }
 
 .intro-banner__text h1 {
-  // font-family: 'Inter', sans-serif;
-  // font-weight: 600;
-  // font-size: 84px;
-  // letter-spacing: 1.5px;
-  // text-align: center;
   font-family: 'Work Sans';
   font-style: normal;
   font-weight: 600;
@@ -60,28 +55,6 @@
   z-index: 3;
 }
 
-/* squares behind images */
-.section-intro__app-image-blue-square {
-  background-color: $primary;
-  border-radius: 5px;
-  height: 132px;
-  width: 145px;
-  position: absolute;
-  z-index: 1;
-  left: -14.8412px;
-  top: -33px;
-}
-
-.section-intro__app-image-paleblue-square {
-  background-color: rgb(228, 237, 254);
-  border-radius: 5px;
-  height: 398px;
-  width: 278px;
-  position: absolute;
-  z-index: 2;
-  left: 113px;
-  top: 283px;
-}
 
 /* the main blocks of the intro sections */
 .section-intro__block {
@@ -93,30 +66,7 @@
   font-size: 36px;
 }
 
-/* mailchimp override */
-.clear {
-  max-width: 353px;
-  margin-left: 0px !important;
-}
 
-.section-intro__mailchimp--blue {
-  color: $white;
-}
-
-.section-intro__mailchimp__form-container {
-  margin-top: 37px;
-  background-color: rgb(255, 255, 255);
-  border-style: solid;
-  border-width: 1px;
-  border-color: rgba(171, 171, 171, 0.25);
-  border-radius: 5px;
-  box-shadow: rgb(170 170 170 / 50%) 0px 2px 4px 1px;
-  padding: 10px;
-}
-
-.section-intro__mailchimp__form {
-  margin-top: 23px;
-}
 
 .intro-right-section {
   display: flex;
@@ -137,10 +87,23 @@
     margin: 0 auto;
     text-align: center;
   }
+  .intro-banner__text {
+   
+    width: 100%;
+  
+  }
 
   .intro-banner__text h1 {
     font-size: 44px;
+    letter-spacing: -1px;
+    font-weight: 200;
+    width: 170%;
+    padding: 10px;
 
+  }
+  .intro-banner__text h3 {
+    width: 22em;
+    line-height: 150%;
   }
 
   .section-intro__app-image {

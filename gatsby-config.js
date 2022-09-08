@@ -15,7 +15,7 @@ module.exports = {
     titleTemplate: '%s · Socious',
     titleTemplateJapanese: '%s · ソーシャス',
     description:
-      'Socious is an impact gig marketplace with a mission to accelerate social and environmental impact. We use AI and blockchain technologies to incentivize people to contribute to impact projects.',
+      'Socious is an impact network with a mission to help make a difference. We use AI and blockchain technologies to connect change makers',
     descriptionJapanese:
       'ソーシャスは、「社会・環境インパクトを加速させる」というミッションのもと、誰でも気軽に社会貢献できるように、社会貢献にインセンティブを与えるAI・ブロックチェーンプラットフォームを開発しています。',
     image: 'https://socious.io/socious-og.png',
@@ -31,12 +31,6 @@ module.exports = {
     },
   },
   plugins: [
-    // {
-    //   resolve: "gatsby-plugin-webpack-bundle-analyser-v2",
-    //   options: {
-    //     devMode: true,
-    //   },
-    // },
     'gatsby-plugin-loadable-components-ssr',
     {
       resolve: 'gatsby-plugin-google-tagmanager',
@@ -92,14 +86,15 @@ module.exports = {
     "gatsby-transformer-sharp",
     "gatsby-plugin-anchor-links",
     "gatsby-plugin-react-helmet",
-    {
-      resolve: 'gatsby-plugin-mailchimp',
-      options: {
-        endpoint:
-          'https://socious.us6.list-manage.com/subscribe/post?u=131eb0c7f6b2c3a36daf52940&amp;id=521f139131',
-        timeout: 3500,
-      },
-    },
+    // {
+    //   resolve: 'gatsby-plugin-mailchimp',
+    //   option: {
+    //     endpoint:
+    //     'https://socious.us6.list-manage.com/subscribe/post?u=131eb0c7f6b2c3a36daf52940&amp;id=521f139131',
+    //     // 'https://us6.list-manage.com/contact-form?u=131eb0c7f6b2c3a36daf52940&form_id=8ac2ed4e02b1104cad3be462bb898bb4',
+    //     timeout: 3500,
+    //   },
+    // },
     {
       resolve: `gatsby-source-notion-api`,
       options: {
