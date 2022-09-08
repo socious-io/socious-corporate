@@ -19,6 +19,7 @@ const PostItem = (props) => {
             <h3>{title}</h3>
           </div>
           <div class="news-content-link">
+            <br></br>
             <a href={url}>Read More &rarr;</a>
           </div>
 
