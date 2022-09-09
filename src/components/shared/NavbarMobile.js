@@ -82,14 +82,14 @@ const NavbarMobile = (props) => {
             >
               {jaPage ? 'ニュース' : 'News'}
             </Link>
-            {/* <Link
+            <Link
               to={blogLink}
               activeStyle={activeLinkStyleMobile}
               partiallyActive={true}
               className="menu-item"
             >
               {jaPage ? 'ブログ（英語）' : 'Blog'}
-            </Link> */}
+            </Link>
             <div className='!flex justify-center select-lang'>
               <a className="!flex m0 items-center gap-2" href={altPage}>
                 {!jaPage ? <CheckMarkLang /> : <></>} English (US)
