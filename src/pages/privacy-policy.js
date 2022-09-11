@@ -2,14 +2,17 @@ import React from 'react';
 import {IntlProvider} from 'react-intl';
 import Seo from '../components/seo';
 import '../styles/terms/index.scss';
+import useSiteMetadata from '../hooks/use-site-metadata';
 
 const PrivacyPolicyPage = (props) => {
   const {
     pageContext: {language, messages},
   } = props;
 
-  const enURL = process.env.URL + "/privacy-policy/"; 
-  const jaURL = process.env.URL + "/privacy-policy-ja/";
+  const { url } = useSiteMetadata();
+
+  const enURL = url + "/privacy-policy/"; 
+  const jaURL = url + "/privacy-policy-ja/";
       
   return (
     <IntlProvider defaultLocale="en" locale={language} messages={messages}>
