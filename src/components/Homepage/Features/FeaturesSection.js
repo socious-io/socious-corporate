@@ -31,7 +31,7 @@ const SlideContainer = styled.div`
   max-width: 900px;
   object-fit: contain;
   z-index: 2;
-
+  
 
   @media (max-width: 600px) {
     flex-direction: column;
@@ -69,6 +69,7 @@ const SlideText = styled.div`
   justify-content: center;
   position: relative;
   z-index: 2;
+  
 
   @media only screen and (max-width: 600px) {
     width: 100%;
@@ -111,7 +112,7 @@ const SlideTextContentMobile = styled(motion.div)`
 
 const ImageContainer = styled(motion.div)`
   position: absolute;
-  top: calc(30% - 224.5px);
+  top: calc(50% - 224.5px);
   left: 0px;
   width: 100%;
   height: 100%;
@@ -194,8 +195,8 @@ const FeaturesSection = (props) => {
                 transition={{ duration: .4 }}
                 viewport={{ once: false, amount: .6 }}
                 style={{
-                  paddingTop: index === 0 ? 'calc(0%)' : 0,
-                  paddingBottom: index === featuresList?.length - 1 ? 'calc(60%)' : 0
+                  paddingTop: index === 0 ? 'calc(40vh)' : 0,
+                  paddingBottom: index === featuresList?.length - 1 ? 'calc(50vh)' : 0
                 }}
               >
                 <Feature feature={feature} />
