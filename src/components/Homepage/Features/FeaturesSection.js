@@ -35,7 +35,7 @@ const SlideContainer = styled.div`
 
   @media (max-width: 600px) {
     flex-direction: column;
-    height: 250vh;
+    height: 500vh;
   }
 `
 
@@ -91,7 +91,8 @@ const SlideTextContent = styled(motion.div)`
   justify-content: center;
 
   @media only screen and (max-width: 600px) {
-    height: 50vh;
+    padding-top: 10vh;
+    height: 100vh;
   }
 `
 
@@ -117,7 +118,7 @@ const ImageContainer = styled(motion.div)`
   opacity: 1;
 
   @media only screen and (max-width: 600px) {
-    padding: 60px 20px 0 20px;
+    padding: 30px 20px 0 20px;
     top: 0;
     height: 100vh;
   }
