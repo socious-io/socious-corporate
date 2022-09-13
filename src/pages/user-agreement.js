@@ -2,14 +2,17 @@ import React from 'react';
 import {IntlProvider} from 'react-intl';
 import Seo from '../components/seo';
 import '../styles/terms/index.scss';
+import useSiteMetadata from '../hooks/use-site-metadata';
 
 const UserAgreementPage = (props) => {
   const {
     pageContext: {language, messages},
   } = props;
+  
+  const { url } = useSiteMetadata();
 
-  const enURL = process.env.URL + "/user-agreement/"; 
-  const jaURL = process.env.URL + "/user-agreement-ja/";
+  const enURL = url + "/user-agreement/"; 
+  const jaURL = url + "/user-agreement-ja/"; 
       
   return (
     <IntlProvider defaultLocale="en" locale={language} messages={messages}>
