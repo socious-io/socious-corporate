@@ -1,4 +1,3 @@
-
 .skills-item{
   width: 100%;
   // height: 20em;
@@ -51,6 +50,12 @@
 // Media-queries for smaller screens
 
 @media only screen and (max-width: 1230px) {
+  .skills-section{
+    max-width: 100vw;
+    padding-left: 15vw;
+    padding-right: 15vw;
+  }
+
   .skills-header{
     font-size: 18px;
   }
