@@ -39,7 +39,7 @@ const NavbarLarge = (props) => {
       `
   )
   const blueLogo = getImage(logo)
-  console.log(logo);
+  // console.log(logo);
 
   const intl = useIntl();
   const jaPage = intl.locale === 'ja';

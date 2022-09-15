@@ -2,7 +2,7 @@
 
 /* INTRO_SECTION */
 
-.section-intro {
+.organization-section-intro {
   justify-content: space-around;
   height: 100vh;
   background-size: cover;
@@ -11,7 +11,7 @@
 
 }
 
-.intro-banner__text {
+.organization-intro-banner__text {
   height: 100%;
   width: 60%;
   display: flex;
@@ -22,14 +22,14 @@
   color: #FFF;
 }
 
-.intro-banner__text h1 {
+.organization-intro-banner__text h1 {
   font-family: 'Inter', sans-serif;
   font-weight: 600;
   font-size: 84px;
   letter-spacing: 1.5px;
   text-align: center;
 }
-.intro-banner__text h3 {
+.organization-intro-banner__text h3 {
   font-family: 'Inter', sans-serif;
   font-weight: 300;
   padding:10px;
@@ -37,135 +37,16 @@
   letter-spacing: 1.5px;
 }
 
-.section-intro__app-image {
-  // background-image: url('/images/socious-company.png');
-  background-color: rgba(255, 255, 255, 0);
-  background-repeat: no-repeat;
-  background-size: cover;
-  height: 763px;
-  width: 420.13px;
-  /* for squares*/
-  position: relative;
-  z-index: 3;
-}
-
-/* squares behind images */
-.section-intro__app-image-blue-square {
-  background-color: $primary;
-  border-radius: 5px;
-  height: 132px;
-  width: 145px;
-  position: absolute;
-  z-index: 1;
-  left: -14.8412px;
-  top: -33px;
-}
-
-.section-intro__app-image-paleblue-square {
-  background-color: rgb(228, 237, 254);
-  border-radius: 5px;
-  height: 398px;
-  width: 278px;
-  position: absolute;
-  z-index: 2;
-  left: 113px;
-  top: 283px;
-}
-
-/* the main blocks of the intro sections */
-.section-intro__block {
-  font-family: "Inter", sans-serif;
-  position: relative;
-}
-
-.section-intro__mailchimp {
-  font-size: 36px;
-}
-
-/* mailchimp override */
-.clear {
-  max-width: 353px;
-  margin-left: 0px !important;
-}
-
-.section-intro__mailchimp--blue {
-  color: $white;
-}
-
-.section-intro__mailchimp__form-container {
-  margin-top: 37px;
-  background-color: rgb(255, 255, 255);
-  border-style: solid;
-  border-width: 1px;
-  border-color: rgba(171, 171, 171, 0.25);
-  border-radius: 5px;
-  box-shadow: rgb(170 170 170 / 50%) 0px 2px 4px 1px;
-  padding: 10px;
-}
-
-.section-intro__mailchimp__form {
-  margin-top: 23px;
-}
-
-.intro-right-section {
-  display: flex;
-  align-items: center;
-}
-
-/* END_SECTION_INTRO */
-
 /* SECTION_INTRO_MOBILE */
 
 @media only screen and (max-width: 1015px) {
-  .section-intro {
+  .organization-section-intro {
     width: 100%;
     justify-content: center;
   }
 
-  .section-intro__block {
-    margin: 0 auto;
-    text-align: center;
-  }
-
-.intro-banner__text h1 {
-  font-size: 44px;
-
-}
-
-  .section-intro__app-image {
-    margin: 0 auto;
-  }
-
-  .section-intro__mailchimp__form-container {
-    width: 100%;
-    margin-bottom: 100px;
-    padding: 0;
-  }
-
-  .square-1 {
-    left: 42.1588px;
-  }
-
-  .square-2 {
-    left: 141px;
+  .organization-intro-banner__text h1 {
+    font-size: 44px;
   }
 }
 
-@media only screen and (max-width: 450px) {
-  .section-intro__app-image {
-    width: 100vw;
-    height: 40rem;
-    background-size: contain;
-    background-position: 50% 50%;
-  }
-
-  .section-intro__app-image-blue-square {
-    display: none;
-  }
-
-  .section-intro__app-image-paleblue-square {
-    display: none;
-  }
-}
-
-/* END_SECTION_INTRO_MOBILE */

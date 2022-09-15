@@ -57,7 +57,7 @@ const TeamSection = (props) => {
   const meetTheTeamLanguage = language === 'ja' ? 'チーム' : 'Meet The Team'
   const teamMemberData = language === 'ja' ? "teamMemberDataJa" : "teamMemberData"
   const languageExtension = language === 'ja' ? "Ja" : ""
-  console.log(data.wpcontent?.teamMembers?.nodes)
+  // console.log(data.wpcontent?.teamMembers?.nodes)
   const team = (data.wpcontent?.teamMembers?.nodes || []).map((member, index) =>
     <TeamMember
       key={index}
