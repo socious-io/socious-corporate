@@ -11,8 +11,8 @@ const Cta = (props) => {
 
   return (
     <SimpleLocalize {...props}>
-      <div className="!py-[5px] job-action xxs:!mt-10">
-        <div className="!p-[35px] !w-full job-action__container">
+      <div className="job-action">
+        <div className="job-action__container">
           <h2 className='job-action__header mb-5'>
             <FormattedMessage
               id="call-to-action-job-header"
@@ -28,7 +28,10 @@ const Cta = (props) => {
 
           <p className='job-action__subtitle'>
             <FormattedMessage
-              id="call-to-action-job-subtitle"
+              id="call-to-action-job-subtitle-one"
+            /><br></br>
+            <FormattedMessage
+              id="call-to-action-job-subtitle-two"
             />
           </p>
 

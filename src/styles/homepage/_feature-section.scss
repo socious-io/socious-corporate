@@ -136,7 +136,7 @@
   width: 50%;
   padding: 50px;
   background: $primary-dark;
-  justify-content: center;
+  // justify-content: center;
   align-items: center;
   margin: 0 auto;
   border-radius: 20px;
@@ -156,6 +156,7 @@
   font-weight: 550;
   text-align: center;
   padding-bottom: 20px;
+  padding-top: 0;
 }
 
 .job-action__get {
@@ -167,7 +168,7 @@
   max-width: 13em;
   padding: 10px 30px;
   text-align: center;
-  margin: 0 auto;
+  margin: 0;
   cursor: pointer;
 }
 
@@ -182,9 +183,11 @@
 .job-action__link {
   text-decoration: none;
   color: $white;
-  font-size: 20px;
+  font-family: 'Work Sans';
+  font-style: normal;
   font-weight: 600;
-
+  font-size: 20px;
+  line-height: 150%;
 }
 
 .job-action__modal {
@@ -295,25 +298,49 @@
 
   .job-action__container {
     width: 100%;
-    padding: 20px;
     max-width: unset;
+    margin-top: 0;
   }
 
   //call-to-action
   .job-action {
     width: 100%;
-    padding: 50px 0;
+    height: 109vw;
     border-radius: 0px;
-    margin-top: 40%;
+    padding: 10vw;
+    margin: 0 auto;
+  }
+
+  .job-action__subtitle {
+    padding: 0 0 1.5em 0;
+    font-family: 'Work Sans';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 150%;
   }
 
   .job-action__header {
-    font-size: 24px;
     align-self: stretch;
+
+    /* Header/Work Sans/h2 */
+
+    font-family: 'Work Sans';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 125%;
   }
 
   .job-action__get {
-    padding: 12px 42px;
+    padding: 12px 64px;
+    max-width: 20em;
+    font-family: 'Work Sans';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 150%;
+    margin: 0 0 2em 0;
   }
 
   //modal
