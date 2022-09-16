@@ -11,6 +11,7 @@ const Cta = (props) => {
 
   return (
     <SimpleLocalize {...props}>
+      <div className="job">
       <div className="job-action">
         <div className="job-action__container">
           <h2 className='job-action__header mb-5'>
@@ -43,6 +44,7 @@ const Cta = (props) => {
             />
           </a>
         </div>
+      </div>
       </div>
       <BasicModal open={open} handleClose={handleClose} />
     </SimpleLocalize>
