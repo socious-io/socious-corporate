@@ -7,14 +7,14 @@
   background:$white;
 }
 
-.section-jobs__sup-header {
+.organization-section-jobs__sup-header {
   color: $black;
   font-size: 36px;
   text-align: center;
   font-weight: 600;
 }
 
-.section-jobs__header {
+.organization-section-jobs__header {
   font-weight: 400;
   margin-top: 20px;
   margin-bottom: 3rem;
@@ -23,7 +23,7 @@
   
 }
 
-.section-jobs__list {
+.organization-section-jobs__list {
  display: flex;
  flex-direction: column;
  justify-content: center;
@@ -39,7 +39,7 @@
   position: relative;
 }
 
-.section-jobs__block {
+.organization-section-jobs__block {
   // max-width: 90rem;
   // margin: 48px auto;
   display: flex;
@@ -125,7 +125,6 @@
   align-items: center;
   background: $extra-light-grey;
   border-radius: 20px;
-
   
 }
 
@@ -135,8 +134,7 @@
   width:60%;
   justify-content: center;
   align-items: center;
-
-
+  
 }
 .section-reason__list-jobs{
   display: flex;
@@ -165,6 +163,7 @@ color: #595959;
   font-weight: 400;
   text-align: center;
   line-height: 1.8rem;
+  height: 6rem;
 }
 
 .section-reason__list-icon {
@@ -194,17 +193,14 @@ color: #595959;
   .section-reason__list-item {
      margin: 2% 0;
   }
-  .section-jobs__list-container{
-    width: 70%;
-  }
 }
 
 @media only screen and (max-width: 1015px) {
-  .section-jobs__block {
+  .organization-section-jobs__block {
     flex-direction: column;
   }
 
-  .section-jobs__list {
+  .organization-section-jobs__list {
     width: 90%;
   }
 

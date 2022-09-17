@@ -30,7 +30,10 @@ const TalentCta = (props) => {
 
           <p className='hire-action__subtitle'>
             <FormattedMessage
-              id="call-to-action-job-subtitle"
+              id="call-to-action-job-subtitle-one"
+            /><br></br>
+            <FormattedMessage
+              id="call-to-action-job-subtitle-two"
             />
           </p>
 

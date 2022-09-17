@@ -38,7 +38,7 @@ const FeaturedBlog = () => {
 
 
   const { edges } = query.allWpPost
-  console.log("EDGES", edges);
+  // console.log("EDGES", edges);
 
   return (
     <div className="main featured-box">

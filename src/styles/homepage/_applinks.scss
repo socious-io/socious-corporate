@@ -72,23 +72,44 @@
   }
 
   .section-app-links__app-links-button{
-    margin-top: 20px;
-    padding: 10px 90px;
+    // margin-top: 20px;
+    // padding: 10px 90px;
+    /* Header/Work Sans/h3 */
+
+    font-family: 'Work Sans';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 150%;
+
+    padding: 12px 98px;
+    margin: 0 auto;
   }
   .section-app-links__app-links-button-work {
-    padding: 10px 96px;
-
+    padding: 12px 106px;
+    font-family: 'Work Sans';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 150%;
+    margin: 0 auto;
   }
 
   .section-app-links__app-links {
     display: flex;
-  
+    width: 100%;
+    padding: 2vw 0 2vw 0;
   }
   .section-app-links__app-links-block {
     display: flex;
     flex-direction: column;
-    margin: 5% 5%;
-    margin-bottom: 50px;
-    width: max-content;
+    align-items: center;
+    justify-content: center;
+    // margin-left: 10vw;
+    // margin-right: 10vw;
+    padding: 0;
+    width: 312px;
+    margin: 0;
+    margin-top: 5vw;
   }
 }

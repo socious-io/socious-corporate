@@ -44,7 +44,7 @@ const Blogs = () => {
 
   const [loadMore, setLoadMore] = useState(false)
 
-  console.log(edges);
+  // console.log(edges);
 
   const handleLoadMore = () => {
     setLoadMore(true)

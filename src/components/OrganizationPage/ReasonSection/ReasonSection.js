@@ -27,14 +27,14 @@ const ReasonsSection = (props) => {
   return (
     <SimpleLocalize {...props}>
       <div className="section-reason">
-        <div className="section-jobs__block">
-          <div className="section-jobs__list">
-            <div className="section-jobs__sup-header">
+        <div className="organization-section-jobs__block">
+          <div className="organization-section-jobs__list">
+            <div className="organization-section-jobs__sup-header">
               <FormattedMessage
                 id="organization-reason-title"
               />
             </div>
-            <div className="section-jobs__header">
+            <div className="organization-section-jobs__header">
               <FormattedMessage
                 id="organization-reason-description"
               />

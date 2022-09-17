@@ -110,6 +110,8 @@
   }
 }
 
+
+
 .header__logoblue-container {
   display: flex !important;
   align-items: center;
@@ -180,4 +182,10 @@
   border: 0.5px solid #E4E2E0;
   transform: rotate(90deg);
 
+}
+
+@media only screen and (max-width: 1015px) {
+  .header__logo-container {
+    padding: 8vw;
+  }
 }
