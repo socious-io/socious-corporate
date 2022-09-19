@@ -17,7 +17,7 @@ const TalentCta = (props) => {
           <div className="hire-action__container">        
           <h2 className='hire-action__header'>
             <FormattedMessage
-              id="call-to-action-job-header"
+              id="start-hiring-header"
             />
           </h2>
           <button 
@@ -30,10 +30,10 @@ const TalentCta = (props) => {
 
           <p className='hire-action__subtitle'>
             <FormattedMessage
-              id="call-to-action-job-subtitle-one"
+              id="start-hiring-subtitle-one"
             /><br></br>
             <FormattedMessage
-              id="call-to-action-job-subtitle-two"
+              id="start-hiring-subtitle-two"
             />
           </p>
 
