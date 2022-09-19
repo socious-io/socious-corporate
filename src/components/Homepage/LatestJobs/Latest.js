@@ -78,13 +78,18 @@ const Latest = ({ latestJobDetails = {}, imageOpt }) => {
           <div className="job-role">
             {latestJobDetails.role}
           </div>
-          <div className="">
+          <div className="hidden xxs:flex mdp:hidden">
             <p>
               {latestJobDetails.company}
             </p>
           </div>
-          <div>
+          <div className="hidden xxs:flex mdp:hidden">
             {latestJobDetails.location}
+          </div>
+          <div className="flex xxs:hidden mdp:flex">
+            <p>
+              {latestJobDetails.company} <span class="latest-company-dot"></span> {latestJobDetails.location}
+            </p>
           </div>
           <div>
             {latestJobDetails.jobTags?.join(' | ')}

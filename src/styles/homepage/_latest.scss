@@ -11,6 +11,14 @@
   flex-direction: column;
 }
 
+.latest-company-dot {
+  height: 5px;
+  width: 5px;
+  background-color: #000;
+  border-radius: 50%;
+  display: inline-block;
+  margin: 0.2em;
+}
 
 .latest-title {
   color: $black;
