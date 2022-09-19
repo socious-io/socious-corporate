@@ -49,7 +49,8 @@ const Footer = () => {
             </div>
             <div className="footer-list">
               <ul>
-                <li><AnchorLink to={linkLanguageSelector("/contact")} title={contactUs} /></li>
+                {/* <li><AnchorLink to={linkLanguageSelector("/contact")} title={contactUs} /></li> */}
+                <li><a href="https://us6.list-manage.com/contact-form?u=131eb0c7f6b2c3a36daf52940&form_id=8ac2ed4e02b1104cad3be462bb898bb4" target="_blank" rel="noreferrer">{jaPage ? 'お問い合わせ' : 'Contact Us'}</a></li>
                 <li><Link to={linkLanguageSelector("/support")}>{jaPage ? 'サポート' : 'Support'}</Link></li>
                 <li><Link to={linkLanguageSelector("/newsroom")}>{jaPage ? 'ニュースルーム' : 'Newsroom'}</Link></li>
                 <li><Link to={linkLanguageSelector("/blog")}>{jaPage ? 'ブログ（英語)' : 'Blog'}</Link></li>
