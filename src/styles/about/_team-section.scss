@@ -44,7 +44,7 @@
 }
 
 .team-member {
-  height: 95%;
+  height: 92.5%;
   max-width: 21.1vw;
   min-width: 304px;
   // height: 31.8vw;
@@ -102,13 +102,14 @@
 .member-icon{
 
   margin: 5% auto;
-  padding: 10px;
-  width: 45px;
-  border-radius: 100px;
-  background: #f3f2f1;
-  color: #ffffff;
+  display: flex;
+  justify-content: center;
+  // padding: 10px;
+  // width: 45px;
+  // border-radius: 100px;
+  // background: #f3f2f1;
+  // color: #ffffff;
   bottom: 0;
-  
 }
 
 .member-description{
