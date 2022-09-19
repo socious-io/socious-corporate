@@ -54,7 +54,7 @@ const TeamSection = (props) => {
 
   const { language } = props.pageContext
 
-  const meetTheTeamLanguage = language === 'ja' ? 'チーム' : 'Meet The Team'
+  const meetTheTeamLanguage = language === 'ja' ? 'チーム' : 'Meet the team'
   const teamMemberData = language === 'ja' ? "teamMemberDataJa" : "teamMemberData"
   const languageExtension = language === 'ja' ? "Ja" : ""
   // console.log(data.wpcontent?.teamMembers?.nodes)

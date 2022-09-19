@@ -1,9 +1,9 @@
 import React, { useEffect } from "react";
 import { GatsbyImage, getImage } from "gatsby-plugin-image";
 import { BsMedium } from "react-icons/bs";
-import { GrLinkedinOption } from "react-icons/gr";
+// import { GrLinkedinOption } from "react-icons/gr";
 import LinkedInIcon from '@mui/icons-material/LinkedIn';
-import { FiTwitter } from "react-icons/fi";
+// import { FiTwitter } from "react-icons/fi";
 
 const TeamMember = (props) => {
   const modalId = `myModal${props.id}`
