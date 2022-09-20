@@ -16,7 +16,7 @@
   font-family: 'Work Sans';
   font-style: normal;
   font-weight: 600;
-  font-size: 38px;
+  font-size: 36px;
   line-height: 125%;
   letter-spacing: -1px;
 
@@ -29,7 +29,7 @@
   font-family: 'Work Sans';
   font-style: normal;
   font-weight: 400;
-  font-size: 21px;
+  font-size: 20px;
   line-height: 150%;
   padding-bottom: 2.5em;
 }
@@ -68,6 +68,14 @@
   // padding: 0 20px;
   margin: 5% 20%;
 
+}
+
+.team-member-linkedin{
+  fill: #F3F2F1;
+}
+
+.team-member-linkedin:hover {
+  fill: #00BA88;
 }
 
 .member-content {
