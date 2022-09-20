@@ -11,7 +11,7 @@ const IssueSection = (props) => {
 
   return (
     <SimpleLocalize {...props}>
-      <div className="xxs:!pt-[195px] mdp:!pt-[25px] issue-section" id="social-issues">
+      <div className="xxs:!pt-[200px] mdp:!pt-[80px] issue-section" id="social-issues">
 
         {/* <div className="issue-banner__image"></div> */}
         <div className="!flex xxs:!flex-col xxs:!p-4 mdp:!flex-row mdp:!px-8 lg:!px-20 2xl:!px-96 !items-baseline issue-banner__content">
