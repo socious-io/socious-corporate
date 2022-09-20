@@ -13,8 +13,8 @@ hr.newsroom-banner__hr {
 
 .newsroom-banner__text {
   margin: 0 auto;
-  margin-top: 5%;
-  margin-bottom: 5%;
+  margin-top: 8%;
+  margin-bottom: 6%;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -23,18 +23,25 @@ hr.newsroom-banner__hr {
 }
 
 .newsroom-banner__text h1 {
-  font-family: 'Inter', sans-serif;
-  font-size:24px;
-  letter-spacing: 1.5px;
   text-align: center;
   color: $secondary;
   text-transform: uppercase;
+
+  font-family: 'Work Sans';
+  font-style: normal;
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 125%;
 }
 
 .newsroom-banner__text h3 {
-  font-family: 'Inter', sans-serif;
-  font-size:44px;
-  letter-spacing: 1.5px;
+  font-family: 'Work Sans';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 44px;
+  line-height: 125%;
+  /* identical to box height, or 55px */
+
   text-align: center;
 }
 

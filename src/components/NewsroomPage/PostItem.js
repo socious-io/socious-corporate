@@ -16,15 +16,13 @@ const PostItem = (props) => {
       </div>
       <div className="news-item__content">
         <div class="news-content-date">
-          <small>{date}</small>
+          <p>{date}</p>
         </div>
-        <br />
         <div class="news-content-title">
           <h3>{title}</h3>
         </div>
         <div class="news-content-link">
-          <br></br>
-          <a href={url}>Read More &rarr;</a>
+          <a href={url}>Read more &rarr;</a>
         </div>
       </div>
     </div>

@@ -42,7 +42,7 @@ const FeaturedBlog = () => {
 
   return (
     <div className="main featured-box">
-      <div className="container__blog">
+      <div className="featured-container__blog">
         <h1>Featured posts</h1>
         {  edges.map(edge => (
           <div className="featured-blog">
