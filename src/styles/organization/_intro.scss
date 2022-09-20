@@ -13,28 +13,38 @@
 
 .organization-intro-banner__text {
   height: 100%;
-  width: 60%;
   display: flex;
-  justify-content: center;
+  // justify-content: center;
   align-items: center;
   margin: 0 auto;
+  padding-top: 25vh;
   flex-direction:column;
   color: #FFF;
 }
 
 .organization-intro-banner__text h1 {
-  font-family: 'Inter', sans-serif;
+  font-family: 'Work Sans';
+  font-style: normal;
   font-weight: 600;
-  font-size: 84px;
-  letter-spacing: 1.5px;
+  font-size: 64px;
+  line-height: 100%;
+  /* or 64px */
+
   text-align: center;
+  letter-spacing: -1px;
+  padding-left: 20vw;
+  padding-right: 20vw;
+
 }
 .organization-intro-banner__text h3 {
-  font-family: 'Inter', sans-serif;
-  font-weight: 300;
-  padding:10px;
   text-align: center;
-  letter-spacing: 1.5px;
+  font-family: 'Work Sans';
+  font-style: normal;
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 125%;
+  padding-left: 27vw;
+  padding-right: 27vw;
 }
 
 /* SECTION_INTRO_MOBILE */
@@ -47,6 +57,14 @@
 
   .organization-intro-banner__text h1 {
     font-size: 44px;
+    padding-left: 5vw;
+    padding-right: 5vw;
+  }
+
+  .organization-intro-banner__text h3 {
+    font-size: 18px;
+    padding-left: 5vw;
+    padding-right: 5vw;
   }
 }
 
