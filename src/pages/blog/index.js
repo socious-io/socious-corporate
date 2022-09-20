@@ -27,7 +27,7 @@ const BlogPage = (props) => {
       {/* Likely temporary Blog */}
       <div className="blog-banner">
         <div className="container__blog">
-          <h2>Blog</h2>
+          <h2>BLOG</h2>
           <p>Thoughts and opinions from the Socious team</p>
         </div>
       </div>

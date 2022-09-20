@@ -96,8 +96,28 @@
 
   img {
     width: calc((720 /1140) * 100%);
-    max-width: 450px;
-    max-height: 17em;
+    max-width: 528px; //450px;
+    max-height: 367px; //17em;
+  }
+
+
+}
+
+.featured-container__blog {
+  @extend %font-work-sans;
+
+  box-sizing: border-box;
+  width: 75vw;
+  margin-left: 1rem;
+  margin-right: 1rem;
+  
+  // Default styling for every link and h2
+  a {
+    text-decoration: none;
+  }
+
+  h1, h2 {
+    font-weight: 600;
   }
 }
 
@@ -124,9 +144,8 @@
   }
 }
 
-// @media only screen and (max-width: 1230px){
-//   .featured-blog {
-//     margin: 0 auto;
-//     width: 80%;
-//   }
-// }
+@media only screen and (max-width: 750px){
+  .featured-container__blog {
+    width: 90vw;
+  }
+}
