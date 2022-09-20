@@ -6,7 +6,7 @@ const latestJobs = [
     role: "Partnerships Executive",
     company: "CDP Worldwide",
     location: "United Kingdom",
-    jobTags: ['Full-time', 'Paid', 'Expert']
+    jobTags: ['Full-time', 'Paid', 'Intermediate']
   },
   {
     id: 2,
@@ -15,7 +15,7 @@ const latestJobs = [
     role: "Manager of Marketing & Communications",
     company: "Habitat for Humanity",
     location: "United States",
-    jobTags: ['Full-time', 'Paid', 'Intermediate']
+    jobTags: ['Full-time', 'Paid', 'Expert']
   },
   {
     id: 3,

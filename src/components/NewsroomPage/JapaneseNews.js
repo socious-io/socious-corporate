@@ -107,10 +107,10 @@ const JapaneseNews = () => {
             }
           </>
         }
-      <button 
+      { hasMore ? <button 
         onClick={(event) => {handleLoadMore(); trackButtonClick(event)}} 
         className='news-container__more'>
-          Load more news</button>
+          Load more news</button> : <></> }
     </div>
   )
 }

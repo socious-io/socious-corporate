@@ -63,52 +63,52 @@ const SkillSection = (props) => {
     query SkillSection {
       climate: file(relativePath: {eq: "skills/climate.png"}) {
         childImageSharp {
-          gatsbyImageData(placeholder: BLURRED, blurredOptions: {width: 100})
+          gatsbyImageData(placeholder: BLURRED, blurredOptions: {width: 10})
         }
       }
       sustainability: file(relativePath: {eq: "skills/sustainability.png"}) {
         childImageSharp {
-          gatsbyImageData(placeholder: BLURRED, blurredOptions: {width: 100})
+          gatsbyImageData(placeholder: BLURRED, blurredOptions: {width: 10})
         }
       }
       gender: file(relativePath: {eq: "skills/gender-equality.png"}) {
         childImageSharp {
-          gatsbyImageData(placeholder: BLURRED, blurredOptions: {width: 100})
+          gatsbyImageData(placeholder: BLURRED, blurredOptions: {width: 10})
         }
       }
       refugees: file(relativePath: {eq: "skills/refugees.png"}) {
         childImageSharp {
-          gatsbyImageData(placeholder: BLURRED, blurredOptions: {width: 100})
+          gatsbyImageData(placeholder: BLURRED, blurredOptions: {width: 10})
         }
       }
       waste: file(relativePath: {eq: "skills/zero-waste.png"}) {
         childImageSharp {
-          gatsbyImageData(placeholder: BLURRED, blurredOptions: {width: 100})
+          gatsbyImageData(placeholder: BLURRED, blurredOptions: {width: 10})
         }
       }
       blackLives: file(relativePath: {eq: "skills/black-lives.png"}) {
         childImageSharp {
-          gatsbyImageData(placeholder: BLURRED, blurredOptions: {width: 100})
+          gatsbyImageData(placeholder: BLURRED, blurredOptions: {width: 10})
         }
       }
       childProtection: file(relativePath: {eq: "skills/child-protection.png"}) {
         childImageSharp {
-          gatsbyImageData(placeholder: BLURRED, blurredOptions: {width: 100})
+          gatsbyImageData(placeholder: BLURRED, blurredOptions: {width: 10})
         }
       }
       animalRights: file(relativePath: {eq: "skills/animal-rights.png"}) {
         childImageSharp {
-          gatsbyImageData(placeholder: BLURRED, blurredOptions: {width: 100})
+          gatsbyImageData(placeholder: BLURRED, blurredOptions: {width: 10})
         }
       }
       bioDiversity: file(relativePath: {eq: "skills/biodiversity.png"}) {
         childImageSharp {
-          gatsbyImageData(placeholder: BLURRED, blurredOptions: {width: 100})
+          gatsbyImageData(placeholder: BLURRED, blurredOptions: {width: 10})
         }
       }
       community: file(relativePath: {eq: "skills/community-dev.png"}) {
         childImageSharp {
-          gatsbyImageData(placeholder: BLURRED, blurredOptions: {width: 100})
+          gatsbyImageData(placeholder: BLURRED, blurredOptions: {width: 10})
         }
       }
     }

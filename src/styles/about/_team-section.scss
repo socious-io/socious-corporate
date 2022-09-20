@@ -1,40 +1,62 @@
 /* SECTION_TEAM */
 .team-section {
   background-color: $extra-light-grey;
-  padding: 2rem;
 }
 
 .team-title {
   text-align: center;
   color: $black;
   font-size: 2rem;
-  margin: 2% 0;
-  margin-top: 3%;
+  padding-top: 8.3vw;
 }
 
 .team-title h2 {
-  margin-top: 0;
-  
+  /* Header/Work Sans/h1 */
+
+  font-family: 'Work Sans';
+  font-style: normal;
+  font-weight: 600;
+  font-size: 38px;
+  line-height: 125%;
+  letter-spacing: -1px;
+
+  color: #000000;
 }
+
 .team-title p{
-  font-size: 16px;
-  padding: 20px;
+  // font-size: 16px;
+  padding-top: 1.25em;
+  font-family: 'Work Sans';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 21px;
+  line-height: 150%;
+  padding-bottom: 2.5em;
 }
 
 .team-container {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
+  
+  padding-left: 1em;
+  padding-right: 1em;
 }
 
 .team-member {
-  width: 20rem;
-  height: 95%;
+  height: 92.5%;
+  max-width: 21.1vw;
+  min-width: 304px;
+  // height: 31.8vw;
   background-color: #FFF;
-  border-radius: 0.5rem;
+  border-radius: 20px;
   margin: 1rem;
   position: relative;
   transition: 200ms ease-in-out;
+
+  // padding: 24px;
+  padding-top: 1rem;
+  gap: 24px;
 }
 
 .team-member:hover {
@@ -55,35 +77,53 @@
 
 .member-name {
   color: $black;
-  font-size: 18px;
-  font-weight: bold;
-  padding: 10px;
+  // font-size: 18px;
+  // font-weight: bold;
+  // padding: 10px;
+
+  font-family: 'Work Sans';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 22px;
+  line-height: 150%;
 }
+
 .member-title{
-  padding: 10px;
+  padding-top: 0.5em;
+
+  font-family: 'Work Sans';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 17px;
+  line-height: 150%;
+  color: $black;
 }
 
 .member-icon{
 
   margin: 5% auto;
-  padding: 10px;
-  width: 45px;
-  border-radius: 100px;
-  background: #f3f2f1;
-  color: #ffffff;
+  display: flex;
+  justify-content: center;
+  // padding: 10px;
+  // width: 45px;
+  // border-radius: 100px;
+  // background: #f3f2f1;
+  // color: #ffffff;
   bottom: 0;
-  
 }
 
 .member-description{
-  padding: 5px;
-  margin-bottom: 2%;
-  font-size: 14px;
+  // padding: 5px;
+  // margin-bottom: 2%;
  
-  
+  font-family: 'Work Sans';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 150%;
 }
 .member-divider{
-  margin: 2px;
+  margin: 1em;
   border-color: #e4e6ed;
   
 }
@@ -191,6 +231,15 @@
 @media screen and (max-width: 1015px) {
   .modal-content {
     width: 100%;
+  }
+
+  .team-title p{
+    padding-left: 2em;
+    padding-right: 2em
+  }
+
+  .team-title h2 {
+    padding-top: 1em;
   }
 }
 

@@ -82,7 +82,7 @@ const Blogs = () => {
             }
           </>
         }
-        <button onClick={handleLoadMore} className="load-more">Load more blogs</button>
+        { hasMore ? <button onClick={handleLoadMore} className="load-more">Load more blogs</button> : <></> }
       </div>
     </div>
   )

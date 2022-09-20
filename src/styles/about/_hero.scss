@@ -60,6 +60,7 @@
 
 }
 
+
 }
 
 @media only screen and (max-width: 900px) {
@@ -70,6 +71,14 @@
   .hero-text h1 {
     font-weight: 700;
     font-size: 2rem;
+  }
+
+  .hero-text {
+    padding-top: 15em;
+  }
+
+  .hero-image {
+    margin-top: 5em;
   }
 }
 
