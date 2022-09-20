@@ -117,7 +117,7 @@ const TalentSection = (props) => {
     <SimpleLocalize {...props}>
       <section className="talents-section">
         <div className="talents-header">
-          {/* <h3>Hire <span>1500+ </span>impact talents</h3> */}
+          <h3>Hire <span>1500+ </span>impact talents</h3>
         </div>
         <div className="talents-section-slider">
         <Slider {...settings} className="talents-slider">
