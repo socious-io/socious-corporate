@@ -14,7 +14,7 @@ const AboutPage = (props) => {
   return (
     <Layout {...props} header="default" pageTitle="About">
       <Seo key="about"
-      title="Join Impact Organizations with Talents | Socious"
+      title="Join Impact Projects and Make a Difference"
       description="Socious connects change-makers with impact projects & ethical organizations. Join our impact community and help us make a difference!"
       />
       <HeroSection {...props} />

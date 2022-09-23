@@ -8,19 +8,32 @@
 }
 
 .organization-section-jobs__sup-header {
+  margin-top: 80px;
   color: $black;
-  font-size: 36px;
+
   text-align: center;
+  font-family: 'Work Sans';
+  font-style: normal;
   font-weight: 600;
+  font-size: 36px;
+  line-height: 125%;
 }
 
 .organization-section-jobs__header {
-  font-weight: 400;
   margin-top: 20px;
   margin-bottom: 3rem;
-  font-size: 20px;
-  text-align: center;
   
+  text-align: center;
+  font-family: 'Work Sans';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 150%;
+  /* or 30px */
+
+  /* Neutral/800 */
+
+  color: #595959;
 }
 
 .organization-section-jobs__list {
@@ -28,6 +41,7 @@
  flex-direction: column;
  justify-content: center;
  align-items: center;
+ width: 42%;
  margin: 0 auto;
 }
 
@@ -131,7 +145,7 @@
 .section-reason__list-container{
   display: flex;
   flex-direction: column;
-  width:60%;
+  width:80%;
   justify-content: center;
   align-items: center;
   
@@ -147,9 +161,13 @@
 }
 
 .section-reason__list-item-link {
-  font-size: 20px;
-  font-weight: 500;
   padding: 15px;
+
+  font-family: 'Work Sans';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 150%;
  
 }
 .section-reason__list-item-link a{
@@ -158,12 +176,15 @@ color: #595959;
 }
 
 .section-reason__list-item-subtitle {
-  font-size: 18px;
   color: r$black;
-  font-weight: 400;
-  text-align: center;
-  line-height: 1.8rem;
   height: 6rem;
+  text-align: center;
+
+  font-family: 'Work Sans';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 150%;
 }
 
 .section-reason__list-icon {

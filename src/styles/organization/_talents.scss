@@ -23,9 +23,15 @@
 .talents-header{
   text-align: center;
   margin: 5% auto;
-  font-size: 25px;
-  font-weight: 500;
+
+  font-family: 'Work Sans';
+  font-style: normal;
+  font-weight: 600;
+  font-size: 36px;
+  line-height: 125%;
+  letter-spacing: -1px;
 }
+
 .talents-header span{
 color: $green;
 }
