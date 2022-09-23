@@ -12,7 +12,7 @@ module.exports = {
     title: 'Socious | Impact Gig Marketplace powered by Blockchain & AI',
     titleJapanese:
       'ソーシャス | ブロックチェーンを活用したSDG人材プラットフォーム',
-    titleTemplate: '%s · Socious',
+    titleTemplate: '%s | Socious',
     titleTemplateJapanese: '%s · ソーシャス',
     description:
       'Socious is an impact network with a mission to help make a difference. We use AI and blockchain technologies to connect change makers',
