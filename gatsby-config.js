@@ -9,7 +9,7 @@ module.exports = {
   siteMetadata: {
     url: 'https://socious.io',
     // title and description are deprecated, use i18n instead
-    title: 'Socious | Impact Gig Marketplace powered by Blockchain & AI',
+    title: 'Socious | Impact Network Powered by Blockchain & AI',
     titleJapanese:
       'ソーシャス | ブロックチェーンを活用したSDG人材プラットフォーム',
     titleTemplate: '%s | Socious',

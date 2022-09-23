@@ -16,7 +16,7 @@ const BlogPage = (props) => {
 
   const seoTitle = jaPage ?
                    'ブログ' :
-                   'Blog | All about Social Impact | Socious'
+                   'Blog | All about Social Impact'
   
 	return (
 		<Layout {...props} header="">

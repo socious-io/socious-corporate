@@ -10,7 +10,7 @@ const CareersPage = (props) => {
   return (
     <Layout {...props} header="">
       <Seo key="careers"
-      title="Careers | Social Impact Jobs | Socious"
+      title="Careers | Social Impact Jobs"
       description="Looking for a social impact job? Want to make a difference in the world? Join the Socious team and help us bring together change-makers!"
       />
       <Banner {...props} />
