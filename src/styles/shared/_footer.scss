@@ -120,6 +120,9 @@ footer {
   font-weight: 600;
   font-size: 24px;
   line-height: 125%;
+
+  padding-left: 30vw;
+  padding-right: 30vw;
   
 }
 
@@ -180,5 +183,19 @@ footer {
 
   .buttonStyles{
     padding: 12px ;
+  }
+
+  .headingStyles{
+    font-size: 104px;
+  }
+  
+  .paragraphStyles {
+    font-family: 'Work Sans';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 150%;
+    padding-left: 2vw;
+    padding-right: 2vw;
   }
 }

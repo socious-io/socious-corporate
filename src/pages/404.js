@@ -43,7 +43,7 @@ const NotFoundPage = (props) => {
         <main className="pageStyles">
           <p className="headingStyles">404</p>
           <p className="paragraphStyles">
-            Something went wrong. Let’s take you<br></br> back home.
+            Something went wrong. Let’s take you back home.
             <br />
             <br />
             <br />
