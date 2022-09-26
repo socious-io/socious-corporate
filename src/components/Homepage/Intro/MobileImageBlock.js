@@ -9,6 +9,7 @@ const MobileImageBlock = () => {
         alt="socious app illustration"
         className="section-intro__app-image"
         placeholder="blurred"
+        blurredOptions={{width: 10}}
         loading="eager"
         objectFit="contain"
       />
