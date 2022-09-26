@@ -35,7 +35,7 @@ const SlideContainer = styled.div`
 
   @media (max-width: 600px) {
     flex-direction: column;
-    height: 500vh;
+    height: 420vh;
   }
 `
 
@@ -179,7 +179,7 @@ const FeaturesSection = (props) => {
             >
               <img
                 style={{ margin: 'auto' }}
-                src={gifs[inViewArray.indexOf(true)]}
+                src={gifs[inViewArray.indexOf(true)] || gifs[0]}
                 height={500}
               />
             </ImageContainer>
