@@ -4,10 +4,10 @@ import { useInView } from "react-intersection-observer";
 import Feature from "./Features";
 import features from "../../../../data/Homepage/features";
 import featuresJa from "../../../../data/Homepage/featuresJa";
-import gif0 from "../../../images/gif-new/0.gif"
-import gif1 from "../../../images/gif-new/1.gif"
-import gif2 from "../../../images/gif-new/2.gif"
-import gif3 from "../../../images/gif-new/3.gif"
+import gif0 from "../../../images/gif-webm/0.webp"
+import gif1 from "../../../images/gif-webm/1.webp"
+import gif2 from "../../../images/gif-webm/2.webp"
+import gif3 from "../../../images/gif-webm/3.webp"
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import Cta from "../CTA";

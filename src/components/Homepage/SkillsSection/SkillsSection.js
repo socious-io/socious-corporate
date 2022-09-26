@@ -32,6 +32,7 @@ const SkillSection = (props) => {
           infinite: true,
           dots: false,
           centerMode: true,
+          arrows: false,
         }
       },
       {
@@ -43,6 +44,7 @@ const SkillSection = (props) => {
           infinite: true,
           dots: false,
           centerMode: true,
+          arrows: false,
         }
       },
       {
@@ -53,6 +55,7 @@ const SkillSection = (props) => {
           infinite: true,
           dots: false,
           centerMode: true,
+          arrows: false,
         }
       }
     ]
