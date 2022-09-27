@@ -18,32 +18,32 @@ const LatestJobs = (props) => {
     query LatestJobs {
       partnerships: file(relativePath: {eq: "latest-jobs/cdp.png"}) {
         childImageSharp {
-          gatsbyImageData(placeholder: BLURRED, blurredOptions: {width: 100})
+          gatsbyImageData(placeholder: BLURRED, blurredOptions: {width: 10})
         }
       }
       habitat: file(relativePath: {eq: "latest-jobs/habibat.png"}) {
         childImageSharp {
-          gatsbyImageData(placeholder: BLURRED, blurredOptions: {width: 100})
+          gatsbyImageData(placeholder: BLURRED, blurredOptions: {width: 10})
         }
       }
       developer: file(relativePath: {eq: "latest-jobs/roi.png"}) {
         childImageSharp {
-          gatsbyImageData(placeholder: BLURRED, blurredOptions: {width: 100})
+          gatsbyImageData(placeholder: BLURRED, blurredOptions: {width: 10})
         }
       }
       designer: file(relativePath: {eq: "latest-jobs/zearn.png"}) {
         childImageSharp {
-          gatsbyImageData(placeholder: BLURRED, blurredOptions: {width: 100})
+          gatsbyImageData(placeholder: BLURRED, blurredOptions: {width: 10})
         }
       }
       nutritionist: file(relativePath: {eq: "latest-jobs/wfp.png"}) {
         childImageSharp {
-          gatsbyImageData(placeholder: BLURRED, blurredOptions: {width: 100})
+          gatsbyImageData(placeholder: BLURRED, blurredOptions: {width: 10})
         }
       }
       producer: file(relativePath: {eq: "latest-jobs/prosperity.png"}) {
         childImageSharp {
-          gatsbyImageData(placeholder: BLURRED, blurredOptions: {width: 100})
+          gatsbyImageData(placeholder: BLURRED, blurredOptions: {width: 10})
         }
       }
     }

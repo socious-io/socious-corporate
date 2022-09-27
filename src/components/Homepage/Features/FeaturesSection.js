@@ -1,13 +1,19 @@
 import React from "react";
 import { useInView } from "react-intersection-observer";
+import { graphql, useStaticQuery } from "gatsby";
+import { GatsbyImage, getImage } from "gatsby-plugin-image";
 
 import Feature from "./Features";
 import features from "../../../../data/Homepage/features";
 import featuresJa from "../../../../data/Homepage/featuresJa";
-import gif0 from "../../../images/gif-webm/0.webp"
-import gif1 from "../../../images/gif-webm/1.webp"
-import gif2 from "../../../images/gif-webm/2.webp"
-import gif3 from "../../../images/gif-webm/3.webp"
+// import gif0 from "../../../images/gif-webm/0.webp"
+// import gif1 from "../../../images/gif-webm/1.webp"
+// import gif2 from "../../../images/gif-webm/2.webp"
+// import gif3 from "../../../images/gif-webm/3.webp"
+// import gif0 from "../../../images/gif-new/0.gif"
+// import gif1 from "../../../images/gif-new/1.gif"
+// import gif2 from "../../../images/gif-new/2.gif"
+// import gif3 from "../../../images/gif-new/3.gif"
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import Cta from "../CTA";
@@ -144,7 +150,33 @@ const SlideImgChild = styled.div`
 `
 
 const FeaturesSection = (props) => {
-  const gifs = [gif0, gif1, gif2, gif3]
+  const data = useStaticQuery(graphql`
+    query FeaturesSection {
+      gif0: file(relativePath: {eq: "gif-webm/0.webp"}) {
+        childImageSharp {
+          gatsbyImageData(placeholder: BLURRED, blurredOptions: {width: 20})
+        }
+      }
+      gif1: file(relativePath: {eq: "gif-webm/1.webp"}) {
+        childImageSharp {
+          gatsbyImageData(placeholder: BLURRED, blurredOptions: {width: 20})
+        }
+      }
+      gif2: file(relativePath: {eq: "gif-webm/2.webp"}) {
+        childImageSharp {
+          gatsbyImageData(placeholder: BLURRED, blurredOptions: {width: 20})
+        }
+      }
+      gif3: file(relativePath: {eq: "gif-webm/3.webp"}) {
+        childImageSharp {
+          gatsbyImageData(placeholder: BLURRED, blurredOptions: {width: 20})
+        }
+      }
+    }
+  `)
+
+  const { gif0, gif1, gif2, gif3 } = data
+  const gifs = [getImage(gif0), getImage(gif1), getImage(gif2), getImage(gif3)]
   const { language } = props.pageContext
 
   const { ref: ref1, inView: inView1 } = useInView({ threshold: .5 });
@@ -177,11 +209,12 @@ const FeaturesSection = (props) => {
               exit={{ opacity: 0 }}
               transition={{ duration: .4 }}
             >
-              <img
+              {/* <img
                 style={{ margin: 'auto' }}
                 src={gifs[inViewArray.indexOf(true)] || gifs[0]}
                 height={500}
-              />
+              /> */}
+              <GatsbyImage image={gifs[inViewArray.indexOf(true)] || gifs[0]} style={{ margin: 'auto' }} height={500}/>
             </ImageContainer>
           </SlideImgChild>
         </SlideImg>
