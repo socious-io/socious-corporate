@@ -414,7 +414,7 @@
     width: 100%;
     max-width: unset;
     margin-top: 0;
-    padding: 0 0 0 0;
+    padding: 5vw 0 0 0;
   }
 
   //call-to-action
@@ -422,8 +422,9 @@
     width: 100%;
     height: 109vw;
     border-radius: 0px;
-    padding: 10vw;
+    padding: 9vw;
     margin: 0 auto;
+    margin-top: 15vh;
   }
 
   .job-action__subtitle {
@@ -433,6 +434,7 @@
     font-weight: 400;
     font-size: 16px;
     line-height: 150%;
+    
   }
 
   .job-action__header {
@@ -448,8 +450,7 @@
   }
 
   .job-action__get {
-    padding: 12px 64px;
-    max-width: 20em;
+    width: 80vw;
     font-family: 'Work Sans';
     font-style: normal;
     font-weight: 600;
@@ -477,5 +478,12 @@
 
   }
 
+  .job-action__link {
+    font-family: 'Work Sans';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 150%;
+  }
 
 }

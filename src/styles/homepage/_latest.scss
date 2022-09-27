@@ -193,7 +193,26 @@
   }
   .latest-link{
     display: none;
-     }
+  }
+  
+  .latest-section-main {
+    padding-bottom: 10vw;
+  }
+
+  .latest-more {
+    font-family: 'Work Sans';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 150%;
+
+    padding: 0;
+    margin: 0;
+    margin-top: 5vw;
+    width: 80vw;
+    padding-top: 12px;
+    padding-bottom: 12px;
+  }
 }
 
 /* SECTION_ABOUT_MOBILE_END */
