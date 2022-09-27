@@ -57,9 +57,16 @@
   }
 
   .skills-header{
-    font-size: 18px;
+    font-family: 'Work Sans';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 125%;
+    padding-top: 5vw;
+    padding-bottom: 1vw;
   }
   .skills-section-career{
+    margin: 8vw 0 10vw 0;
     font-size: 18px;
   
   }
@@ -75,7 +82,21 @@
 //   // flex-wrap: wrap;
   
 // }
- 
 
+}
+
+@media only screen and (max-width: 450px) {
+  .skills-section-career button{
+    padding: 0;
+    width: 80vw;
+    padding-top: 12px;
+    padding-bottom: 12px;
+
+    font-family: 'Work Sans';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 150%;
+  }
 
 }
