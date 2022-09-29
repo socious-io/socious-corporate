@@ -39,7 +39,7 @@ const SlideContainer = styled.div`
 
   @media (max-width: 600px) {
     flex-direction: column;
-    height: 420vh;
+    height: 500vh;
   }
 `
 
@@ -55,7 +55,7 @@ const SlideImg = styled.div`
   transition: opacity 1s ease 0.3s, transform 1s ease;
   opacity: 1;
   transform: translate(0px, 0px);
-  margin: 64px 64px 128px 0;
+  margin: 0 64px 128px 0;
 
   @media only screen and (max-width: 600px) {
     margin: 0;
@@ -141,7 +141,7 @@ const contentVariants = {
 }
 
 const SlideImgChild = styled.div`
-  padding-top: 100%;
+  padding-top: 0;
   background: white;
   position: relative;
   width: 100%;
