@@ -7,7 +7,6 @@ import SimpleLocalize from '../../shared/SimpleLocalize';
 import { FormattedMessage } from 'react-intl';
 import { useIntl } from 'react-intl';
 import { trackButtonClick } from '../../segmentUtils';
-import { lightBlue } from '@mui/material/colors';
 
 const Intro = (props) => {
   const [open, setOpen] = useState(false);
@@ -16,7 +15,7 @@ const Intro = (props) => {
   const { introBackgroundImage } = useStaticQuery(
     graphql`
       query {
-        introBackgroundImage: file(relativePath: {eq: "homepage-banner-mobile.jpg"}) {
+        introBackgroundImage: file(relativePath: {eq: "homepage-banner-mobile.webp"}) {
           childImageSharp {
             gatsbyImageData(
               width: 2000,
