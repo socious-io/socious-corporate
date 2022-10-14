@@ -50,8 +50,8 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
     const posts = result.data.postsRemark.edges;
     const wordpressPosts = wordpressResult?.data?.allWpPost?.edges || [];
     posts.forEach(({ node }) => {
-      let path = node.frontmatter.slug;
       for (let language of languages) {
+        let path = node.frontmatter.slug;
         let slug = node.frontmatter.slug;
 
         const isDefaultLanguage = language === defaultLanguage;
