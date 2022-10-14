@@ -61,8 +61,8 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
         path = "/"+slug;
 
         if (!isDefaultLanguage) {
-          slug = language + '/' + slug;
           path = "/" + language + '/' + slug;
+          slug = language + '/' + slug;
         }
 
         const pageForLanguage = Object.assign({}, node, {
