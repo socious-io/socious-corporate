@@ -52,19 +52,27 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
     posts.forEach(({ node }) => {
       let path = node.frontmatter.slug;
       for (let language of languages) {
+        let slug = node.frontmatter.slug;
+
         const isDefaultLanguage = language === defaultLanguage;
+
+        let pathComponents = path.match(/([^\/]+)/g);
+        slug = pathComponents[pathComponents.length - 1];
+        path = "/"+slug;
+
         if (!isDefaultLanguage) {
-          path = "/" + language + '/' + node.frontmatter.slug;
+          slug = language + '/' + slug;
+          path = "/" + language + '/' + slug;
         }
 
         const pageForLanguage = Object.assign({}, node, {
-          originalPath: node.frontmatter.slug,
+          originalPath: slug,
           path: path,
           component: blogPostTemplate,
           context: {
             language,
             messages: messages[language],
-            slug: node.frontmatter.slug
+            slug: slug
           },
         });
         createPage(pageForLanguage);
