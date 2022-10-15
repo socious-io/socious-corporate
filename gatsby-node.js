@@ -49,40 +49,48 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
 
     const posts = result.data.postsRemark.edges;
     const wordpressPosts = wordpressResult?.data?.allWpPost?.edges || [];
+
+    let posts_path_list = [];
+    posts.forEach(({node})=>{
+      let path = node.frontmatter.slug;
+      if(path[0]!='/'){
+        path = "/"+path;
+      }
+      posts_path_list.push(path)
+    })
+
     posts.forEach(({ node }) => {
       let path = node.frontmatter.slug;
       for (let language of languages) {
+        let slug = node.frontmatter.slug;
+
         const isDefaultLanguage = language === defaultLanguage;
+
+        let pathComponents = path.match(/([^\/]+)/g);
+        slug = pathComponents[pathComponents.length - 1];
+        path = "/"+slug;
+
         if (!isDefaultLanguage) {
-          path = "/" + language + '/' + node.frontmatter.slug;
+          path = "/" + language + '/' + slug;
+          if(posts_path_list.includes(path)){
+            slug = language + '/' + slug;
+          }          
         }
 
         const pageForLanguage = Object.assign({}, node, {
-          originalPath: node.frontmatter.slug,
+          originalPath: slug,
           path: path,
           component: blogPostTemplate,
           context: {
             language,
             messages: messages[language],
-            slug: node.frontmatter.slug
+            slug: slug
           },
         });
         createPage(pageForLanguage);
       }
-
-      // createPage({
-      //   path: node.frontmatter.slug,
-      //   component: blogPostTemplate,
-      //   context: {
-      //     slug: node.frontmatter.slug,
-      //   },
-      // });
     }
     )
-
-
-
-
 
 
     wordpressPosts.forEach(({ node }) => {
