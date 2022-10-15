@@ -49,6 +49,16 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
 
     const posts = result.data.postsRemark.edges;
     const wordpressPosts = wordpressResult?.data?.allWpPost?.edges || [];
+
+    let posts_path_list = [];
+    posts.forEach(({node})=>{
+      let path = node.frontmatter.slug;
+      if(path[0]!='/'){
+        path = "/"+path;
+      }
+      posts_path_list.push(path)
+    })
+
     posts.forEach(({ node }) => {
       let path = node.frontmatter.slug;
       for (let language of languages) {
@@ -62,7 +72,9 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
 
         if (!isDefaultLanguage) {
           path = "/" + language + '/' + slug;
-          slug = language + '/' + slug;
+          if(posts_path_list.includes(path)){
+            slug = language + '/' + slug;
+          }          
         }
 
         const pageForLanguage = Object.assign({}, node, {
@@ -77,20 +89,8 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
         });
         createPage(pageForLanguage);
       }
-
-      // createPage({
-      //   path: node.frontmatter.slug,
-      //   component: blogPostTemplate,
-      //   context: {
-      //     slug: node.frontmatter.slug,
-      //   },
-      // });
     }
     )
-
-
-
-
 
 
     wordpressPosts.forEach(({ node }) => {
