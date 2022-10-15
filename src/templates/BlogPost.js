@@ -7,7 +7,8 @@ import Seo from '../components/seo';
 const BlogPost = (props) => {
   const {data} = props;
   const {frontmatter, html} = data.markdownRemark;
-  const time = new Date(frontmatter.Date.start).toDateString().split(' ').slice(1).join(' ')
+  const dateSplit = frontmatter.Date.start.split('-')
+  const time = new Date(dateSplit[0],dateSplit[1],dateSplit[2]).toDateString().split(' ').slice(1).join(' ')
 
 
   return (

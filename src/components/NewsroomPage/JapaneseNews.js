@@ -65,24 +65,24 @@ const JapaneseNews = () => {
     setHasMore(()=> displayList.length < edges.length)
   }, [displayList])
 
-  const posts = data.allMarkdownRemark.edges.map(post => {
-    const { id,
-            frontmatter: { title, slug, Date:date, Hero_Image, Publish }
-    } = post.node
-    const one = new Date(date.start).toDateString().split(' ').slice(1).join(' ')
+  // const posts = data.allMarkdownRemark.edges.map(post => {
+  //   const { id,
+  //           frontmatter: { title, slug, Date:date, Hero_Image, Publish }
+  //   } = post.node
+  //   const one = new Date(date.start).toDateString().split(' ').slice(1).join(' ')
 
-    const completeArticle = Publish ?
-      <PostItem
-        key={id}
-        slug={slug}
-        title={title}
-        date={one}
-        imageSrc={Hero_Image[0].external.url}
-      /> :
-      null
+  //   const completeArticle = Publish ?
+  //     <PostItem
+  //       key={id}
+  //       slug={slug}
+  //       title={title}
+  //       date={one}
+  //       imageSrc={Hero_Image[0].external.url}
+  //     /> :
+  //     null
 
-      return completeArticle
-  });
+  //     return completeArticle
+  // });
 
   return (
     <div className="news-container">
@@ -90,7 +90,9 @@ const JapaneseNews = () => {
           <>
             {
               displayList.map((edge) => {
-                const time = new Date(edge.node.frontmatter.Date.start).toDateString().split(' ').slice(1).join(' ')
+                const dateSplit = edge.node.frontmatter.Date.start.split('-')
+                const time = new Date(dateSplit[2],dateSplit[0],dateSplit[1]).toDateString().split(' ').slice(1).join(' ')
+                const newTime = [time.slice(0, 6), " ", time.slice(6)].join('');
 
                 return (
                   <div >
@@ -98,7 +100,7 @@ const JapaneseNews = () => {
                     key={edge.node.id}
                     slug={edge.node.frontmatter.slug}
                     title={edge.node.frontmatter.title}
-                    date={time}
+                    date={newTime}
                     imageSrc={edge.node.frontmatter.Hero_Image[0].external.url}       
                   />
                   </div>
