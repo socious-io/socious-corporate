@@ -65,34 +65,34 @@ const EnglishNews = () => {
     setHasMore(()=> displayList.length < edges.length)
   }, [displayList])
 
-  const posts = data.allMarkdownRemark.edges.map(post => {
-    const { id,
-            frontmatter: { title, slug, Date:date, Hero_Image, Publish }
-    } = post.node
-  const dates = new Date(date.start).toDateString().split('').slice(1).join('')
-const newDates = [dates.slice(0, 9), ",", dates.slice(9)].join('');
-  
+//   const posts = data.allMarkdownRemark.edges.map(post => {
+//     const { id,
+//             frontmatter: { title, slug, Date:date, Hero_Image, Publish }
+//     } = post.node
+//   const dates = new Date(date.start).toDateString().split('').slice(1).join('')
+// const newDates = [dates.slice(0, 9), ",", dates.slice(9)].join('');
 
-    const completeArticle = Publish ?
-      <PostItem
-        key={id}
-        slug={slug}
-        title={title}
-        date={newDates}
-        imageSrc={Hero_Image[0].external.url}
-      /> :
-      null
+//     const completeArticle = Publish ?
+//       <PostItem
+//         key={id}
+//         slug={slug}
+//         title={title}
+//         date={newDates}
+//         imageSrc={Hero_Image[0].external.url}
+//       /> :
+//       null
 
-      return completeArticle
-  });
+//       return completeArticle
+//   });
 
   return (
     <div className="news-container">
          { edges.length > 0 && 
           <>
             {
-              displayList.map((edge) => {
-                const time = new Date(edge.node.frontmatter.Date.start).toDateString().split(' ').slice(1).join(' ');
+              displayList.map((edge) => {                
+                const dateSplit = edge.node.frontmatter.Date.start.split('-')
+                const time = new Date(dateSplit[2],dateSplit[0],dateSplit[1]).toDateString().split(' ').slice(1).join(' ')
                 const newTime = [time.slice(0, 6), ", ", time.slice(6)].join('');
                 return (
                   <div >
