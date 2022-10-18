@@ -34,12 +34,12 @@ const JobsSection = (props) => {
                 id="benefits-caption"
               />
             </div>
-            <div className="section-jobs__header">
+            <div className="section-jobs__header-first">
               <FormattedMessage
                 id="benefits-header-left"
               />
             </div>
-            <div className="section-jobs__header">
+            <div className="section-jobs__header-second">
               <FormattedMessage
                 id="benefits-header-bottom"
               />

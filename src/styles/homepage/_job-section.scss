@@ -10,19 +10,38 @@
 }
 
 .section-jobs__sup-header {
+  font-family: 'Work Sans';
+  font-style: normal;
   color: $black;
   font-size: 36px;
   text-align: center;
   font-weight: 600;
+  line-height: 125%;
 }
 
-.section-jobs__header {
+.section-jobs__header-first {
   font-weight: 400;
-  margin-top: 20px;
-  margin-bottom: 3rem;
   font-size: 20px;
   text-align: center;
   padding: 0 18%;
+  margin-top: 1.5em;
+  margin-bottom: 1.5em;
+
+  font-family: 'Work Sans';
+  font-style: normal;
+  line-height: 150%;
+}
+
+.section-jobs__header-second {
+  font-weight: 400;
+  font-size: 20px;
+  text-align: center;
+  padding: 0 18%;
+  margin-bottom: 4em;
+
+  font-family: 'Work Sans';
+  font-style: normal;
+  line-height: 150%;
 }
 
 .section-jobs__list {
@@ -285,7 +304,17 @@
     margin-bottom: 0.5em;
   }
 
-  .section-jobs__header {
+  .section-jobs__header-first {
+    font-family: 'Work Sans';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 150%;
+    margin: 0.75em 0 0.75em 0;
+    padding: 0;
+  }
+
+  .section-jobs__header-second {
     font-family: 'Work Sans';
     font-style: normal;
     font-weight: 400;
