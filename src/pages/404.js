@@ -13,7 +13,7 @@ const NotFoundPage = (props) => {
   const {notFoundBackgroundImage} = useStaticQuery(
     graphql`
       query {
-        notFoundBackgroundImage: file(relativePath: {eq: "404-banner.png"}) {
+        notFoundBackgroundImage: file(relativePath: {eq: "404-new-banner.png"}) {
           childImageSharp {
             gatsbyImageData(
               width: 2000
@@ -30,7 +30,7 @@ const NotFoundPage = (props) => {
   const pluginImage = getImage(notFoundBackgroundImage);
   const backgroundFluidImageStack = [
     pluginImage,
-    `linear-gradient(0deg, rgba(0, 0, 0, 0.16), rgba(0, 0, 0, 0.16))`,
+    // `linear-gradient(0deg, rgba(0, 0, 0, 0.16), rgba(0, 0, 0, 0.16))`,
   ].reverse();
 
   return (
@@ -48,7 +48,7 @@ const NotFoundPage = (props) => {
             <br />
             <br />
             <Link to="/" className="buttonStyles">
-              Return Back Home
+              Return back home
             </Link>
           </p>
         </main>

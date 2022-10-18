@@ -110,7 +110,7 @@ const NavbarMobile = (props) => {
             <QRModal open={open} handleClose={handleClose} />
           </Menu>
           :
-          <MenuIcon onClick={() => setSidebar(true)} fontSize="large" className={`fixed top-[8vw] right-[10vw] ${location.pathname == '/' ? '!fill-white' : '!fill-[#2f4786]'}`} />
+          <MenuIcon onClick={() => setSidebar(true)} fontSize="large" className={`fixed top-[8vw] right-[10vw] ${location.pathname == '/' || location.pathname == '/404/' ? '!fill-white' : '!fill-[#2f4786]'}`} />
       }
     </nav>
   );
