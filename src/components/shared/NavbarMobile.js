@@ -9,7 +9,7 @@ import CheckMarkLang from './CheckMarkLang';
 import QRModal from '../shared/QR-Modal';
 
 const NavbarMobile = (props) => {
-  const { headerStyle, homePage, aboutLink, careersLink, newsroomLink, altPage, organizationLink, blogLink, sidebar, setSidebar, location } =
+  const { headerStyle, homePage, aboutLink, careersLink, newsroomLink, altPage, organizationLink, blogLink, sidebar, setSidebar, location, is404Page } =
     props;
   const [open, setOpen] = useState(false);
   const handleOpen = () => setOpen(true);
@@ -110,7 +110,7 @@ const NavbarMobile = (props) => {
             <QRModal open={open} handleClose={handleClose} />
           </Menu>
           :
-          <MenuIcon onClick={() => setSidebar(true)} fontSize="large" className={`fixed top-[8vw] right-[10vw] ${location.pathname == '/' || location.pathname == '/404/' ? '!fill-white' : '!fill-[#2f4786]'}`} />
+          <MenuIcon onClick={() => setSidebar(true)} fontSize="large" className={`fixed top-[8vw] right-[10vw] ${location.pathname == '/' || is404Page ? '!fill-white' : '!fill-[#2f4786]'}`} />
       }
     </nav>
   );

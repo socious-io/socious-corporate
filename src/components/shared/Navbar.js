@@ -4,7 +4,7 @@ import NavbarLarge from './NavbarLarge';
 import NavbarMobile from './NavbarMobile';
 import { useIntl } from 'react-intl';
 
-const Navbar = ({ header }) => {
+const Navbar = ({ header, is404Page }) => {
   const [sidebar, setSidebar] = useState(false)
 
   let headerStyle;
@@ -65,6 +65,7 @@ const Navbar = ({ header }) => {
         newsroomLink={newsroomLink}
         blogLink={blogLink}
         altPage={altPage}
+        is404Page={is404Page}
       />
     </div>
   </>
