@@ -34,7 +34,7 @@ const NotFoundPage = (props) => {
   ].reverse();
 
   return (
-    <Layout {...props} header="transparent">
+    <Layout {...props} header="transparent" is404Page>
       <BgImage
         image={backgroundFluidImageStack}
         className="section-intro"

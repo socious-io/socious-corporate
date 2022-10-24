@@ -30,6 +30,7 @@ const Layout = (props) => {
     header,
     pageTitle,
     children,
+    is404Page,
   } = props;
 
   return (
@@ -39,7 +40,7 @@ const Layout = (props) => {
           <FormattedMessage id={pageTitle || 'site-title'} />
         </title>
         <div id="scroll-top"></div>
-        <Navbar header={header} />
+        <Navbar header={header} is404Page={is404Page}/>
         {children}
         <Footer />
       </ThemeProvider>
