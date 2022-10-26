@@ -56,7 +56,7 @@ const Intro = (props) => {
 
           <div className="section-app-links__app-links-block">
             <div className="section-app-links__app-links">
-                <button 
+                <button
                   className="section-app-links__app-links-button-work"
                   onClick={(event) => {handleOpen(); trackButtonClick(event);}}
                 >
@@ -70,7 +70,7 @@ const Intro = (props) => {
                 onClick={trackButtonClick}
               >
                 <button className="section-app-links__app-links-button">
-                  Hire talents
+                  Hire talent
                 </button>
               </a>
             </div>
