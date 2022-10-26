@@ -59,10 +59,11 @@ const Footer = () => {
           </div>
           <div className="footer-item">
             <div className="footer-title">
-              <h4>{jaPage ? 'コーポレート' : 'Download'}</h4>
+              <h4>{jaPage ? 'アプリ' : 'App'}</h4>
             </div>
             <div className="footer-list">
               <ul>
+              <li><Link to={linkLanguageSelector("https://socious.io/app")}>{jaPage ? 'ウェブアプリ' : 'Web app'}</Link></li>
                 <li>
                   <a
                       href="https://apps.apple.com/jp/app/socious/id1581904474"
@@ -93,7 +94,7 @@ const Footer = () => {
       <div className="footer-ending">
         <div>
           <p>
-            Copyright &copy; 2022 Socious Inc.
+            Copyright &copy; 2022 Socious Global Inc.
           </p>
           <p>
             All rights reserved.
