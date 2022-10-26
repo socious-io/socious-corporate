@@ -6,7 +6,7 @@ import SimpleLocalize from "../../shared/SimpleLocalize";
 import TalentItem from "./Talents";
 import talentPools from "../../../../data/OrganizationPage/talents";
 import Slider from "react-slick";
-import "slick-carousel/slick/slick.css"; 
+import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 
 const TalentSection = (props) => {
@@ -71,20 +71,20 @@ const TalentSection = (props) => {
     graphic,
     marketer,
     dataScience,
-    product, 
+    product,
     recruiter,
     designer,
     editor,
     web
 
  } = data
- 
+
   const talentImages = [copywrite,
     finance,
     graphic,
     marketer,
     dataScience,
-    product, 
+    product,
     recruiter,
     designer,
     editor,
@@ -105,26 +105,26 @@ const TalentSection = (props) => {
     const { language } = props.pageContext
     const talentComponentLanguageSelector = language === 'ja' ? talentPools : talentPools
 
-  const talentsComponents = talentComponentLanguageSelector.map(item => 
+  const talentsComponents = talentComponentLanguageSelector.map(item =>
     <TalentItem
       key={item.id}
       imageOpt={talentImages[item.id - 1]}
       imageAlt={item.imageAlt}
     />
   )
-  
+
   return (
     <SimpleLocalize {...props}>
       <section className="talents-section">
         <div className="talents-header">
-          <h3>Hire <span>1,500+ </span>impact talents</h3>
+          <h3>Hire <span>2,000+ </span>purpose-driven talent</h3>
         </div>
         <div className="talents-section-slider">
         <Slider {...settings} className="talents-slider">
           {talentsComponents}
           </Slider>
         </div>
-      
+
       </section>
     </SimpleLocalize>
   )
