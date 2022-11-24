@@ -30,7 +30,7 @@ const NotFoundPage = (props) => {
   const pluginImage = getImage(notFoundBackgroundImage);
   const backgroundFluidImageStack = [
     pluginImage,
-    `linear-gradient(0deg, rgba(0, 0, 0, 0.16), rgba(0, 0, 0, 0.4))`,
+    `linear-gradient(0deg, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4))`
   ].reverse();
 
   return (
