@@ -34,7 +34,7 @@
   text-align: center;
   letter-spacing: -1px;
   max-width: 100vw;
-  padding-top: 5vh;
+  padding-top: 20vh;
 }
 
 .intro-banner__text h3 {
@@ -47,8 +47,8 @@
 
   font-family: 'Work Sans';
   font-style: normal;
-  font-weight: 600;
-  font-size: 24px;
+  font-weight: 400; //600 original
+  font-size: 22px; //24 original
   line-height: 125%;
   /* or 30px */
 
@@ -88,6 +88,35 @@
   align-items: center;
 }
 
+.section-supported-by {
+  font-family: 'Work Sans';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 150%;
+  /* identical to box height, or 24px */
+
+  text-align: center;
+
+  /* Neutral / 0 */
+
+  color: #FFFFFF;
+  padding-top: 1rem;
+}
+
+.section-supported-by__item {
+  max-width: 200px;
+}
+
+.section-supported-by__list {
+  display:flex;
+  flex-direction: row;
+  width:80vw;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+}
+
 /* END_SECTION_INTRO */
 
 /* SECTION_INTRO_MOBILE */
@@ -95,7 +124,7 @@
 @media only screen and (max-width: 1015px) {
   .section-intro {
     width: 100vw;
-    height: 180vw;
+    height: 100vh;
     padding: 10vw;
     justify-content: center;
   }
@@ -106,7 +135,7 @@
   }
   .intro-banner__text {
     width: 100%;
-    padding-top: 55vw;
+    padding-top: 50vw;
   }
 
   // .intro-banner__text h1 {
@@ -180,6 +209,15 @@
 
   .section-intro__app-image-paleblue-square {
     display: none;
+  }
+
+  .section-supported-by__item {
+    max-width:150px;
+    margin:10px;
+  }
+
+  .section-supported-by {
+    padding-top: 2rem;
   }
 }
 

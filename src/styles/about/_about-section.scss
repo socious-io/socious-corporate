@@ -2,8 +2,9 @@
 
 .about-section {
   min-height: 50vh;
-  padding: 3rem 0;
+  padding: 0 0;
   margin: 0 auto;
+  margin-bottom: 8vw;
 }
 
 
@@ -29,7 +30,7 @@
 .about-item {
   display: flex;
   justify-content: center;
-  margin: 0 auto;
+  margin: 20px auto;
   padding: 5rem 0;
   background: $extra-light-grey;
   border-radius: 20px;
@@ -44,6 +45,7 @@
   justify-content: center;
   align-items: center;
   // justify-content: flex-end;
+  padding: 1rem;
 }
 
 .about-image img {
@@ -114,6 +116,10 @@
 @media only screen and (max-width: 602px) {
   .about-title h2 {
     font-size: 2rem;
+  }
+
+  .about-item {
+    padding: 0;
   }
 }
 

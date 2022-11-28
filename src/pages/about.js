@@ -6,7 +6,6 @@ import ScrollArrow from '../components/shared/ScrollArrow';
 
 import HeroSection from '../components/AboutPage/HeroSection';
 import IssueSection from '../components/AboutPage/IssueSection';
-import AboutSection from '../components/AboutPage/AboutSection';
 import TeamSection from '../components/AboutPage/TeamSection';
 import CompanySection from '../components/AboutPage/CompanySection';
 
@@ -20,7 +19,6 @@ const AboutPage = (props) => {
       <HeroSection {...props} />
       <ScrollArrow {...props} />
       <IssueSection {...props} />
-      <AboutSection {...props} />
       {/* <VisionSection {...props} /> */}
       {/* <ValuesSection {...props} /> */}
       <TeamSection {...props} />

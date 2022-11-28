@@ -1,14 +1,20 @@
-import React from 'react';
+import React, { useState } from 'react'
 import { Link } from 'gatsby';
 import { useIntl, FormattedMessage } from 'react-intl';
 import { getImage } from 'gatsby-plugin-image';
 import { graphql, useStaticQuery } from 'gatsby';
+import BasicModal from '../shared/QR-Modal';
+
 
 import IconWeb from '../../images/icons/line/web.svg';
 
 const NavbarLarge = (props) => {
   const { headerStyle, homePage, aboutLink, careersLink, newsroomLink, altPage, blogLink, organizationLink } =
     props;
+  
+  const [open, setOpen] = useState(false);
+  const handleOpen = () => setOpen(true);
+  const handleClose = () => setOpen(false);
 
   // let headerStyle;
   // switch (header) {
@@ -45,50 +51,77 @@ const NavbarLarge = (props) => {
   const jaPage = intl.locale === 'ja';
 
   return (
+    <>
     <div className={headerStyle}>
-      <nav>
-        <div className="header__logo-container">
-          <Link to={homePage}>
-            {/* <StaticImage
-            src="../../images/logo-horizontal-white.svg"
-            className="header__logo-image"
-            alt="Socious brand logo"
-          /> */}
-          </Link>
+      <nav>        
+        <div className="nav-links-left">
+          <div className="nav-item">
+            <div className="header__logo-container">
+              <Link to={homePage}>
+                {/* <StaticImage
+                src="../../images/logo-horizontal-white.svg"
+                className="header__logo-image"
+                alt="Socious brand logo"
+              /> */}
+              </Link>
+            </div>
+          </div>
+          <div className="nav-item">
+              <Link to={aboutLink}>
+                <FormattedMessage id="about-title" />
+              </Link>
+            </div>
+            <div className="nav-item">
+              <Link to={organizationLink}>
+                Organizations
+              </Link>
+            </div>
+            <div className="nav-item">
+              <Link to={careersLink}>
+                <FormattedMessage id="careers-title" />
+              </Link>
+            </div>
+            <div className="nav-item">
+              <Link to={newsroomLink}>
+                <FormattedMessage id="news-title" />
+              </Link>
+            </div>
+            <div className="nav-item">
+              <Link to={blogLink}>
+                Blog
+              </Link>
+            </div>
+            <div className="nav-item">
+              <a className="header__language-switcher" href={altPage}>
+                <IconWeb />
+                {jaPage ? 'English(US)' : '日本語'}
+              </a>
+            </div>
         </div>
-        <div className="nav-links">
-          <div className="nav-item">
-            <Link to={aboutLink}>
-              <FormattedMessage id="about-title" />
-            </Link>
-          </div>
-          <div className="nav-item">
-            <Link to={organizationLink}>
-              Organizations
-            </Link>
-          </div>
-          <div className="nav-item">
-            <Link to={careersLink}>
-              <FormattedMessage id="careers-title" />
-            </Link>
-          </div>
-          <div className="nav-item">
-            <Link to={newsroomLink}>
-              <FormattedMessage id="news-title" />
-            </Link>
-          </div>
-          <div className="nav-item">
-            <Link to={blogLink}>
-              Blog
-            </Link>
-          </div>
-          <a className="header__language-switcher" href={altPage}>
-            <IconWeb />
-            {jaPage ? 'English(US)' : '日本語'}
-          </a>
+        <div className="nav-links-right">          
+            <div className="nav-item">
+              <Link to={"/app/auth/login"}>
+                Sign in
+              </Link>
+            </div>
+            <div className="nav-item">
+              <Link to={"/app/auth/signup"}>
+                Sign up
+              </Link>
+            </div>
+            <div className="nav-item">
+              <button
+                onClick={handleOpen}
+                className='section-app-links__app-links-button-work'>
+                <FormattedMessage
+                  id="get-the-app"
+                />
+              </button>
+            </div>
         </div>
       </nav>
     </div>
+    <BasicModal open={open} handleClose={handleClose} /></>
   );
 };
 

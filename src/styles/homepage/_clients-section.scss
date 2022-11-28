@@ -1,0 +1,50 @@
+.clients_section {
+  text-align: center;
+}
+
+.clients_section__h1 {
+  padding: 1rem 10vw;
+  padding-top: 0;
+  /* Header/Work Sans/h2 */
+
+  font-family: 'Work Sans';
+  font-style: normal;
+  font-weight: 600;
+  font-size: 36px;
+  line-height: 125%;
+}
+
+.clients_section__static_image {
+  width: 90vw;
+}
+
+.clients_section__list {
+  gap: 10px;
+  width: 60vw;
+  margin: auto;
+}
+
+.clients_section__item {
+  max-width: 150px;
+  margin: 0 10px;
+}
+
+@media (max-width: 1015px) {
+  .clients_section__h1 {
+    font-size: 24px;
+  }
+
+  .clients_section__static_image {
+    width: 100vw;
+  }
+
+  .clients_section__item {
+    max-width:20vw;
+    margin:10px;
+  }
+
+  .clients_section__list {
+    max-width: 100vw;
+    margin: 0 10vw;
+  }
+}

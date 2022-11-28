@@ -7,6 +7,8 @@ import CrossButtonSidebar from './CrossButtonSidebar';
 import MenuIcon from '@mui/icons-material/Menu';
 import CheckMarkLang from './CheckMarkLang';
 import QRModal from '../shared/QR-Modal';
+import { getImage, StaticImage } from "gatsby-plugin-image";
+
 
 const NavbarMobile = (props) => {
   const { headerStyle, homePage, aboutLink, careersLink, newsroomLink, altPage, organizationLink, blogLink, sidebar, setSidebar, location, is404Page } =
@@ -100,14 +102,66 @@ const NavbarMobile = (props) => {
               </a>
             </div>
 
-            <button
+            <Link
+              to={"/app/auth/login"}
+              activeStyle={activeLinkStyleMobile}
+              partiallyActive={true}
+              className="menu-item"
+            >
+              {jaPage ? 'ログイン' : 'Sign in '}&#8594;
+            </Link>
+            <Link
+              to={"/app/auth/signup"}
+              activeStyle={activeLinkStyleMobile}
+              partiallyActive={true}
+              className="menu-item"
+            >
+              {jaPage ? 'サインアップ' : 'Sign up '}&#8594;
+            </Link>
+            <br></br>
+
+            <div
+              style={activeLinkStyleMobile}
+              className="menu-item"
+            >
+              {jaPage ? 'ダウンロード' : 'Download app'}
+            </div>
+
+                <a
+                  href="https://apps.apple.com/jp/app/socious/id1581904474"
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  <StaticImage
+                    src="../../images/appstore.png"
+                    alt="Download on Appstore"
+                    loading="eager"
+                    objectFit="cover"
+                    width={180}
+                  />
+                </a>
+                <a
+                  href="https://play.google.com/store/apps/details?id=com.dissocialnetwork"
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  <StaticImage
+                    src="../../images/googleplay.png"
+                    alt="Get it on Google Play"
+                    loading="eager"
+                    objectFit="cover"
+                    width={180}
+                  />
+                </a>
+
+            {/* <button
               onClick={handleOpen}
               className='job-action__get'>
               <FormattedMessage
                 id="get-socious"
               />
             </button>
-            <QRModal open={open} handleClose={handleClose} />
+            <QRModal open={open} handleClose={handleClose} /> */}
           </Menu>
           :
           <MenuIcon onClick={() => setSidebar(true)} fontSize="large" className={`fixed top-[8vw] right-[10vw] ${location.pathname == '/' || is404Page ? '!fill-white' : '!fill-[#2f4786]'}`} />

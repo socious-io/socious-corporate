@@ -4,6 +4,7 @@ import Layout from '../../components/Layout';
 import Seo from '../../components/seo';
 
 import Banner from '../../components/CareersPage/Banner';
+import AboutSection from '../../components/AboutPage/AboutSection';
 import JobsSection from '../../components/CareersPage/JobsSection';
 
 const CareersPage = (props) => {
@@ -15,6 +16,7 @@ const CareersPage = (props) => {
       />
       <Banner {...props} />
       <JobsSection {...props} />
+      <AboutSection {...props} />      
     </Layout>
   );
 };
