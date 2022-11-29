@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'gatsby'
 import { GatsbyImage, getImage } from "gatsby-plugin-image";
 
 const SkillItem = (props) => {
@@ -7,9 +8,11 @@ const SkillItem = (props) => {
 
   return (
     <div className="skills-item pr-2 pl-2">
-      <div className="featured-in-image">
-        <GatsbyImage image={image} alt={props.imageAlt}/>
-      </div>
+      <Link to={props.link} target="_blank">
+        <div className="featured-in-image">
+          <GatsbyImage image={image} alt={props.imageAlt}/>
+        </div>
+      </Link>
     </div>
   )
 }

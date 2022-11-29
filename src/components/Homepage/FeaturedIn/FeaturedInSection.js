@@ -30,6 +30,9 @@ const FeaturedInSection = (props) => {
               }
             }
           }
+          asseeninlink {
+            link
+          }
         }
       }
     }
@@ -85,7 +88,8 @@ const FeaturedInSection = (props) => {
     {
       return {
         imageAlt: item.featuredImage.node.sourceUrl, 
-        id:index+1
+        id:index+1,
+        link: item.asseeninlink.link
       }
     }
   )
@@ -98,6 +102,7 @@ const FeaturedInSection = (props) => {
       key={item.id}
       imageOpt={skillImages[item.id - 1]}
       imageAlt={item.imageAlt}
+      link={item.link}
     />
   )
 
