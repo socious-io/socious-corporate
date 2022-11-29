@@ -48,29 +48,6 @@ const Intro = (props) => {
     `
   )
 
-  // wpcontent {
-        //   supportedByList (first: 20) {
-        //     nodes {
-        //       featuredImage {
-        //         node {
-        //           sourceUrl
-        //           imageFile {
-        //             childImageSharp {
-        //               gatsbyImageData(
-        //                 width: 200
-        //                 height: 200
-        //                 quality: 100
-        //                 placeholder: BLURRED
-        //                 blurredOptions: {width: 100}
-        //               )
-        //             }
-        //           }
-        //         }
-        //       }
-        //     }
-        //   }
-        // }
-
   const pluginImage = getImage(introBackgroundImage)
   const backgroundFluidImageStack = [
     pluginImage,
