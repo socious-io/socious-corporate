@@ -4,32 +4,34 @@ import { graphql, useStaticQuery } from 'gatsby';
 
 
 const ClientsSection = (props) => {
-  const { allWpClientsAndPartners } = useStaticQuery(
+  const { wpcontent } = useStaticQuery(
     graphql`
-    query ClientsSection{
-      allWpClientsAndPartners {
-        nodes {
-          featuredImage {
-            node {
-              sourceUrl
-              localFile {
-                childImageSharp {
-                  gatsbyImageData(
-                    quality: 100
-                    placeholder: BLURRED
-                    blurredOptions: {width: 100}
-                  )
+      query {
+        wpcontent {
+          clientsAndPartnersList {
+            nodes {
+              featuredImage {
+                node {
+                  sourceUrl
+                  imageFile {
+                    childImageSharp {
+                      gatsbyImageData(
+                        quality: 100
+                        placeholder: BLURRED
+                        blurredOptions: {width: 100}
+                      )
+                    }
+                  }
                 }
               }
             }
           }
         }
       }
-    }
   `);
 
-  const clientsAndPartnersList = (allWpClientsAndPartners?.nodes || []).map((member, index) => {
-    const image = getImage(member.featuredImage.node.localFile.childImageSharp.gatsbyImageData)
+  const clientsAndPartnersList = (wpcontent?.clientsAndPartnersList?.nodes || []).map((member, index) => {
+    const image = getImage(member.featuredImage.node.imageFile.childImageSharp.gatsbyImageData)
     return <GatsbyImage className="clients_section__item" key={index} id={index} image={image} alt={member.featuredImage.node.sourceUrl} />
   })
 

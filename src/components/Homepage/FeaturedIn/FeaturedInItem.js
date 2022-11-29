@@ -4,8 +4,6 @@ import { GatsbyImage, getImage } from "gatsby-plugin-image";
 const SkillItem = (props) => {
 
   const image = getImage(props.imageOpt)
-  console.log("props.imageOpt: ")
-  console.log(props.imageOpt)
 
   return (
     <div className="skills-item pr-2 pl-2">

@@ -13,7 +13,7 @@ const Intro = (props) => {
   const [open, setOpen] = useState(false);
   const handleOpen = () => setOpen(true);
   const handleClose = () => setOpen(false);
-  const { introBackgroundImage, allWpSupportedBy } = useStaticQuery(
+  const { introBackgroundImage, wpcontent } = useStaticQuery(
     graphql`
       query {
         introBackgroundImage: file(relativePath: {eq: "homepage-banner-mobile.webp"}) {
@@ -26,18 +26,20 @@ const Intro = (props) => {
             )
           }
         }
-        allWpSupportedBy {
-          nodes {
-            featuredImage {
-              node {
-                sourceUrl
-                localFile {
-                  childImageSharp {
-                    gatsbyImageData(
-                      quality: 100
-                      placeholder: BLURRED
-                      blurredOptions: {width: 100}
-                    )
+        wpcontent {
+          supportedByList {
+            nodes {
+              featuredImage {
+                node {
+                  sourceUrl
+                  imageFile {
+                    childImageSharp {
+                      gatsbyImageData(
+                        quality: 100
+                        placeholder: BLURRED
+                        blurredOptions: {width: 100}
+                      )
+                    }
                   }
                 }
               }
@@ -61,8 +63,8 @@ const Intro = (props) => {
   const organizationLink = jaPage ? '/ja/organization' : '/organization';
 
 
-  const supportedByList = (allWpSupportedBy?.nodes || []).map((member, index) => {
-    const image = getImage(member.featuredImage.node.localFile.childImageSharp.gatsbyImageData)
+  const supportedByList = (wpcontent?.supportedByList?.nodes || []).map((member, index) => {
+    const image = getImage(member.featuredImage.node.imageFile.childImageSharp.gatsbyImageData)
     return <GatsbyImage className="section-supported-by__item" key={index} id={index} image={image} alt={member.featuredImage.node.sourceUrl} />
   })
 
