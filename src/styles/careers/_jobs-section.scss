@@ -47,6 +47,13 @@
   .jobs-header p {
     width: 100%;
     text-align: center;
+    /* Text/Level 4 (16px, 1rem) */
+
+    font-family: 'Work Sans';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 150%;
   }
 
   .jobs-header h2 {
@@ -62,7 +69,8 @@
   }
 
   .jobs-section {
-    width: 90vw;
+    max-width: 86vw;
+    padding: 0;
     margin: auto;
     display: flex;
     flex-direction: column;
