@@ -15,16 +15,29 @@
 }
 
 .about-title h2 {
-  font-size: 24px;
+  // font-size: 24px;
+  /* Header/Work Sans/h1 */
+
+  font-family: 'Work Sans';
+  font-style: normal;
+  font-weight: 600;
+  font-size: 36px;
+  line-height: 125%;
 }
 
 .about-title p {
-  font-size: 18px;
+  // font-size: 18px;
+  // font-weight: 400;
+  // line-height: 3rem;
+  margin: 1rem 34vw;
+  // padding: 2rem;
+  // width: 50%;
+  
+  font-family: 'Work Sans';
+  font-style: normal;
   font-weight: 400;
-  line-height: 3rem;
-  margin: 0 auto;
-  padding: 2rem;
-  width: 50%;
+  font-size: 20px;
+  line-height: 150%;
 }
 
 .about-item {
@@ -95,11 +108,23 @@
   }
 
   .about-title {
+    padding: 0;
     font-size: 1rem;
+    margin: 0 7vw;
   }
 
   .about-title p {
-    width: 75%;
+    margin: auto;
+    margin-top: 1rem;
+    margin-bottom: 2rem;
+    // width: 75%;
+    /* Text/Level 4 (16px, 1rem) */
+
+    font-family: 'Work Sans';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 150%;
   }
   
   .about-item {
@@ -115,7 +140,13 @@
 
 @media only screen and (max-width: 602px) {
   .about-title h2 {
-    font-size: 2rem;
+    /* Header/Work Sans/h2 */
+
+    font-family: 'Work Sans';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 125%;
   }
 
   .about-item {

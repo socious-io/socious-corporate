@@ -22,14 +22,14 @@ const JobsSection = (props) => {
             <FormattedMessage
               id="careers-header-black-one"
             />
-          <span style={{color: "#2669A0"}}>
+          {/* <span style={{color: "#2669A0"}}>
             <FormattedMessage
               id="careers-header-blue"
             />
           </span>
             <FormattedMessage
               id="careers-header-black-two"
-            />
+            /> */}
           </h2>
           <p>
             <FormattedMessage
