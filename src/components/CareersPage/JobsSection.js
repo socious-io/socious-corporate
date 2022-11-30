@@ -1,5 +1,5 @@
 import React from 'react'
-import { Link } from 'gatsby'
+import { navigate } from 'gatsby'
 import { useLocation } from '@reach/router';
 
 import { LinkSimple } from 'phosphor-react'
@@ -36,9 +36,18 @@ const JobsSection = (props) => {
               id="careers-page-description"
             />
           </p>
+          <br></br>
+          <br></br>
+          <button
+            onClick={()=>{navigate("/app/organization/socious/projects")}}
+            className='job-action__get '>
+            <FormattedMessage
+              id="see-open-roles"
+            />
+          </button>
         </div>
 
-        <div className="jobs-list">
+        {/* <div className="jobs-list">
           <div className="jobs-list__header">
             <h2><i className="ph-map-pin"></i>{jaPage ? '東京' : 'Tokyo'}</h2>
           </div>
@@ -141,7 +150,7 @@ const JobsSection = (props) => {
               <p>11/07/2022</p>
             </div>
           </div>
-        </div>
+        </div> */}
       </div>
     </SimpleLocalize>
   )

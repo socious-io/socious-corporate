@@ -85,9 +85,9 @@ const AboutSection = (props) => {
         </div>
 
         <div className="about-section">
-           <Slider {...settings} className="skills-slider">
+           {/* <Slider {...settings} className="skills-slider"> */}
           {aboutComponents}
-          </Slider>
+          {/* </Slider> */}
         </div>
       </section>
     </SimpleLocalize>

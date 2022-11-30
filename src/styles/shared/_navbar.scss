@@ -3,7 +3,9 @@
 .header {
   height: 96px;
   width: 100vw;
-  padding: 28px 0;
+  // padding: 28px 0;
+  padding: 24px 32px;
+  gap: 24px;
   box-sizing: border-box;
 
   &.header-default {
@@ -16,6 +18,7 @@
     top: 0;
     left: 0;
     right: 0;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.25);
   }
 
   &.header-primary {
@@ -29,9 +32,9 @@
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    align-items: center;
+    // align-items: center;
     padding: 0px;
-    width: 90%;
+    width: 95%;
     height: 40px;
     margin: 0 auto;
   }
@@ -59,12 +62,35 @@
   gap: 32px;
 }
 
+.nav-links-left {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-around;
+  padding: 0px;
+  gap: 32px;
+
+}
+
+.nav-links-right {
+  display: flex;
+  float: right;  
+  align-items: center;
+  gap: 32px;
+}
+
 .nav-item a:link,
 .nav-item a:visited {
   text-decoration: none;
   color: $black;
   font-size: 16px;
   cursor: pointer;
+
+  font-family: 'Work Sans';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 150%;
 }
 
 /* For use on pages with transparent nav */
@@ -146,7 +172,7 @@
   font-family: 'Work Sans';
   font-style: normal;
   font-weight: 600;
-  font-size: 36px;
+  font-size: 24px;
   line-height: 125%;
   /* identical to box height, or 45px */
 
@@ -186,6 +212,10 @@
 
 @media only screen and (max-width: 1015px) {
   .header__logo-container {
-    padding: 8vw;
+    padding: 1vw;
+  }
+
+  .header {
+    padding: 24px 6vw;
   }
 }

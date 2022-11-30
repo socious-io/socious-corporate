@@ -3,6 +3,7 @@ import React from 'react'
 import { graphql, useStaticQuery } from 'gatsby'
 import { getImage } from 'gatsby-plugin-image'
 import { BgImage } from 'gbimage-bridge'
+import { navigate } from 'gatsby'
 
 import SimpleLocalize from "../shared/SimpleLocalize";
 import { FormattedMessage } from "react-intl";
@@ -35,11 +36,18 @@ const Banner = (props) => {
     <SimpleLocalize {...props}>
       <BgImage image={backgroundFluidImageStack} className="career-banner" alt='career banner'>
         <div className="career-banner__text">
-          <h1>
+          <p>
             <FormattedMessage
               id="careers-banner"
             />
-          </h1>
+          </p>
+          <button
+            onClick={()=>{navigate("/app/organization/socious/projects")}}
+            className='job-action__get '>
+            <FormattedMessage
+              id="see-open-roles"
+            />
+          </button>
         </div>
       </BgImage>
     </SimpleLocalize>

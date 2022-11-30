@@ -18,7 +18,6 @@ import gif3 from "../../../images/gif-mp4/3.mp4"
 // import gif3 from "../../../images/gif-new/3.gif"
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-import Cta from "../CTA";
 import styled from '@emotion/styled';
 import { motion } from 'framer-motion';
 
@@ -224,7 +223,6 @@ const FeaturesSection = (props) => {
           })}
         </SlideText>
       </SlideContainer>
-      <Cta {...props} />
     </Container>
   )
 }
