@@ -218,4 +218,25 @@
   .header {
     padding: 24px 6vw;
   }
+
+  .mobile__language-switcher {
+    &:link,
+    &:visited {
+      cursor: pointer;
+    }
+
+    /* Header/Work Sans/h2 */
+
+    font-family: 'Work Sans';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 125%;
+    /* identical to box height, or 30px */
+
+
+    /* Primary/01 */
+
+    color: #2F4786;
+  }  
 }
