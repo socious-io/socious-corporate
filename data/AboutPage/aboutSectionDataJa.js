@@ -22,20 +22,18 @@ const aboutItemsJa = [
   },
   {
     id: 4,
+    imageUrl: '/images/illustration_candor.png',
+    imageAlt: 'illustration of Candor and Collaboration',
+    header: '率直なコミュニケーションと協働',
+    content: 'ソーシャスは、社員が互いに敬意を持って率直に話し合える環境を醸成することに努めています。互いに率直なフィードバックを受け容れる環境が成長と協働に繋がると信じています。'
+  },
+  {
+    id: 5,
     imageUrl: '/images/Illustration_autonomy.png',
     imageAlt: 'illustration of Autonomy and Accountability',
     header: '自由と責任',
     content: '大いなる力は大いなる責任が伴う。それはソーシャスのメンバーにとっても同じです。ソーシャスでは、社員一人ひとりが何をするのか、どの程度のリソースを割くのかに対する広範な決定権限があります。メンバーが自己決断できる予算に制限はありませんが、全てのメンバーが自分の決断・ハイパフォーマンスに責任を持つことで、社会的インパクトを最大化できます。'
   },
-
-{
-  id: 5,
-  imageUrl: '/images/illustration_candor.png',
-  imageAlt: 'illustration of Candor and Collaboration',
-  header: '率直なコミュニケーションと協働',
-  content: 'ソーシャスは、社員が互いに敬意を持って率直に話し合える環境を醸成することに努めています。互いに率直なフィードバックを受け容れる環境が成長と協働に繋がると信じています。'
-},
-
 ]
 
 export default aboutItemsJa

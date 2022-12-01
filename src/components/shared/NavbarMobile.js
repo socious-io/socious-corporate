@@ -40,7 +40,7 @@ const NavbarMobile = (props) => {
       {
         sidebar ?
           <Menu right customCrossIcon={false} isOpen={sidebar}>
-            <div className='!flex justify-between pb-20'>
+            <div className='!flex justify-between pb-3'>
               <div className="header__logoblue-container">
                 <Link to={homePage} />
                 {/* <StaticImage
@@ -92,13 +92,16 @@ const NavbarMobile = (props) => {
             >
               {jaPage ? 'ブログ（英語）' : 'Blog'}
             </Link>
-            <div className='!flex justify-center select-lang'>
-              <a className="!flex m0 items-center gap-2" href={altPage}>
+            <div className='pb-5'>
+              {/* <a className="!flex m0 items-center gap-2" href={altPage}>
                 {!jaPage ? <CheckMarkLang /> : <></>} English (US)
               </a>
               <div className='seperator-lang'></div>
               <a className="!flex m0 items-center gap-2" href={altPage}>
                 {jaPage ? <CheckMarkLang /> : <></>}Japanese (日本)
+              </a> */}
+              <a className="mobile__language-switcher" href={altPage}>
+                {jaPage ? 'English(US)' : '日本語(JP)'}
               </a>
             </div>
 

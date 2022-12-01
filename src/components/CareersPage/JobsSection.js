@@ -22,14 +22,6 @@ const JobsSection = (props) => {
             <FormattedMessage
               id="careers-header-black-one"
             />
-          {/* <span style={{color: "#2669A0"}}>
-            <FormattedMessage
-              id="careers-header-blue"
-            />
-          </span>
-            <FormattedMessage
-              id="careers-header-black-two"
-            /> */}
           </h2>
           <p>
             <FormattedMessage
@@ -46,111 +38,6 @@ const JobsSection = (props) => {
             />
           </button>
         </div>
-
-        {/* <div className="jobs-list">
-          <div className="jobs-list__header">
-            <h2><i className="ph-map-pin"></i>{jaPage ? '東京' : 'Tokyo'}</h2>
-          </div>
-          <div className="jobs-list__item">
-            <div className="job-title">
-              <p><Link to={linkLanguageSelector("/careers/lead-developer")}><LinkSimple size={18} /> Lead Developer</Link></p>
-            </div>
-            <div className="job-department">
-              <p>Engineering</p>
-            </div>
-            <div className="job-date">
-              <p>01/07/2022</p>
-            </div>
-          </div>
-          <div className="jobs-list__item">
-            <div className="job-title">
-              <p><Link to={linkLanguageSelector("/careers/senior-data-scientist")}><LinkSimple size={18} /> Senior Data Scientist</Link></p>
-            </div>
-            <div className="job-department">
-              <p>Data Science / Machine Learning</p>
-            </div>
-            <div className="job-date">
-              <p>01/07/2022</p>
-            </div>
-          </div>
-          <div className="jobs-list__item">
-            <div className="job-title">
-              <p><Link to={linkLanguageSelector("/careers/lead-designer")}><LinkSimple size={18} /> Lead UI/UX Designer</Link></p>
-            </div>
-            <div className="job-department">
-              <p>Design</p>
-            </div>
-            <div className="job-date">
-              <p>01/07/2022</p>
-            </div>
-          </div>
-          <div className="jobs-list__item">
-            <div className="job-title">
-              <p><Link to={linkLanguageSelector("/careers/talent-acquisition-lead")}><LinkSimple size={18} /> Talent Acquisition Lead</Link></p>
-            </div>
-            <div className="job-department">
-              <p>Talent</p>
-            </div>
-            <div className="job-date">
-              <p>01/07/2022</p>
-            </div>
-          </div>
-          <div className="jobs-list__item">
-            <div className="job-title">
-              <p><Link to={linkLanguageSelector("/careers/cto")}><LinkSimple size={18} /> Chief Technology Officer (CTO)</Link></p>
-            </div>
-            <div className="job-department">
-              <p>Engineering</p>
-            </div>
-            <div className="job-date">
-              <p>01/07/2022</p>
-            </div>
-          </div>
-          <div className="jobs-list__item">
-            <div className="job-title">
-              <p><Link to={linkLanguageSelector("/careers/executive-assistant")}><LinkSimple size={18} /> Executive Assistant</Link></p>
-            </div>
-            <div className="job-department">
-              <p>Operations</p>
-            </div>
-            <div className="job-date">
-              <p>01/07/2022</p>
-            </div>
-          </div>
-          <div className="jobs-list__item">
-            <div className="job-title">
-              <p><Link to={linkLanguageSelector("/careers/backend-developer")}><LinkSimple size={18} /> Lead Backend Developer</Link></p>
-            </div>
-            <div className="job-department">
-              <p>Engineering</p>
-            </div>
-            <div className="job-date">
-              <p>01/07/2022</p>
-            </div>
-          </div>
-          <div className="jobs-list__item">
-            <div className="job-title">
-              <p><Link to={linkLanguageSelector("/careers/growth-lead")}><LinkSimple size={18} /> Growth Lead</Link></p>
-            </div>
-            <div className="job-department">
-              <p>Growth</p>
-            </div>
-            <div className="job-date">
-              <p>01/07/2022</p>
-            </div>
-          </div>
-          <div className="jobs-list__item">
-            <div className="job-title">
-              <p><Link to={linkLanguageSelector("/careers/junior-developer")}><LinkSimple size={18} /> Junior Full Stack Developer</Link></p>
-            </div>
-            <div className="job-department">
-              <p>Engineering</p>
-            </div>
-            <div className="job-date">
-              <p>11/07/2022</p>
-            </div>
-          </div>
-        </div> */}
       </div>
     </SimpleLocalize>
   )
