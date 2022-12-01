@@ -26,7 +26,7 @@ const aboutItems = [
     imageUrl: '/images/Illustration_autonomy.png',
     imageAlt: 'illustration of Autonomy and Accountability',
     header: 'Autonomy and Accountability',
-    content: `With great power comes great responsibility, and so it is for employees at Socious. We want employees to decide what they will take on and the level of resources they need. There are no budget or scope limits, but all employees are accountable for a great performance that maximizes impact returns..
+    content: `With great power comes great responsibility, and so it is for employees at Socious. We want employees to decide what they will take on and the level of resources they need. There are no budget or scope limits, but all employees are accountable for a great performance that maximizes impact returns.
     `
   },
   {
@@ -34,7 +34,7 @@ const aboutItems = [
     imageUrl: '/images/illustration_candor.png',
     imageAlt: 'illustration of Candor and Collaboration',
     header: 'Candor and Collaboration',
-    content: `We want to foster an environment where employees can speak to one another honestly and with respect. We believe that being honest is better than being nice..
+    content: `We want to foster an environment where employees can speak to one another honestly and with respect. We believe that being honest is better than being nice.
     `
   },
 ]

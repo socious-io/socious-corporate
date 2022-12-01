@@ -30,12 +30,12 @@ const AboutSection = (props) => {
           gatsbyImageData(placeholder: BLURRED, blurredOptions: {width: 100})
         }
       }
-      autonomy: file(relativePath: {eq: "Illustration_autonomy.png"}) {
+      candor: file(relativePath: {eq: "illustration_candor.png"}) {
         childImageSharp {
           gatsbyImageData(placeholder: BLURRED, blurredOptions: {width: 100})
         }
       }
-      candor: file(relativePath: {eq: "illustration_candor.png"}) {
+      autonomy: file(relativePath: {eq: "Illustration_autonomy.png"}) {
         childImageSharp {
           gatsbyImageData(placeholder: BLURRED, blurredOptions: {width: 100})
         }
@@ -43,8 +43,8 @@ const AboutSection = (props) => {
     }
   `)
 
-  const { diversity, life, performance,autonomy, candor } = data
-  const aboutImages = [diversity, life, performance,autonomy, candor]
+  const { diversity, life, performance, candor, autonomy } = data
+  const aboutImages = [diversity, life, performance, candor, autonomy]
 
   const { language } = props.pageContext
   const aboutComponentLanguageSelector = language === 'ja' ? aboutItemsJa : aboutItems
@@ -85,9 +85,7 @@ const AboutSection = (props) => {
         </div>
 
         <div className="about-section">
-           {/* <Slider {...settings} className="skills-slider"> */}
           {aboutComponents}
-          {/* </Slider> */}
         </div>
       </section>
     </SimpleLocalize>
