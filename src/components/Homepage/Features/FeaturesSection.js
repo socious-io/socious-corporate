@@ -4,18 +4,18 @@ import { useInView } from "react-intersection-observer";
 import Feature from "./Features";
 import features from "../../../../data/Homepage/features";
 import featuresJa from "../../../../data/Homepage/featuresJa";
-import gif0 from "../../../images/gif-mp4/0.mp4"
-import gif1 from "../../../images/gif-mp4/1.mp4"
-import gif2 from "../../../images/gif-mp4/2.mp4"
-import gif3 from "../../../images/gif-mp4/3.mp4"
+// import gif0 from "../../../images/gif-mp4/0.mp4"
+// import gif1 from "../../../images/gif-mp4/1.mp4"
+// import gif2 from "../../../images/gif-mp4/2.mp4"
+// import gif3 from "../../../images/gif-mp4/3.mp4"
 // import gif0 from "../../../images/gif-webp/0.webp"
 // import gif1 from "../../../images/gif-webp/1.webp"
 // import gif2 from "../../../images/gif-webp/2.webp"
 // import gif3 from "../../../images/gif-webp/3.webp"
-// import gif0 from "../../../images/gif-new/0.gif"
-// import gif1 from "../../../images/gif-new/1.gif"
-// import gif2 from "../../../images/gif-new/2.gif"
-// import gif3 from "../../../images/gif-new/3.gif"
+import gif0 from "../../../images/gif-new/0.gif"
+import gif1 from "../../../images/gif-new/1.gif"
+import gif2 from "../../../images/gif-new/2.gif"
+import gif3 from "../../../images/gif-new/3.gif"
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import styled from '@emotion/styled';
@@ -184,9 +184,15 @@ const FeaturesSection = (props) => {
               exit={{ opacity: 0 }}
               transition={{ duration: .4 }}
             >
+              <img
+                style={{ margin: 'auto' }}
+                src={gifs[inViewArray.indexOf(true)]}
+                height={500}
+              />
               
-              {gifs?.map((path,index) => {
+              {/* {gifs?.map((path,index) => {
                 return (
+
                   <video loop autoPlay muted playsinline
                     style={{ 
                       margin: 'auto',
@@ -198,7 +204,7 @@ const FeaturesSection = (props) => {
                   <source src={path} type="video/mp4" />
                   </video>
                 )
-              })}
+              })} */}
               
             </ImageContainer>
           </SlideImgChild>
