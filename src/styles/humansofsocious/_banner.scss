@@ -1,0 +1,150 @@
+.hos-banner {
+  height: 90vh;
+  background-size: cover;
+  background-position: 50% 50%;
+  width: 100%;
+}
+
+.hos-banner__text {
+  height: 100%;
+  width: 100%;
+
+  display: flex;
+  flex-direction: column;
+  // justify-content: center;
+  // align-items: center;
+
+  color: #FFF;
+  padding-top: 170px;
+}
+
+#hos-banner__p {
+
+  font-family: 'Canela';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 96px;
+  line-height: 72px;
+  /* identical to box height, or 75% */
+
+  text-align: center;
+
+  /* Base/White */
+
+  color: #FFFFFF;
+  padding: 1rem;
+}
+
+#hos-description__p {
+  /* Text xl/Regular */
+
+  // font-family: 'TT Norms Pro';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px; //20px;
+  line-height: 30px;
+  /* identical to box height, or 150% */
+
+  text-align: center;
+
+  /* Gray/200 */
+
+  color: #EAECF0;
+  padding: 1rem;
+}
+
+.hos-subscription-form {
+  padding: 4vw 8vw;
+}
+
+#hos-privacy-policy {
+  text-decoration: underline;
+}
+
+.hos-form-message{
+  margin: 0 0% 0% 0%;
+  background: #f8f8f8;
+}
+
+.hos-pagination {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 1rem 8vw;
+}
+
+.hos-list {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  padding: 1rem 8vw;
+}
+
+.hos-container__blog__temp {
+  width: 80vw;
+  margin: 0 auto;
+  display:flex;
+  flex-direction: row;
+  justify-content: space-around;
+  
+  // Default styling for every link and h2
+  a {
+    text-decoration: none;
+  }
+  
+  h2 {
+    font-weight: 600;
+  }
+}
+
+.hos-blog-card {
+  margin: 0;
+  width: 25vw;
+}
+
+.hos-blog-image {
+  margin: auto;
+  height: 40vh;
+}
+
+.hos-blog-content-words {
+  padding: 1rem 0;
+}
+
+.hos-blog-author {
+  display: flex;
+  flex-direction:row;
+  align-items: flex-start;
+  padding-top: 1rem;
+}
+
+.hos-blog-author-text {
+  padding: 0 1rem;
+}
+
+.hos-blog-title {
+  padding: 0;
+}
+
+
+
+@media only screen and (max-width: 600px) {
+  .hos-banner__text p {
+    padding: 1rem;
+    text-align: center;
+    font-family: 'Work Sans';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 36px;
+    line-height: 125%;
+  }
+
+  .hos-blog-card {
+    padding: 1rem 0;
+    width: 100%;
+  }
+
+  .hos-container__blog__temp {
+    flex-direction: column;
+  }
+}
