@@ -99,12 +99,12 @@
 
 .hos-blog-card {
   margin: 0;
-  width: 25vw;
+  width: 20vw;
 }
 
 .hos-blog-image {
   margin: auto;
-  height: 40vh;
+  height: 60vh;
 }
 
 .hos-blog-content-words {
@@ -124,6 +124,34 @@
 
 .hos-blog-title {
   padding: 0;
+}
+
+.hos-template-blog-content__html {
+  font-weight: 400;
+  font-size: 1.25rem;
+  line-height: 150%;
+
+  img {
+    width: 100%;
+  }
+
+  p {
+    padding: 1rem 0;
+  }
+
+  h1 {
+    font-size: 36px;
+  }
+
+  h2,h3,h4 {
+    font-size: 24px;
+    font-weight: 700;
+    padding: 1rem 0;
+  }
+
+  figcaption {
+    font-size: 14px;
+  }
 }
 
 

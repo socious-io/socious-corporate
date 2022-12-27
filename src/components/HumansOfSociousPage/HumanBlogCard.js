@@ -1,6 +1,8 @@
 import React from 'react';
 import { Link } from 'gatsby';
 import { getSrc } from "gatsby-plugin-image";
+import { GatsbyImage, getImage } from "gatsby-plugin-image";
+
 
 
 const HumanBlogCard = ({ edge, alternate }) => {
@@ -16,8 +18,11 @@ const HumanBlogCard = ({ edge, alternate }) => {
   } } = edge
   const date = hosBlogData?.date ? hosBlogData?.date : "";
   // const link = edge.node.slug.substring(0, slug.indexOf("%"))
+  
+  const authorFeaturedImage = hosBlogData?.author?.featuredImage;
 
   const imageData = featuredImage?.node?.localFile?.childImageSharp?.gatsbyImageData;
+  const authorImageData = getImage(authorFeaturedImage?.node?.localFile?.childImageSharp?.gatsbyImageData);
 
   return (
     <div className="hos-blog-card">
@@ -28,18 +33,20 @@ const HumanBlogCard = ({ edge, alternate }) => {
 
       <div className='hos-blog-content-words'>
         <p className='hos-blog-category'>
-          Category
+          {hosBlogData?.category}
         </p>
         <h1 className="hos-blog-title">
         <Link to={`/hos/${slug}`}>{title}</Link>
         </h1>
         <p className="hos-blog-summary">
-          Summary
+          {hosBlogData?.summary}
         </p>
         <div className='hos-blog-author'>
-          <div className='hos-blog-author-image'>Image</div>
+          <div className='hos-blog-author-image'>{authorImageData?
+          <GatsbyImage image={authorImageData} alt={authorFeaturedImage?.node.altText || ""} />
+          :<></>}</div>
           <div className='hos-blog-author-text'>
-            <p className='hos-blog-author-name'>First Name Last Name</p>
+            <p className='hos-blog-author-name'>{hosBlogData?.author?.title}</p>
             <p className='hos-blog-date'><small>{date}</small></p>
           </div>          
         </div>
