@@ -8,7 +8,7 @@ const HumanBlogs = () => {
 
   const query = useStaticQuery(graphql`
     {
-      allWpHosBlog (sort: {order: DESC, fields: date}) {
+      allWpHosBlog (sort: {order: ASC, fields: date}) {
         edges {
           node {
             id
