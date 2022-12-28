@@ -268,7 +268,33 @@
   }
 }
 
-// @media screen and (max-width: 750px) {
+@media screen and (max-width: 750px) {
+  .hos-template-blog-content {
+    padding: 0 7vw;
+  }
+
+  .hos-blog-template-banner {
+    flex-direction: column-reverse;
+    margin: 4vh 7vw 2vh;
+  }
+
+  .hos-template-image {
+    max-height: 60vh;
+    max-width: 86vw;
+  }
+
+  .hos-template-blog-footer-left {
+    display: none;
+  }
+
+  .hos-template-button-copy-link {
+    display: none;
+  }
+
+  .hos-more-articles {
+    flex-direction: column;
+  }
+
 //   .container__blog {
 //     width: 90vw;
 //   }
@@ -278,4 +304,4 @@
 //     max-width: 680px;
 //     margin: 0 1rem;
 //   }
-// }
+}
