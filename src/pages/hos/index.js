@@ -30,23 +30,8 @@ const HumansOfSociousPage = (props) => {
       },
       validationSchema: validationSchema,
       onSubmit: (values) => {
-        // console.log(JSON.stringify(values, null, 2));
-        // addToMailchimp(values.email, { FNAME: values.name, MSG: values.message }) // listFields are optional if you are only capturing the email address.
-        //   .then(data => {
-        //     // I recommend setting data to React state
-        //     // but you can do whatever you want (including ignoring this `then()` altogether)
-        //     console.log(data)
-        //     navigate("/contact-accepted")
-        //   })
-        //   .catch(() => {
-        //     // unnecessary because Mailchimp only ever
-        //     // returns a 200 status code
-        //     // see below for how to handle errors
-        //   })
         console.log(values)
         alert("Subscribed")
-  
-  
       },
     });
 
@@ -79,12 +64,8 @@ const HumansOfSociousPage = (props) => {
           </form>
           <p>We care about your data in our <Link id="hos-privacy-policy" to={`/privacy-policy/`}>privacy policy</Link></p>
         </div>
+        
         <HumanBlogs />
-        {/* <div className="main">
-          <div className="container__articles">
-            {pageContext.language === 'ja' ? <JapaneseNews /> : <EnglishNews />}
-          </div>
-        </div> */}
         <Cta />
       </Layout>
     );

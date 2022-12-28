@@ -73,6 +73,72 @@
   padding: 1rem 8vw;
 }
 
+.hos-page-button {
+  margin: 0.1rem;
+  width: 40px;
+  height: 40px;
+
+  /* Gray/50 */
+
+  background: #F9FAFB;
+  border-radius: 8px;
+
+  /* Text sm/Medium */
+
+  // font-family: 'TT Norms Pro';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 20px;
+  /* identical to box height, or 143% */
+
+  text-align: center;
+
+  /* Gray/600 */
+
+  color: #475467;
+}
+
+.hos-page-button-arrows {
+  /* Auto layout */
+
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 8px 14px;
+  gap: 8px;
+
+  // width: 88px;
+  height: 36px;
+
+  /* Base/White */
+
+  background: #FFFFFF;
+  /* Gray/300 */
+
+  border: 1px solid #D0D5DD;
+  /* Shadow/xs */
+
+  box-shadow: 0px 1px 2px rgba(16, 24, 40, 0.05);
+  border-radius: 8px;
+
+  
+  /* Text sm/Semibold */
+
+  // font-family: 'TT Norms Pro';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 20px;
+  /* identical to box height, or 143% */
+
+
+  /* Gray/700 */
+
+  color: #344054;
+}
+
 .hos-list {
   display: flex;
   flex-direction: row;
@@ -151,6 +217,7 @@
 
   figcaption {
     font-size: 14px;
+    padding-bottom: 1rem;
   }
 }
 

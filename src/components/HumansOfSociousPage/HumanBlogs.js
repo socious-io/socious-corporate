@@ -61,32 +61,29 @@ const HumanBlogs = () => {
   `)
   const { edges } = query.allWpHosBlog
 
-  const [displayList, setDisplayList] = useState([...edges.slice(0, 3)])
+  const cardsPerPage = 3;
 
-  const [hasMore, setHasMore ] = useState(edges.length > 5)
+  const numberOfPages = Math.ceil(edges.length/cardsPerPage);
 
-  const [loadMore, setLoadMore] = useState(false)
+  const [displayList, setDisplayList] = useState([...edges.slice(0, cardsPerPage)])
+  
+  const [currentPage, setCurrentPage] = useState(1);
 
-  // console.log(edges);
-
-  const handleLoadMore = () => {
-    setLoadMore(true)
-  }
-  useEffect(() => {
-    if (loadMore && hasMore) {
-      const currentLength = displayList.length
-      const isMore = currentLength < edges.length
-      const nextResults = isMore
-        ? edges.slice(currentLength, currentLength + 5)
-        : []
-      setDisplayList([...displayList, ...nextResults])
-      setLoadMore(false)
+  const changePage = (data) => {
+    if(data == 'prev'){
+      setCurrentPage(currentPage > 1 ? currentPage-1 : 1);
     }
-  }, [loadMore, hasMore])
+    else if(data == 'next'){
+      setCurrentPage(currentPage < numberOfPages ? currentPage+1 : numberOfPages)
+    }
+    else{
+      setCurrentPage(data);
+    }
+  }
 
   useEffect(() => {
-    setHasMore(()=> displayList.length < edges.length)
-  }, [displayList])
+    setDisplayList([...edges.slice((currentPage-1)*cardsPerPage, currentPage*cardsPerPage)]);
+  }, [currentPage])
 
   return (
     <div>
@@ -104,11 +101,15 @@ const HumanBlogs = () => {
           </>
         }
       </div>
-      {/* { hasMore ? <button onClick={handleLoadMore} className="load-more">Load more blogs</button> : <></> } */}
+
       <div className="hos-pagination">
-        <button>&#8592; Previous</button>
-        <div className="hos-pages-list">1 2 3 4</div>
-        <button>Next &#8594;</button>
+        <button onClick={() => {changePage('prev')}} className="hos-page-button-arrows">&#8592; &nbsp; Previous</button>
+        <div className="hos-pages-list">
+          {[...Array(numberOfPages).keys()].map(x => {
+            return (<button onClick={() => {changePage(x+1)}} className="hos-page-button">{x+1}</button>)
+            })}
+        </div>
+        <button onClick={() => {changePage('next')}} className="hos-page-button-arrows">Next &nbsp; &#8594;</button>
       </div>
     </div>
   )

@@ -2,6 +2,7 @@ import { graphql } from 'gatsby'
 import React from 'react'
 import HumanBlogCard from '../components/HumansOfSociousPage/HumanBlogCard'
 import { GatsbyImage, getImage } from "gatsby-plugin-image";
+import { Link } from 'gatsby'
 
 
 import Layout from '../components/Layout'
@@ -115,7 +116,7 @@ Copy link</button>
             <p>Subheading</p>
           </div>
           <div className="hos-more-articles-header-right">
-            <button>View All</button>
+            <Link to={"/hos"}><button>View All</button></Link>
           </div>
         </div>
           <div className='hos-more-articles'>
