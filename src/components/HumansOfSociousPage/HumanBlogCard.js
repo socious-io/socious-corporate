@@ -14,9 +14,9 @@ const HumanBlogCard = ({ edge, alternate }) => {
     slug,
     featuredImage,
     // excerpt,
+    date,
     hosBlogData
   } } = edge
-  const date = hosBlogData?.date ? hosBlogData?.date : "";
   // const link = edge.node.slug.substring(0, slug.indexOf("%"))
   
   const authorFeaturedImage = hosBlogData?.author?.featuredImage;
@@ -41,15 +41,18 @@ const HumanBlogCard = ({ edge, alternate }) => {
         <p className="hos-blog-summary">
           {hosBlogData?.summary}
         </p>
+
+        {authorImageData?
         <div className='hos-blog-author'>
-          <div className='hos-blog-author-image'>{authorImageData?
+          <div className='hos-blog-author-image'>
           <GatsbyImage image={authorImageData} alt={authorFeaturedImage?.node.altText || ""} />
-          :<></>}</div>
+          </div>
           <div className='hos-blog-author-text'>
             <p className='hos-blog-author-name'>{hosBlogData?.author?.title}</p>
             <p className='hos-blog-date'><small>{date}</small></p>
           </div>          
         </div>
+        :<></>}
         
       </div>
 

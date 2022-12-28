@@ -13,6 +13,7 @@ const HumanBlogs = () => {
           node {
             id
             slug
+            date(formatString: "MMM DD, YYYY")
             hosBlogData {
               author {
                 ... on WpHosBlogAuthors {
@@ -35,7 +36,6 @@ const HumanBlogs = () => {
                 }
               }
               category
-              date
               summary
             }
             title
