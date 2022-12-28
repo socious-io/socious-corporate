@@ -109,7 +109,7 @@ const NavbarMobile = (props) => {
               to={"/app/auth/login"}
               activeStyle={activeLinkStyleMobile}
               partiallyActive={true}
-              className="menu-item"
+              className="menu-item-sign"
             >
               {jaPage ? 'ログイン' : 'Sign in '}&#8594;
             </Link>
@@ -117,7 +117,7 @@ const NavbarMobile = (props) => {
               to={"/app/auth/signup"}
               activeStyle={activeLinkStyleMobile}
               partiallyActive={true}
-              className="menu-item"
+              className="menu-item-sign"
             >
               {jaPage ? 'サインアップ' : 'Sign up '}&#8594;
             </Link>
@@ -167,7 +167,7 @@ const NavbarMobile = (props) => {
             <QRModal open={open} handleClose={handleClose} /> */}
           </Menu>
           :
-          <MenuIcon onClick={() => setSidebar(true)} fontSize="large" className={`fixed top-[8vw] right-[10vw] ${location.pathname == '/' || is404Page ? '!fill-white' : '!fill-[#2f4786]'}`} />
+          <MenuIcon onClick={() => setSidebar(true)} fontSize="large" className={`fixed top-[8vw] right-[10vw] ${['/','/ja','/ja/'].includes(location.pathname) || is404Page ? '!fill-white' : '!fill-[#2f4786]'}`} />
       }
     </nav>
   );
