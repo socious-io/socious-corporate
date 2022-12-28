@@ -5,8 +5,6 @@ import Layout from '../../components/Layout';
 import Seo from '../../components/seo';
 import Banner from '../../components/HumansOfSociousPage/Banner';
 
-import JapaneseNews from '../../components/NewsroomPage/JapaneseNews';
-import EnglishNews from '../../components/NewsroomPage/EnglishNews';
 import Cta from "../../components/Homepage/CTA";
 import { Button, TextField, InputLabel } from '@mui/material';
 import { useFormik } from 'formik';
@@ -43,28 +41,35 @@ const HumansOfSociousPage = (props) => {
         />
 
         <Banner />
-        <div className="hos-subscription-form">          
-          <form onSubmit={formik.handleSubmit}>
-            <InputLabel className='form-message-title'><h1>Stories and Interviews</h1></InputLabel>
-            <TextField
-              className='hos-form-message'
-              // multiline
-              // minRows={6}
-              id="message"
-              name="message"
-              placeholder='Enter your email'
-              value={formik.values.message}
-              onChange={formik.handleChange}
-              error={formik.touched.message && Boolean(formik.errors.message)}
-              helperText={formik.touched.message && formik.errors.message}
-            />
-            <Button color="primary" variant="contained" type="submit" className='form-submit'>
-              Get Started
-            </Button>
-          </form>
-          <p>We care about your data in our <Link id="hos-privacy-policy" to={`/privacy-policy/`}>privacy policy</Link></p>
+        <div className="hos-subscription-form"> 
+            <div className="hos-subscription-form-div">  
+              <p className='hos-form-message-title'>Stories and Interviews</p>    
+              <p className="hos-form-subscribe-to">Subscribe to...</p>   
+            </div>
+            <form onSubmit={formik.handleSubmit}>
+              <span className="hos-form-text-div">
+                <span classname="hos-form-text-field">
+                  <TextField
+                    className='hos-form-message'
+                    // multiline
+                    // minRows={6}
+                    id="message"
+                    name="message"
+                    placeholder='Enter your email'
+                    value={formik.values.message}
+                    onChange={formik.handleChange}
+                    error={formik.touched.message && Boolean(formik.errors.message)}
+                    helperText={formik.touched.message && formik.errors.message}
+                  />
+                  <p className="hos-form-we-care">We care about your data in our <Link id="hos-privacy-policy" to={`/privacy-policy/`}>privacy policy</Link></p>
+                </span>
+                <Button variant="contained" type="submit" className='hos-form-submit'>
+                  Get Started
+                </Button>
+              </span>
+            </form>
         </div>
-        
+
         <HumanBlogs />
         <Cta />
       </Layout>

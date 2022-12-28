@@ -33,13 +33,13 @@ const HumanBlogCard = ({ edge, alternate }) => {
 
       <div className='hos-blog-content-words'>
         <p className='hos-blog-category'>
-          {hosBlogData?.category}
+          {hosBlogData?.category || "Category"}
         </p>
         <h1 className="hos-blog-title">
         <Link to={`/hos/${slug}`}>{title}</Link>
         </h1>
         <p className="hos-blog-summary">
-          {hosBlogData?.summary}
+          {hosBlogData?.summary || "Summary"}
         </p>
 
         {authorImageData?
