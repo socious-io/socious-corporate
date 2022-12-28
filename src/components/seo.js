@@ -30,14 +30,13 @@ const Seo = ({key, title, description, image, twitterImage, children}) => {
   const titleSelector = jaPage ? titleJapanese : defaultTitle;
   const imageSelector = jaPage ? imageJapanese : defaultImage;
   const descriptionSelector = jaPage ? descriptionJapanese : defaultDescription;
-  const titleTemplateSelector = jaPage ? titleTemplateJapanese : titleTemplate;
-
+  
   if (key) {
     if (!title) title = intl.formatMessage({id: `${key}-title`});
     if (!description)
       description = intl.formatMessage({id: `${key}-description`});
   }
-
+  
   const pathWithSlash = pathname.endsWith("/") ? pathname : pathname + "/";
   const absoluteURL = "https://socious.io" + pathWithSlash  
   const langURL = "https://socious.io" + (jaPage ? pathWithSlash.replace('/ja', "") : `/ja${pathWithSlash}`);
@@ -53,6 +52,7 @@ const Seo = ({key, title, description, image, twitterImage, children}) => {
     twitterImage: twitterImage || defaultTwitterImage,
   };
 
+  const titleTemplateSelector = seo.title.startsWith("Socious |") || seo.title.startsWith("ソーシャス |")? "%s" : (jaPage ? titleTemplateJapanese : titleTemplate);
 
   const fixedFaviconLink = (icon) => {
     return `${siteUrl}/${icon}`;
