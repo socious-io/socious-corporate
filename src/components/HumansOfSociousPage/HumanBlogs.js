@@ -109,6 +109,9 @@ const HumanBlogs = () => {
             return (<button onClick={() => {changePage(x+1)}} className="hos-page-button">{x+1}</button>)
             })}
         </div>
+        <div className="hos-pages-list-mobile">
+          <p>Page {currentPage} of {numberOfPages}</p>
+        </div>
         <button onClick={() => {changePage('next')}} className="hos-page-button-arrows">Next &nbsp; &#8594;</button>
       </div>
     </div>

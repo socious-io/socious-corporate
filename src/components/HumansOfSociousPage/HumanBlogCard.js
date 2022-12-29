@@ -38,7 +38,7 @@ const HumanBlogCard = ({ edge, alternate }) => {
         <h1 className="hos-blog-title">
         <Link to={`/hos/${slug}`}>{title}</Link>
         </h1>
-        <p className="hos-blog-summary">
+        <p className="hos-blog-card-summary">
           {hosBlogData?.summary || "Summary"}
         </p>
 

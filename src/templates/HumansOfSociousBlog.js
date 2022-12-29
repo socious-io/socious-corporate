@@ -130,6 +130,9 @@ const HumansOfSociousBlog = (props) => {
 						})
 					}
           </div>
+          <div className="hos-more-articles-header-right-mobile">
+            <Link to={"/hos"}><button>View All</button></Link>
+          </div>
     	</div>
 		</Layout>
 	)

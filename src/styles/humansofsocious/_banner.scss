@@ -321,7 +321,7 @@
   color: #101828;
 }
 
-.hos-blog-summary {
+.hos-blog-card-summary {
   /* Text md/Regular */
 
   // font-family: 'TT Norms Pro';
@@ -398,6 +398,14 @@
   flex-direction: column;
 }
 
+.hos-pages-list-mobile  {
+  display: none;
+}
+
+.hos-pages-list {
+  display: block;
+}
+
 
 @media only screen and (max-width: 600px) {
   .hos-banner__text {
@@ -441,7 +449,7 @@
     font-family: 'Canela';
     font-style: normal;
     font-weight: 500;
-    font-size: 36px;
+    font-size: 34px; //36
     line-height: 44px;
     /* identical to box height, or 122% */
 
@@ -475,4 +483,95 @@
   .hos-form-message {
     width: 100%;
   }
+
+  .hos-pages-list-mobile  {
+    display: block;
+    margin: auto;
+    /* Text sm/Regular */
+
+    // font-family: 'TT Norms Pro';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 20px;
+    /* identical to box height, or 143% */
+
+
+    /* Gray/700 */
+
+    color: #344054;
+  }
+
+  .hos-pages-list {
+    display: none;
+  }
+
+  .hos-template-blog-content__html {
+    font-weight: 400;
+    font-size: 1.25rem;
+    line-height: 150%;
+  
+    img {
+      width: 100%;
+    }
+  
+    p {
+      padding: 1rem 0;
+      /* Text md/Regular */
+
+      // font-family: 'TT Norms Pro';
+      font-style: normal;
+      font-weight: 400;
+      font-size: 16px;
+      line-height: 24px;
+      /* or 150% */
+
+
+      /* Gray/600 */
+
+      color: #475467;
+    }
+  
+    h1 {
+      font-size: 36px;
+    }
+  
+    h2,h3,h4 {
+      padding: 1rem 0;
+
+      /* Display xs/Semibold */
+
+      // font-family: 'TT Norms Pro';
+      font-style: normal;
+      font-weight: 600;
+      font-size: 24px;
+      line-height: 32px;
+      /* or 133% */
+
+
+      /* Gray/900 */
+
+      color: #101828;
+    }
+  
+    figcaption {
+      padding-top: 0.2rem;
+      padding-bottom: 1rem;
+
+      /* Text sm/Regular */
+
+      // font-family: 'TT Norms Pro';
+      font-style: normal;
+      font-weight: 400;
+      font-size: 14px;
+      line-height: 20px;
+      /* identical to box height, or 143% */
+
+
+      /* Gray/600 */
+
+      color: #475467;
+    }
+  }
+
 }
