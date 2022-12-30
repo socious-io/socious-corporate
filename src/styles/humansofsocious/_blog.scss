@@ -44,11 +44,10 @@
 
 .hos-more-articles-header-left {
   h2 {
-    /* Display md/Semibold */
-
-    // font-family: 'TT Norms Pro';
+    //font-family: 'TT Norms Pro';
     font-style: normal;
-    font-weight: 600;
+    //font-weight: 600;
+    font-weight: 600; 
     font-size: 36px;
     line-height: 44px;
     /* identical to box height, or 122% */
@@ -58,6 +57,7 @@
     /* Gray/900 */
 
     color: #101828;
+    padding-bottom: 1rem;
   }
 
   p {
@@ -191,14 +191,21 @@
 }
 
 .hos-more-articles-box {
-  background: linear-gradient(#F8F8F8, rgba(248, 248, 248, 0));
-  margin: 3rem 0 2rem;
+  //background: linear-gradient(#F8F8F8, rgba(248, 248, 248, 0));
+  margin: 0 0 2rem;
   // padding: 4rem 0;
-  padding: 4rem 10vw;
+  padding: 4rem 7vw;
 }
 
 .hos-more-articles-box-header {
   padding-bottom: 2rem;
+}
+
+.hos-more-articles-box-divider {
+  background-color: #EAECF0;
+  width: 88vw;
+  margin: auto;
+  margin-top: 3rem;
 }
 
 .hos-template-blog-footer {
@@ -399,6 +406,7 @@
     border-top: 1px solid lightgray;
     margin-left: 5vw;
     margin-right: 5vw;
+    margin-top: 3rem;
   }
 
   .hos-more-articles-box-header {
@@ -431,6 +439,10 @@
 
   .hos-more-articles-header-right-mobile {
     display: flex;
+  }
+
+  .hos-more-articles-box-divider{
+    display: none;
   }
 
 //   .container__blog {

@@ -133,10 +133,11 @@ const HumansOfSociousBlog = (props) => {
       </div>
 
 			{/* More Blogs */}
+      <hr className="hos-more-articles-box-divider"></hr>
 			<div className="hos-more-articles-box">
 				<div className='hos-more-articles-box-header'>
           <div className="hos-more-articles-header-left">
-            <h2>Latest Stories</h2>
+            <h2>Latest stories</h2>
             <p>Subheading</p>
           </div>
           <div className="hos-more-articles-header-right">
@@ -164,6 +165,7 @@ const HumansOfSociousBlog = (props) => {
 
 export default HumansOfSociousBlog
 
+
 export const query = graphql`
 	query ($slug: String) {
 		wpHosBlog(slug: {eq: $slug}) {
@@ -189,7 +191,7 @@ export const query = graphql`
 			}
 		}
     allWpHosBlog (
-      sort: {fields: date, order: ASC}
+      sort: {fields: date, order: DESC}
       filter: {slug: {ne: $slug}}
 			limit: 3
     ) {

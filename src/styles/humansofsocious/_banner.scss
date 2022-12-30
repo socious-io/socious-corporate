@@ -348,6 +348,19 @@
 
   p {
     padding: 1rem 0;
+    /* Text lg/Regular */
+
+    // font-family: 'TT Norms Pro';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 28px;
+    /* or 156% */
+
+
+    /* Gray/600 */
+
+    color: #475467;
   }
 
   h1 {
@@ -355,14 +368,37 @@
   }
 
   h2,h3,h4 {
-    font-size: 24px;
-    font-weight: 700;
     padding: 1rem 0;
+    //font-family: 'TT Norms Pro';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 30px;
+    line-height: 38px;
+    /* identical to box height, or 127% */
+
+
+    /* Gray/900 */
+
+    color: #101828;
   }
 
   figcaption {
     font-size: 14px;
-    padding-bottom: 1rem;
+    padding-bottom: 3rem;
+    padding-top: 1rem;
+    /* Text sm/Regular */
+
+    //font-family: 'TT Norms Pro';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 20px;
+    /* identical to box height, or 143% */
+
+
+    /* Gray/600 */
+
+    color: #475467;
   }
 }
 
