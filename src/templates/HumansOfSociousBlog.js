@@ -61,8 +61,10 @@ const HumansOfSociousBlog = (props) => {
 	return (
 		<Layout {...props}>
 			<Seo
-        title={seoTitle}
-        description={title}
+        title={title}
+        description={summary}
+        image={data.site.siteMetadata.url+featuredImage?.node?.localFile?.publicURL}
+        twitterImage={data.site.siteMetadata.url+featuredImage?.node?.localFile?.publicURL}
       />
 			
 			<div className='hos-blog-template-banner'>
@@ -171,6 +173,11 @@ export default HumansOfSociousBlog
 
 export const query = graphql`
 	query ($slug: String) {
+    site {
+      siteMetadata {
+        url
+      }
+    }
 		wpHosBlog(slug: {eq: $slug}) {
 			title
 			slug
@@ -184,6 +191,7 @@ export const query = graphql`
 					sourceUrl
 					altText
           localFile {
+            publicURL
             childImageSharp {
               gatsbyImageData(
                 placeholder: BLURRED
