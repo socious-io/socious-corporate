@@ -11,6 +11,7 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
   return new Promise(async (resolve) => {
     const blogPostTemplate = path.resolve("src/templates/BlogPost.js");
     const wordpressPostTemplate = path.resolve("src/templates/WordPressBlog.js");
+    const humansOfSociousPostTemplate = path.resolve("src/templates/HumansOfSociousBlog.js");
 
     const result = await graphql(`
     {
@@ -41,14 +42,26 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
     }  
   `);
 
+    const hosBlogResult = await graphql(`
+    {
+      allWpHosBlog {
+        edges {
+          node {
+            slug
+          }
+        }
+      }
+    }`)
 
-    if (result.errors || wordpressResult.errors) {
+    if (result.errors || wordpressResult.errors || hosBlogResult.errors) {
       reporter.panicOnBuild("Error while running GraphQL query.");
       return;
     }
 
     const posts = result.data.postsRemark.edges;
     const wordpressPosts = wordpressResult?.data?.allWpPost?.edges || [];
+    const hosBlogPosts = hosBlogResult?.data?.allWpHosBlog?.edges || [];
+
 
     let posts_path_list = [];
     posts.forEach(({node})=>{
@@ -122,7 +135,29 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
       //   },
       // });
     });
-    resolve()
+
+  hosBlogPosts.forEach(({ node }) => {
+    let path = `/hos/${node.slug}`;
+    for (let language of languages) {
+      const isDefaultLanguage = language === defaultLanguage;
+      if (!isDefaultLanguage) {
+        path = "/" + language + '/hos/' + node.slug;
+      }
+
+      const pageForLanguage = Object.assign({}, node, {
+        originalPath: `/hos/${node.slug}`,
+        path: path,
+        component: humansOfSociousPostTemplate,
+        context: {
+          language,
+          messages: messages[language],
+          slug: node.slug
+        },
+      });
+      createPage(pageForLanguage);
+    }
+  });
+  resolve()
   })
 };
 

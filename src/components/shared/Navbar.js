@@ -34,6 +34,7 @@ const Navbar = ({ header, is404Page }) => {
   const blogLink = jaPage ? '/ja/blog' : '/blog';
   const organizationLink = jaPage ? '/ja/organization' : '/organization';
   const contactLink = jaPage ? '/ja/contact' : '/contact';
+  const hosLink = '/hos';
 
   let navSelector = '';
 
@@ -48,6 +49,7 @@ const Navbar = ({ header, is404Page }) => {
         careersLink={careersLink}
         newsroomLink={newsroomLink}
         blogLink={blogLink}
+        hosLink={hosLink}
         altPage={altPage}
       />
 

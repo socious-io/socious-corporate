@@ -9,9 +9,9 @@ import BasicModal from '../shared/QR-Modal';
 import IconWeb from '../../images/icons/line/web.svg';
 
 const NavbarLarge = (props) => {
-  const { headerStyle, homePage, aboutLink, careersLink, newsroomLink, altPage, blogLink, organizationLink } =
+  const { headerStyle, homePage, aboutLink, careersLink, newsroomLink, altPage, blogLink, organizationLink, hosLink } =
     props;
-  
+
   const [open, setOpen] = useState(false);
   const handleOpen = () => setOpen(true);
   const handleClose = () => setOpen(false);
@@ -52,21 +52,21 @@ const NavbarLarge = (props) => {
 
   return (
     <>
-    <div className={headerStyle}>
-      <nav>        
-        <div className="nav-links-left">
-          <div className="nav-item">
-            <div className="header__logo-container">
-              <Link to={homePage}>
-                {/* <StaticImage
+      <div className={headerStyle}>
+        <nav>
+          <div className="nav-links-left">
+            <div className="nav-item">
+              <div className="header__logo-container">
+                <Link to={homePage}>
+                  {/* <StaticImage
                 src="../../images/logo-horizontal-white.svg"
                 className="header__logo-image"
                 alt="Socious brand logo"
               /> */}
-              </Link>
+                </Link>
+              </div>
             </div>
-          </div>
-          <div className="nav-item">
+            <div className="nav-item">
               <Link to={aboutLink}>
                 <FormattedMessage id="about-title" />
               </Link>
@@ -92,13 +92,18 @@ const NavbarLarge = (props) => {
               </Link>
             </div>
             <div className="nav-item">
+              <Link to={hosLink}>
+                Humans of Socious
+              </Link>
+            </div>
+            <div className="nav-item">
               <a className="header__language-switcher" href={altPage}>
                 <IconWeb />
                 {jaPage ? 'English(US)' : '日本語'}
               </a>
             </div>
-        </div>
-        <div className="nav-links-right">          
+          </div>
+          <div className="nav-links-right">
             <div className="nav-item">
               <Link to={"/app/auth/login"}>
                 <FormattedMessage id="sign-in" />
@@ -106,7 +111,7 @@ const NavbarLarge = (props) => {
             </div>
             <div className="nav-item">
               <Link to={"/app/auth/signup"}>
-              <FormattedMessage id="sign-up" />
+                <FormattedMessage id="sign-up" />
               </Link>
             </div>
             <div className="nav-item">
@@ -118,10 +123,10 @@ const NavbarLarge = (props) => {
                 />
               </button>
             </div>
-        </div>
-      </nav>
-    </div>
-    <BasicModal open={open} handleClose={handleClose} /></>
+          </div>
+        </nav>
+      </div>
+      <BasicModal open={open} handleClose={handleClose} /></>
   );
 };
 
