@@ -59,12 +59,12 @@ const HumansOfSociousBlog = (props) => {
   const pluginImage = getImage(featuredImage?.node?.localFile?.childImageSharp?.gatsbyImageData)
 
 	return (
-		<Layout {...props}>
+		<Layout {...props} pageTitle={title}>
 			<Seo
         title={title}
         description={summary}
-        image={data.site.siteMetadata.url+featuredImage?.node?.localFile?.publicURL}
-        twitterImage={data.site.siteMetadata.url+featuredImage?.node?.localFile?.publicURL}
+        image={window.location.href.split('/')[2]+featuredImage?.node?.localFile?.publicURL}
+        twitterImage={window.location.href.split('/')[2]+featuredImage?.node?.localFile?.publicURL}
       />
 			
 			<div className='hos-blog-template-banner'>
