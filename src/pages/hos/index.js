@@ -29,7 +29,6 @@ const HumansOfSociousPage = (props) => {
       validationSchema: validationSchema,
       onSubmit: (values) => {
         console.log(values)
-        alert("Subscribed")
       },
     });
 
@@ -41,7 +40,8 @@ const HumansOfSociousPage = (props) => {
         />
 
         <Banner />
-        <div className="hos-subscription-form"> 
+        <div style={{paddingTop: "4rem"}}></div>
+        <div style={{display: "none"}} className="hos-subscription-form"> 
             <div className="hos-subscription-form-div">  
               <p className='hos-form-message-title'>Stories and Interviews</p>    
               <p className="hos-form-subscribe-to">Subscribe to...</p>   

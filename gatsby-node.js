@@ -53,38 +53,6 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
       }
     }`)
 
-    // {
-      //   allWpHosBlog {
-      //     nodes {
-      //       hosBlogData {
-      //         author {
-      //           ... on WpHosBlogAuthors {
-      //             title
-      //             featuredImage {
-      //               node {
-      //                 localFile {
-      //                   childImageSharp {
-      //                     id
-      //                   }
-      //                 }
-      //               }
-      //             }
-      //           }
-      //         }
-      //         category
-      //         summary
-      //       }
-      //       title
-      //       featuredImage {
-      //         node {
-      //           uri
-      //         }
-      //       }
-      //     }
-      //   }
-      // }
-
-
     if (result.errors || wordpressResult.errors || hosBlogResult.errors) {
       reporter.panicOnBuild("Error while running GraphQL query.");
       return;
