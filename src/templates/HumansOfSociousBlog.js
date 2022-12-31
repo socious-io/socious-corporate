@@ -63,8 +63,8 @@ const HumansOfSociousBlog = (props) => {
 			<Seo
         title={title}
         description={summary}
-        image={window.location.href.split('/')[2]+featuredImage?.node?.localFile?.publicURL}
-        twitterImage={window.location.href.split('/')[2]+featuredImage?.node?.localFile?.publicURL}
+        image={"https://95-humans-of-socious.socious-corporate.pages.dev"+featuredImage?.node?.localFile?.publicURL}
+        twitterImage={"https://95-humans-of-socious.socious-corporate.pages.dev"+featuredImage?.node?.localFile?.publicURL}
       />
 			
 			<div className='hos-blog-template-banner'>
