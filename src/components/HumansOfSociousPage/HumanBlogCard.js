@@ -18,7 +18,7 @@ const HumanBlogCard = ({ edge, alternate }) => {
     hosBlogData
   } } = edge
   // const link = edge.node.slug.substring(0, slug.indexOf("%"))
-  
+
   const authorFeaturedImage = hosBlogData?.author?.featuredImage;
 
   const imageData = featuredImage?.node?.localFile?.childImageSharp?.gatsbyImageData;
@@ -33,27 +33,27 @@ const HumanBlogCard = ({ edge, alternate }) => {
 
       <div className='hos-blog-content-words'>
         <p className='hos-blog-category'>
-          {hosBlogData?.category || "Category"}
+          {hosBlogData?.category || <></>}
         </p>
         <h1 className="hos-blog-title">
-        <Link to={`/hos/${slug}`}>{title}</Link>
+          <Link to={`/hos/${slug}`}>{title}</Link>
         </h1>
         <p className="hos-blog-card-summary">
-          {hosBlogData?.summary || "Summary"}
+          {hosBlogData?.summary || <></>}
         </p>
 
-        {authorImageData?
-        <div className='hos-blog-author'>
-          <div className='hos-blog-author-image'>
-          <GatsbyImage image={authorImageData} alt={authorFeaturedImage?.node.altText || ""} />
+        {authorImageData ?
+          <div className='hos-blog-author'>
+            <div className='hos-blog-author-image'>
+              <GatsbyImage image={authorImageData} alt={authorFeaturedImage?.node.altText || ""} />
+            </div>
+            <div className='hos-blog-author-text'>
+              <p className='hos-blog-author-name'>{hosBlogData?.author?.title}</p>
+              <p className='hos-blog-date'><small>{date}</small></p>
+            </div>
           </div>
-          <div className='hos-blog-author-text'>
-            <p className='hos-blog-author-name'>{hosBlogData?.author?.title}</p>
-            <p className='hos-blog-date'><small>{date}</small></p>
-          </div>          
-        </div>
-        :<></>}
-        
+          : <></>}
+
       </div>
 
     </div>

@@ -133,12 +133,13 @@ const HumansOfSociousBlog = (props) => {
       </div>
 
 			{/* More Blogs */}
-      <hr className="hos-more-articles-box-divider"></hr>
+      {edges.length > 0 ?
+      <><hr className="hos-more-articles-box-divider"></hr>
 			<div className="hos-more-articles-box">
 				<div className='hos-more-articles-box-header'>
           <div className="hos-more-articles-header-left">
             <h2>Latest stories</h2>
-            <p>Subheading</p>
+            <p className="hos-more-articles-subheading"></p>
           </div>
           <div className="hos-more-articles-header-right">
             <Link to={"/hos"}><button>View All</button></Link>
@@ -158,7 +159,9 @@ const HumansOfSociousBlog = (props) => {
           <div className="hos-more-articles-header-right-mobile">
             <Link to={"/hos"}><button>View All</button></Link>
           </div>
-    	</div>
+    	</div></>
+      : <div style={{padding: "2rem"}}></div>
+      }
 		</Layout>
 	)
 }
