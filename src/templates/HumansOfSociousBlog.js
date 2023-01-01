@@ -10,18 +10,6 @@ import Seo from '../components/seo'
 
 const HumansOfSociousBlog = (props) => {
   
-	const jaPage = false
-
-  // const seoDescription = jaPage ?
-  //                        'ソーシャスは社会変革のためのコミュニティアプリです。' :
-  //                        'Learn more about Socious and what we do, who we are, and what we stand for'
-
-  const seoTitle = jaPage ?
-                   'ブログ' :
-                   'Blog'
-
-	const WORDPRESS_URL = process.env.WORDPRESS_ENDPOINT
-
   const { data } = props
 
   const { title, content, featuredImage, date }  = data.wpHosBlog
@@ -50,7 +38,7 @@ const HumansOfSociousBlog = (props) => {
   }
 
   
-  const summary = data.wpHosBlog.hosBlogData.summary;
+  const {summary, calltoaction} = data.wpHosBlog.hosBlogData;
 
 	const { edges } = data.allWpHosBlog
 
@@ -63,8 +51,8 @@ const HumansOfSociousBlog = (props) => {
 			<Seo
         title={title}
         description={summary}
-        image={"https://95-humans-of-socious.socious-corporate.pages.dev"+featuredImage?.node?.localFile?.publicURL}
-        twitterImage={"https://95-humans-of-socious.socious-corporate.pages.dev"+featuredImage?.node?.localFile?.publicURL}
+        image={data.site.siteMetadata.url+featuredImage?.node?.localFile?.publicURL}
+        twitterImage={data.site.siteMetadata.url+featuredImage?.node?.localFile?.publicURL}
       />
 			
 			<div className='hos-blog-template-banner'>
@@ -84,9 +72,9 @@ const HumansOfSociousBlog = (props) => {
 
       <div className='hos-template-blog-content'>
         {newContent?<div className='hos-template-blog-content__html' dangerouslySetInnerHTML={{ __html: newContent }}></div>:<></>}
-        <div className='hos-template-support-cause'>
-          <p>If you would like to support {title.split(" ")[0]}’s cause, please….</p>
-        </div>
+        {calltoaction?<div className='hos-template-support-cause'>
+          <p>{calltoaction}</p>
+        </div>:<></>}
         <hr className="hos-template-footer-divider"></hr>
         <div className='hos-template-blog-footer'>
           <div className='hos-template-blog-footer-left'>
@@ -185,6 +173,7 @@ export const query = graphql`
       date(formatString: "MMM DD, YYYY")
       hosBlogData {
         summary
+        calltoaction
       }
 			featuredImage {
 				node {
