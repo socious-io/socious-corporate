@@ -9,6 +9,8 @@ import Layout from '../components/Layout'
 import Seo from '../components/seo'
 
 const HumansOfSociousBlog = (props) => {
+
+  const seoTitle = "Humans of Socious"
   
   const { data } = props
 
@@ -46,13 +48,13 @@ const HumansOfSociousBlog = (props) => {
 
   const pluginImage = getImage(featuredImage?.node?.localFile?.childImageSharp?.gatsbyImageData)
 
-  const currentSiteUrl = props.location.origin;
+  const currentSiteUrl = data.site.siteMetadata.url;
 
 	return (
 		<Layout {...props} pageTitle={title}>
 			<Seo
-        title={title}
-        description={summary}
+        title={seoTitle}
+        description={title}
         image={currentSiteUrl+featuredImage?.node?.localFile?.publicURL}
         twitterImage={currentSiteUrl+featuredImage?.node?.localFile?.publicURL}
       />
