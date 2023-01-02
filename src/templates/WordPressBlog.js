@@ -27,11 +27,15 @@ const WordPressBlog = (props) => {
 
   const newContent = content.replaceAll("/wp-content/uploads/", "https://socious-wp.azurewebsites.net/wp-content/uploads/")
 
+  const currentSiteUrl = props.location.origin;
+
 	return (
 		<Layout {...props}>
 			<Seo
         title={seoTitle}
         description={title}
+        image={currentSiteUrl+featuredImage?.node?.localFile?.publicURL}
+        twitterImage={currentSiteUrl+featuredImage?.node?.localFile?.publicURL}
       />
 			
 			<div className='blog-show-banner'>
@@ -81,6 +85,9 @@ export const query = graphql`
 				node {
 					sourceUrl
 					altText
+          localFile {
+            publicURL
+          }
 				}
 			}
 		}
