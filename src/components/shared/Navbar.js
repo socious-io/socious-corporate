@@ -24,7 +24,7 @@ const Navbar = ({ header, is404Page }) => {
 
   const jaPage = intl.locale === 'ja';
   const homePage = jaPage ? '/ja/' : '/';
-  const altPage = jaPage
+  var altPage = jaPage
     ? location.pathname.slice(3)
     : `/ja${location.pathname}`;
 
@@ -35,6 +35,11 @@ const Navbar = ({ header, is404Page }) => {
   const organizationLink = jaPage ? '/ja/organization' : '/organization';
   const contactLink = jaPage ? '/ja/contact' : '/contact';
   const hosLink = '/hos';
+
+  const locationPathname = location.pathname == hosLink ? hosLink+"/" : location.pathname;
+  if((locationPathname).startsWith(hosLink+"/")){
+    altPage = location.pathname;
+  }
 
   let navSelector = '';
 

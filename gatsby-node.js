@@ -138,24 +138,18 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
 
   hosBlogPosts.forEach(({ node }) => {
     let path = `/hos/${node.slug}`;
-    for (let language of languages) {
-      const isDefaultLanguage = language === defaultLanguage;
-      if (!isDefaultLanguage) {
-        path = "/" + language + '/hos/' + node.slug;
-      }
 
-      const pageForLanguage = Object.assign({}, node, {
-        originalPath: `/hos/${node.slug}`,
-        path: path,
-        component: humansOfSociousPostTemplate,
-        context: {
-          language,
-          messages: messages[language],
-          slug: node.slug
-        },
-      });
-      createPage(pageForLanguage);
-    }
+    const pageForLanguage = Object.assign({}, node, {
+      originalPath: `/hos/${node.slug}`,
+      path: path,
+      component: humansOfSociousPostTemplate,
+      context: {
+        messages: messages["en"],
+        slug: node.slug
+      },
+    });
+    createPage(pageForLanguage);
+
   });
   resolve()
   })
