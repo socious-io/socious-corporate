@@ -76,6 +76,11 @@ export default WordPressBlog
 
 export const query = graphql`
 	query ($slug: String) {
+    site {
+      siteMetadata {
+        url
+      }
+    }
 		wpPost(slug: {eq: $slug}) {
 			title
 			slug
