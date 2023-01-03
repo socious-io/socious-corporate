@@ -31,13 +31,13 @@ const Navbar = ({ header, is404Page }) => {
   const aboutLink = jaPage ? '/ja/about' : '/about';
   const careersLink = jaPage ? '/ja/careers' : '/careers';
   const newsroomLink = jaPage ? '/ja/newsroom' : '/newsroom';
-  const blogLink = jaPage ? '/ja/blog' : '/blog';
+  const blogLink = '/blog';
   const organizationLink = jaPage ? '/ja/organization' : '/organization';
   const contactLink = jaPage ? '/ja/contact' : '/contact';
   const hosLink = '/hos';
 
-  const locationPathname = location.pathname == hosLink ? hosLink+"/" : location.pathname;
-  if((locationPathname).startsWith(hosLink+"/")){
+  const locationPathname = [hosLink,blogLink].includes(location.pathname) ? location.pathname+"/" : location.pathname;
+  if((locationPathname).startsWith(hosLink+"/") || (locationPathname).startsWith(blogLink+"/")){
     altPage = location.pathname;
   }
 
