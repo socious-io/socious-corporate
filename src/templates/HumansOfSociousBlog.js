@@ -78,7 +78,7 @@ const HumansOfSociousBlog = (props) => {
       <div className='hos-template-blog-content'>
         {newContent?<div className='hos-template-blog-content__html' dangerouslySetInnerHTML={{ __html: newContent }}></div>:<></>}
         {calltoaction?<div className='hos-template-support-cause'>
-          <p>{calltoaction}</p>
+          <p><div dangerouslySetInnerHTML={{ __html: calltoaction }}></div></p>
         </div>:<></>}
         <hr className="hos-template-footer-divider"></hr>
         <div className='hos-template-blog-footer'>
