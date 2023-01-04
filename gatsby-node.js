@@ -108,54 +108,32 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
 
     wordpressPosts.forEach(({ node }) => {
       let path = `/blog/${node.slug}`;
-      for (let language of languages) {
-        const isDefaultLanguage = language === defaultLanguage;
-        if (!isDefaultLanguage) {
-          path = "/" + language + '/blog/' + node.slug;
-        }
-
-        const pageForLanguage = Object.assign({}, node, {
-          originalPath: `/blog/${node.slug}`,
-          path: path,
-          component: wordpressPostTemplate,
-          context: {
-            language,
-            messages: messages[language],
-            slug: node.slug
-          },
-        });
-        createPage(pageForLanguage);
-      }
-
-      // createPage({
-      //   path: `/blog/${node.slug}`,
-      //   component: wordpressPostTemplate,
-      //   context: {
-      //     slug: node.slug,
-      //   },
-      // });
-    });
-
-  hosBlogPosts.forEach(({ node }) => {
-    let path = `/hos/${node.slug}`;
-    for (let language of languages) {
-      const isDefaultLanguage = language === defaultLanguage;
-      if (!isDefaultLanguage) {
-        path = "/" + language + '/hos/' + node.slug;
-      }
-
       const pageForLanguage = Object.assign({}, node, {
-        originalPath: `/hos/${node.slug}`,
+        originalPath: `/blog/${node.slug}`,
         path: path,
-        component: humansOfSociousPostTemplate,
+        component: wordpressPostTemplate,
         context: {
-          language,
-          messages: messages[language],
+          messages: messages["en"],
           slug: node.slug
         },
       });
       createPage(pageForLanguage);
-    }
+    });
+
+  hosBlogPosts.forEach(({ node }) => {
+    let path = `/hos/${node.slug}`;
+
+    const pageForLanguage = Object.assign({}, node, {
+      originalPath: `/hos/${node.slug}`,
+      path: path,
+      component: humansOfSociousPostTemplate,
+      context: {
+        messages: messages["en"],
+        slug: node.slug
+      },
+    });
+    createPage(pageForLanguage);
+
   });
   resolve()
   })

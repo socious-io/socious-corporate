@@ -9,19 +9,9 @@ import Layout from '../components/Layout'
 import Seo from '../components/seo'
 
 const HumansOfSociousBlog = (props) => {
+
+  const seoTitle = "Humans of Socious"
   
-	const jaPage = false
-
-  // const seoDescription = jaPage ?
-  //                        'ソーシャスは社会変革のためのコミュニティアプリです。' :
-  //                        'Learn more about Socious and what we do, who we are, and what we stand for'
-
-  const seoTitle = jaPage ?
-                   'ブログ' :
-                   'Blog'
-
-	const WORDPRESS_URL = process.env.WORDPRESS_ENDPOINT
-
   const { data } = props
 
   const { title, content, featuredImage, date }  = data.wpHosBlog
@@ -50,7 +40,7 @@ const HumansOfSociousBlog = (props) => {
   }
 
   
-  const summary = data.wpHosBlog.hosBlogData.summary;
+  const {summary, calltoaction} = data.wpHosBlog.hosBlogData;
 
 	const { edges } = data.allWpHosBlog
 
@@ -58,11 +48,15 @@ const HumansOfSociousBlog = (props) => {
 
   const pluginImage = getImage(featuredImage?.node?.localFile?.childImageSharp?.gatsbyImageData)
 
+  const currentSiteUrl = data.site.siteMetadata.url;
+
 	return (
-		<Layout {...props}>
+		<Layout {...props} pageTitle={title}>
 			<Seo
         title={seoTitle}
         description={title}
+        image={currentSiteUrl+featuredImage?.node?.localFile?.publicURL}
+        twitterImage={currentSiteUrl+featuredImage?.node?.localFile?.publicURL}
       />
 			
 			<div className='hos-blog-template-banner'>
@@ -82,9 +76,9 @@ const HumansOfSociousBlog = (props) => {
 
       <div className='hos-template-blog-content'>
         {newContent?<div className='hos-template-blog-content__html' dangerouslySetInnerHTML={{ __html: newContent }}></div>:<></>}
-        <div className='hos-template-support-cause'>
-          <p>If you would like to support {title.split(" ")[0]}’s cause, please….</p>
-        </div>
+        {calltoaction?<div className='hos-template-support-cause'>
+          <p><div dangerouslySetInnerHTML={{ __html: calltoaction }}></div></p>
+        </div>:<></>}
         <hr className="hos-template-footer-divider"></hr>
         <div className='hos-template-blog-footer'>
           <div className='hos-template-blog-footer-left'>
@@ -171,6 +165,11 @@ export default HumansOfSociousBlog
 
 export const query = graphql`
 	query ($slug: String) {
+    site {
+      siteMetadata {
+        url
+      }
+    }
 		wpHosBlog(slug: {eq: $slug}) {
 			title
 			slug
@@ -178,12 +177,14 @@ export const query = graphql`
       date(formatString: "MMM DD, YYYY")
       hosBlogData {
         summary
+        calltoaction
       }
 			featuredImage {
 				node {
 					sourceUrl
 					altText
           localFile {
+            publicURL
             childImageSharp {
               gatsbyImageData(
                 placeholder: BLURRED
