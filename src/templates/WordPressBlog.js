@@ -27,8 +27,7 @@ const WordPressBlog = (props) => {
 
   const newContent = content.replaceAll("/wp-content/uploads/", "https://socious-wp.azurewebsites.net/wp-content/uploads/")
 
-  // const currentSiteUrl = data.site.siteMetadata.url;
-  const currentSiteUrl = "https://95-humans-of-socious.socious-corporate.pages.dev"
+  const currentSiteUrl = data.site.siteMetadata.url;
 
 	return (
 		<Layout {...props}>

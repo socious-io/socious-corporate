@@ -48,8 +48,7 @@ const HumansOfSociousBlog = (props) => {
 
   const pluginImage = getImage(featuredImage?.node?.localFile?.childImageSharp?.gatsbyImageData)
 
-  // const currentSiteUrl = data.site.siteMetadata.url;
-  const currentSiteUrl = "https://95-humans-of-socious.socious-corporate.pages.dev"
+  const currentSiteUrl = data.site.siteMetadata.url;
 
 	return (
 		<Layout {...props} pageTitle={title}>
