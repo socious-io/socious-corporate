@@ -20,7 +20,7 @@
 
 #hos-banner__p {
 
-  font-family: 'Canela';
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
   font-style: normal;
   font-weight: 500;
   font-size: 96px;
@@ -40,6 +40,7 @@
   /* Text xl/Regular */
 
   // font-family: 'TT Norms Pro';
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
   font-style: normal;
   font-weight: 400;
   font-size: 18px; //20px;
@@ -102,7 +103,8 @@
 }
 
 .hos-form-message-title {
-  font-family: 'Canela';
+  // font-family: 'Canela';
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
   font-style: normal;
   font-weight: 500;
   font-size: 48px;
@@ -120,6 +122,7 @@
   /* Text xl/Regular */
 
   // font-family: 'TT Norms Pro';
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
   font-style: normal;
   font-weight: 400;
   font-size: 20px;
@@ -138,6 +141,7 @@
   /* Text sm/Regular */
 
   // font-family: 'TT Norms Pro';
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
   font-style: normal;
   font-weight: 400;
   font-size: 14px;
@@ -170,6 +174,7 @@
   /* Text sm/Medium */
 
   // font-family: 'TT Norms Pro';
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
   font-style: normal;
   font-weight: 500;
   font-size: 14px;
@@ -276,6 +281,7 @@
   /* Display xs/Semibold */
 
   // font-family: 'TT Norms Pro';
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
   font-style: normal;
   font-weight: 600;
   font-size: 24px;
@@ -293,6 +299,7 @@
   /* Text sm/Semibold */
 
   // font-family: 'TT Norms Pro';
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
   font-style: normal;
   font-weight: 600;
   font-size: 14px;
@@ -309,6 +316,7 @@
   /* Text sm/Semibold */
 
   // font-family: 'TT Norms Pro';
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
   font-style: normal;
   font-weight: 600;
   font-size: 14px;
@@ -325,6 +333,7 @@
   /* Text md/Regular */
 
   // font-family: 'TT Norms Pro';
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
   font-style: normal;
   font-weight: 400;
   font-size: 16px;
@@ -370,6 +379,7 @@
   h2,h3,h4 {
     padding: 1rem 0;
     //font-family: 'TT Norms Pro';
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
     font-style: normal;
     font-weight: 600;
     font-size: 30px;
@@ -448,8 +458,7 @@
     padding-top: 20vh;
   }
 
-  .hos-banner__p {
-    font-family: 'Canela';
+  #hos-banner__p {
     font-style: normal;
     font-weight: 500;
     font-size: 60px;
@@ -482,7 +491,8 @@
   .hos-form-message-title {
     margin: 1rem 0 0 0;
     padding: 0;
-    font-family: 'Canela';
+    // font-family: 'Canela';
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
     font-style: normal;
     font-weight: 500;
     font-size: 34px; //36
@@ -578,6 +588,7 @@
       /* Display xs/Semibold */
 
       // font-family: 'TT Norms Pro';
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
       font-style: normal;
       font-weight: 600;
       font-size: 24px;
