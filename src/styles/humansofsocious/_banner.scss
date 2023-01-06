@@ -372,6 +372,17 @@
     color: #475467;
   }
 
+  .hos-introduction {
+    padding: 1rem 0;
+    /* Text lg/Regular */
+
+    // font-family: 'TT Norms Pro';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 28px;
+  }
+
   h1 {
     font-size: 36px;
   }
@@ -576,6 +587,17 @@
       /* Gray/600 */
 
       color: #475467;
+    }
+
+    .hos-introduction {
+      padding: 1rem 0;
+      /* Text lg/Regular */
+  
+      // font-family: 'TT Norms Pro';
+      font-style: normal;
+      font-weight: 400;
+      font-size: 14px;
+      line-height: 24px;
     }
   
     h1 {

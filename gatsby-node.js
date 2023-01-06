@@ -121,10 +121,10 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
     });
 
   hosBlogPosts.forEach(({ node }) => {
-    let path = `/hos/${node.slug}`;
+    let path = `/humans-of-socious/${node.slug}`;
 
     const pageForLanguage = Object.assign({}, node, {
-      originalPath: `/hos/${node.slug}`,
+      originalPath: `/humans-of-socious/${node.slug}`,
       path: path,
       component: humansOfSociousPostTemplate,
       context: {

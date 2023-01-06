@@ -34,7 +34,7 @@ const Navbar = ({ header, is404Page }) => {
   const blogLink = '/blog';
   const organizationLink = jaPage ? '/ja/organization' : '/organization';
   const contactLink = jaPage ? '/ja/contact' : '/contact';
-  const hosLink = '/hos';
+  const hosLink = '/humans-of-socious';
 
   const locationPathname = [hosLink,blogLink].includes(location.pathname) ? location.pathname+"/" : location.pathname;
   if((locationPathname).startsWith(hosLink+"/") || (locationPathname).startsWith(blogLink+"/")){
@@ -71,6 +71,7 @@ const Navbar = ({ header, is404Page }) => {
         careersLink={careersLink}
         newsroomLink={newsroomLink}
         blogLink={blogLink}
+        hosLink={hosLink}
         altPage={altPage}
         is404Page={is404Page}
       />
