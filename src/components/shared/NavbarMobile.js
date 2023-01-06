@@ -11,7 +11,7 @@ import { getImage, StaticImage } from "gatsby-plugin-image";
 
 
 const NavbarMobile = (props) => {
-  const { headerStyle, homePage, aboutLink, careersLink, newsroomLink, altPage, organizationLink, blogLink, sidebar, setSidebar, location, is404Page } =
+  const { headerStyle, homePage, aboutLink, careersLink, newsroomLink, altPage, organizationLink, blogLink, sidebar, setSidebar, location, is404Page, hosLink } =
     props;
   const [open, setOpen] = useState(false);
   const handleOpen = () => setOpen(true);
@@ -91,6 +91,14 @@ const NavbarMobile = (props) => {
               className="menu-item"
             >
               {jaPage ? 'ブログ（英語）' : 'Blog'}
+            </Link>
+            <Link
+              to={hosLink}
+              activeStyle={activeLinkStyleMobile}
+              partiallyActive={true}
+              className="menu-item"
+            >
+              {jaPage ? 'ソーシャスの人間（英語）' : 'Humans of Socious'}
             </Link>
             <div className='pb-5'>
               {/* <a className="!flex m0 items-center gap-2" href={altPage}>

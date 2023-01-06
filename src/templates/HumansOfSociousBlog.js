@@ -40,7 +40,7 @@ const HumansOfSociousBlog = (props) => {
   }
 
   
-  const {summary, calltoaction} = data.wpHosBlog.hosBlogData;
+  const {introduction, summary, calltoaction} = data.wpHosBlog.hosBlogData;
 
 	const { edges } = data.allWpHosBlog
 
@@ -75,7 +75,10 @@ const HumansOfSociousBlog = (props) => {
 			{/* Main Body */}
 
       <div className='hos-template-blog-content'>
-        {newContent?<div className='hos-template-blog-content__html' dangerouslySetInnerHTML={{ __html: newContent }}></div>:<></>}
+        {newContent?<div className='hos-template-blog-content__html' >
+          <p className='hos-introduction' dangerouslySetInnerHTML={{ __html: introduction }}></p>
+          <div dangerouslySetInnerHTML={{ __html: newContent }}></div>
+          </div>:<></>}
         {calltoaction?<div className='hos-template-support-cause'>
           <p><div dangerouslySetInnerHTML={{ __html: calltoaction }}></div></p>
         </div>:<></>}
@@ -176,6 +179,7 @@ export const query = graphql`
 			content
       date(formatString: "MMM DD, YYYY")
       hosBlogData {
+        introduction
         summary
         calltoaction
       }

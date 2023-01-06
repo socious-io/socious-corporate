@@ -36,7 +36,7 @@ const HumanBlogCard = ({ edge, alternate }) => {
           {hosBlogData?.category || <></>}
         </p>
         <h1 className="hos-blog-title">
-          <Link to={`/hos/${slug}`}>{title}</Link>
+          <Link to={`/humans-of-socious/${slug}`}>{title}</Link>
         </h1>
         <p className="hos-blog-card-summary">
           {hosBlogData?.summary || <></>}
