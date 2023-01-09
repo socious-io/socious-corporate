@@ -4,6 +4,7 @@
   flex-direction: row;
   justify-content: space-around;
   height: 80vh;
+  margin: 0 7vw;
 }
 
 .hos-blog-show-title {
@@ -39,6 +40,7 @@
   flex-direction: column;
   align-items: left;
   justify-content: center;
+  max-width: 50vw;
 }
 
 .hos-more-articles {
@@ -478,13 +480,7 @@
     display: none;
   }
 
-//   .container__blog {
-//     width: 90vw;
-//   }
-
-//   .container__blog__temp {
-//     width: auto;
-//     max-width: 680px;
-//     margin: 0 1rem;
-//   }
+  .hos-template-banner-left {
+    width: 100%;
+  }
 }
