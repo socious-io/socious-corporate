@@ -19,10 +19,10 @@ const HumanBlogCard = ({ edge, alternate }) => {
   } } = edge
   // const link = edge.node.slug.substring(0, slug.indexOf("%"))
 
-  const authorFeaturedImage = hosBlogData?.author?.featuredImage;
+  // const authorFeaturedImage = hosBlogData?.author?.featuredImage;
 
   const imageData = featuredImage?.node?.localFile?.childImageSharp?.gatsbyImageData;
-  const authorImageData = getImage(authorFeaturedImage?.node?.localFile?.childImageSharp?.gatsbyImageData);
+  // const authorImageData = getImage(authorFeaturedImage?.node?.localFile?.childImageSharp?.gatsbyImageData);
 
   return (
     <div className="hos-blog-card">
@@ -30,6 +30,7 @@ const HumanBlogCard = ({ edge, alternate }) => {
       {/* {imageData ? (<img className='hos-blog-image' src={getSrc(imageData)} alt={featuredImage?.node.altText || title} />) : (<></>)} */}
 
       <img className='hos-blog-image' src={getSrc(imageData)} alt={featuredImage?.node.altText || title} />
+      {/* <GatsbyImage image={authorImageData} alt={featuredImage?.node.altText || title} className='hos-blog-image' /> */}
 
       <div className='hos-blog-content-words'>
         <p className='hos-blog-category'>
