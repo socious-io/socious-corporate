@@ -29,7 +29,7 @@ const HumanBlogCard = ({ edge, alternate }) => {
 
       {/* {imageData ? (<img className='hos-blog-image' src={getSrc(imageData)} alt={featuredImage?.node.altText || title} />) : (<></>)} */}
 
-      <img className='hos-blog-image' src={getSrc(imageData)} alt={featuredImage?.node.altText || title} />
+      <Link to={`/humans-of-socious/${slug}`}><img className='hos-blog-image' src={getSrc(imageData)} alt={featuredImage?.node.altText || title} /></Link>
       {/* <GatsbyImage image={authorImageData} alt={featuredImage?.node.altText || title} className='hos-blog-image' /> */}
 
       <div className='hos-blog-content-words'>
