@@ -53,7 +53,7 @@ const HumansOfSociousBlog = (props) => {
 	return (
 		<Layout {...props} pageTitle={title}>
 			<Seo
-        title={seoTitle+": "+title}
+        title={title+" | "+seoTitle}
         description={introduction}
         image={currentSiteUrl+featuredImage?.node?.localFile?.publicURL}
         twitterImage={currentSiteUrl+featuredImage?.node?.localFile?.publicURL}
