@@ -114,7 +114,7 @@ const NavbarMobile = (props) => {
             </div>
 
             <Link
-              to={"/app/auth/login"}
+              to={"/app"}
               activeStyle={activeLinkStyleMobile}
               partiallyActive={true}
               className="menu-item-sign"
