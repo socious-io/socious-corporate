@@ -105,7 +105,7 @@ const NavbarLarge = (props) => {
           </div>
           <div className="nav-links-right">
             <div className="nav-item">
-              <Link to={"/app/auth/login"}>
+              <Link to={"/app"}>
                 <FormattedMessage id="sign-in" />
               </Link>
             </div>
