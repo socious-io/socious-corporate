@@ -32,59 +32,72 @@
     <priority>1.00</priority>
   </url>
   <url>
-    <loc>https://socious.io/about/</loc>
+    <loc>https://socious.io/about</loc>
     <lastmod>2022-08-21</lastmod>
     <xhtml:link
             rel="alternate"
             hreflang="ja"
-            href="https://socious.io/ja/about/"/>
+            href="https://socious.io/ja/about"/>
     <xhtml:link
             rel="alternate"
             hreflang="en"
-            href="https://socious.io/about/"/>
+            href="https://socious.io/about"/>
     <priority>0.80</priority>
   </url>
   <url>
-    <loc>https://socious.io/ja/about/</loc>
+    <loc>https://socious.io/ja/about</loc>
     <lastmod>2022-08-21</lastmod>
     <xhtml:link
             rel="alternate"
             hreflang="ja"
-            href="https://socious.io/ja/about/"/>
+            href="https://socious.io/ja/about"/>
     <xhtml:link
             rel="alternate"
             hreflang="en"
-            href="https://socious.io/about/"/>
+            href="https://socious.io/about"/>
     <priority>0.80</priority>
   </url>
   <url>
-    <loc>https://socious.io/organization/</loc>
+    <loc>https://socious.io/organization</loc>
     <lastmod>2022-08-21</lastmod>
     <xhtml:link
             rel="alternate"
             hreflang="ja"
-            href="https://socious.io/ja/organization/"/>
+            href="https://socious.io/ja/organization"/>
     <xhtml:link
             rel="alternate"
             hreflang="en"
-            href="https://socious.io/organization/"/>
+            href="https://socious.io/organization"/>
     <priority>0.80</priority>
   </url>
   <url>
-    <loc>https://socious.io/ja/organization/</loc>
+    <loc>https://socious.io/ja/organization</loc>
     <lastmod>2022-08-21</lastmod>
     <xhtml:link
             rel="alternate"
             hreflang="ja"
-            href="https://socious.io/ja/organization/"/>
+            href="https://socious.io/ja/organization"/>
     <xhtml:link
             rel="alternate"
             hreflang="en"
-            href="https://socious.io/organization/"/>
+            href="https://socious.io/organization"/>
     <priority>0.80</priority>
   </url>
   <url>
-    <loc>https://socious.io/careers/</loc>
+    <loc>https://socious.io/careers</loc>
+    <lastmod>2022-08-21</lastmod>
+    <xhtml:link
+            rel="alternate"
+            hreflang="ja"
+            href="https://socious.io/ja/careers"/>
+    <xhtml:link
+            rel="alternate"
+            hreflang="en"
+            href="https://socious.io/careers"/>
+    <priority>0.80</priority>
+  </url>
+  <url>
+    <loc>https://socious.io/ja/careers</loc>
     <lastmod>2022-08-21</lastmod>
     <xhtml:link
             rel="alternate"
@@ -93,20 +106,7 @@
     <xhtml:link
             rel="alternate"
             hreflang="en"
-            href="https://socious.io/careers/"/>
-    <priority>0.80</priority>
-  </url>
-  <url>
-    <loc>https://socious.io/ja/careers/</loc>
-    <lastmod>2022-08-21</lastmod>
-    <xhtml:link
-            rel="alternate"
-            hreflang="ja"
-            href="https://socious.io/ja/careers/"/>
-    <xhtml:link
-            rel="alternate"
-            hreflang="en"
-            href="https://socious.io/careers/"/>
+            href="https://socious.io/careers"/>
     <priority>0.80</priority>
   </url>
   <url>
