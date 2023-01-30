@@ -29,6 +29,7 @@ module.exports = {
       safariPinnedTab: 'favicons/safari-pinned-tab.svg',
       appleTouchIcon: 'favicons/apple-touch-icon.png',
     },
+    trailingSlash: "ignore",
   },
   plugins: [
     'gatsby-plugin-loadable-components-ssr',
