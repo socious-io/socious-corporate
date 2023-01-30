@@ -6,6 +6,7 @@ const path = require(`path`);
 
 
 module.exports = {
+  trailingSlash: "ignore",
   siteMetadata: {
     url: 'https://socious.io',
     // title and description are deprecated, use i18n instead
@@ -29,7 +30,6 @@ module.exports = {
       safariPinnedTab: 'favicons/safari-pinned-tab.svg',
       appleTouchIcon: 'favicons/apple-touch-icon.png',
     },
-    trailingSlash: "ignore",
   },
   plugins: [
     'gatsby-plugin-loadable-components-ssr',
