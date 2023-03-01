@@ -421,6 +421,15 @@
 
     color: #475467;
   }
+
+  a {
+    color: #004a46;
+    text-decoration:underline
+  }
+
+  a:hover {
+    color: #003b38
+  }
 }
 
 .hos-form-submit {
