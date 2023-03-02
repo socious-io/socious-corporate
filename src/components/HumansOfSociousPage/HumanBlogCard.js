@@ -58,6 +58,7 @@ const HumanBlogCard = ({ edge, alternate }) => {
       </div>
 
     </div>
+    
   );
 };
 

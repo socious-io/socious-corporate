@@ -80,10 +80,12 @@
 
   img {
     width: 100%;
+    padding-bottom: 1rem;
   }
 
   p, h1, h2, h3 {
-    max-width: 640px;
+    padding-bottom: 1rem;
+    // max-width: 640px;
     margin: 0 auto;
   }
 
@@ -94,6 +96,20 @@
   h2 {
     font-size: 24px;
   }
+
+  a {
+    color: #004a46;
+    text-decoration:underline
+  }
+
+  a:hover {
+    color: #003b38;
+  }
+
+  p, h2, h3, figcaption, img {
+    padding-left: 4rem;
+    padding-right: 4rem;
+  }
 }
 
 .main-blog-image {
@@ -102,4 +118,13 @@
   // height: 540px;
   margin: 0 0 48px;
   object-fit: cover;
+}
+
+@media only screen and (max-width: 600px) {
+  .blog-content {
+    p, h2, h3, figcaption, img {
+      padding-left: 0;
+      padding-right: 0;
+    }
+  }
 }

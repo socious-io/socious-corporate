@@ -146,9 +146,9 @@ const HumansOfSociousBlog = (props) => {
           {
 						edges.map((edge) => {
 							return (
-								<div className='hos-blog-card' key={edge.node.id}>
-									<HumanBlogCard edge={edge} alternate />
-								</div>
+								// <div className='hos-blog-card' key={edge.node.id}>
+                <HumanBlogCard edge={edge} key={edge.node.id} alternate/>
+								// </div>
 							)
 						})
 					}
