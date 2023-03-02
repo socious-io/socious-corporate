@@ -255,11 +255,13 @@
 .hos-blog-card {
   margin: 0;
   width: 28vw;
+  padding: 1rem;
 }
 
 .hos-blog-image {
-  max-height: 72vh;
-  max-width: 54vh;
+  height: 36vw;
+  width: 26vw;
+  object-fit: cover;
 }
 
 .hos-blog-content-words {
@@ -534,8 +536,8 @@
   }
 
   .hos-blog-image {
-    max-height: 116vw;
-    max-width: 87vw;
+    height: 116vw;
+    width: 87vw;
   }
 
   .hos-form-subscribe-to {
