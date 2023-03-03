@@ -38,8 +38,8 @@ const Seo = ({key, title, description, image, twitterImage, children}) => {
   }
   
   const pathWithSlash = pathname.endsWith("/") ? pathname : pathname + "/";
-  const absoluteURL = "https://18-hreflang.socious-corporate.pages.dev" + pathname  
-  const langURL = "https://18-hreflang.socious-corporate.pages.dev" + (jaPage ? pathname.replace('/ja', "") : `/ja${pathname}`);
+  const absoluteURL = "https://socious.io" + pathname  
+  const langURL = "https://socious.io" + (jaPage ? pathname.replace('/ja', "") : `/ja${pathname}`);
   
   const duplicate = !!(["/ja/privacy-policy-ja/", "/ja/privacy-policy/", "/ja/user-agreement/", "/ja/user-agreement-ja/"].includes(pathWithSlash) || pathWithSlash.match((/\/ja(\/careers\/\S+|\/blog\/.*)/)));
   const haveLang = !(["/privacy-policy-ja/", "/privacy-policy/", "/user-agreement/", "/user-agreement-ja/"].includes(pathWithSlash) || pathWithSlash.match((/(\/careers\/\S+|\/blog\/.*)/)));
