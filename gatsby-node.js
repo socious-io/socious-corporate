@@ -144,13 +144,13 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
 exports.onCreatePage = async ({ page, actions }) => {
   const { createPage, deletePage } = actions;
   return new Promise((resolve) => {
-    let path = page.path;
+    let path = page.path.length > 1 ? page.path.replace(/\/$/, "") : page.path;
     deletePage(page);
 
     for (let language of languages) {
       const isDefaultLanguage = language === defaultLanguage;
       if (!isDefaultLanguage) {
-        path = "/" + language + page.path;
+        path = "/" + language + page.path.replace(/\/$/, "");
       }
 
       const pageForLanguage = Object.assign({}, page, {
