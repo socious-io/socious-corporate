@@ -54,7 +54,7 @@ const HumansOfSociousBlog = (props) => {
 		<Layout {...props} pageTitle={title}>
 			<Seo
         title={title}
-        description={introduction}
+        description={introduction||" "}
         image={currentSiteUrl+featuredImage?.node?.localFile?.publicURL}
         twitterImage={currentSiteUrl+featuredImage?.node?.localFile?.publicURL}
       />
@@ -139,16 +139,16 @@ const HumansOfSociousBlog = (props) => {
             <p className="hos-more-articles-subheading"></p>
           </div>
           <div className="hos-more-articles-header-right">
-            <Link to={"/hos"}><button>View All</button></Link>
+            <Link to={"/humans-of-socious"}><button>View All</button></Link>
           </div>
         </div>
           <div className='hos-more-articles'>
           {
 						edges.map((edge) => {
 							return (
-								<div className='hos-blog-card' key={edge.node.id}>
-									<HumanBlogCard edge={edge} alternate />
-								</div>
+								// <div className='hos-blog-card' key={edge.node.id}>
+                <HumanBlogCard edge={edge} key={edge.node.id} alternate/>
+								// </div>
 							)
 						})
 					}
