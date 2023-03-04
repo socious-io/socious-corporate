@@ -139,7 +139,7 @@ const HumansOfSociousBlog = (props) => {
             <p className="hos-more-articles-subheading"></p>
           </div>
           <div className="hos-more-articles-header-right">
-            <Link to={"/humans-of-socious"}><button>View All</button></Link>
+            <Link to={"/humans-of-socious/"}><button>View All</button></Link>
           </div>
         </div>
           <div className='hos-more-articles'>

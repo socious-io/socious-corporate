@@ -28,16 +28,16 @@ const Navbar = ({ header, is404Page }) => {
     ? location.pathname.slice(3)
     : `/ja${location.pathname}`;
 
-  const aboutLink = jaPage ? '/ja/about' : '/about';
-  const careersLink = jaPage ? '/ja/careers' : '/careers';
-  const newsroomLink = jaPage ? '/ja/newsroom' : '/newsroom';
-  const blogLink = '/blog';
-  const organizationLink = jaPage ? '/ja/organization' : '/organization';
-  const contactLink = jaPage ? '/ja/contact' : '/contact';
-  const hosLink = '/humans-of-socious';
+  const aboutLink = jaPage ? '/ja/about/' : '/about/';
+  const careersLink = jaPage ? '/ja/careers/' : '/careers/';
+  const newsroomLink = jaPage ? '/ja/newsroom/' : '/newsroom/';
+  const blogLink = '/blog/';
+  const organizationLink = jaPage ? '/ja/organization/' : '/organization/';
+  const contactLink = jaPage ? '/ja/contact/' : '/contact/';
+  const hosLink = '/humans-of-socious/';
 
-  const locationPathname = [hosLink,blogLink].includes(location.pathname) ? location.pathname+"/" : location.pathname;
-  if((locationPathname).startsWith(hosLink+"/") || (locationPathname).startsWith(blogLink+"/")){
+  const locationPathname = [hosLink,blogLink].includes(location.pathname) ? location.pathname : location.pathname+"/";
+  if((locationPathname).startsWith(hosLink) || (locationPathname).startsWith(blogLink)){
     altPage = location.pathname;
   }
 
