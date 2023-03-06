@@ -43,7 +43,7 @@ const BlogCard = ({ edge, alternate }) => {
 
 
         }
-        <Link to={`/blog/${slug}`}>
+        <Link to={`/blog/${slug}/`}>
           Read more &rarr;
         </Link>
       </div>

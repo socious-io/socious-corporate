@@ -90,6 +90,8 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
           }          
         }
 
+        path = path + '/'
+
         const pageForLanguage = Object.assign({}, node, {
           originalPath: slug,
           path: path,
@@ -107,7 +109,7 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
 
 
     wordpressPosts.forEach(({ node }) => {
-      let path = `/blog/${node.slug}`;
+      let path = `/blog/${node.slug}/`;
       const pageForLanguage = Object.assign({}, node, {
         originalPath: `/blog/${node.slug}`,
         path: path,
@@ -121,7 +123,7 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
     });
 
   hosBlogPosts.forEach(({ node }) => {
-    let path = `/humans-of-socious/${node.slug}`;
+    let path = `/humans-of-socious/${node.slug}/`;
 
     const pageForLanguage = Object.assign({}, node, {
       originalPath: `/humans-of-socious/${node.slug}`,

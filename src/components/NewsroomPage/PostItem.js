@@ -2,7 +2,7 @@ import React from 'react';
 
 const PostItem = (props) => {
   const {title, date, slug, imageSrc} = props;
-  const url = '/' + slug;
+  const url = '/' + slug + '/';
 
   return (
     <div className="news-item">
