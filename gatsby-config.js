@@ -6,6 +6,7 @@ const path = require(`path`);
 
 
 module.exports = {
+  trailingSlash: "ignore",
   siteMetadata: {
     url: 'https://socious.io',
     // title and description are deprecated, use i18n instead
